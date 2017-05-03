@@ -1,0 +1,634 @@
+% This file was converted to LaTeX by Writer2LaTeX ver. 1.4
+% see http://writer2latex.sourceforge.net for more info
+\documentclass{article}
+\usepackage[ascii]{inputenc}
+\usepackage[T3,T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[noenc]{tipa}
+\usepackage{tipx}
+\usepackage[geometry,weather,misc,clock]{ifsym}
+\usepackage{pifont}
+\usepackage{eurosym}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\makeatother
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+\newcounter{Equation}
+\renewcommand\theEquation{\arabic{Equation}}
+\title{}
+\begin{document}
+\clearpage\setcounter{page}{1}\section{Abstract}
+Optimal behaviour policies for non-degenerate Markov Decision Processes (nMDPs) can be intractable to find, when state space size is prohibitive. In this paper, a theoretical method of deconstruction nMDPs into a set of concurrent MDPs is demonstrated. Such concurrent representations may be degenerate in state space, and require exponentially less memory to store. In offset of the state space savings, it frequently believed that such degeneracies lead to sub-optimal policy regression. Surprisingly, given weak preconditions, policy regression for the degenerate Concurrent MDP sets (CMDP) can converge upon optimal policies for the coincident non-degenerate nMDPs. To illustrate this effect a theoretical exploration is followed by a simple localization and box pushing simulation. In validation of the position, regression approaches using Q-Learning did not yield statistically significant behaviour policies in terms of reward maximization, despite the fact that the degenerate CMDP required exponentially less state space to specify (pairwise p-value {\textless} X.XXXX ). 
+
+\section{Introduction}
+In prior work Concurrent Markov Decision Processes were presented [], and shown via experiment to enable discovery locally policy when compared with nMDPs. Among some theoretical questions, the question of how a set of degenerate MDPs, with partial state spaces, could converge on identical or superior policies as compared with the non-degenerate MDP was left as future work. Indeed, for people, we routinely choose to represent partial truths to ourselves, or give attention to subsets of our sensory information, such that our daily tasks are simplified. Thus, future intelligent agents, including robots, may need to rely on similar coping mechanisms that broadly introduce state degeneracy into problem models for the sake of efficiency. The work on CMDPs demonstrated that this approach, of introducing state degeneracy, may have theoretical merits. This paper grounds the state degeneracy discovery in theory.
+
+\ \ This paper exposes and explores some weak problem assumptions that are made when performing a split of a non-degenerate MDP into a set of Concurrent Markov Decision Processes. When these weak assumptions are met, it is demonstrated that identical or superior local policy regression is expected both theoretically and empirically. Thus, this work contributes this set of assumptions which may be validated when simplifying nMDP problems into CMDP problems.
+
+This paper outlines a brief background related to state space representation in Section 1, before outlining the core CMDP theory in Section 2. Section 3 outlines how a simple version of Q-Learning can be used to contrast the state space representation experiment. In Section 4, results are demonstrated for a simple localization and box pushing experiment.
+
+\section{Background}
+The idea of state space factorization is not novel, and falls broadly into three categories. 
+
+
+\bigskip
+
+In all approaches, it is frequently assumed in the literature that models which are degenerate in state space will expectedly suffer in the quality of their local optima. Broadly speaking, in Machine Learning literature, this is sometimes expressed as the Bias-Variance trade off. Practically speaking, when creating degenerate MDPs, the question of how degenerate these MDPs may be until they become biased is sometimes considered to be a core question. 
+
+Thus in this paper we present a method, given what is believed to be a non-degenerate and intractable nMDP, to construct and converge on an optimal behaviour policy. The method includes splitting the nMDP into a tractable CMDP form. We demonstrate both analytically and empirically, that the regressed policies are identical in terms of local optimality, if certain conditions hold.
+
+\section{3 Theory}
+First, it is shown that an nMDP can be split into sub dependent MDPs, denoted a CMDP. Afterwards a lemma is provided which may be reused when approaching nMDP deconstruction. 
+
+\subsection{3.0 Defintions, Concurrent Markov Decision Processes:}
+To begin MDP problem definition, we broadly consider the task of finding the optimal location in a discrete state space in  $S=N^N$, using the maximum value function  $V:S\rightarrow R$. To ensure the space  $S$ has an optimal element it is assumed that a certain rearrangement of the value image  $V\left(S\right)$ monotonic.
+
+Thus, to discover a solution to the problem, the help of an agent may be elicited, who has allowed actions in a set  $A{\subset}N$, for every instant  $t{\in}T{\subset}N$. The convention that an agent chooses an action  $a_t{\in}A$ for every state  $s_t{\in}S$, before arriving in state  $s_{t+1}{\in}S$ is followed. The probability  $T\left(s_{t+1}\right|s_t,a_t$ represents the true and observed transitional probability of the system, also described as the dynamics of the environment, which are assumed to be stably stochastic, unless started otherwise. The epoch  $E_e$ is a set of contiguous time indexes, with restrictions:  $e_i{\in}N,$,and  $?e_1,e_2{\in}N$. We assume the size of the epochs increase  $\left|e_i\right|<\left|e_{(i+1)}\right|$, meaning that over time more time instants are contained within each. \ It is assumed that some discoverable infinite horizon reward exists  $R\left(s_t,a_t,s_{t+1}\right)$ such that agents may attempt to ``maximize'' the value given by the trajectory, where the value of a state is given by  $V\left(S\right).$
+
+\begin{equation}
+V\left(s_t\right)=\sum _{s_{t+1}{\in}S}^{}P\left(s_{t+1}\vee s_t,a_t\right)\left(R\left(s_t,a_t,s_{t+1}\right)+\mathit{\gamma V}\left(s_{t+1}\right)\right)
+\end{equation}
+The goal is to (a) explore and map the quality  $Q_t:S\times A\rightarrow R$ for the space, such that (b) a behavioural policy  $a_t=\pi _t(s_t,a_t)$ is partly characterized by the  $Q_t$ values of the state. Commonly, the naive optimal policy is given by  $\pi _{}^{\ast }$:
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{m{15.493cm}m{0.996cm}}
+ $\pi _{}^{\ast }\left(s_t\right)\leftarrow \mathit{arg}\underset a{\mathit{max}}Q_t(s_t,a)$
+
+~
+ &
+\centering\arraybslash (\stepcounter{Equation}{\theEquation})\\
+\end{supertabular}
+\end{flushleft}
+The above MDP definition is frequently expressed as a tuple: \  $m_k=<S_k,A_k,T_k,R_k,\pi _k>?$, where the initial posed nMDP problem is noted as  $m_{}=<S_{},A_{},T_{},R_{},\pi _{}>?$. The time index  $t$, may sometimes be replaced with an epoch index  $e$, in situations that an MDP  $m_i$ operates on a different discrete timescale than another MDP  $m_j$.
+
+\subsubsection{Random Field Deconstruction Example:}
+[Warning: Draw object ignored]The problem of the random field with real values can be considered,  $r:X^N\rightarrow R^{+?,X{\subset}N}$, which we assume is well-ordered and monotonic. For brevity, we consider  $N=2$ \ as a visual example.
+
+\paragraph[An nMDP definition can be described:]{An nMDP definition can be described:}
+\begin{itemize}
+\item \  $S=X^N$ is the set of all possible states
+\item  $A=A_u\times A_l$ s.t.  $A_u,A_l=\left\{-1,1,{\emptyset}\right\}$
+
+\begin{itemize}
+\item with  $a_u{\in}A_u,a_l{\in}A_l$ 
+\end{itemize}
+\item \begin{equation*}
+R\left(s_{t+1}\vee s_t,a_t\right)=r\left(l+a_l,u+a_u\right)-r(l,u)
+\end{equation*}
+\item  $T\left(\left\{l+a_l,u+a_u\right\}\vee ,\{a_l,a_u\},\{l,u\}\right)=1$,  $0$ otherwise
+\end{itemize}
+In terms of notation the following equalities are always true:  $s_{t+1}=\{i+a_u,j+a_l\}$, $a_t=\{a_u,a_l\}$ , and $s_t=\{i,j\}$.
+
+Thus, the problem for a reinforcement learning agent may be to localize and converge upon an optimal space  $s_t$ such that  $r(s_t)$ is maximized. The agent can, without fail, move in any combination of ``up'', ``left'', ''down'', ''right'', and ``nothing'' to localize the best location. \ A discount reward and infinite time horizon are considered.
+
+It turns out that the nMDP problem can be restated in terms of a degenerate manner using two models with degenerate state space. Colloquially, an agent can solve a degenerate CMDP problem of locating the best column and row independently.
+
+\subsubsection[An CMDP definition can be described:]{[Warning: Draw object ignored]An CMDP definition can be described:}
+First, a child dependent MDP is defined
+
+\begin{itemize}
+\item \begin{equation*}
+S_l=X^1,j
+\end{equation*}
+\item \begin{equation*}
+A_l
+\end{equation*}
+\item \begin{equation*}
+R_l\left(l+a_l\vee a_l,l,u\right)=r\left(l+a_l,u\right)-r(l,u)
+\end{equation*}
+\item  $T_l\left(l+a_l\vee ,a_l,l,\right)=1,0$ otherwise
+\item The sequence index  $t$ is used for the child MDP.
+\item \begin{equation*}
+M_l=\left\langle S_l,A_l,T_l,R_l\right\rangle 
+\end{equation*}
+\end{itemize}
+Second, a parent dependent MDP is defined
+
+\begin{itemize}
+\item \begin{equation*}
+S_u=X^1,i
+\end{equation*}
+\item \begin{equation*}
+A_u
+\end{equation*}
+\item \begin{equation*}
+R_u\left(u+a_u\vee a_u,u,E_e\right)=R_u\left(s_{u,e+1}\vee a_{u,e},s_{u,e},E_e\right)
+\end{equation*}
+\begin{itemize}
+\item Noting  $R_u\left(s_{u,e+1}\vee a_{u,e},s_{u,e},E_e\right)=\sum _{t{\in}E_e}^{}\frac{R_l\left(s_{l,t+1}\vee a_{l,t},s_{l,t},s_{u,t}\right)}{\acute{E_e}}-\sum _{t{\in}E_e^o}^{}\frac{R_l\left(s_{l,t+1}\vee a_{l,t},s_{l,t},s_{u,t}\right)}{\acute{E_e^o}}$
+\end{itemize}
+\item  $T_u\left(u+a_u\vee ,a_u,u\right)=1,0$ otherwise
+\item \begin{equation*}
+M_u=\left\langle S_u,A_u,T_u,R_u\right\rangle 
+\end{equation*}
+\item 
+\bigskip
+\item The sequence index  $e$ is used for the parent MDP.
+\end{itemize}
+For notation, the equalities are always true:  $s_{x,t+1}=x+a_x$,  $a_{x,t}=a_x$ , and $s_{x,t}=x$, $a_{x,t}$, where  $x{\in}\{l,u\}$, where a time index  $t$ is substituted with and epoch  $e$ for the parent MDP. The notation  $\acute{E_e}$ represents the cardinality of an epoch, and is variable in  $T$. 
+
+[Warning: Draw object ignored]Thus, as mentioned in prior [],two MDPs can form an interdependent set, such that the action  $a_e$ of the parent MDP describes reachable state space of a child MDP, though restricting state space exploration by defining variable  $u$. Conversely, the child MDP's policy  $\left\{a_t=\pi _t(s_t)\right\}_{t{\in}E_e}^{}$ over all timesteps defines the reward obtained  $R_u\left(s_{e+1}\vee a_e,s_e,E_e\right)$. A block diagram can illustrate these dependencies.
+
+\subsubsection{Policy Convergence:}
+We consider elementary q-learning: ELEMENTARY Q-LEARNING
+
+In order for convergence to be ensured  $t\rightarrow {\infty}$, or  $e\rightarrow {\infty}$, two conditions must be met: (a) an agent must visit each state  $s{\in}S$ infinite times, (b) an agent's learning rate  $\alpha $ must satisfy CONVERGENCE CRITERIA, and (c) the Reward function and transitions probabilities  $T$, and  $R$ must be stably stochastic.
+
+A rudimentary action selection model  $\pi _t$ can involve sampling the density function:
+
+\begin{equation}
+\pi _{}\left(s\right)\ \pi _{}\left(s,a\right)=\frac{e^{Q_{t-1}(s,a)}}{\sum _{b{\in}A}^{}e^{Q_{t-1}(s,b)}}
+\end{equation}
+
+\bigskip
+
+Which can be shown to converge readily for an nMDP which satisfies the three above conditions[].
+
+\subsubsection{Convergence}
+We now briefly show convergence of both the parent and child process based on  $\pi _t$. \ Past interest, nothing is lost by moving to section XXX. In general, optimal policies will be denoted  $\pi ^{\ast }(s){\in}\Omega ^{\ast }(s)$, where  $\Omega ^{\ast }$ is the set of all optimal policies, and the action selection policies  $\Omega ^{\ast }(s)$ represent the set of optimal action selection policies for a state  $s{\in}S$. 
+
+\paragraph{Child MDP Convergence on optimal policy}
+For the child MDP, it is clear that the epoch  $e\rightarrow {\infty}$ duration increases as  $t\rightarrow {\infty}$. Thus we have:
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{m{15.493cm}m{0.996cm}}
+\centering  $\lim _{e\rightarrow {\infty}}\acute{E_e}={\infty}$ and  $\pi _l\left(s_l,a_l\right)>0$ &
+\centering\arraybslash (\stepcounter{Equation}{\theEquation})\\
+\end{supertabular}
+\end{flushleft}
+We also know that, given all epoch  $e$,  $\pi _u\left(s_u,a_u\right)>0$. Thus, all states are reachable and infinite visitations at time infinity are assured. For a sub space  $S_l$, for the child MDP, we note that the Q-Values  $Q_t(s_l,a_l)$ will be reset to initialized values upon transition to every new epoch  $e_{i+1}{\neq}e_i$; in this case, since  $\acute{E_e}\rightarrow {\infty}$, we are assured that policy convergence is possible. The practical problem of resetting the Q-Values in a non-optimal way is addressed in the implementation section, but in the worst case, (with resetting values,) eventual convergence is theoretically assured. 
+
+\paragraph{Parent MDP Convergence on optimal policy}
+Convergence for the parent MDP is apparent, as the reward function  $R_u\left(s_{e+1}\vee a_e,s_e,E_e\right)$ is not only stably stochastic, but also increasingly reflective of the mean reward expected from a learning agent given a target row  $j$. \ Since  $\pi _t\left(s_u,a_u\right)>0$ and  $e\rightarrow {\infty}$, with a stable transition model  $T_u$ convergence is assured.
+
+\paragraph{Mapping Disjoint CMDP Policies onto an optimal nMDP Policy}
+\ \ Having two convergent sub optimal policies ( $\pi _u,\pi _l$) is a promising initial step, but may not contribute to the solution for an optimal global policy  $\pi _{}.$ It turns out that it can under some weak conditions, outlined below, such convergence can be shown readily. Specifically we wish to map the set two sub optimal policies onto an optimal nMDP policy:
+
+\begin{equation}
+f:\Omega _u^{\ast }\left(S_u\right)\times \Omega _l^{\ast }\left(S_l\right)\rightarrow \widetilde{\Omega }_{}^{\ast }\left(S_{}\right):\widetilde{\Omega }_{}^{\ast }\left(S_{}\right){\subseteq}\Omega _{}^{\ast }\left(S_{}\right)
+\end{equation}
+For the above MDP problem, it can be readily demonstrated that such a mapping function  $f$ can be found, given the above CMDP problem. Specifically we must consider the nature of optimal policy for both the parent and child MDPs. We begin with the definition of an optimal value given a state  $s$:
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{m{15.493cm}m{0.996cm}}
+\begin{equation}
+\Omega _{}^{\ast }(s)=\underset a{\mathit{argmax}}\sum _{s'{\in}S}^{}P\left(s'\vee s,a\right)\left(R\left(s,a,s'\right)+\mathit{\gamma V}\left(s'\right)\right)
+\end{equation}
+~
+ &
+~
+\\
+\end{supertabular}
+\end{flushleft}
+And, it follows directly that a specific and optimal global policy can be expressed as every combination of optimal CMDP policies,  $\pi _{}^{\ast }\left(s\right)=\pi _u^{\ast }\left(s\right){\cup}\pi _l^{\ast }\left(s\right)$. For details on this detailed derivation, please see Convergent Factors Lemma in the as the appendix. We also, then, know that execution of the regular action policies will lead the Q-values to converge on these optimal policies.
+
+\begin{equation}
+\pi _{}^{}\left(s\right)=\left\{\pi _u^{}\left(s\right),\pi _l^{}\left(s\right)\right\}
+\end{equation}
+
+\bigskip
+
+This technique can factor exponentially large state space problems into polynomial space, rendering intractable problems as tractable. With the addition a dynamic programming approach, the convergence speed can be optimized, trading off storage space for convergence speed. 
+
+\subsubsection{Simulation}
+For simulation, we tackle the elementary two dimensional  $S=X^2$, where  $X=\{1,2,{\dots},100\}$. Each cell is assigned a valued  $V\left(s{\in}S\right){\in}\left\{1,{\dots},1000\right\}$. We contrast a nMDP approach, and its convergence time, with two CMDP approaches, with all three described below.
+
+\subsubsection{Example Derivation of multi-agent robotics Application}
+After initial consideration of the nMDP problem, it can be illuminating to consider how a multi-agent MDP can be expressed as a CMDP problem. In general, when multi-agent MDPs are formed, they are approached from two directions. Either the MDP representation is centralized, meaning that a single nMDP contains all information across all agents, or each individual agent possesses a subset of the compelte MDP problem, sometimes called decentralized MDPs. 
+
+Decentralized MDPs commonly express degeneracy when compared with their original problem. Importantly there has been work on decentralized MDPs whose formulation allow seeming convergence on optimal solutions to related nMDP problems. However, the theoretical accuracy of policy convergence for multi-agent CMDP problems has been elusive.
+
+Thus, the following derivation demonstrates how the general CMDP approach can be used to derive a multi-agent CMDP for a mult-agent robotics simulation, such that policy convergence for the multi-agent CMDP can be identical to the intractable nMDP counterpart. 
+
+\subsubsection{Centralized nMDP:}
+The centralized nMDP is defined as a decentralized MDP that may consist of a set of states  $S_U$ a set of system actions for each agent  $A_U=\times _{i=1}^n\left\{A_I{\cup}A_T\right\}$, a real valued reward function  $R_U$, and a stably stochastic transitional model  $T_U$. The decentralized MDP is used in this paper as a control to contrast with other learning models.
+
+The value of the reward  $R_T$ and transition functions  $T_T$ are assumed to be unpredictable up to some known discrete iteration  $t_s$. After  $t_s$ the task allocation process's reward and transition function are assumed to have a constant expectation value, which may be affected by some unknown amount of zero mean noise.
+
+\ \ It is worth emphasizing that within the Concurrent MDP model the two individual performance and task allocation processes explored concurrently. This concurrent learning approach distinguishes the model from a single 
+
+\subsubsection{Task Allocation MDP:}
+Team progress toward a goal can be defined as a  $<S_T,A_T,T_T,R_T>?$ \ tuple, where $S_T{\subset}S_U$ ,
+
+\begin{itemize}
+\item  $S_T$ denotes a discrete set of states, which capture the individual performance characteristics between all agents and all tasks.
+\item  $A_T$ denotes a discrete set of actions, i.e., a function that assigns all available tasks to available agents.
+\item  $T_T\left(s_T,a_T,s_T^'\right)$ denotes a stable transition model, i.e., the probability of executing action  $a_T$ starting from state  $s_T$ and ending up in state  $s_T^'$. The transition function is completely specified by the individual performance process through a set of evidence  $E_{\mathit{TI}}$.
+\end{itemize}
+
+\bigskip
+
+\subsubsection{Individual Performance MDP:}
+Individual agent progress toward a sub-task can be defined as a  $<S_I,A_I,T_I,R_I>?$ \ tuple,  $S_I{\subset}S_U$,
+
+\begin{itemize}
+\item  $S_I$ denotes a discrete set of states, whose intrinsic value is partially specified by the task allocation process through a set of evidence  $E_{\mathit{IT}}$. 
+\item  $A_I$ denotes a discrete set of actions.
+\item  $T_I\left(s_I,a_I,s_I^'\right)$ denotes a stable transition model, i.e., the probability of executing action  $a_I$ starting from state  $s_I$ and ending up in state  $s_I^'$.
+\item  $R_I(s_I,a_I,s_I^')$ denotes a positive real number as a reward received for transitioning from state  $s_I$ into state  $s_I^'$ using action  $a_I$.
+\end{itemize}
+The evidence value \  $e_{\mathit{IT}}{\in}E_{\mathit{IT}}$ is defined by the task allocation MDP, such that maximal visitation of all states at time infinity is assured. Such a single-agent MDP can be seen as a straightforward process for the reinforcement learning.
+
+Given these definitions, the derivation of a multi-agent CMDP can occur in three steps:
+
+One, we can imagine the initial situation as our example problem for a single agent, with a child MDP,  $\left\langle S_l,A_l,T_l,R_l\right\rangle $ and parent MDP  $\left\langle S_u,A_u,T_u,R_u\right\rangle $ depicted on a grid. In this situation the reward and transition functions are defined in accordiance with section 3.0. In this arrangement, the parent MDP will have to try many rows, letting the child MDP visit an increasing amount of column states per row, as described in section 3.0.
+
+[Warning: Draw object ignored]
+
+The first alteration that can be made, is to convert the problem into multi-agent MDP; the problem is constructed of a parent MDP and a set of independent children MDPs. The parent MDP's definition can be expanded in the following manner:
+
+\begin{itemize}
+\item \begin{equation*}
+S_u=X^1,X^n
+\end{equation*}
+\item \begin{equation*}
+A_u=\{-1,0,1\}^n
+\end{equation*}
+\item \begin{equation*}
+\mathit{Transition}
+\end{equation*}
+\item \begin{equation*}
+R_u\left(u+a_u\vee a_u,u,E_e\right)=\sum _{i{\in}\{1,{\dots},n\}}^{}R_{u,i}\left(s_{u,e+1}\vee a_{u,e},s_{u,e},E_e\right)
+\end{equation*}
+\begin{itemize}
+\item Noting  $R_{u,i}\left(s_{u,e+1}\vee a_{u,e},s_{u,e},E_e\right)=\sum _{t{\in}E_e}^{}\frac{R_l\left(s_{l,t+1}\vee a_{l,t},s_{l,t},s_{u,t}\right)}{\acute{E_e}}-\sum _{t{\in}E_e^o}^{}\frac{R_l\left(s_{l,t+1}\vee a_{l,t},s_{l,t},s_{u,t}\right)}{\acute{E_e^o}}$
+\end{itemize}
+\end{itemize}
+Expanding the state by a factor of  $n$ allows for the parent MDP to regress to an optimal policy over  $n$ agents with an exponential increase in both state space and action space. However, this state space expansion is \ bounded by  $O(\left|X^n\right|)$ whereas the multi-agent nMDP space space requirements are bounded by  $O(\left|X^n\right|\left|X^n\right|n)$. 
+
+[Warning: Draw object ignored]
+
+\subsubsection{Convergence}
+\ \ We can analyze policy convergence for both the multi-agent child MDPs, and the multi-agent parent MDP: First, the multi-agent child MDPs remain unchanged, so given sufficient policy execution time, their convergence is assured. Second, the multi-agent parent MDP converges similarly as shown in section 1: The state space, action space, and transition space have increased in dimension, which does not affect convergence[]. The Reward, although now a sum over the agents, is a sum over a set of stably stochastic functions, which is itself stably stochastic[].
+
+\subsubsection{b. complete multi-agent CMDP:}
+\ \ Thus, we can imagine the current problem as a search for the highest cell numbers in a grid spread over number ( $n$) of columns, where the number of total columns is unlimited. It is natural, at this point, to expand the multi-agent child MDP into a complete multi-agent child MDP, by solving a two dimensional row problem: 
+
+[Warning: Draw object ignored]
+
+This division of space can be readily generalized to a foraging problem, where each layer  $i$ is assigned reward such that reward increases as a foraging targets location is nearer:
+
+[Warning: Draw object ignored]
+
+\subsubsection{}
+\subsubsection{Convergence}
+\ \ The complete \ model differs only in that state space is larger, and that the model must contain a definition for a series of  $k$ sets,  $k{\in}\left\{X,X\right\}^n$. If we assume the  $k$ values set for any experiment, we see that the only difference in models is that the state space has increased in dimension. Aside from an increase in computational and storage space burden, convergence in increased state spaces is assured.
+
+Thus, using this methodology, many general multi-agent problems can be derived from the initial situation given within section 3.0, including the assurance that, as time increased policy uncertainty asymptotically decreases.
+
+This remodelling, however, requires a human expert to complete. It may be more enticing to consider how CMDP models may reconfigure dynamically to solve problems, and how such models can be regularized. The remainder of this paper considers how multiple approaches may be derived and combined to create a general and regularized reinforcement learning framework.
+
+\subsection{4.0 General Reinforcement Learning}
+In the following section, the approach to finding a policy for a singular MDP,  $M=<S,A,T,R>?$, is generalized; instead of relying on a human to decide how to structure a CMDP, as described in sections 3.0 and 3.1, it may be desired that a reinforcement learning mechanism learn its own structure. This learning mechanism is inspired by all domans of research not limited to regularized neural networks and projected component analysis[]. In both of these domains models learn generative state space representations by initially (1) isolating principal components that information can be projected onto and following to (2) analyze and predict outcomes using the independent subspaces noting covariance information. These methods sometimes do not consider (3) the usage of information to make predictions of drive actions of an agent within their environment. Thus, in the following sections we construct a model that can automatically analyze the components of state and action space, fulfilling (1) and (2), where this method is tied to \ the performance of (3) the dynamic CMDP's ability to both exhibit reduced space consumption and have increased decision making and policy convergence behaviour.
+
+The mechanism is formed using several sub behaviours. First, an nMDP can be broken into a CMDP, which we know converges at time infinity. For this decomposition and recomposition to be genrally applied, we need a method to map Transitional and Policy information between similar models. This is addressed in section 4.1 Learning and Mapping Transitional Knowledge. Afterward, knowing that nMDP models and CMDP models can be continually decomposed and recomposed, an approach to expressing the decomposition/composition behaviour as a reinforcement learning problem is expressed, in section 4.2 as Dynamic Reconfiguration of Concurrent Markov Decision Processes.
+
+\subsection{4.1 Learning and Usage of Transitional Knowledge}
+In this section we consider the benefits and drawbacks of modelling the regressed Q values directly for a behavioural policy. The classic initial approach is to discover  $Q$.
+
+\begin{equation}
+Q:S\times A\rightarrow R^{+?}
+\end{equation}
+Such that it is elementary to derive the behavioural policy online:
+
+\begin{equation}
+\pi ^{\ast }:S\rightarrow A
+\end{equation}
+Where a common policy definition is commonly used in casual experimentation,  $\pi ^{\ast }(s)=\underset a{\mathit{argmax}}Q(s,a)$.
+
+The calculation of Q has been traditionally computed online using equation (XX), repeated for reference:
+
+\begin{equation}
+Q(s,a)^'\leftarrow Q(s,a)+\alpha \left(R\left(s,a,s^'\right)-Q\left(s,a\right)+\underset{a^{\ast }}{\mathit{max}}Q(s^',a^{\ast })\right)
+\end{equation}
+Where the symbol (`) represents a function or variable value at the following time step. The procedure of executing Q-Learning ( $Q_l$) computes the a map,
+
+\begin{equation}
+Q_l:R(S,A,S)\times T(S,A,S)\rightarrow Q(S,A)
+\end{equation}
+, such that neither the complete reward ( $R(S,A,S)$) or transition ( $T(S,A,S)$) images are kept in memory; the  $\mathit{QL}$ algorithm functions  $\mathit{online}$. The purpose of this section is to, first, provide a mechanism that stores and calculates Q values based on learning approximate characterizing functions, for transition  $\widetilde T(S,A,S){\approx}T(S,A,S)$ and reward  $\widetilde R\left(S,A,S\right)=R(S,A,S)$, by executing transition learning and reward learning,  $T_l,R_l$. Second, this section outlines a method to recover Q values from these images anytime, using transitional learning,  $Q_{\mathit{tr}}$:
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{m{15.493cm}m{0.996cm}}
+{\centering  $T_l:\widetilde T\left(S,A,S\right)\times \left\{\left(s,a,s^'\right)\right\}\rightarrow \widetilde T^'(S,A,S)$\par}
+
+{\centering  $R_l:\widetilde R\left(S,A,S\right)\times \{(s,a,s^')\}\rightarrow \widetilde R^'(S,A,S)$\par}
+
+\centering  $Q_{\mathit{tr}}:\widetilde T(S,A,S)^'\times \widetilde R(S,A,S)^'\rightarrow Q^'(S,A)$ &
+\centering\arraybslash (\stepcounter{Equation}{\theEquation})\\
+\end{supertabular}
+\end{flushleft}
+Thus, it is expected that the basis functions  $T_l$ and  $R_l$ are computed online, whereas the current Q-Values can be updated as needed using a process  $Q_{\mathit{tr}}$, to be outlined. 
+
+The  $T_l$ and  $R_l$ functions can be discovered, in the following manner, through the tracking of local visitation frequencies:
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{m{15.493cm}m{0.996cm}}
+{\centering  $T_l:\widetilde T'\left(s,a,s'\right)\leftarrow \widetilde T\left(s,a,s'\right)+\alpha \left(\frac{\mathit{fr}\left(s,a,s^'\right)+1}{\mathit{fr}\left(s,a\right)+1}-\widetilde T\left(s,a,s'\right)\right)$\par}
+
+\centering  $\frac{\mathit{fr}\left(s,a,s^'\right)+1}{\mathit{fr}\left(s,a\right)+1}=\frac{1+\widetilde T\left(s,a,s'\right)}{1+\sum _{s'}^{}\widetilde T\left(s,a,s'\right)}$ &
+\centering\arraybslash (\stepcounter{Equation}{\theEquation})\\
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+The  $Q_{\mathit{tr}}$ function can be defined using one of three regression functions, each with benefits and drawbacks, where  $\xi $ represents a collection of sample states action state tuples,  $\xi \left(s,a\right){\subseteq}S\times A\times S$, where  $a$ and  $b$ are constants:
+
+\begin{itemize}
+\item A greedy algorithm, which does not value any future reward.
+\end{itemize}
+\begin{equation}
+Q^'(s,a)\leftarrow \frac 1{\sum _{s'{\in}\xi (s,a)}^{}\widetilde T\left(s,a,s'\right)}\sum _{s'{\in}\xi (s,a)}^{}\widetilde T\left(s,a,s'\right)\widetilde R\left(s,a,s'\right)
+\end{equation}
+\begin{itemize}
+\item A complete algorithm, which recursively explores potential for future reward:
+\end{itemize}
+\begin{equation}
+Q^'(s,a)\leftarrow \frac 1{\sum _{s'{\in}\xi (s,a)}^{}\widetilde T\left(s,a,s'\right)}\sum _{s'{\in}\xi (s,a)}^{}\widetilde T\left(s,a,s'\right)\widetilde R\left(s,a,s'\right)+\gamma \underset{a^{\ast }}{\mathit{max}}Q(s^',a^{\ast })
+\end{equation}
+This approach is the most complete, but runs into issues related to recursive state space explosion.
+
+\begin{itemize}
+\item A monte carlo algorithm, which runs a batch monte carlo simulation to update policy values:
+\end{itemize}
+\begin{equation}
+Q^'\left(s,a\right)\leftarrow Q^{}\left(s,a\right)+\frac{\alpha } n\sum _{i=0}^n\widetilde R\left(s,a,s'\right)-Q^{}\left(s,a\right)+\gamma \underset{a^{\ast }}{\mathit{argmax}}Q(s^',a^{\ast })
+\end{equation}
+, where  $s'$ is sampled from the density  $\widetilde T\left(s,a,s'\right)$. It is trivial to note that the monte carlo simulation approaches the value obtained by the complete algorithm as the limit of  $n$ approaches infinity.
+
+Thus, using elementary techniques it is tractable to regress to transitional and reward models online, and it is furher possible to extract policy values online using at least three algorithms.
+
+\subsection{4.2 Transferring Knowledge}
+Given an nMDP, it may be desired to split or reformulate a problem into a CMDP. In this circumstance, given transition and reward data encoded in a manner according to section 4.1, the next step is to consider how a knowledge transference model may be constructed. For the following section we will generalize the notion of state action result sets to the notion of trajectories such that  $l_i^j=\left\{(s_i,a_i,s_i^')\right\}_i^j$.
+
+Using this notation  $\widetilde T\left(s,a,s'\right)=P\left(s^'\vee s,a\right)=\widetilde T\left(l_i^{i+1}\right)$ where  $l_i^{i+1}=\left\{(s_i,a_i,s_i^')\right\}_i^{i+1}$. The value for a transition sequence is a set of values  $\widetilde T\left(l_i^j\right)=\left\{\widetilde T\left(l_i^i\right)\right\}_i^j$ . Lastly, to simplify analysis, we define a function  $\widetilde F{\in}\{\widetilde T,\widetilde R\}$. We also recall  $m_k=<S_k,A_k,T_k,R_k,\widetilde T_k,\widetilde R_k,\pi _k>?$.
+
+\subsection{4.2.1 Preliminary Deconstruction and Reconstruction }
+
+\bigskip
+
+The goal is to describe a deconstruction  $d_x^{\mathit{yz}}$ and reconstruction  $c_{\mathit{yz}}^x$ function, which maintain all of the properties outlined in sections 3.0. This section begins by using the CMDP via a gating function and regression is discussed.
+
+\subsubsection{4.2.1.1 Decision Making and Gating}
+
+\bigskip
+
+Before this, however, it is prudent to consider how a behaviour policy  $\pi _x$ can be mapped from a degenerate behaviour policy set  $\left\{\pi _y,\pi _z\right\}$. Simply, we allow for definition of a surjective confidence function  $g_x:S\times \pi _y(S)\times \pi _z(S)\rightarrow R^{+?}$. Where, typically,  $\pi _x\left(s,a\right)=\underset a{\mathit{argmax}}g_x\left(s,\pi _y\left(s\right),\pi _z(s)\right)$. It seems obvious at this point to formulate this gating function as the result of a reinforcement learning mechanism.
+
+\subsubsection{4.2.1.2 Na\"ive Deconstruction and Reconstruction}
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{m{15.493cm}m{0.996cm}}
+{\centering  $d_x^{\mathit{yz}}:m_x\rightarrow \left\{m_y,m_z\vee S_y\times S_z=S_x,A_y{\cup}A_z=A_x,\widetilde c_{\mathit{yz}}^x\left(\widetilde d_x^{\mathit{yz}}\left(\widetilde F\right)\right)=\left(\widetilde F\right)\right\}$\par}
+
+\centering  $c_x^{\mathit{yz}}:\left\{m_y,\right\}\rightarrow \left\{m_x\vee S_y\times S_z=S_x,A_y{\cup}A_z=A_x,\widetilde c_{\mathit{yz}}^x\left(\widetilde d_x^{\mathit{yz}}\left(\widetilde F\right)\right)=\left(\widetilde F\right)\right\}$ &
+\centering\arraybslash (\stepcounter{Equation}{\theEquation})\\
+\end{supertabular}
+\end{flushleft}
+Thus, splitting and merging are invertible processes. Importantly, the character and performance of any chosen reconstruction sets \  $\left\{d_x^{\mathit{yz}},c_{\mathit{yz}}^x\right\}$ are not implied by usage of the functions. It can be illuminating to define some entry level deconstruction set implementations for an nMDP:
+
+\subsubsection{4.2.1.2.1 Example Na\"ive Deconstruction}
+\ \ A deconstruction implementation is provided:  $d_x^{\mathit{yz}}$. \ It is direct to see that this implementation of  $d_x^{\mathit{yz}}$ satisfies the axioms given in section 3.0.
+
+\begin{itemize}
+\item State
+\end{itemize}
+A set of degenerate state spaces  $\{S_y,S_z\}$ can be defined using principle component analysis on a parent state space  $S_x$ , being careful to include all dimensions from  $S_x$ in either  $S_y$ or  $S_z$.
+
+\begin{itemize}
+\item Action
+\end{itemize}
+The action set  $\{A_y,A_z\}$ can each be formed using a random selection of actions from  $A_z$. If \ actions are missing, \ (  $\left\{A_y{\cup}A_z\right\}\{A$ ,) then the missing actions can simply be added,  $A_y\leftarrow A_y{\cup}\left\{A_x\left\{A_y{\cup}A_z\right\}\right\}$.
+
+\begin{itemize}
+\item Transition
+\end{itemize}
+Note:  $P\left(\left\{s_z^',s_y^'\right\}\vee \left\{a_z,a_y\right\},\left\{s_z,s_y\right\}\right)=P\left(s_x^'\vee a_x,s_x\right)$
+
+The parent transition function  $\widetilde T_x$ can be projected onto subspaces  $\widetilde T_y$ and  $\widetilde T_z$. \ It is direct to note through application of the chain rule that a probability density describing transition can be broken into sub constituent distributions $ $  $P\left(s_x^'\vee a_x,s_x\right)=P\left(s_y^',s_z^'\vee a_x,a_y,s_y,s_z\right)$. Thus, In our current notation this notion can be stated briefly:
+
+\begin{equation}
+\widetilde T_y\left(s_y^'\vee s_y^{},a_y\right)=\sum _{s_z^'}^{}\sum _{a_z}^{}\sum _{s_z}^{}\widetilde T_x\left(\left\{s_y^',s_z^'\right\}\vee \left\{s_y^{},s_z^{}\right\},\left\{a_y,a_z\right\}\right)\frac{\pi _x\left(a_y,a_z\vee s_y,s_z\right)}{\sum _{a_z^'}^{}\pi _x\left(a_y,a_z^'\vee s_y,s_z\right)}
+\end{equation}
+\ \ It is worth noting that if we split the MDPs according to section 3.0, specifically such that one MDP is the parent and the other is the child, then we can reuse the Convergent Factors Lemma(appendix). Specifically the transition functions simplify: 
+
+For the child,  $z$, the parent will always hold its action  $a_z$ constant, rendering its behavioural policy irrelevant for the purposes of projecting transitional probability. 
+
+\begin{equation}
+\widetilde T_z\left(s_z^'\vee s_z^{},a_z,a_y\right)\leftarrow \sum _{s_z^'}^{}\widetilde T_x\left(\left\{s_y^',s_z^'\right\}\vee \left\{s_y^{},s_z^{}\right\},\left\{a_z\right\},a_y\right)
+\end{equation}
+For the parent,  $y$, the transition model must take into account a sequence of actions undertaken 
+
+\begin{equation}
+\widetilde T_y\left(s_y^'\vee s_y^{},a_y\right)=\sum _{s_z^'}^{}\sum _{a_z}^{}\widetilde T_x\left(\left\{s_y^',s_z^'\right\}\vee \left\{s_y^{},s_z^{}\right\},\left\{a_y,a_z\right\}\right)\pi _z\left(a_z\vee s_z\right)
+\end{equation}
+
+
+\begin{itemize}
+\item Reward
+\end{itemize}
+
+\bigskip
+
+\begin{itemize}
+\item Policy
+\end{itemize}
+It becomes apparent that the degenerate policy \  $\pi _y\left(a_y\vee s_y\right)$ is unknown, and needs to be inferred from the complete policy  $\pi _x\left(a_x\vee s_x\right)$. Briefly a direct mapping can be considered which is a projection of  $\pi _x\left({\bullet}\right)$ onto  $\pi _y\left({\bullet}\right)$, where  $\sigma $ is a normalization constant:
+
+\begin{equation}
+\pi _x\left(a_y\vee s_y\right)=\sigma \sum _{s_z^'}^{}\sum _{s_z}^{}\sum _{a_z}^{}\widetilde T_x\left(\left\{s_y^',s_z^'\right\}\vee \left\{s_y^{},s_z^{}\right\},\left\{a_y,a_z\right\}\right)\pi _x\left(\left\{s_y^{},s_z^{}\right\}\vee \left\{s_y^{},s_z^{}\right\}\right)
+\end{equation}
+In essence, the degenerate policy image  $\pi _x\left(A_y\vee S_y\right)$ becomes the expectation of the parent policy  $\pi _x\left(A_x\vee A_x\right)$ weighted by the transitional expectation, and this can be taken as the \  $\pi _y\left(a_y\vee s_y\right)=\pi _x\left(a_y\vee s_y\right)$.
+
+After policy is initialized, the behavioural policy can be updated using Q-Learning or any other mechanism.
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{m{15.493cm}m{0.996cm}}
+\subsubsection{4.2.1.2.1 Example Na\"ive Reconstruction}
+\ \ A reconstruction implementation is provided:  $c_x^{\mathit{yz}}$. \ It is direct to see that this implementation of  $c_x^{\mathit{yz}}$ satisfies the axioms given in section 3.0.
+
+Similar to deconstruction, reconstruction steps can be expressed direction as a mapping of  $\left\langle S,A,T,R\right\rangle $ tuples:
+
+\begin{itemize}
+\item State
+\item  $S_x=S_y\times S_z$
+\item Action
+\item  $A_x=A_y{\cup}A_z$
+\item Transitional probability
+\item Knowing  $s_x^'=\left\{s_y^',s_z^'\right\}$
+\item  $\widetilde T_x\left(\left\{s_y^',s_z^'\right\}\vee \left\{s_y^{},s_z^{}\right\},a_x\right)=\widetilde T_y\left(s_y^'\vee s_y^{},a_x\right)\widetilde T_z\left(s_z^'\vee s_z^{},a_x\right)$
+\item Reward
+\item ~
+
+\item Policy
+\item ~
+
+\end{itemize}
+ &
+\centering\arraybslash (\stepcounter{Equation}{\theEquation})\\
+\end{supertabular}
+\end{flushleft}
+\subsubsection{4.2.1.3 Concurrency and re-mapping}
+Given the state space savings given by a degenerate formulation, it may be desired to only represent nMDPs in their degenerate formats. Thus, in general,
+
+
+\bigskip
+
+\subsection{4.2.1 Compensation for temporal scale difference}
+(page 88)
+
+\subsection{4.2.2 Compensation for action space factorization}
+
+\bigskip
+
+\subsection{4.2.3 Compensation for action space factorization}
+
+\bigskip
+
+\section{}
+\section{4 Simulation}
+\subsection{Experiment Two}
+\section{Results}
+\section{Conclusion}
+\section{References}
+\section{Appendix: Convergent Factors Lemma}
+Note
+
+The set of optimal policies \  $\Omega _{}^{\ast }\left(i,j\right)$ can be expressed as a union of two independent policies,  $\left(\Omega _u^{\ast }\left(j\right),\Omega _l^{\ast }\left(i\vee j\right)\right),$ \ for problems in the presented CMDP's class. For this proof,  $i$ and  $j$ are taken to be two subspaces  $S_I,S_J$ within a parent state space  $S$, such that a bijective function exists,  $f_s,:S_I\times S_J\rightarrow \mathit{S.}$ We assume separable actions for with another bijective map,  $f_a:A_I\times A_J\rightarrow A$. It's worth noting that in practicality, transformations such as affine projections and arbitrary component projections, can be considered. To begin we can consider the set of all optimal actions that maximize expected future discounted reward.
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{m{15.493cm}m{0.996cm}}
+\begin{equation}
+\Omega _{}^{\ast }(a)=\underset a{\mathit{argmax}}\sum _{s'{\in}S}^{}P\left(s'\vee s,a\right)\left(R\left(s,a,s'\right)+\mathit{\gamma V}\left(s'\right)\right)
+\end{equation}
+~
+ &
+~
+\\
+\end{supertabular}
+\end{flushleft}
+The argument is that there exists a mapping from two optimal sub policies onto this policy. 
+
+\begin{equation}
+f:\Omega _u^{\ast }\left(S_u\right)\times \Omega _l^{\ast }\left(S_l\right)\rightarrow \widetilde{\Omega }_{}^{\ast }\left(S_{}\right):\widetilde{\Omega }_{}^{\ast }\left(S_{}\right){\subseteq}\Omega _{}^{\ast }\left(S_{}\right)
+\end{equation}
+
+\bigskip
+
+For the following analysis, consultation of a visual grid can be beneficial. To simplify notation,  $\left(i,j\right)$ is taken to equal  $\mathit{ij}$, and actions  $\left(a_u,a_l\right)=a_{\mathit{ul}}$.
+
+
+\bigskip
+
+\begin{equation}
+\Omega _{}^{\ast }(i,j)=\underset{\left(a_u,a_l\right)}{\mathit{argmax}}\sum _{\left(i',j'\right){\in}S}^{}P\left(i'j'\vee \mathit{ij},a_{\mathit{ul}}\right)\left(R\left(\mathit{ij},a_{\mathit{ul}},i'j'\right)+\mathit{\gamma V}\left(i'j'\right)\right)
+\end{equation}
+knowing  $\underset{\left(a_u,a_l\right)}{\mathit{max}}R\left(\left(i,j\right),\left(a_u,a_l\right),\left(i',j'\right)\right)=\underset{\left(a_u,a_l\right)}{\mathit{max}}R\left(\left(i,j'\right),\left(a_u,a_l\right),\left(i',j'\right)\right)$ allows the expression to be altered with  $j'$, using the exchange lemma.
+
+\begin{equation}
+\Omega _{}^{\ast }(\left(i,j\right))=\underset{\left(a_u,a_l\right)}{\mathit{argmax}}\sum _{\left(i',j'\right){\in}S}^{}P\left(\left(i',j'\right)\vee \left(i,j\right),\left(a_u,a_l\right)\right)\left(R\left(\left(i,j'\right),\left(a_u,a_l\right),\left(i',j'\right)\right)+\mathit{\gamma V}\left(\left(i',j'\right)\right)\right)
+\end{equation}
+
+\bigskip
+
+It then becomes clear that the reward dependency can be expressed in terms of \  $R_l$ only:
+
+\begin{equation}
+\Omega _{}^{\ast }(\left(i,j\right))=\underset{\left(a_u,a_l\right)}{\mathit{argmax}}\sum _{\left(i',j'\right){\in}S}^{}P\left(\left(i',j'\right)\vee \left(i,j\right),\left(a_u,a_l\right)\right)\left(R_l\left(j^'\vee a_l,i',j\right)+\mathit{\gamma V}\left(\left(i',j'\right)\right)\right)
+\end{equation}
+At this point, it is possible to note that the Transition function may be decomposed  $P\left(\left(i',j'\right)\vee \left(i,j\right),\left(a_u,a_l\right)\right)=P\left(i'\vee a_l,i\right)P\left(j'\vee a_u,j\right)$. 
+
+\begin{equation}
+\Omega _{}^{\ast }(\left(i,j\right))=\underset{\left(a_u,a_l\right)}{\mathit{argmax}}\sum _{\left(i',j'\right){\in}S}^{}P\left(i'\vee a_l,i\right)P\left(j'\vee a_u,j\right)\left(R_l\left(j^'\vee a_l,i',j\right)+\mathit{\gamma V}\left(\left(i',j'\right)\right)\right)
+\end{equation}
+Leading to a summation decomposition:
+
+\begin{equation}
+\Omega _{}^{\ast }(\left(i,j\right))=\underset{\left(a_u,a_l\right)}{\mathit{argmax}}\sum _{i'{\in}S}^{}P\left(i'\vee a_u,i\right)\left[\sum _{j'{\in}S}^{}P\left(i'\vee a_l,i\right)\left(R_l\left(j^'\vee a_l,i',j\right)+\mathit{\gamma V}\left(\left(i',j'\right)\right)\right)\right]
+\end{equation}
+
+\bigskip
+
+It is also possible to take the difference between two reward functions, differentiated by  $i$ and  $i${}', to achieve a favourable formulation. This addition is possible because our formulation is considering an optimal action,  $\left(a_u,a_l\right)$.
+
+\begin{equation}
+\Omega _{}^{\ast }\left(i,j\right)=\underset{\left(a_u,a_l\right)}{\mathit{argmax}}\sum _{i'{\in}S}^{}P\left(j'\vee a_u,j\right)\left[\sum _{j'{\in}S}^{}P\left(i'\vee a_l,i\right)\left(R_l\left(j^'\vee a_l,i',j\right)-R_l\left(j'^{}\vee a_l,i,j\right)+\mathit{\gamma V}\left(i',j'\right)-\mathit{\gamma V}\left(i',j\right)\right)\right]
+\end{equation}
+And, an optimal decision policy can be substituted in for action selection  $\Omega _{}^{\ast }\left(j\left|i\right.\right)=\underset{a_l}{\mathit{argmax}}\sum _{j'{\in}S}^{}P\left(j'\vee a_l,j\right)\left(R\left(j,a_l,j^'\vee i\right)+\mathit{\gamma V}\left(j^'\vee i\right)\right)$.
+
+\begin{equation}
+\Omega _{}^{\ast }\left(i,j\right)=\underset{\left(a_u,a_l\right)}{\mathit{argmax}}\sum _{i'{\in}S}^{}P\left(i'\vee a_u,i\right)\left[\sum _{j'{\in}S}^{}P\left(j'\vee \Omega _{}^{\ast }\left(j\left|i\right.\right),j\right)\left(R_l\left(j^'\vee \Omega _{}^{\ast }\left(j\left|i\right.\right),i',j\right)-R_l\left(j^{}\vee \Omega _{}^{\ast }\left(j\left|i\right.\right),i,j'\right)+\mathit{\gamma V}\left(i',j'\right)-\mathit{\gamma V}\left(i',j\right)\right)\right]
+\end{equation}
+The formulation can now be radically generalized.
+
+\begin{equation}
+\Omega _{}^{\ast }\left(i,j\right)=\underset{\left(a_u,a_l\right)}{\mathit{argmax}}\sum _{i'{\in}S}^{}P\left(i'\vee a_u,i\right)\left[R_u\left(i^'\vee a_u,j,i\right)+\mathit{\gamma V}\left(i'\right)\right]\mathit{if}a_u{\in}\Omega _l^{\ast }\left(j\vee i\right)
+\end{equation}
+
+\bigskip
+
+From here it is direct to union the row selection policy:
+
+\begin{equation}
+\Omega _{}^{\ast }\left(i,j\right)=\underset{a_l}{\mathit{argmax}}\left[\sum _{i'{\in}S}^{}P\left(i'\vee a_u,i\right)\left[R_u\left(i^'\vee a_u,i\right)+\mathit{\gamma V}\left(i'\right)\right]\right]{\cup}\left[\Omega _l^{\ast }\left(j\vee i\right)\right]\mathit{if}a_u{\in}\Omega _l^{\ast }\left(j\vee i\right)
+\end{equation}
+And substitute a definition only dependent on independent policies.
+
+\begin{equation}
+\Omega _{}^{\ast }\left(i,j\right)=\Omega _u^{\ast }\left(i\right){\cup}\Omega _l^{\ast }\left(j\vee i\right)
+\end{equation}
+And, it follows directly that a specific and optimal global policy can be expressed as every combination of optimal CMDP policies. 
+
+\begin{equation}
+\pi _{}^{\ast }\left(i,j\right)=\pi _u^{\ast }\left(i\right){\cup}\pi _l^{\ast }\left(j\vee i\right)
+\end{equation}
+We also know that execution of the regular action policies will converge on these optimal policies.
+
+\begin{equation}
+\pi _{}^{}\left(i,j\right)=\pi _u^{}\left(i\right){\cup}\pi _l^{}\left(j\vee i\right)
+\end{equation}
+
+\bigskip
+
+
+\bigskip
+\end{document}
