@@ -1,4 +1,54 @@
-\documentclass[]{article}
+%% bare_jrnl_compsoc.tex
+%% V1.4b
+%% 2015/08/26
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.8b or later) with an IEEE
+%% Computer Society journal paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/pkg/ieeetran
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall the IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%*************************************************************************
+
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. The IEEE's font choices and paper sizes can   ***
+% *** trigger bugs that do not appear when using other class files.       ***                          ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+\documentclass[compsoc,journal,letterpaper,10pt,draftclsnofoot,onecolumn]{IEEEtran}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -12,16 +62,7 @@
   \else
     \usepackage{fontspec}
   \fi
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \fi
-% use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-% use microtype if available
-\IfFileExists{microtype.sty}{%
-\usepackage[]{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
 \usepackage[unicode=true]{hyperref}
 \hypersetup{
             pdfborder={0 0 0},
@@ -64,13 +105,21 @@
 \def\fps@figure{htbp}
 \makeatother
 
+%%%%%
+%%%%%                                         Our definitions
+%%%%%
 
-\date{}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+%%%%%
+%%%%%
+%%%%%
+
+\date{\today}
 
 \begin{document}
 
-\section{Abstract}\label{abstract}
-
+\begin{abstract}
 Optimal behaviour policies for non-degenerate Markov Decision Processes
 (nMDPs) can be intractable to find, when state space size is
 prohibitive. In this paper, a theoretical method of deconstruction nMDPs
@@ -88,6 +137,7 @@ statistically significant behaviour policies in terms of reward
 maximization, despite the fact that the degenerate CMDP required
 exponentially less state space to specify (pairwise p-value \textless{}
 X.XXXX ).
+\end{abstract}
 
 \section{Introduction}\label{introduction}
 
@@ -152,94 +202,92 @@ Processes:}\label{defintions-concurrent-markov-decision-processes}
 To begin MDP problem definition, we broadly consider the task of finding
 the optimal location in a discrete state space in
 \(S = \mathbb{N}^{N}\), using the maximum value function
-\(V:S\mathbb{\rightarrow \ R\ }\). To ensure the space \(S\) has an
+\(V:S\rightarrow\mathbb{R}\). To ensure the space \(S\) has an
 optimal element it is assumed that a certain rearrangement of the value
 image \(V\left( S \right)\) monotonic.
 
 Thus, to discover a solution to the problem, the help of an agent may be
-elicited, who has allowed actions in a set \(A\mathbb{\subset N}\), for
-every instant \(t\  \in \mathbf{T}\mathbb{\  \subset N}\). The
+elicited, who has allowed actions in a set \(A \subset \mathbb{N}\), for
+every instant \(t \in \mathbf{T}\subset\mathbb{N}\). The
 convention that an agent chooses an action \(a_{t} \in A\) for every
 state \(s_{t} \in S\), before arriving in state \(s_{t + 1} \in S\) is
-followed. The probability \(T\left( s_{t + 1} \right|s_{t},a_{t})\)
+followed. The probability \(T\left( s_{t + 1} |s_{t}, a_{t}\right)\)
 represents the true and observed transitional probability of the system,
 also described as the dynamics of the environment, which are assumed to
 be stably stochastic, unless started otherwise. The epoch \(E_{e}\)is a
 set of contiguous time indexes, with restrictions:
-\(e_{i}\mathbb{\in N,}\bigcup_{e = 1}^{\mathbb{N}}E_{e} = \mathbf{T}\),and
-\(\bigcup_{e_{1},e_{2}\mathbb{\in N}}^{\ }{E_{e_{1}} \cap E_{e_{2}}} = \{\varnothing\}\).
+\(e_{i}\in\mathbb{N}\), \(\bigcup_{e = 1}^{\mathbb{N}}E_{e} = \mathbf{T}\), and
+\(\bigcup_{e_{1},e_{2}\in\mathbb{ N}}{E_{e_{1}} \cap E_{e_{2}}} = \{\varnothing\}\).
 We assume the size of the epochs increase
-\(\left| e_{i} \right| < \left| e_{(i + 1)} \right|\ \), meaning that
+\(\left| e_{i} \right| < \left| e_{(i + 1)} \right|\), meaning that
 over time more time instants are contained within each. It is assumed
 that some discoverable infinite horizon reward exists
-\(R\left( s_{t},a_{t},s_{t + 1} \right)\) such that agents may attempt
+\(R\left( s_{t}, a_{t}, s_{t + 1} \right)\) such that agents may attempt
 to ``maximize'' the value given by the trajectory, where the value of a
 state is given by \(V\left( S \right).\)
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(V\left( s_{t} \right) = \sum_{s_{t + 1} \in S\ }^{\ }{P\left( s_{t + 1}|s_{t},a_{t} \right)\left( R\left( s_{t},a_{t},s_{t + 1} \right) + \gamma V\left( s_{t + 1} \right) \right)}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+V\left( s_{t} \right) = \sum_{s_{t + 1} \in S\ }{P\left( s_{t + 1}|s_{t},a_{t} \right)\left( R\left( s_{t},a_{t},s_{t + 1} \right) + \gamma V\left( s_{t + 1} \right) \right)}
+\end{equation}
 
 The goal is to (a) explore and map the quality
 \(Q_{t}:S \times A\mathbb{\rightarrow R}\) for the space, such that (b)
-a behavioural policy \(a_{t} = \pi_{t}(s_{t},a_{t})\) is partly
+a behavioural policy \(a_{t} = \pi_{t}(s_{t}, a_{t})\) is partly
 characterized by the \(Q_{t}\) values of the state. Commonly, the naive
-optimal policy is given by \(\pi_{\ }^{*}\):
+optimal policy is given by \(\pi^{*}\):
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\pi_{\ }^{*}\left( s_{t} \right) \leftarrow \arg{Q_{t}(s_{t},a)}\) &
-()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+\pi^{*}\left( s_{t} \right) \leftarrow \argmax_{a}{Q_{t}(s_{t},a)} 
+\end{equation}
 
 The above MDP definition is frequently expressed as a tuple:
-\(m_{k} = < S_{k},A_{k},T_{k},R_{k},\pi_{k} >\), where the initial posed
+\(m_{k} = \langle S_{k}, A_{k}, T_{k}, R_{k}, \pi_{k} \rangle\), where the initial posed
 nMDP problem is noted as
-\(m_{\ } = < S_{\ },A_{\ },T_{\ },R_{\ },\pi_{\ } >\). The time index
+\(m = \langle S, A, T, R,\pi \rangle \). The time index
 \(t\), may sometimes be replaced with an epoch index \(e\), in
-situations that an MDP \(m_{i}\ \)operates on a different discrete
+situations that an MDP \(m_{i}\)operates on a different discrete
 timescale than another MDP \(m_{j}\).
 
 \subsubsection{Random Field Deconstruction
 Example:}\label{random-field-deconstruction-example}
 
-\includegraphics[width=2.68750in,height=2.80556in]{media/image1.png}The
+\begin{figure}
+\includegraphics[width=2.68750in,height=2.80556in]{media/image1.png}\\
+\caption{\label{fig:figure1}The nMDP with transitions from \((i,j)\)only.}
+\end{figure}
+
+The
 problem of the random field with real values can be considered,
 \(r:X^{N} \rightarrow \mathbb{R}^{+}\ \ ,\ X\mathbb{\subset N}\), which
 we assume is well-ordered and monotonic. For brevity, we consider
 \(N = 2\) as a visual example.
 
 \paragraph{An nMDP definition can be
-described:}\label{an-nmdp-definition-can-be-described}
+described}\label{an-nmdp-definition-can-be-described}
 
 \begin{itemize}
 \item
-  \(S\  = X^{N}\) is the set of all possible states
+  \(S = X^{N}\) is the set of all possible states
 \item
-  \(A = A_{u} \times A_{l}\ \)s.t.
-  \(\text{\ \ }A_{u},A_{l} = \left\{ - 1,1,\varnothing \right\}\)
+  \(A = A_{u} \times A_{l} \) \ s.t.\  \ 
+  \( A_{u}, A_{l} = \left\{ - 1,1,\varnothing \right\}\)
 
   \begin{itemize}
   \item
-    with \(a_{u} \in A_{u},a_{l} \in A_{l}\)
+    with \(a_{u} \in A_{u}, a_{l} \in A_{l}\)
   \end{itemize}
 \item
-  \(R\left( s_{t + 1}|s_{t},a_{t} \right) = r\left( l + a_{l},u + a_{u} \right) - r(l,u)\)
+  \(R\left( s_{t + 1}|s_{t}, a_{t} \right) = r\left( l + a_{l}, u + a_{u} \right) - r(l,u)\)
 \item
   \(T\left( \left\{ l + a_{l},u + a_{u} \right\}|,\{ a_{l},a_{u}\},\{ l,u\} \right) = 1\),
   \(0\) otherwise
 
   In terms of notation the following equalities are always true:
-  \(s_{t + 1} = \{ i + a_{u},j + a_{l}\}\),\(a_{t} = \{ a_{u},a_{l}\}\)
-  , and\(\ s_{t} = \{ i,j\}\).
+  \(s_{t + 1} = \{ i + a_{u}, j + a_{l}\}\), \(a_{t} = \{ a_{u},a_{l}\}\), and\(\ s_{t} = \{ i,j\}\).
 \end{itemize}
 
 Thus, the problem for a reinforcement learning agent may be to localize
-and converge upon an optimal space \(s_{t}\) such that \(r(s_{t})\ \)is
+and converge upon an optimal space \(s_{t}\) such that \(r(s_{t})\) is
 maximized. The agent can, without fail, move in any combination of
 ``up'', ``left'', ''down'', ''right'', and ``nothing'' to localize the
 best location. A discount reward and infinite time horizon are
@@ -251,25 +299,29 @@ Colloquially, an agent can solve a degenerate CMDP problem of locating
 the best column and row independently.
 
 \subsubsection[An CMDP definition can be
-described:]{\texorpdfstring{\protect\includegraphics[width=3.20833in,height=2.40000in]{media/image3.png}An
-CMDP definition can be
-described:}{An CMDP definition can be described:}}\label{an-cmdp-definition-can-be-described}
+described]{ An CMDP definition can be described}\label{an-cmdp-definition-can-be-described}
+
+\begin{figure}
+\includegraphics{media/image3.png}\\
+\includegraphics{media/image4.png}\\
+\caption{\label{fig:figure2} Parent (a) and child (b) within the CMDP.}
+\end{figure}
 
 First, a \emph{child} dependent MDP is defined
 
 \begin{itemize}
 \item
-  \(S_{l}\  = X^{1},\ j\)
+  \(S_{l}  = X^{1}, j\)
 \item
   \(A_{l}\)
 \item
-  \(R_{l}\left( l + a_{l}|a_{l},l,u \right) = r\left( l + a_{l},u \right) - r(l,u)\)
+  \(R_{l}\left( l + a_{l}|a_{l},l,u \right) = r\left( l + a_{l}, u \right) - r(l,u)\)
 \item
-  \(T_{l}\left( l + a_{l}|,a_{l},l, \right) = 1,\ 0\ \)otherwise
+  \(T_{l}\left( l + a_{l}|a_{l}, l, \right) = 1, 0\) otherwise
 \item
   The sequence index \(t\) is used for the child MDP.
 \item
-  \(M_{l} = \left\langle S_{l},A_{l},T_{l},R_{l} \right\rangle\)
+  \(M_{l} = \left\langle S_{l}, A_{l} ,T_{l}, R_{l} \right\rangle\)
 \end{itemize}
 
 Second, a \emph{parent} dependent MDP is defined
@@ -285,12 +337,12 @@ Second, a \emph{parent} dependent MDP is defined
   \begin{itemize}
   \item
     Noting
-    \(R_{u}\left( s_{u,e + 1}|a_{u,e},s_{u,e},E_{e} \right) = \sum_{t \in E_{e}}^{\ }\frac{R_{l}\left( s_{l,t + 1}|a_{l,t},s_{l,t},s_{u,t} \right)}{\overset{}{E_{e}}} - \sum_{t \in E_{e}^{o}}^{\ }\frac{R_{l}\left( s_{l,t + 1}|a_{l,t},s_{l,t},s_{u,t} \right)}{\overset{}{E_{e}^{o}}}\)
+    \(R_{u}\left( s_{u,e + 1}|a_{u,e}, s_{u,e}, E_{e} \right) = \sum_{t \in E_{e}}^{\ }\frac{R_{l}\left( s_{l,t + 1}|a_{l,t}, s_{l,t}, s_{u,t} \right)}{\overline{\overline E}_{e}} - \sum_{t \in E_{e}^{o}}^{\ }\frac{R_{l}\left( s_{l,t + 1}|a_{l,t},s_{l,t},s_{u,t} \right)}{\overline{\overline E}_{e}^{o}}\)
   \end{itemize}
 \item
-  \(T_{u}\left( u + a_{u}|,a_{u},u \right) = 1,\ 0\ \)otherwise
+  \(T_{u}\left( u + a_{u}|a_{u}, u \right) = 1,\ 0\) otherwise
 \item
-  \(M_{u} = \left\langle S_{u},A_{u},T_{u},R_{u} \right\rangle\)
+  \(M_{u} = \left\langle S_{u}, A_{u}, T_{u}, R_{u} \right\rangle\)
 \item
 \item
   The sequence index \(e\) is used for the parent MDP.
@@ -300,10 +352,15 @@ For notation, the equalities are always true:
 \(s_{x,t + 1} = x + a_{x}\), \(a_{x,t} = a_{x}\) ,
 and\(s_{x,t} = x\),\(a_{x,t}\), where \(x \in \{ l,u\}\), where a time
 index \(t\) is substituted with and epoch \(e\) for the parent MDP. The
-notation \(\overset{}{E_{e}}\) represents the cardinality of an epoch,
+notation \(\overline{\overline E}_{e}\) represents the cardinality of an epoch,
 and is variable in \(\mathbf{T}\).
 
-\includegraphics[width=3.20833in,height=1.70208in]{media/image3.png}Thus,
+\begin{figure}
+\includegraphics[width=3.20833in,height=1.70208in]{media/image3.png}\\
+\caption{\label{fig:figure3}Block diagram of a CMDP.}
+\end{figure}
+
+Thus,
 as mentioned in prior {[}{]},two MDPs can form an interdependent set,
 such that the action \(a_{e}\) of the \emph{parent} MDP describes
 reachable state space of a \emph{child} MDP, though restricting state
@@ -326,17 +383,12 @@ function and transitions probabilities \(T\), and \(R\) must be stably
 stochastic.
 
 A rudimentary action selection model \(\pi_{t}\ \)can involve sampling
-the density function:
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\pi_{\ }\left( s \right)\ \sim\ \pi_{\ }\left( s,a \right) = \frac{e^{Q_{t - 1}(s,a)}}{\sum_{b \in A}^{\ }e^{Q_{t - 1}(s,b)}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
-
+the density function
+\begin{equation}
+\pi\left( s \right) \sim \left( s, a \right) = \frac{e^{Q_{t - 1}(s, a)}}{\sum_{b \in A}e^{Q_{t - 1}(s, b)}}
+\end{equation}
 Which can be shown to converge readily for an nMDP which satisfies the
-three above conditions{[}{]}.
+three above conditions {[}{]}.
 
 \subsubsection{Convergence}\label{convergence}
 
@@ -353,13 +405,12 @@ policy}\label{child-mdp-convergence-on-optimal-policy}
 
 For the child MDP, it is clear that the epoch \(e \rightarrow \infty\)
 duration increases as \(t \rightarrow \infty\). Thus we have:
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\operatorname{}\overset{}{E_{e}} = \infty\) and
-\(\pi_{l}\left( s_{l},a_{l} \right) > 0\) & ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{align}
+\lim_{e\rightarrow\infty}
+\overline{\overline{E}}_{e} &= \infty \notag\\ 
+\textrm{and}\qquad
+\pi_{l}\left( s_{l}, a_{l} \right) &> 0
+\end{align} 
 
 We also know that, given all epoch \(e\),
 \(\pi_{u}\left( s_{u},a_{u} \right) > 0\). Thus, all states are
@@ -367,7 +418,7 @@ reachable and infinite visitations at time infinity are assured. For a
 sub space \(S_{l}\), for the child MDP, we note that the Q-Values
 \(Q_{t}(s_{l},a_{l})\) will be reset to initialized values upon
 transition to every new epoch \(e_{i + 1} \neq e_{i}\); in this case,
-since \(\overset{}{E_{e}} \rightarrow \ \infty\), we are assured that
+since \(\overline{\overline E}_{e} \rightarrow \infty\), we are assured that
 policy convergence is possible. The practical problem of resetting the
 Q-Values in a non-optimal way is addressed in the implementation
 section, but in the worst case, (with resetting values,) eventual
@@ -393,48 +444,29 @@ weak conditions, outlined below, such convergence can be shown readily.
 Specifically we wish to map the set two sub optimal policies onto an
 optimal nMDP policy:
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(f:\Omega_{u}^{*}\left( S_{u} \right) \times \Omega_{l}^{*}\left( S_{l} \right) \rightarrow \ {\tilde{\Omega}}_{\ }^{*}\left( S_{\ } \right):{\tilde{\Omega}}_{\ }^{*}\left( S_{\ } \right) \subseteq \Omega_{\ }^{*}\left( S_{\ } \right)\ \)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+f:\Omega_{u}^{*}\left( S_{u} \right) \times \Omega_{l}^{*}\left( S_{l} \right) \rightarrow \ {\tilde{\Omega}}^{*}\left( S \right):{\tilde{\Omega}}^{*}\left( S \right) \subseteq \Omega^{*}\left( S \right)
+\end{equation}
+ 
 
 For the above MDP problem, it can be readily demonstrated that such a
 mapping function \(f\) can be found, given the above CMDP problem.
 Specifically we must consider the nature of optimal policy for both the
 parent and child MDPs. We begin with the definition of an optimal value
 given a state \(s\):
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\Omega_{\ }^{*}(s) = \ \operatorname{}{\sum_{s' \in S\ }^{\ }{P\left( s'|s,a \right)\left( R\left( s,a,s' \right) + \gamma V\left( s' \right) \right)}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}\strut
-\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
-
+\begin{equation}
+\Omega^{*}(s) = \argmax_{a}\sum_{s' \in S}P\left( s'|s,a \right)\left( R\left( s, a, s' \right) + \gamma V\left( s' \right) \right)
+\end{equation}
 And, it follows directly that a specific and optimal global policy can
 be expressed as every combination of optimal CMDP policies,
-\(\pi_{\ }^{*}\left( s \right) = \pi_{u}^{*}\left( s \right) \cup \pi_{l}^{*}\left( s \right)\).
+\(\pi^{*}\left( s \right) = \pi_{u}^{*}\left( s \right) \cup \pi_{l}^{*}\left( s \right)\).
 For details on this detailed derivation, please see Convergent Factors
 Lemma in the as the appendix. We also, then, know that execution of the
 regular action policies will lead the Q-values to converge on these
 optimal policies.
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\pi_{\ }^{\ }\left( s \right) = \left\{ \pi_{u}^{\ }\left( s \right),\pi_{l}^{\ }\left( s \right) \right\}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+\pi\left( s \right) = \left\{ \pi_{u}\left( s \right),\pi_{l}\left( s \right) \right\}
+\end{equation}
 
 This technique can factor exponentially large state space problems into
 polynomial space, rendering intractable problems as tractable. With the
@@ -444,7 +476,7 @@ optimized, trading off storage space for convergence speed.
 \subsubsection{Simulation}\label{simulation}
 
 For simulation, we tackle the elementary two dimensional
-\(S\  = X^{2}\), where \(X = \{ 1,2,\ldots,100\}\). Each cell is
+\(S = X^{2}\), where \(X = \{ 1,2,\ldots,100\}\). Each cell is
 assigned a valued
 \(V\left( s \in S \right) \in \left\{ 1,\ldots,1000 \right\}\). We
 contrast a nMDP approach, and its convergence time, with two CMDP
@@ -495,7 +527,7 @@ from a single
 \subsubsection{Task Allocation MDP:}\label{task-allocation-mdp}
 
 Team progress toward a goal can be defined as a
-\(< S_{T},A_{T},T_{T},R_{T} >\) tuple, where\(S_{T} \subset S_{U}\) ,
+\( \langle S_{T}, A_{T}, T_{T}, R_{T} \rangle \) tuple, where\(S_{T} \subset S_{U}\) ,
 
 \begin{itemize}
 \item
@@ -506,7 +538,7 @@ Team progress toward a goal can be defined as a
   \(A_{T}\) denotes a discrete set of actions, i.e., a function that
   assigns all available tasks to available agents.
 \item
-  \(T_{T}\left( s_{T},a_{T},s_{T}^{'} \right)\) denotes a stable
+  \(T_{T}\left( s_{T}, a_{T}, s_{T}^{'} \right)\) denotes a stable
   transition model, i.e., the probability of executing action \(a_{T}\)
   starting from state \(s_{T}\) and ending up in state \(s_{T}^{'}\).
   The transition function is completely specified by the individual
@@ -514,10 +546,10 @@ Team progress toward a goal can be defined as a
 \end{itemize}
 
 \subsubsection{Individual Performance
-MDP:}\label{individual-performance-mdp}
+MDP}\label{individual-performance-mdp}
 
 Individual agent progress toward a sub-task can be defined as a
-\(< S_{I},A_{I},T_{I},R_{I} >\) tuple, \(S_{I} \subset S_{U}\),
+\( \langle S_{I}, A_{I}, T_{I}, R_{I} \rangle \) tuple, \(S_{I} \subset S_{U}\),
 
 \begin{itemize}
 \item
@@ -527,7 +559,7 @@ Individual agent progress toward a sub-task can be defined as a
 \item
   \(A_{I}\) denotes a discrete set of actions.
 \item
-  \(T_{I}\left( s_{I},a_{I},s_{I}^{'} \right)\) denotes a stable
+  \(T_{I}\left( s_{I}, a_{I}, s_{I}^{'} \right)\) denotes a stable
   transition model, i.e., the probability of executing action \(a_{I}\)
   starting from state \(s_{I}\) and ending up in state \(s_{I}^{'}\).
 \item
@@ -536,7 +568,7 @@ Individual agent progress toward a sub-task can be defined as a
   \(s_{I}^{'}\) using action \(a_{I}\).
 \end{itemize}
 
-The evidence value \(e_{\text{IT}}\  \in E_{\text{IT}}\) is defined by
+The evidence value \(e_{\text{IT}} \in E_{\text{IT}}\) is defined by
 the task allocation MDP, such that maximal visitation of all states at
 time infinity is assured. Such a single-agent MDP can be seen as a
 straightforward process for the reinforcement learning.
@@ -553,6 +585,10 @@ in accordiance with section 3.0. In this arrangement, the parent MDP
 will have to try many rows, letting the child MDP visit an increasing
 amount of column states per row, as described in section 3.0.
 
+ 
+\includegraphics{media/figure7.pdf}
+ 
+
 The first alteration that can be made, is to convert the problem into
 multi-agent MDP; the problem is constructed of a parent MDP and a set of
 independent children MDPs. The parent MDP's definition can be expanded
@@ -560,18 +596,18 @@ in the following manner:
 
 \begin{itemize}
 \item
-  \(S_{u}\  = X^{1},X^{n}\)
+  \(S_{u}  = X^{1},X^{n}\)
 \item
-  \(A_{u} = {\{ - 1,0,1\}}^{n}\)
+  \(A_{u} = {\{ - 1, 0, 1\}}^{n}\)
 \item
   \(\text{Transition}\)
 \item
-  \(R_{u}\left( u + a_{u}|a_{u},u,E_{e} \right) = \sum_{i \in \{ 1,\ldots,n\}}^{\ }{R_{u,i}\left( s_{u,e + 1}|a_{u,e},s_{u,e},E_{e} \right)}\)
+  \(R_{u}\left( u + a_{u}|a_{u}, u, E_{e} \right) = \sum_{i \in \{ 1,\ldots,n\}}R_{u,i}\left( s_{u,e + 1}|a_{u,e}, s_{u,e}, E_{e} \right)\)
 
   \begin{itemize}
   \item
     Noting
-    \(R_{u,i}\left( s_{u,e + 1}|a_{u,e},s_{u,e},E_{e} \right) = \sum_{t \in E_{e}}^{\ }\frac{R_{l}\left( s_{l,t + 1}|a_{l,t},s_{l,t},s_{u,t} \right)}{\overset{}{E_{e}}} - \sum_{t \in E_{e}^{o}}^{\ }\frac{R_{l}\left( s_{l,t + 1}|a_{l,t},s_{l,t},s_{u,t} \right)}{\overset{}{E_{e}^{o}}}\)
+    \(R_{u,i}\left( s_{u,e + 1}|a_{u,e}, s_{u,e}, E_{e} \right) = \sum_{t \in E_{e}}^{\ }\frac{R_{l}\left( s_{l, t + 1}|a_{l,t}, s_{l,t}, s_{u,t} \right)}{\overline{\overline E}_{e}} - \sum_{t \in E_{e}^{o}}^{\ }\frac{R_{l}\left( s_{l,t + 1}|a_{l,t}, s_{l,t}, s_{u,t} \right)}{\overline{\overline E}_{e}^{o}}\)
   \end{itemize}
 \end{itemize}
 
@@ -581,6 +617,11 @@ exponential increase in both state space and action space. However, this
 state space expansion is bounded by \(O(\left| X^{n} \right|)\) whereas
 the multi-agent nMDP space space requirements are bounded by
 \(O(\left| X^{n} \right|\left| X^{n} \right|n)\).
+
+ 
+\includegraphics{media/figure8.pdf}
+ 
+
 
 \subsubsection{Convergence}\label{convergence-1}
 
@@ -603,9 +644,13 @@ number of total columns is unlimited. It is natural, at this point, to
 expand the \emph{multi-agent child} MDP into a \emph{complete
 multi-agent child} MDP, by solving a two dimensional row problem:
 
+\includegraphics{media/figure9.pdf}
+ 
 This division of space can be readily generalized to a foraging problem,
 where each layer \(i\) is assigned reward such that reward increases as
 a foraging targets location is nearer:
+
+\includegraphics{media/figure10.pdf}
 
 \subsubsection{}\label{section}
 
@@ -635,7 +680,7 @@ framework.
 Learning}\label{general-reinforcement-learning}
 
 In the following section, the approach to finding a policy for a
-singular MDP, \(M = < S,A,T,R >\), is generalized; instead of relying on
+singular MDP, \(M = \langle S, A, T, R \rangle \), is generalized; instead of relying on
 a human to decide how to structure a CMDP, as described in sections 3.0
 and 3.1, it may be desired that a reinforcement learning mechanism learn
 its own structure. This learning mechanism is inspired by all domans of
@@ -670,45 +715,29 @@ Knowledge}\label{learning-and-usage-of-transitional-knowledge}
 In this section we consider the benefits and drawbacks of modelling the
 regressed Q values directly for a behavioural policy. The classic
 initial approach is to discover \(Q\).
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(Q:S \times A \rightarrow \mathbb{R}^{+}\) & ()\tabularnewline
-\bottomrule
-\end{longtable}
-
+\begin{equation}
+Q:\,S \times A \rightarrow \mathbb{R}^{+}
+\end{equation}
 Such that it is elementary to derive the behavioural policy online:
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\pi^{*}:S \rightarrow A\) & ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+\pi^{*}:S \rightarrow A
+\end{equation}
 
 Where a common policy definition is commonly used in casual
-experimentation, \(\backslash n\pi^{*}(s) = \operatorname{}{Q(s,a)}\).
+experimentation, \(\pi^{*}(s) = \argmax_{a}Q(s,a)\).
 
 The calculation of Q has been traditionally computed online using
 equation (XX), repeated for reference:
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\({Q(s,a)}^{'} \leftarrow Q(s,a) + \ \alpha\left( R\left( s,a,s^{'} \right) - Q\left( s,a \right) + \ \operatorname{}{Q(s^{'},a^{*})} \right)\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+{Q(s,a)}^{'} \leftarrow Q(s,a) + \alpha\left( R\left( s,a,s^{'} \right) - Q\left( s,a \right) + \max_{a^{*}}Q(s^{'},a^{*}) \right)
+\end{equation}
 
 Where the symbol (`) represents a function or variable value at the
 following time step. The procedure of executing Q-Learning (\(Q_{l}\))
 computes the a map,
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(Q_{l}:R(S,A,S) \times T(S,A,S) \rightarrow Q(S,A)\) &
-()\tabularnewline
-\bottomrule
-\end{longtable}
-
+\begin{equation}
+Q_{l}:\,R(S,A,S) \times T(S,A,S) \rightarrow Q(S,A)
+\end{equation}
 , such that neither the complete reward (\(R(S,A,S)\)) or transition
 (\(T(S,A,S)\)) images are kept in memory; the \(\text{QL}\) algorithm
 functions \(\text{online}\). The purpose of this section is to, first,
@@ -719,21 +748,15 @@ learning approximate characterizing functions, for transition
 learning and reward learning, \(T_{l},R_{l}\). Second, this section
 outlines a method to recover Q values from these images anytime, using
 \emph{transitional learning,} \(Q_{\text{tr}}\):
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-\[T_{l}:\tilde{T}\left( S,A,S \right) \times \left\{ \left( s,a,s^{'} \right) \right\} \rightarrow {\tilde{T}}^{'}(S,A,S)\]
-
-\[R_{l}:\tilde{R}\left( S,A,S \right) \times \{(s,a,s^{'})\} \rightarrow {\tilde{R}}^{'}(S,A,S)\]
-
-\[Q_{\text{tr}}:{\tilde{T}(S,A,S)}^{'} \times {\tilde{R}(S,A,S)}^{'} \rightarrow Q^{'}(S,A)\]\strut
-\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-()\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
-
+\begin{align}
+%
+T_{l}:&\,\tilde{T}\left( S,A,S \right) \times \left\{ \left( s,a,s^{'} \right) \right\} \rightarrow {\tilde{T}}^{'}(S,A,S)\notag\\
+%
+R_{l}:&\,\tilde{R}\left( S,A,S \right) \times \{(s,a,s^{'})\} \rightarrow {\tilde{R}}^{'}(S,A,S)\\
+%
+Q_{\text{tr}}:&\,{\tilde{T}(S,A,S)}^{'} \times {\tilde{R}(S,A,S)}^{'} \rightarrow Q^{'}(S,A)\notag
+%
+\end{align}
 Thus, it is expected that the basis functions \(T_{l}\) and
 \(R_{l}\ \)are computed online, whereas the current Q-Values can be
 updated as needed using a process \(Q_{\text{tr}}\), to be outlined.
@@ -741,17 +764,13 @@ updated as needed using a process \(Q_{\text{tr}}\), to be outlined.
 The \(T_{l}\) and \(R_{l}\) functions can be discovered, in the
 following manner, through the tracking of local visitation frequencies:
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-\[T_{l}:\ \tilde{T}'\left( s,a,s' \right) \leftarrow \tilde{T}\left( s,a,s' \right) + \ \alpha\left( \frac{\text{fr}\left( s,a,s^{'} \right) + 1}{\text{fr}\left( s,a \right) + 1} - \tilde{T}\left( s,a,s' \right) \right)\]
-
-\[\frac{\text{fr}\left( s,a,s^{'} \right) + 1}{\text{fr}\left( s,a \right) + 1} = \ \frac{1 + \ \tilde{T}\left( s,a,s' \right)}{1 + \ \sum_{s'}^{\ }{\tilde{T}\left( s,a,s' \right)}}\]\strut
-\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-()\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
+ 
+\begin{equation*}
+T_{l}:\ \tilde{T}'\left( s,a,s' \right) \leftarrow \tilde{T}\left( s,a,s' \right) + \alpha\left( \frac{\text{fr}\left( s,a,s^{'} \right) + 1}{\text{fr}\left( s,a \right) + 1} - \tilde{T}\left( s,a,s' \right) \right)
+\end{equation*}
+\begin{equation*}
+\frac{\text{fr}\left( s,a,s^{'} \right) + 1}{\text{fr}\left( s,a \right) + 1} = \frac{1 + \ \tilde{T}\left( s,a,s' \right)}{1 + \ \sum_{s'}^{\ }{\tilde{T}\left( s,a,s' \right)}} 
+\end{equation*}
 
 The \(Q_{\text{tr}}\) function can be defined using one of three
 regression functions, each with benefits and drawbacks, where \(\xi\)
@@ -764,12 +783,9 @@ represents a collection of sample states action state tuples,
   A greedy algorithm, which does not value any future reward.
 \end{itemize}
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(Q^{'}(s,a) \leftarrow \frac{1}{\sum_{s'\  \in \ \xi(s,a)}^{\ }{\tilde{T}\left( s,a,s' \right)}}\sum_{s'\  \in \ \xi(s,a)}^{\ }{\tilde{T}\left( s,a,s' \right)\tilde{R}\left( s,a,s' \right)}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+Q^{'}(s,a) \leftarrow \frac{1}{\sum_{s'\  \in \ \xi(s,a)}^{\ }{\tilde{T}\left( s,a,s' \right)}}\sum_{s'\  \in \ \xi(s,a)}^{\ }{\tilde{T}\left( s,a,s' \right)\tilde{R}\left( s,a,s' \right)}
+\end{equation} 
 
 \begin{itemize}
 \item
@@ -777,12 +793,12 @@ represents a collection of sample states action state tuples,
   reward:
 \end{itemize}
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(Q^{'}(s,a) \leftarrow \frac{1}{\sum_{s'\  \in \ \xi(s,a)}^{\ }{\tilde{T}\left( s,a,s' \right)}}\sum_{s'\  \in \ \xi(s,a)}^{\ }{\tilde{T}\left( s,a,s' \right)\tilde{R}\left( s,a,s' \right) + \ \gamma\operatorname{}{Q(s^{'},a^{*})}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+ 
+\begin{equation}
+Q^{'}(s,a) \leftarrow \frac{1}{\sum_{s'\  \in \ \xi(s,a)} {\tilde{T}\left( s,a,s' \right)}}\sum_{s'\  \in \ \xi(s,a)}^{\ }{\tilde{T}\left( s,a,s' \right)\tilde{R}\left( s,a,s' \right) + \gamma\max_{a^{*}}Q(s^{'},a^{*})}
+\end{equation}
+
+ 
 
 \begin{quote}
 This approach is the most complete, but runs into issues related to
@@ -794,14 +810,11 @@ recursive state space explosion.
   A monte carlo algorithm, which runs a batch monte carlo simulation to
   update policy values:
 \end{itemize}
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(Q^{'}\left( s,a \right) \leftarrow Q^{\ }\left( s,a \right) + \ \frac{\alpha}{n}\sum_{i = 0}^{\text{n\ }}{\tilde{R}\left( s,a,s' \right) - Q^{\ }\left( s,a \right) + \ \gamma\operatorname{}{Q(s^{'},a^{*})}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
-
+ 
+\begin{equation}
+Q^{'}\left( s,a \right) \leftarrow Q^{\ }\left( s,a \right) + \ \frac{\alpha}{n}\sum_{i = 0}^{\text{n\ }}{\tilde{R}\left( s,a,s' \right) - Q \left( s,a \right) + \gamma\argmax_{a^{*}}{Q(s^{'},a^{*})}}
+\end{equation}
+ 
 , where \(s'\) is sampled from the density
 \(\tilde{T}\left( s,a,s' \right)\). It is trivial to note that the monte
 carlo simulation approaches the value obtained by the complete algorithm
@@ -853,18 +866,14 @@ result of a reinforcement learning mechanism.
 
 \subsubsection{4.2.1.2 Naïve Deconstruction and
 Reconstruction}\label{nauxefve-deconstruction-and-reconstruction}
+ 
+\begin{equation}
+d_{x}^{\text{yz}}:m_{x} \rightarrow \ \left\{ m_{y},m_{z}|\ S_{y} \times S_{z} = S_{x},\ A_{y} \cup A_{z} = A_{x},\ {\tilde{c}}_{\text{yz}}^{x}\left( {\tilde{d}}_{x}^{\text{yz}}\left( \tilde{F} \right) \right) = \left( \tilde{F} \right) \right\} 
+\end{equation}
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-\[d_{x}^{\text{yz}}:m_{x} \rightarrow \ \left\{ m_{y},m_{z}|\ S_{y} \times S_{z} = S_{x},\ A_{y} \cup A_{z} = A_{x},\ {\tilde{c}}_{\text{yz}}^{x}\left( {\tilde{d}}_{x}^{\text{yz}}\left( \tilde{F} \right) \right) = \left( \tilde{F} \right) \right\}\]
-
-\[c_{x}^{\text{yz}}:\left\{ m_{y}, \right\} \rightarrow \ \left\{ m_{x}|\ S_{y} \times S_{z} = S_{x},\ A_{y} \cup A_{z} = A_{x},\ {\tilde{c}}_{\text{yz}}^{x}\left( {\tilde{d}}_{x}^{\text{yz}}\left( \tilde{F} \right) \right) = \left( \tilde{F} \right) \right\}\]\strut
-\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-()\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+c_{x}^{\text{yz}}:\left\{ m_{y}, \right\} \rightarrow \ \left\{ m_{x}|\ S_{y} \times S_{z} = S_{x},\ A_{y} \cup A_{z} = A_{x},\ {\tilde{c}}_{\text{yz}}^{x}\left( {\tilde{d}}_{x}^{\text{yz}}\left( \tilde{F} \right) \right) = \left( \tilde{F} \right) \right\} 
+\end{equation}
 
 Thus, splitting and merging are invertible processes. Importantly, the
 character and performance of any chosen reconstruction sets
@@ -910,12 +919,11 @@ satisfies the axioms given in section 3.0.
   Thus, In our current notation this notion can be stated briefly:
 \end{itemize}
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\({\tilde{T}}_{y}\left( s_{y}^{'}|s_{y}^{\ },a_{y} \right) = \ \sum_{s_{z}^{'}}^{\ }{\sum_{a_{z}}^{\ }{\sum_{s_{z}}^{\ }{{\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{y},a_{z} \right\} \right)\frac{\pi_{x}\left( a_{y},a_{z}|s_{y},s_{z} \right)}{\sum_{a_{z}^{'}}^{\ }{\pi_{x}\left( a_{y},a_{z}^{'}|s_{y},s_{z} \right)}}}}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+ 
+\begin{equation}
+{\tilde{T}}_{y}\left( s_{y}^{'}|s_{y}^{\ },a_{y} \right) = \ \sum_{s_{z}^{'}}^{\ }{\sum_{a_{z}}^{\ }{\sum_{s_{z}}^{\ }{{\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{y},a_{z} \right\} \right)\frac{\pi_{x}\left( a_{y},a_{z}|s_{y},s_{z} \right)}{\sum_{a_{z}^{'}}^{\ }{\pi_{x}\left( a_{y},a_{z}^{'}|s_{y},s_{z} \right)}}}}}
+\end{equation}
+ 
 
 It is worth noting that if we split the MDPs according to section 3.0,
 specifically such that one MDP is the parent and the other is the child,
@@ -926,22 +934,19 @@ For the child, \(z\), the parent will always hold its action \(a_{z}\)
 constant, rendering its behavioural policy irrelevant for the purposes
 of projecting transitional probability.
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\({\tilde{T}}_{z}\left( s_{z}^{'}|s_{z}^{\ },a_{z},a_{y} \right) \leftarrow \ \sum_{s_{z}^{'}}^{\ }{{\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{z} \right\},a_{y} \right)}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+ 
+\begin{equation}
+{\tilde{T}}_{z}\left( s_{z}^{'}|s_{z}^{\ },a_{z},a_{y} \right) \leftarrow \ \sum_{s_{z}^{'}}^{\ }{{\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{z} \right\},a_{y} \right)}
+\end{equation} 
 
 For the parent, \(y\), the transition model must take into account a
 sequence of actions undertaken
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\({\tilde{T}}_{y}\left( s_{y}^{'}|s_{y}^{\ },a_{y} \right) = \ \sum_{s_{z}^{'}}^{\ }{\sum_{a_{z}}^{\ }{{\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{y},a_{z} \right\} \right)\pi_{z}\left( a_{z}|s_{z} \right)}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+ 
+\begin{equation}
+{\tilde{T}}_{y}\left( s_{y}^{'}|s_{y}^{\ },a_{y} \right) = \ \sum_{s_{z}^{'}}^{\ }{\sum_{a_{z}}^{\ }{{\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{y},a_{z} \right\} \right)\pi_{z}\left( a_{z}|s_{z} \right)}}
+\end{equation}
+ 
 
 \begin{itemize}
 \item
@@ -958,12 +963,10 @@ Briefly a direct mapping can be considered which is a projection of
 \(\pi_{y}\left( \bullet \right)\), where \(\sigma\) is a normalization
 constant:
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\pi_{x}\left( a_{y}|s_{y} \right) = \ \sigma\sum_{s_{z}^{'}}^{\ }{\sum_{s_{z}}^{\ }{\sum_{a_{z}}^{\ }{{\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{y},a_{z} \right\} \right)\pi_{x}\left( \left\{ s_{y}^{\ },s_{z}^{\ } \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\} \right)}}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+\pi_{x}\left( a_{y}|s_{y} \right) = \ \sigma\sum_{s_{z}^{'}}^{\ }{\sum_{s_{z}}^{\ }{\sum_{a_{z}}^{\ }{{\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{y},a_{z} \right\} \right)\pi_{x}\left( \left\{ s_{y}^{\ },s_{z}^{\ } \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\} \right)}}}
+\end{equation}
+ 
 
 In essence, the degenerate policy image
 \(\pi_{x}\left( A_{y}|S_{y} \right)\)becomes the expectation of the
@@ -974,9 +977,7 @@ transitional expectation, and this can be taken as the
 After policy is initialized, the behavioural policy can be updated using
 Q-Learning or any other mechanism.
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+ 
 \subsubsection{4.2.1.2.1 Example Naïve
 Reconstruction}\label{example-nauxefve-reconstruction}
 
@@ -1008,12 +1009,7 @@ direction as a mapping of \(\left\langle S,A,T,R \right\rangle\) tuples:
 \item
   Policy
 \item
-\end{itemize}\strut
-\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-()\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
+\end{itemize} 
 
 \subsubsection{4.2.1.3 Concurrency and
 re-mapping}\label{concurrency-and-re-mapping}
@@ -1064,153 +1060,104 @@ component projections, can be considered. To begin we can consider the
 set of all optimal actions that maximize expected future discounted
 reward.
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\Omega_{\ }^{*}(a) = \ \operatorname{}{\sum_{s' \in S\ }^{\ }{P\left( s'|s,a \right)\left( R\left( s,a,s' \right) + \gamma V\left( s' \right) \right)}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}\strut
-\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
-
+ 
+\begin{equation}
+\Omega_{\ }^{*}(a) = \argmax_{a}\sum_{s' \in S\ }^{\ }{P\left( s'|s,a \right)\left( R\left( s,a,s' \right) + \gamma V\left( s' \right) \right)}
+\end{equation}
+ 
 The argument is that there exists a mapping from two optimal sub
 policies onto this policy.
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(f:\Omega_{u}^{*}\left( S_{u} \right) \times \Omega_{l}^{*}\left( S_{l} \right) \rightarrow \ {\tilde{\Omega}}_{\ }^{*}\left( S_{\ } \right):{\tilde{\Omega}}_{\ }^{*}\left( S_{\ } \right) \subseteq \Omega_{\ }^{*}\left( S_{\ } \right)\ \)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation} 
+f:\Omega_{u}^{*}\left( S_{u} \right) \times \Omega_{l}^{*}\left( S_{l} \right) \rightarrow \ {\tilde{\Omega}}_{\ }^{*}\left( S_{\ } \right):{\tilde{\Omega}}_{\ }^{*}\left( S_{\ } \right) \subseteq \Omega_{\ }^{*}\left( S_{\ } \right)
+\end{equation}
 
 For the following analysis, consultation of a visual grid can be
 beneficial. To simplify notation, \(\left( i,j \right)\ \)is taken to
 equal \(\text{ij}\), and actions
 \(\left( a_{u},a_{l} \right) = \ a_{\text{ul}}\).
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\Omega_{\ }^{*}(i,j) = \operatorname{}{\sum_{\left( i',j' \right) \in S\ }^{\ }{P\left( i'j'|ij,a_{\text{ul}} \right)\left( R\left( ij,a_{\text{ul}},i'j' \right) + \gamma V\left( i'j' \right) \right)}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+\Omega_{\ }^{*}(i,j) =  \argmax_{\left(a_{u},a_{l}\right)}\sum_{\left( i',j' \right) \in S\ }^{\ }{P\left( i'j'|ij,a_{\text{ul}} \right)\left( R\left( ij,a_{\text{ul}},i'j' \right) + \gamma V\left( i'j' \right) \right)}
+\end{equation}
 
 knowing
-\(\operatorname{}{R\left( \left( i,j \right),\left( a_{u},a_{l} \right),\left( i',j' \right) \right)} = \ \operatorname{}{R\left( \left( i,j' \right),\left( a_{u},a_{l} \right),\left( i',j' \right) \right)}\)
+\(  \max_{\left(a_{u},a_{l}\right)}R\left( \left( i,j \right),\left( a_{u},a_{l} \right),\left( i',j' \right) \right) = \max_{\left(a_{u},a_{l}\right)}R\left( \left( i,j' \right),\left( a_{u},a_{l} \right),\left( i',j' \right) \right)\)
 allows the expression to be altered with \(j'\), using the exchange
 lemma.
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\Omega_{\ }^{*}(\left( i,j \right)) = \operatorname{}{\sum_{\left( i',j' \right) \in S\ }^{\ }{P\left( \left( i',j' \right)|\left( i,j \right),\left( a_{u},a_{l} \right) \right)\left( R\left( \left( i,j' \right),\left( a_{u},a_{l} \right),\left( i',j' \right) \right) + \gamma V\left( \left( i',j' \right) \right) \right)}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+ \Omega_{\ }^{*}(\left( i,j \right)) =  \argmax_{\left(a_{u},a_{l}\right)}\sum_{\left( i',j' \right) \in S\ }^{\ }{P\left( \left( i',j' \right)|\left( i,j \right),\left( a_{u},a_{l} \right) \right)\left( R\left( \left( i,j' \right),\left( a_{u},a_{l} \right),\left( i',j' \right) \right) + \gamma V\left( \left( i',j' \right) \right) \right)}
+\end{equation}
 
 It then becomes clear that the reward dependency can be expressed in
 terms of \(R_{l}\ \)only:
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\Omega_{\ }^{*}(\left( i,j \right)) = \operatorname{}{\sum_{\left( i',j' \right) \in S\ }^{\ }{P\left( \left( i',j' \right)|\left( i,j \right),\left( a_{u},a_{l} \right) \right)\left( R_{l}\left( j^{'}|a_{l},i',j \right) + \gamma V\left( \left( i',j' \right) \right) \right)}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+\Omega^{*}(\left( i,j \right)) = \argmax_{\left(a_{u},a_{l}\right)} \sum_{\left( i',j' \right) \in S\ }^{\ }{P\left( \left( i',j' \right)|\left( i,j \right),\left( a_{u},a_{l} \right) \right)\left( R_{l}\left( j^{'}|a_{l},i',j \right) + \gamma V\left( \left( i',j' \right) \right) \right)}
+\end{equation}
 
 At this point, it is possible to note that the Transition function may
 be decomposed
 \(P\left( \left( i',j' \right)|\left( i,j \right),\left( a_{u},a_{l} \right) \right) = P\left( i'|a_{l},i \right)P\left( j'|a_{u},j \right)\).
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\Omega_{\ }^{*}(\left( i,j \right)) = \operatorname{}{\sum_{\left( i',j' \right) \in S\ }^{\ }{P\left( i'|a_{l},i \right)P\left( j'|a_{u},j \right)\left( R_{l}\left( j^{'}|a_{l},i',j \right) + \gamma V\left( \left( i',j' \right) \right) \right)}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation} 
+\Omega^{*}(\left( i,j \right)) = \argmax_{\left(a_{u},a_{l}\right)}\sum_{\left( i',j' \right) \in S\ }P\left( i'|a_{l},i \right)P\left( j'|a_{u},j \right)\left( R_{l}\left( j^{'}|a_{l},i',j \right) + \gamma V\left( \left( i',j' \right) \right) \right)
+\end{equation} 
 
 Leading to a summation decomposition:
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\Omega_{\ }^{*}(\left( i,j \right)) = \operatorname{}{\sum_{i' \in S\ }^{\ }{P\left( i'|a_{u},i \right)\left\lbrack \sum_{j' \in S}^{\ }{P\left( i'|a_{l},i \right)\left( R_{l}\left( j^{'}|a_{l},i',j \right) + \gamma V\left( \left( i',j' \right) \right) \right)} \right\rbrack}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+\Omega^{*}(\left( i,j \right)) =  \argmax_{\left(a_{u},a_{l}\right)}\sum_{i' \in S\ }P\left( i'|a_{u},i \right)\left\lbrack \sum_{j' \in S}^{\ } P\left( i'|a_{l},i \right)\left( R_{l}\left( j^{'}|a_{l},i',j \right) + \gamma V\left( \left( i',j' \right) \right) \right) \right\rbrack  
+\end{equation}
 
 It is also possible to take the difference between two reward functions,
 differentiated by \(i\) and \(i\)', to achieve a favourable formulation.
 This addition is possible because our formulation is considering an
 optimal action, \(\left( a_{u},a_{l} \right)\).
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\Omega_{\ }^{*}\left( i,j \right) = \operatorname{}{\sum_{i' \in S\ }^{\ }{P\left( j'|a_{u},j \right)\left\lbrack \sum_{j' \in S}^{\ }{P\left( i'|a_{l},i \right)\left( R_{l}\left( j^{'}|a_{l},i',j \right) - R_{l}\left( {j'}^{\ }|a_{l},i,j \right) + \gamma V\left( i',j' \right) - \gamma V\left( i',j \right) \right)} \right\rbrack}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
-
+\begin{equation}
+\Omega^{*}\left( i,j \right) =  \argmax_{\left(a_{u},a_{l}\right)}\sum_{i' \in S\ }P\left( j'|a_{u},j \right)\left\lbrack \sum_{j' \in S}P\left( i'|a_{l},i \right)\left( R_{l}\left( j^{'}|a_{l},i',j \right) - R_{l}\left( {j'}^{\ }|a_{l},i,j \right) + \gamma V\left( i',j' \right) - \gamma V\left( i',j \right) \right)  \right\rbrack
+\end{equation}
 And, an optimal decision policy can be substituted in for action
 selection
-\(\Omega_{\ }^{*}\left( j \middle| i \right) = \ \operatorname{}{\sum_{j' \in S\ }^{\ }{P\left( j'|a_{l},j \right)\left( R\left( j,a_{l},j^{'}|i \right) + \gamma V\left( j^{'}|i \right) \right)}}\).
+\(\Omega^{*}\left( j \middle| i \right) =  \argmax_{\left(a_{u},a_{l}\right)}\sum_{j' \in S\ }P\left( j'|a_{l},j \right)\left( R\left( j,a_{l},j^{'}|i \right) + \gamma V\left( j^{'}|i \right) \right)\).
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\Omega_{\ }^{*}\left( i,j \right) = \operatorname{}{\sum_{i' \in S\ }^{\ }{P\left( i'|a_{u},i \right)\left\lbrack \sum_{j' \in S}^{\ }{P\left( j'|\Omega_{\ }^{*}\left( j \middle| i \right),j \right)\left( R_{l}\left( j^{'}|\Omega_{\ }^{*}\left( j \middle| i \right),i',j \right) - R_{l}\left( j^{\ }|\Omega_{\ }^{*}\left( j \middle| i \right),i,j' \right) + \gamma V\left( i',j' \right) - \gamma V\left( i',j \right) \right)} \right\rbrack}}\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+\Omega^{*}\left( i,j \right) =  \argmax_{\left(a_{u},a_{l}\right)}\sum_{i' \in S\ }P\left( i'|a_{u},i \right)\left\lbrack \sum_{j' \in S}^{\ }P\left( j'|\Omega_{\ }^{*}\left( j \middle| i \right),j \right)\left( R_{l}\left( j^{'}|\Omega_{\ }^{*}\left( j \middle| i \right),i',j \right) - R_{l}\left( j^{\ }|\Omega^{*}\left( j \middle| i \right),i,j' \right) + \gamma V\left( i',j' \right) - \gamma V\left( i',j \right) \right) \right\rbrack
+\end{equation}
 
-The formulation can now be radically generalized.
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\Omega_{\ }^{*}\left( i,j \right) = \operatorname{}{\sum_{i' \in S\ }^{\ }{P\left( i'|a_{u},i \right)\left\lbrack R_{u}\left( i^{'}|a_{u},j,i \right)\  + \gamma V\left( i' \right) \right\rbrack}\text{\ if\ }a_{u} \in}\Omega_{l}^{*}\left( j|i \right)\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+The formulation can now be radically generalized:
+\begin{equation}
+\Omega^{*}\left( i,j \right) =  \argmax_{\left(a_{u},a_{l}\right)}
+\sum_{i' \in S} 
+P\left( i'|a_{u}, i \right)
+\left\lbrack R_{u}\left(  i^{'}|a_{u}, j, i \right)+ \gamma V\left( i' \right) \right\rbrack
+\qquad\textrm{if\ }
+a_{u} \in\Omega_{l}^{*}\left( j|i \right)
+\end{equation}
 
 From here it is direct to union the row selection policy:
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\Omega_{\ }^{*}\left( i,j \right) = \operatorname{}{\left\lbrack \sum_{i' \in S\ }^{\ }{P\left( i'|a_{u},i \right)\left\lbrack R_{u}\left( i^{'}|a_{u},i \right)\  + \gamma V\left( i' \right)\  \right\rbrack} \right\rbrack \cup \left\lbrack \Omega_{l}^{*}\left( j|i \right) \right\rbrack\text{\ \ \ \ \ \ if\ }a_{u} \in}\Omega_{l}^{*}\left( j|i \right)\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
-
+\begin{equation}
+\Omega^{*}\left( i,j \right) =   \sum_{i' \in S}
+P\left( i'|a_{u}, i \right)\left\lbrack R_{u}\left( i^{'}|a_{u}, i \right) + \gamma V\left( i' \right) \right\rbrack \cup \left\lbrack \Omega_{l}^{*}\left( j|i \right) \right\rbrack
+\qquad\textrm{if\ }a_{u} \in\Omega_{l}^{*}\left( j|i \right)
+\end{equation}
 And substitute a definition only dependent on independent policies.
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\Omega_{\ }^{*}\left( i,j \right) = \Omega_{u}^{*}\left( i \right) \cup \Omega_{l}^{*}\left( j|i \right)\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
-
+ 
+\begin{equation}
+\Omega^{*}\left( i,j \right) = \Omega_{u}^{*}\left( i \right) \cup \Omega_{l}^{*}\left( j|i \right)
+\end{equation}
+ 
 And, it follows directly that a specific and optimal global policy can
 be expressed as every combination of optimal CMDP policies.
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\pi_{\ }^{*}\left( i,j \right) = \pi_{u}^{*}\left( i \right) \cup \pi_{l}^{*}\left( j|i \right)\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+\pi^{*}\left( i,j \right) = \pi_{u}^{*}\left( i \right) \cup \pi_{l}^{*}\left( j|i \right)
+\end{equation}
 
 We also know that execution of the regular action policies will converge
 on these optimal policies.
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\(\pi_{\ }^{\ }\left( i,j \right) = \pi_{u}^{\ }\left( i \right) \cup \pi_{l}^{\ }\left( j|i \right)\)
-& ()\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{equation}
+\pi\left( i,j \right) = \pi_{u}^{\ }\left( i \right) \cup \pi_{l}^{\ }\left( j|i \right)
+\end{equation}
 
 \end{document}

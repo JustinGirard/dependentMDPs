@@ -1,27 +1,120 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.3)  3 MAY 2017 14:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.3)  7 MAY 2017 15:25
 entering extended mode
 **./dependentMDPs_11_pandoc.tex
 (dependentMDPs_11_pandoc.tex
 LaTeX2e <2017-04-15>
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmpcountC=\count81
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 503.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ppl.fd"
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-\c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
-\bibindent=\dimen102
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+-- Using IEEE Computer Society mode.
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <5.01874> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <5.01874> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <7.02625> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <7.02625> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <8.03> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <8.03> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.03374> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.03374> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.53561> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.53561> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <11.04124> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <11.04124> not available
+
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12.045> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <12.045> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.06374> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <17.06374> not available
+
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.075> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <20.075> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEsubeqnnumrollback=\count91
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count92
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
+\c@IEEEbiography=\count93
+\@IEEEtranrubishbin=\box27
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -61,7 +154,7 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks14
+\@emptytoks=\toks15
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
@@ -69,7 +162,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2016/11/05 v2.16a AMS math features
-\@mathmargin=\skip43
+\@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
@@ -77,51 +170,51 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks15
-\ex@=\dimen103
+\@emptytoks=\toks16
+\ex@=\dimen126
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen104
+\pmbraise@=\dimen127
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count87
+\inf@bad=\count94
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count88
-\leftroot@=\count89
+\uproot@=\count95
+\leftroot@=\count96
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count90
-\DOTSCASE@=\count91
+\classnum@=\count97
+\DOTSCASE@=\count98
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
-\big@size=\dimen105
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen128
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count92
-\c@MaxMatrixCols=\count93
+\macc@depth=\count99
+\c@MaxMatrixCols=\count100
 \dotsspace@=\muskip10
-\c@parentequation=\count94
-\dspbrk@lvl=\count95
-\tag@help=\toks16
-\row@=\count96
-\column@=\count97
-\maxfields@=\count98
-\andhelp@=\toks17
-\eqnshift@=\dimen106
-\alignsep@=\dimen107
-\tagshift@=\dimen108
-\tagwidth@=\dimen109
-\totwidth@=\dimen110
-\lineht@=\dimen111
-\@envbody=\toks18
-\multlinegap=\skip44
-\multlinetaggap=\skip45
-\mathdisplay@stack=\toks19
+\c@parentequation=\count101
+\dspbrk@lvl=\count102
+\tag@help=\toks17
+\row@=\count103
+\column@=\count104
+\maxfields@=\count105
+\andhelp@=\toks18
+\eqnshift@=\dimen129
+\alignsep@=\dimen130
+\tagshift@=\dimen131
+\tagwidth@=\dimen132
+\totwidth@=\dimen133
+\lineht@=\dimen134
+\@envbody=\toks19
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
@@ -148,11 +241,16 @@ Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 105.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ppl.fd"
+File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks20
-\inpenc@posthook=\toks21
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
@@ -467,194 +565,7 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\upquote\upquote.s
-ty"
-Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
-tim
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
-Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
-Package textcomp Info: Sub-encoding information:
-(textcomp)               5 = only ISO-Adobe without \textcurrency
-(textcomp)               4 = 5 + \texteuro
-(textcomp)               3 = 4 + \textohm
-(textcomp)               2 = 3 + \textestimated + \textcurrency
-(textcomp)               1 = TS1 - \textcircled - \t
-(textcomp)               0 = TS1 (full)
-(textcomp)             Font families with sub-encoding setting implement
-(textcomp)             only a restricted character set as indicated.
-(textcomp)             Family '?' is the default used for unknown fonts.
-(textcomp)             See the documentation for details.
-Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
-File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-Now handling font encoding TS1 ...
-... processing UTF-8 mapping file for font encoding TS1
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
-File: ts1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
-   defining Unicode char U+00A2 (decimal 162)
-   defining Unicode char U+00A3 (decimal 163)
-   defining Unicode char U+00A4 (decimal 164)
-   defining Unicode char U+00A5 (decimal 165)
-   defining Unicode char U+00A6 (decimal 166)
-   defining Unicode char U+00A7 (decimal 167)
-   defining Unicode char U+00A8 (decimal 168)
-   defining Unicode char U+00A9 (decimal 169)
-   defining Unicode char U+00AA (decimal 170)
-   defining Unicode char U+00AC (decimal 172)
-   defining Unicode char U+00AE (decimal 174)
-   defining Unicode char U+00AF (decimal 175)
-   defining Unicode char U+00B0 (decimal 176)
-   defining Unicode char U+00B1 (decimal 177)
-   defining Unicode char U+00B2 (decimal 178)
-   defining Unicode char U+00B3 (decimal 179)
-   defining Unicode char U+00B4 (decimal 180)
-   defining Unicode char U+00B5 (decimal 181)
-   defining Unicode char U+00B6 (decimal 182)
-   defining Unicode char U+00B7 (decimal 183)
-   defining Unicode char U+00B9 (decimal 185)
-   defining Unicode char U+00BA (decimal 186)
-   defining Unicode char U+00BC (decimal 188)
-   defining Unicode char U+00BD (decimal 189)
-   defining Unicode char U+00BE (decimal 190)
-   defining Unicode char U+00D7 (decimal 215)
-   defining Unicode char U+00F7 (decimal 247)
-   defining Unicode char U+0192 (decimal 402)
-   defining Unicode char U+02C7 (decimal 711)
-   defining Unicode char U+02D8 (decimal 728)
-   defining Unicode char U+02DD (decimal 733)
-   defining Unicode char U+0E3F (decimal 3647)
-   defining Unicode char U+2016 (decimal 8214)
-   defining Unicode char U+2020 (decimal 8224)
-   defining Unicode char U+2021 (decimal 8225)
-   defining Unicode char U+2022 (decimal 8226)
-   defining Unicode char U+2030 (decimal 8240)
-   defining Unicode char U+2031 (decimal 8241)
-   defining Unicode char U+203B (decimal 8251)
-   defining Unicode char U+203D (decimal 8253)
-   defining Unicode char U+2044 (decimal 8260)
-   defining Unicode char U+204E (decimal 8270)
-   defining Unicode char U+2052 (decimal 8274)
-   defining Unicode char U+20A1 (decimal 8353)
-   defining Unicode char U+20A4 (decimal 8356)
-   defining Unicode char U+20A6 (decimal 8358)
-   defining Unicode char U+20A9 (decimal 8361)
-   defining Unicode char U+20AB (decimal 8363)
-   defining Unicode char U+20AC (decimal 8364)
-   defining Unicode char U+20B1 (decimal 8369)
-   defining Unicode char U+2103 (decimal 8451)
-   defining Unicode char U+2116 (decimal 8470)
-   defining Unicode char U+2117 (decimal 8471)
-   defining Unicode char U+211E (decimal 8478)
-   defining Unicode char U+2120 (decimal 8480)
-   defining Unicode char U+2122 (decimal 8482)
-   defining Unicode char U+2126 (decimal 8486)
-   defining Unicode char U+2127 (decimal 8487)
-   defining Unicode char U+212E (decimal 8494)
-   defining Unicode char U+2190 (decimal 8592)
-   defining Unicode char U+2191 (decimal 8593)
-   defining Unicode char U+2192 (decimal 8594)
-   defining Unicode char U+2193 (decimal 8595)
-   defining Unicode char U+2329 (decimal 9001)
-   defining Unicode char U+232A (decimal 9002)
-   defining Unicode char U+2422 (decimal 9250)
-   defining Unicode char U+25E6 (decimal 9702)
-   defining Unicode char U+25EF (decimal 9711)
-   defining Unicode char U+266A (decimal 9834)
-))
-LaTeX Info: Redefining \oldstylenums on input line 334.
-Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
-Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
-Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
-Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
-Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
-Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
-Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
-Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
-Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
-Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
-Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
-Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
-Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
-Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
-Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
-Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
-Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
-Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
-Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
-Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
-Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
-Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
-Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
-Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
-
-Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
-Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
-Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
-Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
-Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
-Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
-Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
-Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
-Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
-Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
-Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
-Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
-Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
-Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
-Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
-Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
-Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
-Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
-Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
-Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
-Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
-Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
-Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
-Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
-Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
-Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
-Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
-Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
-Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
-Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
-Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
-Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
-Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
-Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
-Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
-Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
-Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-))
-("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microty
-pe.sty"
-Package: microtype 2016/05/14 v2.6a Micro-typographical refinements (RS)
- ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks22
-)
-\MT@toks=\toks23
-\MT@count=\count99
-LaTeX Info: Redefining \textls on input line 774.
-\MT@outer@kern=\dimen112
-LaTeX Info: Redefining \textmicrotypecontext on input line 1310.
-\MT@listname@count=\count100
-
-("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microty
-pe-pdftex.def"
-File: microtype-pdftex.def 2016/05/14 v2.6a Definitions specific to pdftex (RS)
-
-LaTeX Info: Redefining \lsstyle on input line 916.
-LaTeX Info: Redefining \lslig on input line 916.
-\MT@outer@space=\skip46
-)
-Package microtype Info: Loading configuration file microtype.cfg.
-
-("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microty
-pe.cfg"
-File: microtype.cfg 2016/05/14 v2.6a microtype main configuration file (RS)
-)) ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
@@ -700,22 +611,26 @@ Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen113
-\Hy@linkcounter=\count101
-\Hy@pagecounter=\count102
+\@linkdim=\dimen135
+\Hy@linkcounter=\count106
+\Hy@pagecounter=\count107
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count103
+\Hy@SavedSpaceFactor=\count108
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -734,17 +649,17 @@ Package hyperref Info: Plain pages OFF on input line 4513.
 Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
-\c@Hy@tempcnt=\count104
+\c@Hy@tempcnt=\count109
 
 ("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5104.
-\XeTeXLinkMargin=\dimen114
-\Fld@menulength=\count105
-\Field@Width=\dimen115
-\Fld@charsize=\dimen116
+\XeTeXLinkMargin=\dimen136
+\Fld@menulength=\count110
+\Field@Width=\dimen137
+\Fld@charsize=\dimen138
 Package hyperref Info: Hyper figures OFF on input line 6358.
 Package hyperref Info: Link nesting OFF on input line 6363.
 Package hyperref Info: Hyper index ON on input line 6366.
@@ -754,17 +669,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6383.
 Package hyperref Info: PDF/A mode OFF on input line 6388.
 LaTeX Info: Redefining \ref on input line 6428.
 LaTeX Info: Redefining \pageref on input line 6432.
-\Hy@abspage=\count106
-\c@Item=\count107
-\c@Hfootnote=\count108
+\Hy@abspage=\count111
+\c@Item=\count112
+\c@Hfootnote=\count113
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
-\Fld@listcount=\count109
-\c@bookmark@seq@number=\count110
+\Fld@listcount=\count114
+\c@bookmark@seq@number=\count115
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -773,7 +688,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip47
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 28.
+Package hyperref Info: Option `breaklinks' set `true' on input line 69.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
@@ -781,44 +696,44 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip49
 \LTpre=\skip50
 \LTpost=\skip51
-\LTchunksize=\count111
-\LTcapwidth=\dimen117
-\LT@head=\box28
-\LT@firsthead=\box29
-\LT@foot=\box30
-\LT@lastfoot=\box31
-\LT@cols=\count112
-\LT@rows=\count113
-\c@LT@tables=\count114
-\c@LT@chunks=\count115
+\LTchunksize=\count116
+\LTcapwidth=\dimen139
+\LT@head=\box30
+\LT@firsthead=\box31
+\LT@foot=\box32
+\LT@lastfoot=\box33
+\LT@cols=\count117
+\LT@rows=\count118
+\c@LT@tables=\count119
+\c@LT@chunks=\count120
 \LT@p@ftn=\toks24
 )
 ("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs
 .sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen118
-\lightrulewidth=\dimen119
-\cmidrulewidth=\dimen120
-\belowrulesep=\dimen121
-\belowbottomsep=\dimen122
-\aboverulesep=\dimen123
-\abovetopsep=\dimen124
-\cmidrulesep=\dimen125
-\cmidrulekern=\dimen126
-\defaultaddspace=\dimen127
-\@cmidla=\count116
-\@cmidlb=\count117
-\@aboverulesep=\dimen128
-\@belowrulesep=\dimen129
-\@thisruleclass=\count118
-\@lastruleclass=\count119
-\@thisrulewidth=\dimen130
+\heavyrulewidth=\dimen140
+\lightrulewidth=\dimen141
+\cmidrulewidth=\dimen142
+\belowrulesep=\dimen143
+\belowbottomsep=\dimen144
+\aboverulesep=\dimen145
+\abovetopsep=\dimen146
+\cmidrulesep=\dimen147
+\cmidrulekern=\dimen148
+\defaultaddspace=\dimen149
+\@cmidla=\count121
+\@cmidlb=\count122
+\@aboverulesep=\dimen150
+\@belowrulesep=\dimen151
+\@thisruleclass=\count123
+\@lastruleclass=\count124
+\@thisrulewidth=\dimen152
 )
 ("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\mdwtools\footnote
 .sty"
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box32
-\fn@width=\dimen131
+\fn@notes=\box34
+\fn@width=\dimen153
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -835,10 +750,10 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
 File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
-\Gread@gobject=\count120
+\Gread@gobject=\count125
 ))
-\Gin@req@height=\dimen132
-\Gin@req@width=\dimen133
+\Gin@req@height=\dimen154
+\Gin@req@width=\dimen155
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grffile.sty"
 Package: grffile 2016/05/16 v1.17 Extended file name support for graphics (HO)
@@ -853,63 +768,41 @@ Package: parskip 2001/04/09 non-zero parskip adjustments
 (dependentMDPs_11_pandoc.aux)
 \openout1 = `dependentMDPs_11_pandoc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 70.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
-File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 70.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 120.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \microtypecontext on input line 70.
-Package microtype Info: Generating PDF output.
-Package microtype Info: Character protrusion enabled (level 2).
-Package microtype Info: Using protrusion set `basicmath'.
-Package microtype Info: Automatic font expansion enabled (level 2),
-(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `basictext'.
-Package microtype Info: No adjustment of tracking.
-Package microtype Info: No adjustment of interword spacing.
-Package microtype Info: No adjustment of character kerning.
-
-("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-cmr.
-cfg"
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-)
-\AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 70.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+-- Lines per column: 38 (exact).
+\AtBeginShipoutBox=\box35
+Package hyperref Info: Link coloring OFF on input line 120.
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count121
+\c@section@level=\count126
 )
-LaTeX Info: Redefining \ref on input line 70.
-LaTeX Info: Redefining \pageref on input line 70.
-LaTeX Info: Redefining \nameref on input line 70.
+LaTeX Info: Redefining \ref on input line 120.
+LaTeX Info: Redefining \pageref on input line 120.
+LaTeX Info: Redefining \nameref on input line 120.
 
 (dependentMDPs_11_pandoc.out) (dependentMDPs_11_pandoc.out)
 \@outlinefile=\write3
@@ -919,16 +812,16 @@ LaTeX Info: Redefining \nameref on input line 70.
 ("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.m
 kii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count122
-\scratchdimen=\dimen134
-\scratchbox=\box34
-\nofMPsegments=\count123
-\nofMParguments=\count124
+\scratchcounter=\count127
+\scratchdimen=\dimen156
+\scratchbox=\box36
+\nofMPsegments=\count128
+\nofMParguments=\count129
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count125
-\MPscratchDim=\dimen135
-\MPnumerator=\count126
-\makeMPintoPDFobject=\count127
+\MPscratchCnt=\count130
+\MPscratchDim=\dimen157
+\MPnumerator=\count131
+\makeMPintoPDFobject=\count132
 \everyMPtoPDFconversion=\toks26
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -942,954 +835,202 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-) [1
+)
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 122.
 
-{C:/Users/Chris Hemming/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 154.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
+File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+LaTeX Font Warning: Font shape `T1/lmss/bx/sc' undefined
+(Font)              using `T1/lmss/bx/n' instead on input line 142.
+
+[1{C:/Users/Chris Hemming/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 204
+.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 204.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 154.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 204.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 154
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 204
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 154
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 204
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 154.
+(Font)              <9.53561> on input line 204.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 154.
+(Font)              <6.6749> on input line 204.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 154.
-LaTeX Font Info:    Try loading font information for U+msa on input line 154.
+(Font)              <4.7678> on input line 204.
+LaTeX Font Info:    Try loading font information for U+msa on input line 204.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msa.
-cfg"
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 154.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+LaTeX Font Info:    Try loading font information for U+msb on input line 204.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msb.
-cfg"
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-Underfull \vbox (badness 10000) detected at line 184
+) [2]
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9.53561> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 252.
+
+<media/image1.png, id=174, 237.2865pt x 214.401pt>
+File: media/image1.png Graphic file (type png)
+ <use media/image1.png>
+Package pdftex.def Info: media/image1.png used on input line 255.
+(pdftex.def)             Requested size: 194.22859pt x 175.49588pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
+
  []
 
-[2]
-Underfull \vbox (badness 10000) detected at line 197
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 256.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8.03> on input line 256.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5.62097> on input line 256.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <4.015> on input line 256.
+[3 <./media/image1.png>] <media/image3.png, id=187, 233.07076pt x 63.23625pt>
+File: media/image3.png Graphic file (type png)
+
+<use media/image3.png>
+Package pdftex.def Info: media/image3.png used on input line 305.
+(pdftex.def)             Requested size: 233.07373pt x 63.23705pt.
+ <media/image4.png, id=188, 224.63925pt x 65.043pt>
+File: media/image4.png Graphic file (type png)
+
+<use media/image4.png>
+Package pdftex.def Info: media/image4.png used on input line 306.
+(pdftex.def)             Requested size: 224.64896pt x 65.0458pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--307
+
  []
 
+File: media/image3.png Graphic file (type png)
+<use media/image3.png>
+Package pdftex.def Info: media/image3.png used on input line 359.
+(pdftex.def)             Requested size: 231.87167pt x 62.9109pt.
 
-LaTeX Warning: File `media/image1.png' not found on input line 210.
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
-
-! Package pdftex.def Error: File `media/image1.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.210 ...750in,height=2.80556in]{media/image1.png}
-                                                  The
-? 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 210.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 221.
-
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3]
-
-LaTeX Warning: File `media/image3.png' not found on input line 256.
-
-
-! Package pdftex.def Error: File `media/image3.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.256 ...:}{An CMDP definition can be described:}}
-                                                  \label{an-cmdp-definition-...
-
-? 
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 256.
-[4]
-Underfull \hbox (badness 1990) in paragraph at lines 287--289
-[]\T1/lmr/m/n/10 (+20) Noting $\OML/lmm/m/it/10 R[] [] \OT1/lmr/m/n/10 (+20) = 
-[][] [] \OMS/lmsy/m/n/10  
  []
 
+[4 <./media/image3.png> <./media/image4.png>] [5] [6] [7]
+<media/figure7.pdf, id=219, 291.0875pt x 142.5325pt>
+File: media/figure7.pdf Graphic file (type pdf)
+ <use media/figure7.pdf>
+Package pdftex.def Info: media/figure7.pdf used on input line 589.
+(pdftex.def)             Requested size: 291.08678pt x 142.53214pt.
 
-LaTeX Warning: File `media/image3.png' not found on input line 306.
+[8] <media/figure8.pdf, id=225, 366.36874pt x 145.54375pt>
+File: media/figure8.pdf Graphic file (type pdf)
 
+<use media/figure8.pdf>
+Package pdftex.def Info: media/figure8.pdf used on input line 622.
+(pdftex.def)             Requested size: 366.3902pt x 145.55226pt.
+ [9 <./media/figure7.pdf> <./media/figure8.pdf>]
+<media/figure9.pdf, id=314, 369.38pt x 131.49126pt>
+File: media/figure9.pdf Graphic file (type pdf)
+ <use media/figure9.pdf>
+Package pdftex.def Info: media/figure9.pdf used on input line 647.
+(pdftex.def)             Requested size: 369.37909pt x 131.49092pt.
 
-! Package pdftex.def Error: File `media/image3.png' not found.
+<media/figure10.pdf, id=315, 598.235pt x 133.49875pt>
+File: media/figure10.pdf Graphic file (type pdf)
+ <use media/figure10.pdf>
+Package pdftex.def Info: media/figure10.pdf used on input line 653.
+(pdftex.def)             Requested size: 469.76157pt x 104.82932pt.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.306 ...833in,height=1.70208in]{media/image3.png}
-                                                  Thus,
-? 
-
-Underfull \vbox (badness 10000) detected at line 336
- []
-
-[5]
-Underfull \vbox (badness 10000) detected at line 362
- []
-
-
-Underfull \hbox (badness 1043) in paragraph at lines 379--385
-[]\T1/lmr/m/n/10 (+20) Convergence for the par-ent MDP is ap-par-ent, as the re
--ward func-tion
- []
-
-[6]
-Underfull \vbox (badness 10000) detected at line 401
- []
-
-! Argument of \LT@nofcols has an extra }.
-<inserted text> 
-                \par 
-l.412 \begin{longtable}[]{@{}ll@{}}
-                                   
-? 
-Runaway argument?
-\global \advance \c@LT@chunks \@ne \global \LT@rows \z@ \setbox \z@ \vbox \ETC.
-! Paragraph ended before \LT@nofcols was complete.
-<to be read again> 
-                   \par 
-l.412 \begin{longtable}[]{@{}ll@{}}
-                                   
-? 
-! Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.412 \begin{longtable}[]{@{}ll@{}}
-                                   
-? 
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.412 \begin{longtable}[]{@{}ll@{}}
-                                   
-? 
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.412 \begin{longtable}[]{@{}ll@{}}
-                                   
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.412 \begin{longtable}[]{@{}ll@{}}
-                                   
-? 
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.412 \begin{longtable}[]{@{}ll@{}}
-                                   
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.412 \begin{longtable}[]{@{}ll@{}}
-                                   
-? 
-! You can't use `macro parameter character #' in restricted horizontal mode.
-\LT@bchunk ...ep {\hskip 1sp\ignorespaces \@sharp 
-                                                  \unskip \hfil }\tabskip \L...
-l.412 \begin{longtable}[]{@{}ll@{}}
-                                   
-? 
-Runaway argument?
-\LT@make@row \m@th \let 
-! Paragraph ended before \LT@nofcols was complete.
-<to be read again> 
-                   \par 
-l.412 \begin{longtable}[]{@{}ll@{}}
-                                   
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.417 \end{longtable}
-                     \strut
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.417 \end{longtable}
-                     \strut
-? 
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.417 \end{longtable}
-                     \strut
-? 
-! Missing { inserted.
-<inserted text> 
-                {
-l.417 \end{longtable}
-                     \strut
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.417 \end{longtable}
-                     \strut
-? 
-! Too many }'s.
-\endminipage ...pagefalse \color@endgroup \egroup 
-                                                  \expandafter \@iiiparbox \...
-l.418 \end{minipage}
-                     & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-? 
-! Undefined control sequence.
-\endminipage ...\expandafter \@iiiparbox \@mpargs 
-                                                  {\unvbox \@tempboxa }
-l.418 \end{minipage}
-                     & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   \def 
-l.418 ...inipage}[t]{0.48\columnwidth}\raggedright
-                                                  \strut
-? 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \def 
-l.418 ...inipage}[t]{0.48\columnwidth}\raggedright
-                                                  \strut
-? 
-
-! LaTeX Error: \begin{document} ended by \end{minipage}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.418 ...inipage}[t]{0.48\columnwidth}\raggedright
-                                                  \strut
-? 
-! Misplaced alignment tab character &.
-<argument> ...e \@ignorefalse \ignorespaces \fi  &
-                                                   \begin {minipage}
-l.418 ...inipage}[t]{0.48\columnwidth}\raggedright
-                                                  \strut
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   \relax 
-l.418 ...inipage}[t]{0.48\columnwidth}\raggedright
-                                                  \strut
-? 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.418 ...inipage}[t]{0.48\columnwidth}\raggedright
-                                                  \strut
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.418 ...inipage}[t]{0.48\columnwidth}\raggedright
-                                                  \strut
-? 
-
-Overfull \hbox (5.44438pt too wide) in paragraph at lines 418--418
-[]\T1/lmr/m/n/10 (-20) b[] 
- []
-
-! Too many }'s.
-\endminipage ...pagefalse \color@endgroup \egroup 
-                                                  \expandafter \@iiiparbox \...
-l.420 \end{minipage}
-                    \tabularnewline
-? 
-! Undefined control sequence.
-\endminipage ...\expandafter \@iiiparbox \@mpargs 
-                                                  {\unvbox \@tempboxa }
-l.420 \end{minipage}
-                    \tabularnewline
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   @
-l.433 \toprule
-              
-? 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   @
-l.433 \toprule
-              
-? 
-! Misplaced \noalign.
-\toprule ->\noalign 
-                    {\ifnum 0=`}\fi \@aboverulesep =\abovetopsep \global \@b...
-l.433 \toprule
-              
-? 
-Runaway argument?
-{\@checkend {minipage}\expandafter \endgroup \if@endpe \@doendpe \fi \ETC.
-! Paragraph ended before \setlength was complete.
-<to be read again> 
-                   \par 
-l.433 \toprule
-              
-? 
-! Argument of \LT@array has an extra }.
-<inserted text> 
-                \par 
-l.433 \toprule
-              
-? 
-Runaway argument?
-! Paragraph ended before \LT@array was complete.
-<to be read again> 
-                   \par 
-l.433 \toprule
-              
-? 
-! Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.433 \toprule
-              
-? 
-! Misplaced alignment tab character &.
-l.435 &
-        ()\tabularnewline
-? 
-! Misplaced \noalign.
-\bottomrule ->\noalign 
-                       {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
-l.436 \bottomrule
-                 
-? 
-! Misplaced \crcr.
-\endlongtable ->\crcr 
-                      \noalign {\let \LT@entry \LT@entry@chop \xdef \LT@save...
-l.437 \end{longtable}
-                     
-? 
-! Misplaced \noalign.
-\endlongtable ->\crcr \noalign 
-                               {\let \LT@entry \LT@entry@chop \xdef \LT@save...
-l.437 \end{longtable}
-                     
-? 
-! Misplaced \crcr.
-\LT@echunk ->\crcr 
-                   \LT@save@row \cr \egroup \global \setbox \@ne \lastbox \u...
-l.437 \end{longtable}
-                     
-? 
-! Misplaced \omit.
-\LT@entry ...->\ifhmode \@firstofone {&}\fi \omit 
-                                                  \ifnum #1=\c@LT@chunks \el...
-l.437 \end{longtable}
-                     
-? 
-! Misplaced \omit.
-\LT@entry ...->\ifhmode \@firstofone {&}\fi \omit 
-                                                  \ifnum #1=\c@LT@chunks \el...
-l.437 \end{longtable}
-                     
-? 
-! Misplaced \cr.
-\LT@echunk ->\crcr \LT@save@row \cr 
-                                    \egroup \global \setbox \@ne \lastbox \u...
-l.437 \end{longtable}
-                     
-? 
-! Extra }, or forgotten \endgroup.
-\LT@echunk ->\crcr \LT@save@row \cr \egroup 
-                                            \global \setbox \@ne \lastbox \u...
-l.437 \end{longtable}
-                     
-? 
-! Extra }, or forgotten \endgroup.
-\LT@echunk ...etbox \@ne \lastbox \unskip \egroup 
-                                                  
-l.437 \end{longtable}
-                     
-? 
-
-! LaTeX Error: \begin{document} ended by \end{longtable}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.437 \end{longtable}
-                     
-? 
-[7]
-Underfull \hbox (badness 2020) in paragraph at lines 519--521
-\T1/lmr/m/n/10 (+20) Individual agent progress to-ward a sub-task can be de-fin
-ed as a $\OML/lmm/m/it/10 <
- []
-
-[8] [9] [10]
-Underfull \vbox (badness 10000) detected at line 678
+[10 <./media/figure9.pdf> <./media/figure10.pdf>] [11] [12] [13] [14] [15]
+[16]
+Overfull \hbox (116.7745pt too wide) in paragraph at lines 1119--1123
+\T1/lmr/m/n/9.53561 And, an op-ti-mal de-ci-sion pol-icy can be sub-sti-tuted i
+n for ac-tion se-lec-tion $\OT1/lmr/m/n/9.53561 
+[] [] = [][] [][] \OML/lmm/m/it/9.53561 P [] []$\T1/lmr/m/n/9.53561 . 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 686
+Overfull \hbox (61.36539pt too wide) detected at line 1126
+[]\OT1/lmr/m/n/9.53561 
+[] [] = [] [] \OML/lmm/m/it/9.53561 P [] []
  []
 
-[11]
-Underfull \vbox (badness 10000) detected at line 699
- []
-
-
-Underfull \vbox (badness 10000) detected at line 710
- []
-
-
-Overfull \hbox (20.40617pt too wide) detected at line 726
-\OML/lmm/m/it/10 T[] \OT1/lmr/m/n/10 : [] [] \OMS/lmsy/m/n/10  [] ! []\OT1/lmr
-/m/n/10 (\OML/lmm/m/it/10 S; A; S\OT1/lmr/m/n/10 )
- []
-
-
-Overfull \hbox (15.53053pt too wide) detected at line 728
-\OML/lmm/m/it/10 R[] \OT1/lmr/m/n/10 : [] [] \OMS/lmsy/m/n/10  f\OT1/lmr/m/n/1
-0 (\OML/lmm/m/it/10 s; a; s[]\OT1/lmr/m/n/10 )\OMS/lmsy/m/n/10 g ! []\OT1/lmr/m
-/n/10 (\OML/lmm/m/it/10 S; A; S\OT1/lmr/m/n/10 )
- []
-
-
-Overfull \hbox (13.07744pt too wide) detected at line 730
-\OML/lmm/m/it/10 Q[] \OT1/lmr/m/n/10 : [][] \OMS/lmsy/m/n/10  [][] ! \OML/lmm/
-m/it/10 Q[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 S; A\OT1/lmr/m/n/10 )
- []
-
-
-Underfull \vbox (badness 10000) detected at line 735
- []
-
-
-Overfull \hbox (116.11194pt too wide) detected at line 747
-\OML/lmm/m/it/10 T[] \OT1/lmr/m/n/10 :  [] [] \OMS/lmsy/m/n/10   [] [] \OT1/lmr
-/m/n/10 +  \OML/lmm/m/it/10  []
- []
-
-
-Overfull \hbox (2.10687pt too wide) detected at line 749
-[] \OT1/lmr/m/n/10 =  []
- []
-
-
-Underfull \vbox (badness 10000) detected at line 754
- []
-
-[12]
-Underfull \vbox (badness 10000) detected at line 772
- []
-
-
-Overfull \hbox (9.88472pt too wide) in alignment at lines 780--785
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 785
- []
-
-
-Underfull \vbox (badness 10000) detected at line 803
- []
-
-[13]
-Overfull \hbox (158.18768pt too wide) detected at line 860
-\OML/lmm/m/it/10 d[] \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 m[] \OMS/lmsy/m/n/10 ! 
- []
- []
-
-
-Overfull \hbox (153.92259pt too wide) detected at line 862
-\OML/lmm/m/it/10 c[] \OT1/lmr/m/n/10 : [] \OMS/lmsy/m/n/10 !  []
- []
-
-
-Underfull \vbox (badness 10000) detected at line 867
- []
-
-[14]
-Overfull \hbox (38.72968pt too wide) in alignment at lines 913--918
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 918
- []
-
-
-Underfull \vbox (badness 10000) detected at line 934
- []
-
-[15]
-Underfull \vbox (badness 10000) detected at line 944
- []
-
-
-Overfull \hbox (45.92418pt too wide) in alignment at lines 961--966
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 966
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1016
- []
-
-[16] [17]
-! Argument of \LT@nofcols has an extra }.
-<inserted text> 
-                \par 
-l.1070 \begin{longtable}[]{@{}ll@{}}
-                                    
-? 
-Runaway argument?
-\global \advance \c@LT@chunks \@ne \global \LT@rows \z@ \setbox \z@ \vbox \ETC.
-! Paragraph ended before \LT@nofcols was complete.
-<to be read again> 
-                   \par 
-l.1070 \begin{longtable}[]{@{}ll@{}}
-                                    
-? 
-! Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.1070 \begin{longtable}[]{@{}ll@{}}
-                                    
-? 
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.1070 \begin{longtable}[]{@{}ll@{}}
-                                    
-? 
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.1070 \begin{longtable}[]{@{}ll@{}}
-                                    
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.1070 \begin{longtable}[]{@{}ll@{}}
-                                    
-? 
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.1070 \begin{longtable}[]{@{}ll@{}}
-                                    
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.1070 \begin{longtable}[]{@{}ll@{}}
-                                    
-? 
-! You can't use `macro parameter character #' in restricted horizontal mode.
-\LT@bchunk ...ep {\hskip 1sp\ignorespaces \@sharp 
-                                                  \unskip \hfil }\tabskip \L...
-l.1070 \begin{longtable}[]{@{}ll@{}}
-                                    
-? 
-Runaway argument?
-\LT@make@row \m@th \let 
-! Paragraph ended before \LT@nofcols was complete.
-<to be read again> 
-                   \par 
-l.1070 \begin{longtable}[]{@{}ll@{}}
-                                    
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.1075 \end{longtable}
-                      \strut
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.1075 \end{longtable}
-                      \strut
-? 
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.1075 \end{longtable}
-                      \strut
-? 
-! Missing { inserted.
-<inserted text> 
-                {
-l.1075 \end{longtable}
-                      \strut
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.1075 \end{longtable}
-                      \strut
-? 
-! Too many }'s.
-\endminipage ...pagefalse \color@endgroup \egroup 
-                                                  \expandafter \@iiiparbox \...
-l.1076 \end{minipage}
-                      & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-
-? 
-! Undefined control sequence.
-\endminipage ...\expandafter \@iiiparbox \@mpargs 
-                                                  {\unvbox \@tempboxa }
-l.1076 \end{minipage}
-                      & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
-
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   \def 
-l.1076 ...nipage}[t]{0.48\columnwidth}\raggedright
-                                                  \strut
-? 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \def 
-l.1076 ...nipage}[t]{0.48\columnwidth}\raggedright
-                                                  \strut
-? 
-
-! LaTeX Error: \begin{document} ended by \end{minipage}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1076 ...nipage}[t]{0.48\columnwidth}\raggedright
-                                                  \strut
-? 
-! Misplaced alignment tab character &.
-<argument> ...e \@ignorefalse \ignorespaces \fi  &
-                                                   \begin {minipage}
-l.1076 ...nipage}[t]{0.48\columnwidth}\raggedright
-                                                  \strut
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   \relax 
-l.1076 ...nipage}[t]{0.48\columnwidth}\raggedright
-                                                  \strut
-? 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.1076 ...nipage}[t]{0.48\columnwidth}\raggedright
-                                                  \strut
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.1076 ...nipage}[t]{0.48\columnwidth}\raggedright
-                                                  \strut
-? 
-
-Overfull \hbox (5.44438pt too wide) in paragraph at lines 1076--1076
-[]\T1/lmr/m/n/10 (-20) b[] 
- []
-
-! Too many }'s.
-\endminipage ...pagefalse \color@endgroup \egroup 
-                                                  \expandafter \@iiiparbox \...
-l.1078 \end{minipage}
-                     \tabularnewline
-? 
-! Undefined control sequence.
-\endminipage ...\expandafter \@iiiparbox \@mpargs 
-                                                  {\unvbox \@tempboxa }
-l.1078 \end{minipage}
-                     \tabularnewline
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   @
-l.1086 \toprule
-               
-? 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   @
-l.1086 \toprule
-               
-? 
-! Misplaced \noalign.
-\toprule ->\noalign 
-                    {\ifnum 0=`}\fi \@aboverulesep =\abovetopsep \global \@b...
-l.1086 \toprule
-               
-? 
-Runaway argument?
-{\@checkend {minipage}\expandafter \endgroup \if@endpe \@doendpe \fi \ETC.
-! Paragraph ended before \setlength was complete.
-<to be read again> 
-                   \par 
-l.1086 \toprule
-               
-? 
-! Argument of \LT@array has an extra }.
-<inserted text> 
-                \par 
-l.1086 \toprule
-               
-? 
-Runaway argument?
-! Paragraph ended before \LT@array was complete.
-<to be read again> 
-                   \par 
-l.1086 \toprule
-               
-? 
-! Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.1086 \toprule
-               
-? 
-! Misplaced alignment tab character &.
-l.1088 &
-         ()\tabularnewline
-? 
-! Misplaced \noalign.
-\bottomrule ->\noalign 
-                       {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
-l.1089 \bottomrule
-                  
-? 
-! Misplaced \crcr.
-\endlongtable ->\crcr 
-                      \noalign {\let \LT@entry \LT@entry@chop \xdef \LT@save...
-l.1090 \end{longtable}
-                      
-? 
-! Misplaced \noalign.
-\endlongtable ->\crcr \noalign 
-                               {\let \LT@entry \LT@entry@chop \xdef \LT@save...
-l.1090 \end{longtable}
-                      
-? 
-! Misplaced \crcr.
-\LT@echunk ->\crcr 
-                   \LT@save@row \cr \egroup \global \setbox \@ne \lastbox \u...
-l.1090 \end{longtable}
-                      
-? 
-! Misplaced \omit.
-\LT@entry ...->\ifhmode \@firstofone {&}\fi \omit 
-                                                  \ifnum #1=\c@LT@chunks \el...
-l.1090 \end{longtable}
-                      
-? 
-! Misplaced \omit.
-\LT@entry ...->\ifhmode \@firstofone {&}\fi \omit 
-                                                  \ifnum #1=\c@LT@chunks \el...
-l.1090 \end{longtable}
-                      
-? 
-! Misplaced \cr.
-\LT@echunk ->\crcr \LT@save@row \cr 
-                                    \egroup \global \setbox \@ne \lastbox \u...
-l.1090 \end{longtable}
-                      
-? 
-! Extra }, or forgotten \endgroup.
-\LT@echunk ->\crcr \LT@save@row \cr \egroup 
-                                            \global \setbox \@ne \lastbox \u...
-l.1090 \end{longtable}
-                      
-? 
-! Extra }, or forgotten \endgroup.
-\LT@echunk ...etbox \@ne \lastbox \unskip \egroup 
-                                                  
-l.1090 \end{longtable}
-                      
-? 
-
-! LaTeX Error: \begin{document} ended by \end{longtable}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1090 \end{longtable}
-                      
-? 
-[18]
-Underfull \vbox (badness 10000) detected at line 1102
- []
-
-
-Overfull \hbox (64.37367pt too wide) in alignment at lines 1109--1114
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1114
- []
-
-
-Overfull \hbox (22.1107pt too wide) in alignment at lines 1119--1124
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1124
- []
-
-
-Overfull \hbox (6.58604pt too wide) in alignment at lines 1130--1135
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1135
- []
-
-
-Overfull \hbox (28.319pt too wide) in alignment at lines 1139--1144
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1144
- []
-
-
-Overfull \hbox (139.57718pt too wide) in alignment at lines 1151--1156
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1156
- []
-
-
-Overfull \hbox (216.04285pt too wide) in alignment at lines 1162--1167
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1167
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1176
- []
-
-[19]
-Overfull \hbox (55.63347pt too wide) in alignment at lines 1180--1185
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1185
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1194
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1204
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1214
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1216.
-[20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1216.
+[17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1163.
+ [18]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1163.
  (dependentMDPs_11_pandoc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1216.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1216.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1163.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1163.
 
-Package rerunfilecheck Info: File `dependentMDPs_11_pandoc.out' has not changed
-.
-(rerunfilecheck)             Checksum: 39EE7D3E30CBB33F4FD08F075D5B0CF6;7014.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1216.
+
+
+Package rerunfilecheck Warning: File `dependentMDPs_11_pandoc.out' has changed.
+
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `dependentMDPs_11_pandoc.out':
+(rerunfilecheck)             Before: 9E73DFB71474D699E476754D337BC8A4;6922
+(rerunfilecheck)             After:  88B5E2EB6A06D23034F3046CD155C18C;6917.
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1163.
  ) 
 Here is how much of TeX's memory you used:
- 12313 strings out of 493328
- 177522 string characters out of 3139099
- 279638 words of memory out of 3000000
- 15466 multiletter control sequences out of 15000+200000
- 59891 words of font info for 105 fonts, out of 3000000 for 9000
+ 11160 strings out of 493328
+ 159911 string characters out of 3139099
+ 232328 words of memory out of 3000000
+ 14445 multiletter control sequences out of 15000+200000
+ 237267 words of font info for 144 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,13n,38p,487b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,11n,28p,482b,402s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
-nc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathi
-t.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Fil
-es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
-m/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/lm/lmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr5.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts
+nc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm
+.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi5.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr5.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
-lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy5.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/sy
-mbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
-ls/msbm7.pfb>
-Output written on dependentMDPs_11_pandoc.pdf (20 pages, 352893 bytes).
+lmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy7
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on dependentMDPs_11_pandoc.pdf (18 pages, 2365884 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 96 named destinations out of 1000 (max. 500000)
- 8489 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 541 PDF objects out of 1000 (max. 8388607)
+ 97 named destinations out of 1000 (max. 500000)
+ 324 words of extra memory for PDF output out of 10000 (max. 10000000)
 
