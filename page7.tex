@@ -1,0 +1,19 @@
+\section*{page 7}
+
+The system can be broken into the following MDP definitions
+
+\underline{$M_i$ -- Parent}
+
+$S_i$ -- a collection of states, $s_i\in S_i$\\
+$A_i$ -- a collection of actions, $a_i \in A_i$\\
+
+$P(s^\prime_i|s_i, a_i)$ is observed directly\\
+
+$R_t\left({}^{s^\prime_i}_{a^\prime_k}|{}_{a_i},{}^{s_i}_{a_k}\right)=R_t\left({}^{s^\prime_i}_{s^\prime_k},{}^{a_i}_{a_k},{}^{s_i}_{s_k}\right)$
+
+\underline{$M_k$ -- child}
+
+$S^\prime_i$ -- all child states, $s_k\in S_k$\\
+$a_k\in A_k$\\
+$P(s^\prime_k|s_k,a_k)$\\
+$R_t(s^\prime_k,a_k,s_k)=R_t\left({}^{s_i}_{s^\prime_k},{}^{a_i}_{a_k},{}^{s_i}_{s_k}\right)$
