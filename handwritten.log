@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.3)  11 MAY 2017 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.3)  12 MAY 2017 15:14
 entering extended mode
 **./handwritten.tex
 (handwritten.tex
@@ -413,26 +413,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-) [2 <./media/page4diagram.pdf>] (page5.tex) [3] (page7.tex
+) [2 <./media/page4diagram.pdf>] (page5.tex
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
+
+ []
+
+) [3] (page7.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 7--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-) [4] (handwritten.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+) [4] (page8.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+) [5] (handwritten.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.6161pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 4197 strings out of 493328
- 65482 string characters out of 3139099
- 126916 words of memory out of 3000000
+ 4200 strings out of 493328
+ 65505 string characters out of 3139099
+ 127916 words of memory out of 3000000
  7668 multiletter control sequences out of 15000+200000
  33971 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -451,9 +496,9 @@ X 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palati
 no/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
 
-Output written on handwritten.pdf (4 pages, 150390 bytes).
+Output written on handwritten.pdf (5 pages, 155507 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
+ 81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

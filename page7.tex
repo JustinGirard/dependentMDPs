@@ -2,18 +2,56 @@
 
 The system can be broken into the following MDP definitions
 
-\underline{$M_i$ -- Parent}
+\underline{$M_i$ -- Parent}\\
 
 $S_i$ -- a collection of states, $s_i\in S_i$\\
 $A_i$ -- a collection of actions, $a_i \in A_i$\\
 
+\begin{equation*}
+\left. \begin{array}{l}
+\tilde{T}\\
+\tilde{R}
+\end{array}\right\}
+\text{Covered Pages on BII p12-14}
+\end{equation*}
+
 $P(s^\prime_i|s_i, a_i)$ is observed directly\\
 
-$R_t\left({}^{s^\prime_i}_{a^\prime_k}|{}_{a_i},{}^{s_i}_{a_k}\right)=R_t\left({}^{s^\prime_i}_{s^\prime_k},{}^{a_i}_{a_k},{}^{s_i}_{s_k}\right)$
+%$R_t\left({}^{s^\prime_i}_{a^\prime_k}|{}_{a_i},{}^{s_i}_{a_k}\right)=R_t\left({}^{s^\prime_i}_{s^\prime_k},{}^{a_i}_{a_k},{}^{s_i}_{s_k}\right)$
 
-\underline{$M_k$ -- child}
+\begin{equation*}
+R_t\left(  \begin{array}{l} s^\prime_i \\ a^\prime_k \end{array}
+\middle| 
+\begin{array}{c} \\ a_i \end{array},
+\begin{array}{c} s_i \\ a_k \end{array}
+\right) 
+=
+R_t\left( 
+\begin{array}{c} s^\prime_i \\ s^\prime_k \end{array},
+\begin{array}{c} a_i \\ a_k \end{array},
+\begin{array}{c} s_i \\ s_k \end{array}
+\right)
+\end{equation*}
+
+
+$S$, $T_i$, $S_k$, $S^\prime_k$ are not directly observable\\
+
+ii) $a_k=\pi_k(s_k)$\\
+iii) $a^\prime_k=\pi_k(s_k)$\\
+iiii) $\left(s_k,s^\prime_k\right)$ chosen indirectly by $\pi_k(\cdot)$ in a manner that
+\begin{equation*}
+\boxed{A^*}\quad\longrightarrow\quad E[R_{t+1}(\cdot)]\geq E[R_t(\cdot)]
+\end{equation*}
+
+\underline{$M_k$ -- child}\\
 
 $S^\prime_i$ -- all child states, $s_k\in S_k$\\
 $a_k\in A_k$\\
 $P(s^\prime_k|s_k,a_k)$\\
 $R_t(s^\prime_k,a_k,s_k)=R_t\left({}^{s_i}_{s^\prime_k},{}^{a_i}_{a_k},{}^{s_i}_{s_k}\right)$
+s.t.\ $s_i$, $s^\prime_i$ are chosen by another process, and
+\begin{equation*}
+\boxed{A^*}\quad\longrightarrow\quad E[R_{t+1}(\cdot)]\geq E[R_t(\cdot)]
+\end{equation*}
+
+
