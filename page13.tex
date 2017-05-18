@@ -7,6 +7,22 @@ knowing $R\left(\{s_x, s_y\}|a, \{s^\prime_x,s^\prime_y\}\right)=R(s|a,s)$\\
 1)\ 
 \begin{minipage}[t]{0.9\textwidth}Average method:\\
 \begin{equation*}
-R\left(s^\prime_x\middle|a,s_x\right)=\sum_{s_y}\sum_{s^\prime_y}R\left(\left\{s^\prime_x,s^\prime_y\right\}\middle|a,\left\{s_x,s_y\right\}\right)
+R\left(s^\prime_x\middle|a,s_x\right)=\underbrace{\sum_{s_y}\sum_{s^\prime_y}R\left(\left\{s^\prime_x,s^\prime_y\right\}\middle|a,\left\{s_x,s_y\right\}\right)}_{\left|S_y\right|^2}
 \end{equation*}
 \end{minipage}
+
+$m\in \left\{ \max,\min\right\}$\\
+$m^\prime\in \left\{ \max, \min \right\}$\\
+
+\begin{equation*}
+\begin{array}{lcl}
+\max, \max & 2) & \text{max method!}  \\ 
+\max, \min & 3)& \min \\
+& 4)& R\left( s^\prime_x\middle|a, s_x \right) = m\quad m^\prime\quad s_x\in S_x\quad s^\prime_y\in S_y \quad
+R\left( \left\{s^\prime_x,s^\prime_y\right\}\middle|a, \left\{ s_x, s_y \right\}\right)
+\\
+\min, \max & 5) & \\
+\min, \min  & & \\
+& 6) &
+\end{array}
+\end{equation*}

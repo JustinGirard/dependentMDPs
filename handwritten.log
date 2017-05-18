@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.3)  17 MAY 2017 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.3)  18 MAY 2017 15:16
 entering extended mode
 **./handwritten.tex
 (handwritten.tex
@@ -470,31 +470,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
  []
 
 ) [4] (page8.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--2
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--15
+Underfull \hbox (badness 10000) in paragraph at lines 5--17
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--38
+Overfull \hbox (13.21535pt too wide) in paragraph at lines 23--46
+\OML/cmm/m/it/10 R[] [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R[] []  [] s[]; s[] 
+[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-) [5] (page9.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 53--399
+
+ []
+
+[5] (page9.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -632,6 +648,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
+
+ []
+
 ) [9] (handwritten.aux)
 
 LaTeX Font Warning: Size substitutions with differences
@@ -641,7 +662,7 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  4422 strings out of 493328
  68566 string characters out of 3139099
- 130336 words of memory out of 3000000
+ 132336 words of memory out of 3000000
  7859 multiletter control sequences out of 15000+200000
  35931 words of font info for 95 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -652,18 +673,19 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
 ype1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
-helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8
-a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on handwritten.pdf (9 pages, 185854 bytes).
+5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/euler/eusm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/u
+hvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on handwritten.pdf (9 pages, 196994 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
