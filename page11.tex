@@ -1,0 +1,29 @@
+\section*{page11}
+
+\underline{Total Mapping}\\
+
+ 
+$\ast\ A_R = \left\{ \begin{array}{l} \text{State 1, State 2, Action 1, Action 2} \\ \text{merge, time up, time down} \end{array} \right\}$\\
+
+Given\ 
+\begin{minipage}[t]{0.7\textwidth}
+$S\in\mathbb{R}^{n}$, define dimensions $\{i_s\}_{i_s=1}^{n}$ \\
+$A\in \mathbb{N}^{m}$, define dimensions $\{i_r\}_{i_r=1}^{m}$
+\end{minipage}\\
+
+Then, with an initial MDP $M=\langle S, A, T, R, \pi, M_R \rangle$, all possible ``sub mdps'' $M_1$, $M_2$, $M_3$, \ldots represent the family of MDPs which can be created from $M$, $\mathscr{P}(M)=\left\{M_x | S_x \subseteq S, A_x\subseteq A, R, \pi \text{\ from MDPs \textbf{???}}\right\}$ and each member $M_x$ is characterized by a language $J_{sx}\subseteq \left\{i_s\right\}_{i_s=1}^{n}$ or $J_{sy}\subseteq\left\{i_r\right\}_{i_r=1}^{m}$ where $J_{sx}\times J_{sy}$ defines a space $S_R$, for the reconfiguration MDP to explore, with actions from $A_R$.\\
+
+\begin{equation*}
+J \left| \begin{array}{l}\text{Reward is defined as average expected reward over an epoch $e$.} \\ \text{in terms of transition} \end{array} \right.
+\end{equation*}\\
+
+$\ast\ S_R = \mathscr{P}\left(\left\{i_s\right\}_{i_s=1}^{n}\right)\times\mathscr{P}\left(\left\{i_r\right\}_{i_r=1}^{m}\right)$
+$\qquad\longleftarrow\ $ exponentional increase in space (stupid!)
+\\
+
+Problems\ 
+\begin{minipage}[t]{0.5\textwidth}
+1)\ exponential space consumption\\
+2)\ how to handle chaining/nesting\\
+3)\ how to structure action choice policy
+\end{minipage}

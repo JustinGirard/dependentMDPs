@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.3)  12 MAY 2017 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.3)  17 MAY 2017 16:16
 entering extended mode
 **./handwritten.tex
 (handwritten.tex
@@ -257,47 +257,80 @@ Package caption Info: Unknown document class (or package),
 \c@lotdepth=\count113
 \sf@top=\skip52
 \sf@bottom=\skip53
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fixltx2e.sty"
-Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
-Applying: [2015/01/01] Old fixltx2e package on input line 46.
+)
+("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\pbox\pbox.sty"
+Package: pbox 2011/12/07 v1.2 Dynamic parboxes
 
-
-Package fixltx2e Warning: fixltx2e is not required with releases after 2015
-(fixltx2e)                All fixes are now in the LaTeX kernel.
-(fixltx2e)                See the latexrelease package for details.
-
-Already applied: [0000/00/00] Old fixltx2e package on input line 53.
-) (handwritten.aux)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count114
+\calc@Bcount=\count115
+\calc@Adimen=\dimen147
+\calc@Bdimen=\dimen148
+\calc@Askip=\skip54
+\calc@Bskip=\skip55
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count116
+\calc@Cskip=\skip56
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\pb@xlen=\skip57
+)
+("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\dashbox\dashbox.s
+ty"
+Package: dashbox 2001/12/11 v1.14 Dashed and layered boxes
+\dashlength=\skip58
+\dashdash=\skip59
+\layersize=\skip60
+\d@shedsavebox=\box30
+\d@shedboxwidth=\skip61
+\d@shedboxtotalheight=\skip62
+\l@yersavebox=\box31
+\l@yerwidth=\skip63
+\l@yerboxwidth=\skip64
+\l@yertotalheight=\skip65
+\l@yerlineheight=\skip66
+\l@yervoffset=\skip67
+\c@l@yercount=\count117
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\eucal.sty"
+Package: eucal 2009/06/22 v3.00 Euler Script fonts
+LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
+(Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
+)
+(handwritten.aux)
 \openout1 = `handwritten.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 373.
-LaTeX Font Info:    ... okay on input line 373.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 373.
-LaTeX Font Info:    ... okay on input line 373.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 373.
-LaTeX Font Info:    ... okay on input line 373.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 373.
-LaTeX Font Info:    ... okay on input line 373.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 373.
-LaTeX Font Info:    ... okay on input line 373.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 373.
-LaTeX Font Info:    ... okay on input line 373.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 380.
+LaTeX Font Info:    ... okay on input line 380.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 380.
+LaTeX Font Info:    ... okay on input line 380.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 380.
+LaTeX Font Info:    ... okay on input line 380.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 380.
+LaTeX Font Info:    ... okay on input line 380.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 380.
+LaTeX Font Info:    ... okay on input line 380.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 380.
+LaTeX Font Info:    ... okay on input line 380.
 
 -- Lines per column: 38 (exact).
 
 ("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.m
 kii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count114
-\scratchdimen=\dimen147
-\scratchbox=\box30
-\nofMPsegments=\count115
-\nofMParguments=\count116
+\scratchcounter=\count118
+\scratchdimen=\dimen149
+\scratchbox=\box32
+\nofMPsegments=\count119
+\nofMParguments=\count120
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count117
-\MPscratchDim=\dimen148
-\MPnumerator=\count118
-\makeMPintoPDFobject=\count119
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen150
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
 \everyMPtoPDFconversion=\toks23
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
@@ -402,13 +435,6 @@ File: media/page4diagram.pdf Graphic file (type pdf)
 Package pdftex.def Info: media/page4diagram.pdf used on input line 8.
 (pdftex.def)             Requested size: 248.92938pt x 97.3635pt.
 
-Overfull \hbox (7.70604pt too wide) in paragraph at lines 11--12
-[]\OT1/ppl/m/n/9.53561 assume a Markov de-ci-sion pro-cess M which can be com-p
-letely rep-re-sented as a tu-ple $\OML/cmm/m/it/10 M \OT1/cmr/m/n/10 = \OMS/cms
-y/m/n/10 h\OML/cmm/m/it/10 S; A; T; R; ; []; []\OMS/cmsy/m/n/10 i$ 
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
@@ -468,20 +494,158 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
-) [5] (handwritten.aux)
+) [5] (page9.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
+
+ []
+
+) [6] (page11.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--13
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+eus on input line 14.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+)
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--23
+
+ []
+
+) [7] (page12.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+) [8] (page13.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+) [9] (handwritten.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.6161pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 4200 strings out of 493328
- 65505 string characters out of 3139099
- 127916 words of memory out of 3000000
- 7668 multiletter control sequences out of 15000+200000
- 33971 words of font info for 87 fonts, out of 3000000 for 9000
+ 4422 strings out of 493328
+ 68566 string characters out of 3139099
+ 130336 words of memory out of 3000000
+ 7859 multiletter control sequences out of 15000+200000
+ 35931 words of font info for 95 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,19n,38p,436b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,19n,38p,673b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
@@ -491,14 +655,15 @@ ts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
 7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program
  Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palati
-no/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
-
-Output written on handwritten.pdf (5 pages, 155507 bytes).
+KTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
+helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8
+a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on handwritten.pdf (9 pages, 185854 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
+ 103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
