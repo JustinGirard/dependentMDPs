@@ -2,8 +2,28 @@
 
 \section*{page 0: Reconfigurable Reinforcement Learning Networks}
 
+In humans, the structure and form of learning is not only driven by the environment and structure of the brain. The growing of the brain-structure itself defines what learning may take place, and thus the conditions and patterns which direct brain formation are primary and total for the success of learning. Thus, as artifical intelligence research continually generates and publishes on novel structures discovered by humans, this work is centered around how the discovery of this structure may occour automatically. This subject is frequently included in the subject of general intelligence, and is famous for both its philosopical and computational complexity, as well as its difficulty in finding funding. There have been previous works on this subject, such as [Consciousness as a State of Matter] [] []. 
+
+Specifically, This work presents a unification method for online learning (Reinforcement Learning) and offline learning (Backpropagation). In addition, this work demonstrates an apporach to the self-structuring of parametric models. First, it is demonstrated that Concurrent Markov Decision Processes (CMDPs) can discover parametric structure and optimal bhaviour with even when subject to large state spaces and generous state uncertainty. Second, it is shown that a variation of CMDPs called Reconfigurable Learning Networks (RLNs) can learn parametric decision networks. RLNs in structure and behaviour turn out to be equilivent to the structure and behaviour of feed-forward neural networks. Lastly, a few empirical examples are demonstrated, beginning with the MINST dataset. Two main contributions are made: First, RLNs can be trained offline and online, using Reinforcement Learning and then Backpropagation; online learning stimulates network growth and adaptation immediately, whereas backpropagation seems to be an ideal phase for network pruning.  Second, an empty RLN can enjoy empirical success even when the reward function for the system is changed. Thus both a degree of empirical success and general learning have been achieved.
+
+In order for a generally intelligent system to operate, solutions to several open problems need to be solved anaytically and/or heuristically. In this work, we present the related problem categories in the Introduction (Section 1), and include background on each area. Second, most of this work is focused around the reconfiguration of existing CMDP problems, so Section 2 includes work on transfer learning and analytical anaysis. Third, we express how convergence of behaviour policies can be preserved despite online RLN restructuring (Section 3). The tradeoff between network structure and computation time  in learning is expressed analytically (Section 5). Lastly, it is shown that RLNs are actually just feed-forward Neural Networks, which adds the ability to use back propagation and other techniques on discovered models (Section 6).
+
+In this work due to the diffiucty of the subject matter initally, models are assumed noiseless and stochastically stable. It is expected that later work will broaden this work by considering state uncertainty, and non-stationary problems.
+
+\section*{Notation}
+
 In general, most online optimization problems can be expressed as fully observable Markov Decision Processes (MDPs)
-as \( \langle S, A, T, R \rangle \) tuples (State S, Action A, Transitions T, Reward R).
+as \( \langle S, A, T, R,\pi \rangle \) tuples: 
+
+\begin{itemize}  
+\item $S \subseteq R^{n}$:  A discrete collection of states
+\item $A \subseteq R^{n}$:  A discrete collection of actions
+\item $T(s|a,s') \in R $:  A stably stochastic transition function, where $\sum_{s \in S} T(s|a,s') = 1 $
+\item $R(s|a,s') \in R $:  A stable stochastic reward fuction
+\item $\pi: S\times A \rightarrow R $:  A non-negative behaviour policy with the general property, $\sum_{a \in A} \pi(s,a) = 1$
+
+\end{itemize}
+
 
 In general, we can express behaviour in this domain as a policy \( \pi: S\rightarrow R\) {\textbf{[? looked like this, but would\ }}  \(\pi:S\rightarrow A \) 
 {\textbf{\ make more sense?]}}. Particular attention is given to the optimal strategy.
