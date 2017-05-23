@@ -1,0 +1,43 @@
+\section*{page 12}
+
+\underline{Mapping function rewards}\\
+
+Given $(S_{\textrm{map}}, A_{\textrm{map}}, T_{\textrm{map}}, R^{i}_{\textrm{map}}, \pi_{\textrm{map}})$, applied to $M=\langle S_x, A_x, \tilde{T}_x, R_x, \tilde{\pi}_x \rangle$, we may trivially define $M_y=\langle S_y, A_y, \tilde{T}_y, R_y, \pi_y \rangle$ in a method consistent with Bush, p.\ 74, with $M_x$ being the parent process and $M_y$ being the child.\\
+
+a) for $R_{\textrm{map}^{i}}$, there are five versions $i\in\{1,\ldots,5\}$\\
+b) Given $M_x$, $M_y$, a merge is also possible, so recovering $M$\\
+c) we can perform temporal Sink actions on an MDP (Book I, p.\ 88)\\
+${}\qquad\hookrightarrow$\ reduce resolution\\
+${}\qquad\hookrightarrow$\ re-increase resolution\\
+
+\underline{Actions}\\
+
+$\therefore$ Seven ``actions'' can be performed on an MDP: $(M_R)$\\
+
+$\qquad$\begin{minipage}[t]{0.9\textwidth}
+\underline{\textbf{???}}\\
+
+\begin{equation*}
+\left\{R^i_{\textrm{map}}\right\}_{i=0}^{5}\cup \left\{\text{merge}\right\}\times\left\{\text{scale\ up}^{i}\right\}_{i=0}^{5}\cup\left\{\text{normal}\right\}\cup\left\{\varnothing\right\}
+\end{equation*}\\
+
+\underline{Reward}\\
+
+\begin{equation*}
+R(s^\prime,a,s)=\sum_{l\in e}R(l)\qquad\text{reward during a trajectory}
+\end{equation*}
+$e=\text{epoch}$\\
+
+\underline{Transition}\\
+
+-easy to explain in MS Word
+\begin{equation*}
+T=\left\{
+\begin{array}{l}
+1\ \text{-- allow \textbf{???}}\\
+0\ \text{-- otherwise}
+\end{array}
+\right.
+\end{equation*}
+\end{minipage}
+

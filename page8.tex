@@ -1,3 +1,5 @@
+\section*{page 8}
+
 \underline{Definitions}\\
 
 \underline{$M$}\quad
@@ -27,28 +29,37 @@ $P\left(
 \begin{array}{c} s_i \\ s_k \end{array}
 \right)$\\
 $R_t\left( 
-\begin{array}{c} s^\prime_i \\ s^\prime_k \end{array},
+\begin{array}{c} s^\prime_i \\ a^\prime_k \end{array},
 \begin{array}{c} a_i \\ \end{array},
 \begin{array}{c} s_i \\ a_k \end{array}
-\right)$ \\
-s.t.\ $s_k$, $s^\prime_k$ are not directly observable\\
+\right)
+=
+R_t\left( 
+\begin{array}{c} s^\prime_i \\ s^\prime_k \end{array},
+\begin{array}{c} a_i \\ a_k\end{array},
+\begin{array}{c} s_i \\ s_k \end{array}
+\right)
+\quad\text{
+s.t.}\ s_k, s^\prime_k\ \text{are not directly observable}$\\
 $a_k=\pi_k(s_k)$\\
 $a^\prime_k=\pi_k(s^\prime_k)$
 \end{minipage}\\
 
+$\ast \rule[3pt]{3cm}{0.1pt}$\fbox{assume $s_k$, $s^\prime_k$ chosen s.t.\ as $t\to\infty\quad E[R_{t+1}()]\geq E[R_t(\cdot)]$}\\
 
 
 \underline{Child MDP}\\
 
 \underline{$M_k$}\quad
-%\begin{minipage}[t]{5in}
-%$S=(S_i/S_k)\times(S_k/S_i)$\\
-%$A=A_i\cup A_k$\\
-%$T=P(S\times A\times S)$\\
-%$R= \text{real, positive, convergent stochastic as $t\to\infty$}$\\
-%$R(s^\prime,a,s) =R\left( 
-%\begin{array}{l} s^\prime_i \\ s^\prime_k \end{array},
-%\begin{array}{l} a_i \\ a_k \end{array},
-%\begin{array}{l} s_i \\ s_k \end{array}
-%\right)$
-%\end{minipage}\\
+\begin{minipage}[t]{5in}
+$S_k, s_k\in S_k$\\
+$a_k\in A_k$\\
+$P(s^\prime_k|s_k,a_k)$\\
+$R_t(s^\prime_k, a_k, s_k)=R_t\left(
+\begin{array}{c}s^\prime_i \\ s^\prime_k \end{array},
+\begin{array}{c}a_i \\ a_k\end{array},
+\begin{array}{c}s_i \\ s_k \end{array}
+\right)\quad\text{s.t.}\ s_i,s^\prime_i\ \text{are chosen by another process}$
+$a_i=\pi_i(s_i)$\\
+$\ast\qquad$ time monotonicity assumed.
+\end{minipage}\\
