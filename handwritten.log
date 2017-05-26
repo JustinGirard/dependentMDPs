@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.3)  18 MAY 2017 15:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.3)  26 MAY 2017 15:24
 entering extended mode
 **./handwritten.tex
 (handwritten.tex
@@ -391,46 +389,46 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
 
 (Font)              Font shape `OT1/phv/b/sc' tried instead on input line 3.
-LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 6.
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 16.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 16.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 6.
+LaTeX Font Info:    Try loading font information for U+msb on input line 16.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 29.
+) [1{C:/Users/Chris Hemming/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 49.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9.53561> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
 
-Overfull \hbox (50.92775pt too wide) in paragraph at lines 29--29
+Overfull \hbox (50.92775pt too wide) in paragraph at lines 49--49
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
-) [1{C:/Users/Chris Hemming/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(page4.tex
+) [2] (page4.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-<media/page4diagram.pdf, id=13, 248.93pt x 97.36375pt>
+<media/page4diagram.pdf, id=18, 248.93pt x 97.36375pt>
 File: media/page4diagram.pdf Graphic file (type pdf)
 
 <use media/page4diagram.pdf>
@@ -441,12 +439,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-) [2 <./media/page4diagram.pdf>] (page5.tex
+) [3 <./media/page4diagram.pdf>] (page5.tex
 Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
-) [3] (page7.tex
+) [4] (page7.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
@@ -471,7 +469,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-) [4] (page8.tex
+) [5] (page8.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -512,7 +510,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--399
 
  []
 
-[5] (page9.tex
+[6] (page9.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -552,7 +550,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--28
 
  []
 
-) [6] (page11.tex
+) [7] (page11.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -585,7 +583,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--23
 
  []
 
-) [7] (page12.tex
+) [8] (page12.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -635,7 +633,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-) [8] (page13.tex
+) [9] (page13.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -655,7 +653,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
-) [9] (handwritten.aux)
+) [10] (handwritten.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.6161pt have occurred.
@@ -668,7 +666,7 @@ Here is how much of TeX's memory you used:
  7859 multiletter control sequences out of 15000+200000
  35931 words of font info for 95 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,19n,38p,673b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,19n,38p,1284b,250s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
@@ -685,10 +683,9 @@ e1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/u
 hvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on handwritten.pdf (9 pages, 196994 bytes).
+Output written on handwritten.pdf (10 pages, 201455 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
+ 110 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
->>>>>>> af5943c720ba25a10a7b51c2fc6ee93d6e5a782b
