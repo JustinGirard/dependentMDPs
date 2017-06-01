@@ -1,0 +1,45 @@
+\section*{page 15}
+
+\underline{Action mapping} (1 way)\\
+
+Next, we can consider an action mapping where actions from $A$ can be randomly assigned to $A_x$, $A_y$: $A_x \leftarrow \left\{ a\in A^\prime \middle| A^\prime \subseteq A \right \}$, $A_x, A_y\subseteq A$, $A_x \cup A_y = A$, $A_x \neq \{ \null \}$, $A_y \neq	 \{ \null \}$.\\
+
+\underline{General approach}: \underline{High reward for \textbf{???}ve states}\\
+
+Given $\tau \in \mathbb{R}$, $\pi(a|s)$, $\tilde{Q}(a,s)$ then 
+\begin{equation*}
+A_x \leftarrow A_x \cup \left\{ a  \middle| \underbrace{ \pi(a|s) \tilde{Q}(a,s) > \tau }_{\text{condition}} \right\}
+\end{equation*}
+or, more usefully/generally
+\begin{equation*}
+A_x \leftarrow A_x \cup \left\{ a \middle| \underbrace{ \left( \pi (a \middle|  S_s^{R^\prime} \right) \tilde{Q}(a,S^{*\prime}) > \tau }_{\text{condition}} \right\}
+\end{equation*}
+where
+\begin{equation*}
+S_s^{*\prime}=\left\{ S^\prime \middle| S/s_s^* \neq S\right\} \qquad\text{(see p. 12)}
+\end{equation*}
+
+Condition options:
+\begin{equation*}
+\ast \text{reformulation over set }S\text{\ vs.\ }s\in S\qquad 
+\left\{ 
+\begin{array}{l}
+\text{a)\ }\pi(a|s)\tilde{Q}(a,s)>\tau \qquad \cdots \quad \text{High reward} \\
+\text{b)\ }\pi(a|s)\tilde{Q}(a,s)>\tau,\quad\pi(a|s)>0\qquad \cdots \quad \text{small reward}
+\end{array}
+\right.
+\end{equation*}
+
+\underline{Transition function mapping: knowing $s_x\in S_x$, $s_y\in S_y$} (1 way)\\
+
+Goal $\exists f:P(S_x|A,S_x)\leftarrow P(S_x|A,S)$\\
+knowing $P(S_x \times S_y | A_x \cup A_y, S_x \times S_y)=P(S|A,S)$
+
+Clearly: 
+\begin{equation*}
+P(s^\prime_x|s_x,a_x) = \sum_{s_y^\prime}\sum_{a_y}\sum_{s_y} P\left( s_x^\prime,s_y^\prime|s_x,s_y,a_x,a_y\right)P\left(a_y|S_y \right)P\left( s_y \right)
+\end{equation*}
+
+\begin{equation*}
+\therefore\quad\tilde{T}\left( s^\prime_x \middle| s_x, a_x \right) = \sum_{s^\prime_y} \sum_{a_y} \sum_{s_y} \tilde{T}\left( s^\prime \middle| a, s  \right) \underbrace{\tilde{\pi}\left( a_y \middle| s_y \right)}_{\text{require policy mapping}}P(s_y)
+\end{equation*}

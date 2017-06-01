@@ -1,0 +1,76 @@
+\section*{page 15.2}
+
+\underline{MDP Policy Decomposition}\\
+
+\begin{equation*}
+\pi^\ast(s) = \argmax_{a} \sum_{s^\prime} R(s, a, s^\prime) P(s^\prime | s, a) +\gamma V(s)
+\end{equation*}
+
+Given $\pi^\ast_i(S_i,A_k)$, $\pi^\ast(S_k)$\\
+
+\begin{equation*}
+1.\quad \pi^\ast(s_i,s_k) = \argmax_{a_i, a_k} \sum_{s^\prime_i} \sum_{s^\prime_k} R\left( (s_i,s_k),(a_i,a_k),(s^\prime_i,s^\prime_k)\right) P\left( (s^\prime_i, s^\prime_k) \middle| (s_i, s_k), (a_i, a_k)  \right)
+\end{equation*}\\
+
+Note:\qquad
+\begin{minipage}[t]{10cm}
+$R\left( (s_i,s_k,a_k),(a_i,a_k),(s^\prime_i,s^\prime_k) \right) \leftarrow R\left((s_i,s_k),(a_i,a_k),(s^\prime_i,s^\prime_k)\right)$\\
+$R\left( (s_i,s_k,a_k),(a_i,a_k),(s^\prime_i,s^\prime_k,a^\prime_k) \right) \leftarrow R\left((s_i,s_k),(a_i,a_k),(s^\prime_i,s^\prime_k)\right)$
+\end{minipage}\\
+
+
+\textasteriskcentered assume separability $\longrightarrow$\\
+\begin{align*}
+2.\quad \pi^\ast(s_i,s_k) & = \argmax_{a_i} \argmax_{a_k} \sum_{s^\prime_i} \sum_{s^\prime_k} R\left( ( s_i, s_k, a_k ), ( a_i, a_k ), ( s^\prime_i, s^\prime_k, a^\prime_k )\right) P\left( ( s^\prime_i, s^\prime_k, a^\prime_k ) \middle| \cdot \right) \\
+& = \argmax_{a_i} \sum_{s^\prime_i} \sum_{s^\prime_k} R\left(  ( s_i, s_k, a_k ),\begin{array}{c} a_i \\ a_k \end{array}
+\middle| 
+\begin{array}{c} s^\prime_i \\ s^\prime_k \\ a^\prime_k \end{array}
+\right)
+P\left( 
+\begin{array}{c} s^\prime_i \\ s^\prime_k \\ a^\prime_k \end{array}
+\middle | \begin{array}{c} a_i \\ a_k \end{array},
+\begin{array}{c} s_i \\ s_k \\ a_k \end{array}
+\right) \\
+& \qquad \qquad \qquad
+\cup
+\argmax_{a_k}
+ \sum_{s^\prime_k} R\left(  \begin{array}{c} s_i \\ s_k \\ a_k \end{array},\begin{array}{c} a_i \\ a_k \end{array}
+\middle| 
+\begin{array}{c} s^\prime_i \\ s^\prime_k \\ a^\prime_k \end{array}
+\right)
+P\left( 
+\begin{array}{c} s^\prime_i \\ s^\prime_k \\ a^\prime_k \end{array}
+\middle | \begin{array}{c} a_i \\ a_k \end{array},
+\begin{array}{c} s_i \\ s_k \\ a_k \end{array}
+\right)
+\end{align*}\\
+
+\begin{align*}
+\ast\qquad \text{let\ }a_k^\ast & = \argmax_{a_k}\sum_{s^\prime_k}  R\left(  \begin{array}{c} s_i \\ s_k \\ a_k \end{array},\begin{array}{c} a_i \\ a_k \end{array}
+\middle| 
+\begin{array}{c} s^\prime_i \\ s^\prime_k \\ a^\prime_k \end{array}
+\right)
+P\left( 
+\begin{array}{c} s^\prime_i \\ s_k \\ a_k \end{array}
+\middle | \begin{array}{c} a_i \\ a_k \end{array},
+\begin{array}{c} s_i \\ s_k \\ a_k \end{array}
+\right)\\
+& \qquad\text{s.\ t.\ }s_i,s^\prime_i\leftarrow\pi^\ast_i( \\
+&\qquad\quad a^\ast_i = \pi^\ast_i(s)
+\end{align*}
+
+\begin{align*}
+3.\qquad &= \argmax_{a_i}\sum_{s^\prime_i}
+ R\left(  \begin{array}{c} s_i \\ a_k \end{array},
+\begin{array}{c} a_k \\ a^\ast_k \end{array},
+\begin{array}{c} s^\prime_i \\  a^\prime_k \end{array}
+\right)
+P\left( 
+\begin{array}{c} s^\prime_i \\ a^\prime_k \end{array}
+\middle | \begin{array}{c} a_i \\ a^\ast_k \end{array},
+\begin{array}{c} s_i \\ a_k \end{array}
+\right)
+\cup
+\pi^\ast_k(s_k)=a_k \\
+& = \pi^\ast_i\left( s_i \middle| \pi_k^\ast \right) \cup \pi^\ast_k(s_k)
+\end{align*}

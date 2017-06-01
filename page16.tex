@@ -1,0 +1,27 @@
+\section*{page 16}
+
+\begin{center}
+Parent Policy Convergence
+\end{center}
+
+\underline{For the Parent MDP $M_k$}\\
+
+--from definition $E\left[ R_t \left( s^\prime_k \middle| a_k, s_k \right) \right] \ge E\left[ R_{t+1}\left( s^\prime_k \middle| a_k, s_k  \right) \right]$\\
+\begin{align*}
+R_t\left( s^\prime_i \middle| a^\prime_i, s^\prime_i \right) & = R\left( \begin{array}{c} s^\prime_i \\ s^\prime_k \end{array} \middle| 
+\begin{array}{c}a_i \\ a_k \end{array}, \begin{array}{c} s_i \\ s_k \end{array} \right)\\
+& \text{i.}\qquad a_k = \pi_k( s_k )\\
+& \qquad\quad ( s^\prime_k, s_k ) \text{\ result from\ }a_i\text{\ s.t.\ }\\
+&\text{ii.}\qquad s^\prime_k \sim T( S_k | \pi_i( s_k ), s_k )\\
+&\text{iii.}\qquad s_k \sim T( S_k | \pi_i( s^\ast_k ), s^\ast_k )
+\end{align*}
+
+\textcircled{A}\\
+\boxed{$\textasteriskcentered$} -- $\pi_k(\cdot)$ is effective: $E\left[ R\left( \begin{array}{c} s^\prime_i \\ s^\prime_k \end{array} \middle| \begin{array}{c} a_i \\ a^\ast_k \end{array}, \begin{array}{c} s_i \\ s_k \end{array} \right) \right] 
+\ge E\left[ R\left( \begin{array}{c} s^\prime_i \\ s^\prime_k \end{array} \middle| \begin{array}{c} A_i \\ A_k \end{array}, \begin{array}{c} s_i \\ s_k \end{array} \right) \right]$\\
+\qquad\qquad$\exists a_i, a^\ast_k\leftarrow\pi_k(s_k)$\\
+
+\textcircled{B}\\
+\boxed{$\textasteriskcentered$} -- $\pi_k(\cdot)$ is convergent:
+
+
