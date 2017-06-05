@@ -16,12 +16,32 @@ R_t\left( s^\prime_i \middle| a^\prime_i, s^\prime_i \right) & = R\left( \begin{
 &\text{iii.}\qquad s_k \sim T( S_k | \pi_i( s^\ast_k ), s^\ast_k )
 \end{align*}
 
-\textcircled{A}\\
+A)\\
 \boxed{$\textasteriskcentered$} -- $\pi_k(\cdot)$ is effective: $E\left[ R\left( \begin{array}{c} s^\prime_i \\ s^\prime_k \end{array} \middle| \begin{array}{c} a_i \\ a^\ast_k \end{array}, \begin{array}{c} s_i \\ s_k \end{array} \right) \right] 
 \ge E\left[ R\left( \begin{array}{c} s^\prime_i \\ s^\prime_k \end{array} \middle| \begin{array}{c} A_i \\ A_k \end{array}, \begin{array}{c} s_i \\ s_k \end{array} \right) \right]$\\
 \qquad\qquad$\exists a_i, a^\ast_k\leftarrow\pi_k(s_k)$\\
 
-\textcircled{B}\\
+B)\\
 \boxed{$\textasteriskcentered$} -- $\pi_k(\cdot)$ is convergent:
+\begin{equation*}
+E\left[ R_{t+1}\left( \cdot \middle| \pi_{\substack{k\\t+1}},\cdot\right)\right] \ge E\left[ R_{t+1}\left( \cdot \middle| \pi_{\substack{k\\t+1}},\cdot\right)\right]
+\end{equation*}
+
+ assume some policy $\pi_k(\cdot)$ is both effective and convergent, then:\\
+$\textcircled{\text{A}}+\textcircled{\text{B}}\rightarrow\textcircled{\text{C}}$\\
+
+C)\\
+
+\begin{equation*}
+\boxed{\ast}\qquad \lim_{t\rightarrow\infty} R_t\left( s^\prime_i \middle| a_i, s_i \right) \sim R_{t+1}\left( s^\prime_i \middle| a_i, s_i \right)
+\end{equation*}
+
+E) Show other typical convergence \textbf{???},\\
+
+Done\\
+
+\underline{For the child}\\
+
+\boxed{$\textasteriskcentered$}$\qquad\qquad$ \underline{trivial}
 
 
