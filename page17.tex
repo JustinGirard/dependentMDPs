@@ -1,0 +1,26 @@
+\section*{page 17}
+
+On The Generalization and reuse of transitional knowledge \#2\\
+
+\hrule
+{\ }\\
+\begin{enumerate}[label=\protect\textcircled{\arabic*}]
+
+\item Setting the state, taking a general FOMDP given usual expections (stably stochastic etc.) $m=\langle S,A,T,R \rangle$ want to find $\pi^{\ast}:\left\{ S \times A \right\} \cup Q(S,A) \rightarrow A$ s.\ t.\ for some value function $V(s)$, $\pi^{\ast}(s) = \argmax_{a} \sum_{s^\prime} T \left( s^\prime \middle| a, s \right) R\left( s^\prime \middle| a, s \right) + \gamma V(s^\prime)$\\
+
+Traditionally, convergence can be found directly, using stochastic gradient descent
+\begin{equation*}
+Q_{t+1}(s,a) = Q_t(s,a) +\alpha\left( R(s^\prime|s,a) -Q_t(s,a) + \gamma \argmax_{a} \left( Q_t(s^\prime, a^\ast )\right)\right)
+\end{equation*}
+which is limited because as $Q(S,A)$ converges, it becomes difficult to adjust to changes in $R(S,A,S)$.
+{\ }\\
+\hrule
+{\ }\\
+
+\item Optimization objectives change, meaning the basis of $Q(S,A)$ is typically malleable in real-life scenarios. In this paper we present a method for separating transitional models and reward models.
+
+We hold reward and transitional functioning separate as $\tilde{T}$ and $\tilde{R}$; and attempt to regress to true values s.\ t.\ $\tilde{T}\approx T$ and $\tilde{R} \approx R$. We then develop a $Q_{\text{map}}$ function $f_Q$ to \textbf{???} $Q(S,A)$ space as needed:
+\begin{equation*}
+f_Q:\tilde{T}\left( S \times A \times S \right) \times \tilde{R}\left( S \times A \times S \right) \rightarrow Q_t\left( S ,A \right)
+\end{equation*}
+\end{enumerate}

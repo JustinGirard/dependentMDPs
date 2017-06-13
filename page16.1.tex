@@ -1,3 +1,4 @@
+\section*{page 16.1}
 
 \begin{enumerate}[label=\protect\textcircled{\arabic*}]
 \setcounter{enumi}{2}
@@ -25,4 +26,12 @@ f_R: & \tilde{R}_{t-1}( \mathfrak{Z} ) \times \left\{  R( s^\prime | a, s ) \rig
 \begin{equation*}
 \tilde{R}_t \leftarrow\text{\ user defined (in this case), and is readily ``pulled''}
 \end{equation*}
+where $f_r(s,a,s^\prime)$ and $f_r(s,a)$ reflect visitation frequencies.\\
+
+$f_Q$ is more difficult, and can be broken into exact solutions and approximate solutions
+\begin{equation*}
+Q_t(s,a) \leftarrow f_Q^{\text{exact}}\left( \mathfrak{Z}, \tilde{T}_t, \tilde{R}_t \right) = \sum_{s^\prime \in \mathfrak{Z}} \tilde{T}(s^\prime|s,a) \tilde{R}(s^\prime|s,a) +\gamma V(s^\prime)
+\end{equation*}
+where $V(s)\approx \argmax_{a} Q_{t-1}(s,a)$, where $\mathfrak{Z}=S \times A$ yields the more accurate and intractable model, it may be desired to focus on estimation, $f_a^{\text{est}}$.
+
 \end{enumerate}

@@ -1,0 +1,33 @@
+\section*{page 18}
+
+MDP: Linearization of Reward/Optimal Policy\\
+
+$P_a$ -- $P_a(i,j)$ represents $T(s_i, a, s_j)$ $\qquad$ $S$-- all states\\
+$\gamma$ -- decay factor $\qquad(0,1)$\\
+$\pi$ -- policy \\
+$V^\pi(s)$ -- typical value function\\
+$\mathbf{V}^\pi$ -- vector of all values $\left\{ V^\pi(s_1),\ldots,V^\pi(s_n)\right\}$\\
+$\prec$ and $\preceq$ denote strict and non-strict vectoral inequality.\\
+$\mathbf{R}$ -- vector of reward (like $\mathbf{V}^\pi(s)$)\\
+
+for optimal reward:
+\begin{equation*}
+\left( P_{a_i} - P_a \right) (I-\gamma P_{a_i})^{-1} \mathbf{R} \succeq 0\qquad\qquad\Leftrightarrow
+\end{equation*}
+
+Proof (cool as fuck):
+\begin{equation*}
+a_1 \equiv \pi(s) \in \argmax_{a\in A} \sum_{s^\prime} P_{s_a}(s^\prime)V^\pi(s^\prime) \quad\forall s \in S
+\end{equation*}
+\begin{align*}
+\sum_{s^\prime}P_{s_{a_1}} & \geq \sum_{s^\prime}P_{s_a}(s^\prime)V^\pi(s^\prime) \quad \forall s \in S, a \in A \\
+& \qquad \vdots \qquad \begin{array}{c} \rotatebox{90}{$\Rsh$} \\ \rotatebox{90}{$\Lsh$}  \end{array}  a_1 \text{\ is Pareto efficient (!)} \\
+P_{a_1} \mathbf{V}^\pi & \succeq P_a V^\pi \quad \forall a\in A \backslash a_1\qquad \text{(non-strict improvement)}\\
+& \qquad \vdots \\
+P_{a_1}(I - \gamma P_{a_1})^{-1} \mathbf{R} &  \succeq P_a(I-\gamma P_{a_1})^{-1} \mathbf{R} \quad \forall a \in A\backslash a_1 
+\end{align*}
+The hard part to verify: $\mathbf{V}^\pi = (I-\gamma P_{a_1})\mathbf{R}$
+
+
+
+
