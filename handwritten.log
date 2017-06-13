@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.3)  5 JUN 2017 12:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.3)  12 JUN 2017 17:16
 entering extended mode
 **./handwritten.tex
 (handwritten.tex
@@ -300,38 +300,46 @@ Package: eucal 2009/06/22 v3.00 Euler Script fonts
 LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
 (Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
 )
-(handwritten.aux)
+("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\enumitem\enumitem
+.sty"
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip68
+\enit@outerparindent=\dimen149
+\enit@toks=\toks22
+\enit@inbox=\box32
+\enitdp@description=\count118
+) (handwritten.aux)
 \openout1 = `handwritten.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 381.
+LaTeX Font Info:    ... okay on input line 381.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 381.
+LaTeX Font Info:    ... okay on input line 381.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 381.
+LaTeX Font Info:    ... okay on input line 381.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 381.
+LaTeX Font Info:    ... okay on input line 381.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 381.
+LaTeX Font Info:    ... okay on input line 381.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 381.
+LaTeX Font Info:    ... okay on input line 381.
 
 -- Lines per column: 38 (exact).
 
 ("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.m
 kii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count118
-\scratchdimen=\dimen149
-\scratchbox=\box32
-\nofMPsegments=\count119
-\nofMParguments=\count120
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count121
-\MPscratchDim=\dimen150
-\MPnumerator=\count122
-\makeMPintoPDFobject=\count123
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count119
+\scratchdimen=\dimen150
+\scratchbox=\box33
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen151
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks24
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -506,7 +514,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 53--399
+Underfull \hbox (badness 10000) in paragraph at lines 53--400
 
  []
 
@@ -809,20 +817,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
-) [15] (handwritten.aux)
+) [15] (page16.1.tex
+LaTeX Font Info:    Try loading font information for U+euf on input line 8.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+) [16] (handwritten.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.6161pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 4438 strings out of 493328
- 68732 string characters out of 3139099
- 140336 words of memory out of 3000000
- 7860 multiletter control sequences out of 15000+200000
- 35931 words of font info for 95 fonts, out of 3000000 for 9000
+ 4737 strings out of 493328
+ 73861 string characters out of 3139099
+ 145534 words of memory out of 3000000
+ 8146 multiletter control sequences out of 15000+200000
+ 36639 words of font info for 98 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,19n,38p,1284b,250s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,19n,38p,1284b,284s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
@@ -833,15 +850,16 @@ ts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/euler/eusm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/u
-hvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on handwritten.pdf (15 pages, 216454 bytes).
+onts/type1/public/amsfonts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/euler/eusm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/h
+elvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on handwritten.pdf (16 pages, 221372 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
+ 133 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

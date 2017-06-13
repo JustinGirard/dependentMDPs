@@ -1,0 +1,28 @@
+
+\begin{enumerate}[label=\protect\textcircled{\arabic*}]
+\setcounter{enumi}{2}
+\item Tractability: it is not possible to map infinite state spaces in practice, so it is advantageous to set up $f_Q$ on a 
+subspace \begin{align*}
+\mathfrak{Z} & = S \times A \times S \\
+\text{s.t.:}\qquad & f_Q: \tilde{T}_t( \mathfrak{Z} ) \times \tilde{R}_t ( \mathfrak{Z} ) \rightarrow Q_t( \mathfrak{Z} )\qquad\qquad \leftarrow\text{(sloppy)}
+\end{align*}
+which more or less can be directly incorporated into $Q_t$:
+\begin{equation*}
+f_m: Q_{t+1}( S \times A ) \times Q_t(\mathfrak{Z}) \rightarrow Q_t(S\times A)
+\end{equation*}
+We also need to keep $\tilde{T}$ and $\tilde{R}_t$ updated and can employ \textbf{???} regression instances to do this
+\begin{align*}
+f_T: & \tilde{T}_{t-1}(\mathfrak{Z})\times\{s,a,s^\prime\}\rightarrow \tilde{T}_t(\mathfrak{Z}) \\
+f_R: & \tilde{R}_{t-1}( \mathfrak{Z} ) \times \left\{  R( s^\prime | a, s ) \right\} \rightarrow \tilde{R}_t( \mathfrak{Z} )
+\end{align*}
+\hrule
+{\ }\\
+
+\item Implementation: I use instances of stochastic gradient descent to regress \fbox{$f_T$} and \fbox{$f_R$}
+\begin{equation*}
+\tilde{T}_t(s^\prime | a, s ) \leftarrow f_T(s,a,s^\prime,T_{t-1}) = \tilde{T}_{t-1}(s^\prime|a,s)+\alpha_T\left(\frac{f_r(s,a,s^\prime)}{f_r(s,a)}-T_{t-1}(s^\prime|a,s)\right)
+\end{equation*}
+\begin{equation*}
+\tilde{R}_t \leftarrow\text{\ user defined (in this case), and is readily ``pulled''}
+\end{equation*}
+\end{enumerate}
