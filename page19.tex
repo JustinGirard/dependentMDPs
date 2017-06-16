@@ -1,0 +1,19 @@
+\section*{page 19}
+
+\underline{Transitional Learning Continued}\\
+
+\renewcommand{\labelitemi}{--}
+\begin{itemize}
+\item $\{s,s^\prime,w\}$ can be controlled to both represent the state space and accurately represent $P+(s^\prime|s^\prime,a)$\\
+\item $A+h$, $B+h$ and $\gamma$ can be controlled to speed the algorithm $R_\gamma$\\
+\item Q-learning can still be used, if calculation of $\bar{R}_\gamma$ is too ``slow''.\\
+\item the reward function $R(s,a,s^\prime)$ can be redefined at an instant to allow immediate re-calculation of a policy $\bar{R}_\gamma(s,a)$.
+\end{itemize}
+{\ }\\
+Possible experiments:\begin{minipage}[t]{\linegoal}
+\begin{itemize}
+\item show speed of convergence is greater, due to the ``storing'' of the transitional model across all actions\\
+\item show that the generalized learning allows for redefinition of the reward function.
+\end{itemize}
+\end{minipage} 
+\renewcommand{\labelitemi}{$\bullet$}

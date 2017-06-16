@@ -1,0 +1,31 @@
+\section*{page 20}
+
+Policy\\
+\underline{Convergence of ``Bad MDP''}\\
+
+Question, given $\pi_i^\ast$, is it possible to find 
+\begin{equation*}
+f: \pi^\ast_j, \pi^\ast_k \rightarrow \pi^*_i
+\end{equation*}
+\begin{equation*}
+f(\pi_j(s))
+\end{equation*}
+\begin{enumerate}[label=\alph*)]
+\item suppose $f\left(\pi_j\left(s,\pi_k(s)\right)\right)=\pi_j\left( s,\pi_k(s)\right)\cup\pi_k(s)$\\
+\item $S_k$,$S_j$ -- assume a subspace that is independent of effect by $A$, $S_j\in S_i$\\
+$A_k$, $A_j$ -- assume a subset of $A_j$\\
+$T_k$, $T_j$ -- assume $T(s_i,a,s^\prime_j)=0\quad\forall(s_i,a_j,s_j)\in S_j\times A_j \times S_j$\\
+$R_k$, $R_j$ -- assume $R(s_i,a,s _j)$\\
+In this case, $A_j$ \underline{must} effect $T(s_k,a_k,s^\prime_k)$ and $A_k$ \underline{must} \underline{effect} $T(s_j,a_j,s^\prime_j)$\\
+\underline{effect how:}\\
+
+\begin{minipage}{0.5\textwidth}
+\begin{equation*}
+\exists a_j, a_k \sum_{s^\prime_j\neq s_j}T\left( s^\prime_j \middle| \begin{array}{c} a_j \\ a_k \end{array}, s_j \right) > 0
+\end{equation*}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\fbox{\textasteriskcentered(Derive this conclusion from $T(s_i,a_i,s_i)$)\textasteriskcentered}
+\end{minipage}\\
+\item $M_j$, $M_k$ execute \underline{concurrently}, meaning at each time $t$ $\exists(a_j,a_k)\in A_i$, chosen by $a_j\sim \pi_j(s_j,a_k)\qquad a_k\sim\pi_k(s_k)$
+\end{enumerate}
