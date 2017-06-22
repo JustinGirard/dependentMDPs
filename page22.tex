@@ -1,0 +1,29 @@
+\section*{page 22}
+
+Child convergence rewrite, using time index\\
+
+$m_1, \ldots, m_\alpha$\\
+
+$m_1$: $(s_i,s_k)$ $\qquad$ pre-existing $s_i=1$, $s_k=1$\\
+
+$m_2$: $a_k=\pi_k(s_k)=(x)$ --- worst case, effects \underline{only} $s_i$, $s_j$,\\
+
+$m_3$: $a_i=\pi_i(s_i,a_k)$\\
+$s^\prime_i\leftarrow 2$\\
+$s^\prime_k\leftarrow 2$\\
+
+$m_4$: $Q(s_k,a_k)\leftarrow \text{update}$: $R(s_k,a_k,s^\prime_k)$\\
+
+$m_5$: $Q(s_i,a_k,s_i)\leftarrow \text{update}$: $R(s_i,a_k,a_i,s^\prime_k)$\\
+update $\pi_i(s_i,a_k)$\\
+
+so: $m_2$ assumed $\pi(s_i,a_k)(m_3)$ to be  convergent stochastic and monotonic in reward \textbf{???}, which is assured by updating $Q(s_i,a_k,a_i)$ at $m_5$\\
+
+$\pi_k(s_k)\rightarrow Q(s_k,a_k)$ $\qquad$ $\pi_i(s_i,a_k)\rightarrow Q(s_k,a_k,s_k)$
+
+
+
+
+
+
+
