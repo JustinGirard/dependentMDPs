@@ -1,6 +1,10 @@
-\section*{page 9}
+\section{Mapping function}
+\label{sec:mapping}
 
-\underline{Basic mapping requirements}\\
+After defining Parent and Child MDPs, it is important to note how to map information from a centralized MDP onto a parent-child pair: (equation $d^{M_j, M_k}_{M_i}$) $d^{M_j, M_k}_{M_i}$ . To expedite convergence and computational proofs that follow, a mapping function $d^{M_j, M_k}_{M_i}$ is assume to have Basic Requirements (Sec.~\ref{sec:basicrequirements}). Afterward the process is explained (Sec.~\ref{sec:mappingprocess}).
+
+\subsection{Basic mapping requirements}
+\label{sec:basicrequirements}
 
 $S_i$, $S_j$, $S_k$: \quad $S_j \times (S_k/S_j)  \supseteq S_i$,\quad $S_k \times (S_j/S_k) \supseteq S_i$\\
 
@@ -12,6 +16,9 @@ $T_i$, $R_i$ $\sim$ unknown/unknowable, stable decomposition\\
 more$\longrightarrow$
 \fbox{\pbox[b]{\textwidth}{\qquad\qquad assumed\\
 $\ast$ important to select so that $\tilde{T}_i$ \& $\tilde{T}_k$ seem independent}}\\
+
+\subsection{Mapping process}
+\label{sec:mappingprocess}
 
 $\exists f_1:\tilde{T}_i\to \tilde{T}_j, \tilde{T}_k$,\ invertible; $\tilde{T}_i = f_1\left(f^{-1}\left(\tilde{T}_i\right)\right)$\\
 $\exists f_2:\tilde{R}_i\to \tilde{R}_j, \tilde{R}_k$,\ invertible; $\tilde{R}_i = f_2\left(f_2^{-1}\left(\tilde{R}_i\right)\right)$\\
