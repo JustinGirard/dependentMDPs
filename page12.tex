@@ -1,10 +1,36 @@
-\section*{page 12}
+\section{Mapping as a process}
 
-\underline{Mapping function rewards}\\
+In this section it is described how, and when, the function $d^{M_j, M_k}_{M_i}$ is applied. In fact, instead of structing the application of $d^{M_j, M_k}_{M_i}$ as human chosen conditional statements, it is possible to consider when to ``split'' and ``merge'' and MDP $M_i$ into $M_j$, $M_k$ as a learning problem. This problem is expressed as the mapping problem, and modelled as a learning problem MDP-map ($M_{\text{map}}$):
+\begin{equation*}
+M^i_{\text{map}} = \left\langle S^{i}_{\text{map}}, A^{i}_{\text{map}}, T^{i}_{\text{map}}, R^{i}_{\text{map}} \right\rangle
+\end{equation*}
+
+\begin{equation*}
+S_{\text{map}} = f\left( d\left( M_i, \mathscr{P}\left( M_j \right), P\left( M_k \right) \right) \right)\,,\quad\text{s.t.\ }
+f: d^{M_j, M_k}_{M_i} \to \mathbb{R} 
+\end{equation*}
+where $d\left( M_i, M_j, M_k \right) = d^{M_j, M_k}_{M_i}$.\\
+
+The state encodes all possible configurations for the MDP split:\\
+\textbf{[FIGURE]}\\
+\begin{align*}
+A^{i}_{\text{map}} & = 
+\text{a set of actions formed from the the decomposition and recomposition functions\: } \\
+& \qquad \qquad
+A_{\text{decomposition}} \cup \left\{ a_r \right\} \\
+& \quad
+\text{where\ }a_r \text{\ is a special recomposition function.}\\
+T^{i}_{\text{map}} & = \left\{ 
+\begin{array}{cl} 1\,, & \left( S = S_1 \text{\ and\ } a \neq a_r \right) \text{\ or\ } \left( S \neq S_1 \text{\ and\ } a = a_r \right)  \\ 0\,, & \text{otherwise} \end{array} 
+\right. \\
+R^{i}_{\text{map}} & = \sum_{e=\text{epoch}}R^{i}(e) \\
+\end{align*}
+
+
 
 Given $(S_{\textrm{map}}, A_{\textrm{map}}, T_{\textrm{map}}, R^{i}_{\textrm{map}}, \pi_{\textrm{map}})$, applied to $M=\langle S_x, A_x, \tilde{T}_x, R_x, \tilde{\pi}_x \rangle$, we may trivially define $M_y=\langle S_y, A_y, \tilde{T}_y, R_y, \pi_y \rangle$ in a method consistent with Bush, p.\ 74, with $M_x$ being the parent process and $M_y$ being the child.\\
 
-a) for $R_{\textrm{map}^{i}}$, there are five versions $i\in\{1,\ldots,5\}$\\
+a) for $R^{i}_{\textrm{map}}$, there are five versions $i\in\{1,\ldots,5\}$\\
 b) Given $M_x$, $M_y$, a merge is also possible, so recovering $M$\\
 c) we can perform temporal Sink actions on an MDP (Book I, p.\ 88)\\
 ${}\qquad\hookrightarrow$\ reduce resolution\\
@@ -15,7 +41,7 @@ ${}\qquad\hookrightarrow$\ re-increase resolution\\
 $\therefore$ Seven ``actions'' can be performed on an MDP: $(M_R)$\\
 
 $\qquad$\begin{minipage}[t]{0.9\textwidth}
-\underline{\textbf{???}}\\
+\underline{State}\\
 
 \begin{equation*}
 \left\{R^i_{\textrm{map}}\right\}_{i=0}^{5}\cup \left\{\text{merge}\right\}\times\left\{\text{scale\ up}^{i}\right\}_{i=0}^{5}\cup\left\{\text{normal}\right\}\cup\left\{\varnothing\right\}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.7.10)  10 JUL 2017 18:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.7.10)  12 JUL 2017 16:06
 entering extended mode
 **./handwritten.tex
 (handwritten.tex
@@ -583,150 +583,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--19
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--35
-
- []
-
-) [8] (page11.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--13
-
- []
-
-LaTeX Font Info:    Try loading font information for U+eus on input line 14.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
-File: ueus.fd 2013/01/14 v3.01 Euler Script
-)
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--23
-
- []
-
-) [9] (page12.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--30
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
-
- []
-
-) [10] (page13.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--16
-
- []
-
-) [11] (page14.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-) [12] (page15.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
 
  []
 
@@ -735,28 +617,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-) [13] (page15.1.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+
+ []
+
+) [9] (page12.tex
+LaTeX Font Info:    Try loading font information for U+eus on input line 9.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+)
+Underfull \hbox (badness 10000) in paragraph at lines 11--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--38
 
  []
 
@@ -766,14 +672,99 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
  []
 
 
-Overfull \hbox (1.84833pt too wide) detected at line 52
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
+) [10] [11] (page13.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+) [12] (page15.1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+
+ []
+
+
+Overfull \hbox (1.84833pt too wide) detected at line 58
 \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 : []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s[]; s
 []\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s[]
 ; a[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 [ \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\O
 ML/cmm/m/it/10 s[]\OT1/cmr/m/n/10 )
  []
 
-) [14] (page15.2.tex
+[13]) [14] (page15.2.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -804,46 +795,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
  []
 
 ) [15] (page16.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+) [16] (page11.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--23
+Underfull \hbox (badness 10000) in paragraph at lines 12--17
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--32
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 24--27
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-
- []
-
-) [16] (page16.1.tex
+) [17] (page16.1.tex
 LaTeX Font Info:    Try loading font information for U+euf on input line 9.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -857,7 +878,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
-) [17] (page17.tex
+) [18] (page17.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -893,7 +914,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-) [18] (page18.tex
+) [19] (page18.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -903,7 +924,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--12
 
  []
 
-) [19] (page19.tex
+) [20] (page19.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -929,11 +950,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 12--452
+Underfull \hbox (badness 10000) in paragraph at lines 12--442
 
  []
 
-[20] (page20.tex
+[21] (page20.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -958,7 +979,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--30
 
  []
 
-) [21] (page21.tex
+) [22] (page21.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -973,18 +994,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<media/page21figure.pdf, id=108, 633.36626pt x 436.63126pt>
+<media/page21figure.pdf, id=111, 633.36626pt x 436.63126pt>
 File: media/page21figure.pdf Graphic file (type pdf)
 
 <use media/page21figure.pdf>
 Package pdftex.def Info: media/page21figure.pdf used on input line 9.
 (pdftex.def)             Requested size: 633.36472pt x 436.63019pt.
- [22 <./media/page21figure.pdf>])
-Underfull \hbox (badness 10000) in paragraph at lines 65--460
+ [23 <./media/page21figure.pdf>])
+Underfull \hbox (badness 10000) in paragraph at lines 65--450
 
  []
 
-[23] (page22.tex
+[24] (page22.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -1024,12 +1045,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--27
 
  []
 
-) [24] (page23.tex
+) [25] (page23.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<media/page23figure.pdf, id=126, 745.78625pt x 372.39125pt>
+<media/page23figure.pdf, id=130, 745.78625pt x 372.39125pt>
 File: media/page23figure.pdf Graphic file (type pdf)
 
 <use media/page23figure.pdf>
@@ -1051,11 +1072,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--29
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 30--468
+Underfull \hbox (badness 10000) in paragraph at lines 30--458
 
  []
 
-[25 <./media/page23figure.pdf>] (handwritten.aux)
+[26 <./media/page23figure.pdf>] (handwritten.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.6161pt have occurred.
@@ -1063,12 +1084,15 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 5229 strings out of 493328
- 81454 string characters out of 3139080
- 155405 words of memory out of 3000000
- 8582 multiletter control sequences out of 15000+200000
+ 5226 strings out of 493328
+ 81450 string characters out of 3139080
+ 155434 words of memory out of 3000000
+ 8585 multiletter control sequences out of 15000+200000
  41085 words of font info for 105 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,19n,38p,1314b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1092,9 +1116,9 @@ symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a
 am Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/urw/palatino/uplr8a.pfb>
-Output written on handwritten.pdf (25 pages, 284934 bytes).
+Output written on handwritten.pdf (26 pages, 287254 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
+ 210 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

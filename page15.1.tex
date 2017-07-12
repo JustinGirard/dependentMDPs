@@ -1,10 +1,16 @@
-\section*{page 15.1}
+\subsection{Proof of Decomposition Correctness (Process 1)}
+
+The following section demonstrates\\
 
 \underline{MDP Policy Decomposition}\\
+
+First, it is true that the optimal policy $\pi^\ast(s)$ for a centralized MDP will arise from maximizing the expected reward.
 
 \begin{equation*}
 \pi^\ast(s) = \argmax_{a} \sum_{s^\prime} R(s,a,s^\prime) P(s^\prime |s, a) + \gamma V(s^\prime)
 \end{equation*}
+
+It is now shown that a set of MDPs ($M_i$, $M_k$) can be observed to create an optimal policy
 
 Given $\pi^\ast_i(S_i, A_k)$, $\pi^\ast_k(S_k)$
 

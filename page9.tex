@@ -8,10 +8,15 @@ After defining Parent and Child MDPs, it is important to note how to map informa
 
 $S_i$, $S_j$, $S_k$: \quad $S_j \times (S_k/S_j)  \supseteq S_i$,\quad $S_k \times (S_j/S_k) \supseteq S_i$\\
 
+Sets $S_k$ and $S_j$ must be able to be combined to make the original set.\\
+
 $A_i$, $A_j$, $A_k$: \quad $A_i \subseteq A_j\cup A_k$\\
+
+Also, action sets must combine to recover the original action set.\\
 
 $T_i$, $R_i$ $\sim$ unknown/unknowable, stable decomposition\\
 
+The true transition and reward functions may remain unknown.\\
 
 more$\longrightarrow$
 \fbox{\pbox[b]{\textwidth}{\qquad\qquad assumed\\
@@ -20,33 +25,59 @@ $\ast$ important to select so that $\tilde{T}_i$ \& $\tilde{T}_k$ seem independe
 \subsection{Mapping process}
 \label{sec:mappingprocess}
 
+Transition mapping:\\
+
 $\exists f_1:\tilde{T}_i\to \tilde{T}_j, \tilde{T}_k$,\ invertible; $\tilde{T}_i = f_1\left(f^{-1}\left(\tilde{T}_i\right)\right)$\\
 $\exists f_2:\tilde{R}_i\to \tilde{R}_j, \tilde{R}_k$,\ invertible; $\tilde{R}_i = f_2\left(f_2^{-1}\left(\tilde{R}_i\right)\right)$\\
 
-(Network approach)\\
-\underline{Parent/child augmentation}\\
+\underline{Transition function mapping: knowing $s_x\in S_x$, $s_y\in S_y$} (1 way)\\
 
-\begin{minipage}{\textwidth}
+Goal $\exists f:P(S_x|A,S_x)\leftarrow P(S|A,S)$\\
+knowing $P(S_x \times S_y | A_x \cup A_y, S_x \times S_y)=P(S|A,S)$
 
-\begin{minipage}{0.4\textwidth}
-$j$ -- parent\quad $k$ -- child\\
-$\tilde{R}_j\leftarrow E[\tilde{R}_k]$\\
-$s_j\in S_j \leftarrow \left\{S_j, a_k=\pi_k(\cdot)\right\}$\\
+Clearly: 
+\begin{equation*}
+P(s^\prime_x|s_x,a_x) = \sum_{s_y^\prime}\sum_{a_y}\sum_{s_y} P\left( s_x^\prime,s_y^\prime|s_x,s_y,a_x,a_y\right)P\left(a_y|S_y \right)P\left( s_y \right)
+\end{equation*}
 
-\fbox{\pbox{0.4\textwidth}{Continuous\\(Now)}}
-\end{minipage}
-\dbox{
-\begin{minipage}{0.3\textwidth}
-\begin{center}
-old approach\\
-\ \\
-\ \\
-Brech\\
-Reword\\
-(BI, p.72)
-\end{center}
-\end{minipage}
-}
-\end{minipage}
+\begin{equation*}
+\therefore\quad\tilde{T}\left( s^\prime_x \middle| s_x, a_x \right) = \sum_{s^\prime_y} \sum_{a_y} \sum_{s_y} \tilde{T}\left( s^\prime \middle| a, s  \right) \underbrace{\tilde{\pi}\left( a_y \middle| s_y \right)}_{\text{require policy mapping}}P(s_y)
+\end{equation*}
+
+Action mapping:\\
+
+\underline{Action mapping} (1 way)\\
+
+Next, we can consider an action mapping where actions from $A$ can be randomly assigned to $A_x$, $A_y$: $A_x \leftarrow \left\{ a\in A^\prime \middle| A^\prime \subseteq A \right \}$, $A_x, A_y\subseteq A$, $A_x \cup A_y = A$, $A_x \neq \{ \null \}$, $A_y \neq	 \{ \null \}$.\\
+
+\underline{General approach}: \underline{High reward for \textbf{???}ve states}\\
+
+Given $\tau \in \mathbb{R}$, $\pi(a|s)$, $\tilde{Q}(a,s)$ then 
+\begin{equation*}
+A_x \leftarrow A_x \cup \left\{ a  \middle| \underbrace{ \pi(a|s) \tilde{Q}(a,s) > \tau }_{\text{condition}} \right\}
+\end{equation*}
+or, more usefully/generally
+\begin{equation*}
+A_x \leftarrow A_x \cup \left\{ a \middle| \underbrace{ \left( \pi (a \middle|  S_s^{R^\prime} \right) \tilde{Q}(a,S^{*\prime}) > \tau }_{\text{condition}} \right\}
+\end{equation*}
+where
+\begin{equation*}
+S_s^{*\prime}=\left\{ S^\prime \middle| S/s_s^* \neq S\right\} \qquad\text{(see p. ???)}
+\end{equation*}
+
+Condition options:
+\begin{equation*}
+\ast \text{reformulation over set }S\text{\ vs.\ }s\in S\qquad 
+\left\{ 
+\begin{array}{l}
+\text{a)\ }\pi(a|s)\tilde{Q}(a,s)>\tau \qquad \cdots \quad \text{High reward} \\
+\text{b)\ }\pi(a|s)\tilde{Q}(a,s)>\tau,\quad\pi(a|s)>0\qquad \cdots \quad \text{small reward}
+\end{array}
+\right.
+\end{equation*}
+
+
+
+(Network approach)\\ 
 
 
