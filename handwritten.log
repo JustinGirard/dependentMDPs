@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.7.10)  12 JUL 2017 16:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.7.10)  13 JUL 2017 15:01
 entering extended mode
 **./handwritten.tex
 (handwritten.tex
@@ -722,17 +722,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
  []
 
 ) [12] (page15.1.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
@@ -757,14 +752,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
  []
 
 
-Overfull \hbox (1.84833pt too wide) detected at line 58
+Overfull \hbox (4.69557pt too wide) detected at line 58
 \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 : []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s[]; s
 []\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s[]
-; a[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 [ \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\O
-ML/cmm/m/it/10 s[]\OT1/cmr/m/n/10 )
+; a[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 [ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (
+\OML/cmm/m/it/10 s[]\OT1/cmr/m/n/10 )
  []
 
-[13]) [14] (page15.2.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+) [14] [15] (page15.2.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -794,47 +799,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-) [15] (page16.tex
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
+) [16] (page16.tex
+Underfull \hbox (badness 10000) in paragraph at lines 50--54
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 109--113
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
-
- []
-
-) [16] (page11.tex
+) [18] (page11.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
@@ -864,21 +839,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--27
 
  []
 
-) [17] (page16.1.tex
-LaTeX Font Info:    Try loading font information for U+euf on input line 9.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
+) [19] (page16.1.tex
+
+LaTeX Warning: Reference `sec:experimental' on page 20 undefined on input line 
+4.
+
+
+LaTeX Warning: Reference `sec' on page 20 undefined on input line 17.
+
+LaTeX Font Info:    Try loading font information for U+euf on input line 20.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--30
-
- []
-
-) [18] (page17.tex
+) [20] (page17.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -914,7 +891,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-) [19] (page18.tex
+) [21] (page18.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -924,7 +901,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--12
 
  []
 
-) [20] (page19.tex
+) [22] (page19.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -954,7 +931,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--442
 
  []
 
-[21] (page20.tex
+[23] (page20.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -979,7 +956,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--30
 
  []
 
-) [22] (page21.tex
+) [24] (page21.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -994,18 +971,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<media/page21figure.pdf, id=111, 633.36626pt x 436.63126pt>
+<media/page21figure.pdf, id=118, 633.36626pt x 436.63126pt>
 File: media/page21figure.pdf Graphic file (type pdf)
 
 <use media/page21figure.pdf>
 Package pdftex.def Info: media/page21figure.pdf used on input line 9.
 (pdftex.def)             Requested size: 633.36472pt x 436.63019pt.
- [23 <./media/page21figure.pdf>])
+ [25 <./media/page21figure.pdf>])
 Underfull \hbox (badness 10000) in paragraph at lines 65--450
 
  []
 
-[24] (page22.tex
+[26] (page22.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -1045,12 +1022,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--27
 
  []
 
-) [25] (page23.tex
+) [27] (page23.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<media/page23figure.pdf, id=130, 745.78625pt x 372.39125pt>
+<media/page23figure.pdf, id=137, 745.78625pt x 372.39125pt>
 File: media/page23figure.pdf Graphic file (type pdf)
 
 <use media/page23figure.pdf>
@@ -1076,7 +1053,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--458
 
  []
 
-[26 <./media/page23figure.pdf>] (handwritten.aux)
+[28 <./media/page23figure.pdf>] (handwritten.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.6161pt have occurred.
@@ -1089,36 +1066,37 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 5226 strings out of 493328
- 81450 string characters out of 3139080
- 155434 words of memory out of 3000000
- 8585 multiletter control sequences out of 15000+200000
+ 5244 strings out of 493328
+ 81761 string characters out of 3139080
+ 155664 words of memory out of 3000000
+ 8603 multiletter control sequences out of 15000+200000
  41085 words of font info for 105 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,19n,38p,1314b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,19n,38p,1314b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/euler/eufm7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/euler/eusm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/urw/palatino/uplr8a.pfb>
-Output written on handwritten.pdf (26 pages, 287254 bytes).
+ype1/public/amsfonts/cmextra/cmex7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/euler/eufm7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/euler/eusm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/s
+ymbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
+ols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/urw/palatino/uplr8a.pfb>
+Output written on handwritten.pdf (28 pages, 303843 bytes).
 PDF statistics:
- 210 PDF objects out of 1000 (max. 8388607)
+ 220 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

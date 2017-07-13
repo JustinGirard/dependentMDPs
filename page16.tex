@@ -1,48 +1,121 @@
 \section{Convergence}
 \label{sec:convergence} 
 
-\begin{center}
-Parent Policy Convergence
-\end{center}
+Policy convergence is considered for the parent and child learning process. Since both policies utilize information from external learning processess the proofs are non-trivial. 
 
-\underline{For the Parent MDP $M_k$}\\
 
---from definition $E\left[ R_t \left( s^\prime_k \middle| a_k, s_k \right) \right] \ge E\left[ R_{t+1}\left( s^\prime_k \middle| a_k, s_k  \right) \right]$\\
+\subsection{For the Parent MDP $M_k$}
+
+\begin{enumerate}[label=\arabic*.]
+\item Assume the child's expected return has a monotic expected value.
+\begin{equation*}
+E\left[ R_t \left( s^\prime_k \middle| a_k, s_k \right) \right] \ge E\left[ R_{t+1}\left( s^\prime_k \middle| a_k, s_k  \right) \right]
+\end{equation*}
+\item{Define reward as}
 \begin{align*}
 R_t\left( s^\prime_i \middle| a^\prime_i, s^\prime_i \right) & = R\left( \begin{array}{c} s^\prime_i \\ s^\prime_k \end{array} \middle| 
-\begin{array}{c}a_i \\ a_k \end{array}, \begin{array}{c} s_i \\ s_k \end{array} \right)\\
-& \text{i.}\qquad a_k = \pi_k( s_k )\\
-& \qquad\quad ( s^\prime_k, s_k ) \text{\ result from\ }a_i\text{\ s.t.\ }\\
-&\text{ii.}\qquad s^\prime_k \sim T( S_k | \pi_i( s_k ), s_k )\\
-&\text{iii.}\qquad s_k \sim T( S_k | \pi_i( s^\ast_k ), s^\ast_k )
+\begin{array}{c}a_i \\ a_k \end{array}, \begin{array}{c} s_i \\ s_k \end{array} \right)
 \end{align*}
-
-A)\\
-\boxed{$\textasteriskcentered$} -- $\pi_k(\cdot)$ is effective: $E\left[ R\left( \begin{array}{c} s^\prime_i \\ s^\prime_k \end{array} \middle| \begin{array}{c} a_i \\ a^\ast_k \end{array}, \begin{array}{c} s_i \\ s_k \end{array} \right) \right] 
-\ge E\left[ R\left( \begin{array}{c} s^\prime_i \\ s^\prime_k \end{array} \middle| \begin{array}{c} A_i \\ A_k \end{array}, \begin{array}{c} s_i \\ s_k \end{array} \right) \right]$\\
-\qquad\qquad$\exists a_i, a^\ast_k\leftarrow\pi_k(s_k)$\\
-
-B)\\
-\boxed{$\textasteriskcentered$} -- $\pi_k(\cdot)$ is convergent:
+\hspace*{6cm}
+\begin{minipage}[t]{\linegoal}
+\begin{enumerate}[label=$\qquad$\roman*.]
+\item $a_k = \pi_k( s_k )$
+\end{enumerate}
+$( s^\prime_k, s_k )$ result from $a_i$ s.t.
+\begin{enumerate}[label=$\qquad$\roman*.,start=2]
+\item $s^\prime_k \sim T( S_k | \pi_i( s_k ), s_k )$
+\item $s_k \sim T( S_k | \pi_i( s^\ast_k ), s^\ast_k )$
+\end{enumerate}
+\end{minipage}
+We define the reward of the parent to be the reward received by the child process during observation ($M_i$ observing $M_k$).
+\end{enumerate}
+\begin{enumerate}[label=\Alph*)]
+\item Parent is effective
 \begin{equation*}
-E\left[ R_{t+1}\left( \cdot \middle| \pi_{\substack{k\\t+1}},\cdot\right)\right] \ge E\left[ R_{t+1}\left( \cdot \middle| \pi_{\substack{k\\t+1}},\cdot\right)\right]
+0 > \min_{a_i}
+E\left[ R\left( \begin{array}{c} s^\prime_i \\ s^\prime_k \end{array} \middle| \begin{array}{c} a_i \\ a^\ast_k \end{array}, \begin{array}{c} s_i \\ s_k \end{array} \right) \right] 
+- E\left[ R\left( \begin{array}{c} s^\prime_i \\ s^\prime_k \end{array} \middle| \begin{array}{c} A_i \\ A_k \end{array}, \begin{array}{c} s_i \\ s_k \end{array} \right) \right]
 \end{equation*}
-
+Child behaviour policy $\pi_k$ is effective if the expected reward increases. In this case we consider $a_k$ to be optimal.
+\item Child is convergent
+\begin{equation*}
+E\left[ R_{t+1}\left( 
+\cdot 
+\middle| \begin{array}{c} a_i \\
+\pi_{\substack{k\\t+1}} \end{array},\cdot
+\right)
+\right] \ge E\left[ R_{t+1}\left( \cdot \middle|
+\begin{array}{c} a_i \\
+ \pi_{\substack{k\\t+1}} \end{array},\cdot\right)\right]
+\end{equation*}
+It is convergent if the centralized MDP's reward increases when observed.\\
  assume some policy $\pi_k(\cdot)$ is both effective and convergent, then:\\
 $\circled{\text{A}}+\circled{\text{B}}\rightarrow\circled{\text{C}}$\\
-
-C)\\
-
+\item The system must be convergent
+\begin{itemize}
+\item The parent chooses actions to maximize $R_t(A)$
+\item The child chooses actions to maximize $R_t(B)$
+\end{itemize}
 \begin{equation*}
 \boxed{\ast}\qquad \lim_{t\rightarrow\infty} R_t\left( s^\prime_i \middle| a_i, s_i \right) \sim R_{t+1}\left( s^\prime_i \middle| a_i, s_i \right)
 \end{equation*}
+\end{enumerate}
 
-E) Show other typical convergence \textbf{???},\\
-
-Done\\
-
-\underline{For the child}\\
+\subsection{For the child}
 
 \boxed{$\textasteriskcentered$}$\qquad\qquad$ \underline{trivial}
 
-
+\begin{enumerate}[label=\arabic*.]
+\item Assume the child's expected return has a monotic expected value.
+\begin{equation*}
+E\left[ R_t \left( s^\prime_k \middle| a_k, s_k \right) \right] \ge E\left[ R_{t+1}\left( s^\prime_k \middle| a_k, s_k  \right) \right]
+\end{equation*}
+\item{Define reward as}
+\begin{align*}
+R_t\left( s^\prime_i \middle| a^\prime_i, s^\prime_i \right) & = R\left( \begin{array}{c} s^\prime_i \\ s^\prime_k \end{array} \middle| 
+\begin{array}{c}a_i \\ a_k \end{array}, \begin{array}{c} s_i \\ s_k \end{array} \right)
+\end{align*}
+\hspace*{6cm}
+\begin{minipage}[t]{\linegoal}
+\begin{enumerate}[label=$\qquad$\roman*.]
+\item $a_k = \pi_k( s_k )$
+\end{enumerate}
+$( s^\prime_k, s_k )$ result from $a_i$ s.t.
+\begin{enumerate}[label=$\qquad$\roman*.,start=2]
+\item $s^\prime_k \sim T( S_k | \pi_i( s_k ), s_k )$
+\item $s_k \sim T( S_k | \pi_i( s^\ast_k ), s^\ast_k )$
+\end{enumerate}
+\end{minipage}
+We define the reward of the parent to be the reward received by the child process during observation ($M_i$ observing $M_k$).
+\end{enumerate}
+\begin{enumerate}[label=\Alph*)]
+\item Parent is effective
+\begin{equation*}
+0 > \min_{a_i}
+E\left[ R\left( \begin{array}{c} s^\prime_i \\ s^\prime_k \end{array} \middle| \begin{array}{c} a_i \\ a^\ast_k \end{array}, \begin{array}{c} s_i \\ s_k \end{array} \right) \right] 
+- E\left[ R\left( \begin{array}{c} s^\prime_i \\ s^\prime_k \end{array} \middle| \begin{array}{c} A_i \\ A_k \end{array}, \begin{array}{c} s_i \\ s_k \end{array} \right) \right]
+\end{equation*}
+Child behaviour policy $\pi_k$ is effective if the expected reward increases. In this case we consider $a_k$ to be optimal.
+\item Child is convergent
+\begin{equation*}
+E\left[ R_{t+1}\left( 
+\cdot 
+\middle| \begin{array}{c} a_i \\
+\pi_{\substack{k\\t+1}} \end{array},\cdot
+\right)
+\right] \ge E\left[ R_{t+1}\left( \cdot \middle|
+\begin{array}{c} a_i \\
+ \pi_{\substack{k\\t+1}} \end{array},\cdot\right)\right]
+\end{equation*}
+It is convergent if the centralized MDP's reward increases when observed.\\
+ assume some policy $\pi_k(\cdot)$ is both effective and convergent, then:\\
+$\circled{\text{A}}+\circled{\text{B}}\rightarrow\circled{\text{C}}$\\
+\item The system must be convergent
+\begin{itemize}
+\item The parent chooses actions to maximize $R_t(A)$
+\item The child chooses actions to maximize $R_t(B)$
+\end{itemize}
+\begin{equation*}
+\boxed{\ast}\qquad \lim_{t\rightarrow\infty} R_t\left( s^\prime_i \middle| a_i, s_i \right) \sim R_{t+1}\left( s^\prime_i \middle| a_i, s_i \right)
+\end{equation*}
+\end{enumerate}
