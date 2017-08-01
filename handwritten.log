@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.7.10)  13 JUL 2017 15:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.7.10)  1 AUG 2017 15:08
 entering extended mode
 **./handwritten.tex
 (handwritten.tex
@@ -440,10 +440,10 @@ Package grfext Info: Graphics extension search list:
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
- (page0.tex
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 1.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
+(sec-preamble.tex
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 1.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
@@ -486,7 +486,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
-) [2] (page4.tex
+) [2] (sec-intro.tex
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 6.
  <media/page4diagram.pdf, id=18, 248.93pt x 97.36375pt>
@@ -507,11 +507,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-[3 <./media/page4diagram.pdf>]) [4] (page5.tex
+[3 <./media/page4diagram.pdf>]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 14.
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 98.
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 116--118
 
  []
 
@@ -519,55 +519,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--34
 File: media/page5figure.pdf Graphic file (type pdf)
 
 <use media/page5figure.pdf>
-Package pdftex.def Info: media/page5figure.pdf used on input line 36.
+Package pdftex.def Info: media/page5figure.pdf used on input line 120.
 (pdftex.def)             Requested size: 672.51085pt x 212.79446pt.
-) [5 <./media/page5figure.pdf>] (page7.tex
+ [5 <./media/page5figure.pdf>]
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 1.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
+LaTeX Warning: Reference `' on page 6 undefined on input line 127.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--17
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+Underfull \hbox (badness 10000) in paragraph at lines 131--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--25
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+Underfull \hbox (badness 10000) in paragraph at lines 148--151
 
  []
 
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 55.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+LaTeX Warning: Reference `' on page 6 undefined on input line 181.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
 [6]
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 79.
+LaTeX Warning: Reference `' on page 7 undefined on input line 205.
 
-) [7] (page9.tex
+) [7] (sec-mappingfunction.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
@@ -642,9 +642,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
-) [9] (page12.tex
+) [9] (sec-mappingprocess.tex
 LaTeX Font Info:    Try loading font information for U+eus on input line 9.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
 Underfull \hbox (badness 10000) in paragraph at lines 11--13
@@ -701,58 +702,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-) [10] [11] (page13.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+[10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
-) [12] (page15.1.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
 
-Overfull \hbox (4.69557pt too wide) detected at line 58
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+
+ []
+
+
+Overfull \hbox (4.69557pt too wide) detected at line 145
 \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 : []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s[]; s
 []\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s[]
 ; a[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 [ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (
@@ -760,46 +761,46 @@ Overfull \hbox (4.69557pt too wide) detected at line 58
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
-) [14] [15] (page15.2.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--20
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 180--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
-) [16] (page16.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+
+ []
+
+) [16] (sec-convergence.tex
 Underfull \hbox (badness 10000) in paragraph at lines 50--54
 
  []
@@ -809,7 +810,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--113
 
  []
 
-) [18] (page11.tex
+) [18] (sec-worstcase.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
@@ -839,13 +840,176 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--27
 
  []
 
-) [19] (page16.1.tex
+) [19] (sec-NN.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
-LaTeX Warning: Reference `sec:experimental' on page 20 undefined on input line 
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+
+ []
+
+[21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--183
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 249--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--258
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--261
+
+ []
+
+) [27] (sec-A.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--3
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+LaTeX Warning: Command \l invalid in math mode on input line 8.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
+
+ []
+
+) [28] (page16.1.tex
+
+LaTeX Warning: Reference `sec:experimental' on page 29 undefined on input line 
 4.
 
 
-LaTeX Warning: Reference `sec' on page 20 undefined on input line 17.
+LaTeX Warning: Reference `sec' on page 29 undefined on input line 17.
 
 LaTeX Font Info:    Try loading font information for U+euf on input line 20.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
@@ -855,7 +1019,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
-) [20] (page17.tex
+) [29] (page17.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -891,7 +1055,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-) [21] (page18.tex
+) [30] (page18.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -901,7 +1065,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--12
 
  []
 
-) [22] (page19.tex
+) [31] (page19.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -927,11 +1091,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 12--442
+Underfull \hbox (badness 10000) in paragraph at lines 12--430
 
  []
 
-[23] (page20.tex
+[32] (page20.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -956,7 +1120,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--30
 
  []
 
-) [24] (page21.tex
+) [33] (page21.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -971,18 +1135,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<media/page21figure.pdf, id=118, 633.36626pt x 436.63126pt>
+<media/page21figure.pdf, id=147, 633.36626pt x 436.63126pt>
 File: media/page21figure.pdf Graphic file (type pdf)
 
 <use media/page21figure.pdf>
 Package pdftex.def Info: media/page21figure.pdf used on input line 9.
 (pdftex.def)             Requested size: 633.36472pt x 436.63019pt.
- [25 <./media/page21figure.pdf>])
-Underfull \hbox (badness 10000) in paragraph at lines 65--450
+ [34 <./media/page21figure.pdf>])
+Underfull \hbox (badness 10000) in paragraph at lines 65--438
 
  []
 
-[26] (page22.tex
+[35] (page22.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -1022,12 +1186,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--27
 
  []
 
-) [27] (page23.tex
+) [36] (page23.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<media/page23figure.pdf, id=137, 745.78625pt x 372.39125pt>
+<media/page23figure.pdf, id=165, 745.78625pt x 372.39125pt>
 File: media/page23figure.pdf Graphic file (type pdf)
 
 <use media/page23figure.pdf>
@@ -1049,11 +1213,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--29
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 30--458
+Underfull \hbox (badness 10000) in paragraph at lines 30--446
 
  []
 
-[28 <./media/page23figure.pdf>] (handwritten.aux)
+[37 <./media/page23figure.pdf>] (handwritten.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.6161pt have occurred.
@@ -1066,13 +1230,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 5244 strings out of 493328
- 81761 string characters out of 3139080
+ 5235 strings out of 493328
+ 81833 string characters out of 3139080
  155664 words of memory out of 3000000
  8603 multiletter control sequences out of 15000+200000
  41085 words of font info for 105 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,19n,38p,1314b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,19n,38p,1321b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
@@ -1094,9 +1258,9 @@ ols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb
 iles/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/palatino/uplr8a.pfb>
-Output written on handwritten.pdf (28 pages, 303843 bytes).
+Output written on handwritten.pdf (37 pages, 335970 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
+ 251 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

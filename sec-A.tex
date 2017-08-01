@@ -1,0 +1,29 @@
+Temporal Differences\\
+(This is a type of reconfiguration)\\
+
+(see Book 2 p 16 for rewrite)\\
+
+\underline{Paper}: On Static and Temporal Difference for MDPs (extends Reconfigurable \textbf{???}, Page 88)\\
+
+want to mix a trajectory $\{ l \}_{i=0}^{\infty}$ with \textbf{???} $l_{i=0}^{\infty}$, s.t.\ $l_i=\{ s_i, a_i, s^\prime_i \}$, $\l_i \in L$ \\
+
+Given a trajectory, $l_i^j$, we want a compressed representation.\\
+
+\begin{equation*}
+F_c ( r_c ) = \left\{ 
+f_c: L^n \times j \to L
+\middle| 
+\textrm{rel}\left[ r_c\left( R(  l_{i_1}^{i_2} ) \right), r_c\left( R( l_{i_2}^{i_3} ) \right) \right]
+=
+\textrm{rel}\left[ R\left( f_c( l_{i_1}^{i_2} ) \right), R\left( f_c( l_{i_2}^{i_3} ) \right) \right]
+\right\}
+\end{equation*}
+s.t.\ $f_c( l_{i_1}^{i_2} ) = l_{c_0}^{c_1}=l_{c_0}$\\
+
+and a reward compressor
+\begin{equation*}
+R_c = \left\{ r_c: R(L^n)\times j \to R(L)\right\}^{\infty}\,,\quad A_c= \left\{ f_{a_c}: L \to \left\{ \pi_c \right\}^{\infty} \right\}
+\end{equation*}
+\begin{equation*}
+T_c(l_{c_0}, a_c \in A_c, l_{c_1})
+\end{equation*}

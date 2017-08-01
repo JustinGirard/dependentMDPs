@@ -1,0 +1,267 @@
+\section{NN}
+
+ 
+\circled{1} Summarize Regression ($y=mx+b$)\\
+points $\{1,2,3,\ldots\}$\\
+\begin{itemize}
+\item easiest starting point is choosing ``the best line''
+\item need a metric to define this idea of ``best'' mathematically
+\item describe the line: $f(x_1)=m(x_1)+b$
+\begin{equation*}
+m=\frac{y_2-y_1}{x_2-x_1}
+\end{equation*}
+\end{itemize}
+idea --- choose line closest to points by taking sum of differences,
+\begin{equation*}
+\text{minimize}\sum_i e_i\,, \qquad e_i=y_i-f(x_i)=y_i-m_i x_i + b m_0 x_0\,, \qquad x_0 = 1 \quad \text{(by convention)}
+\end{equation*}
+\begin{itemize}
+\item apply square to remove negative/positive problem
+\begin{align*}
+e_i & = ( y_i - m_i x_i + b )^2 \\
+e_i & = \left(  \sum_{d=0}^{D} y_{id}-m_d x_{id}\right)^2
+\end{align*}
+look up linear algebra proof
+\end{itemize}
+
+\newpage
+
+Logistic Regression Summary\\
+
+$\circled{A}_i$\\
+
+Logistic sigmoid
+\begin{itemize}[label=--]
+\item not vulnerable to being \textbf{???} fit
+\item (other solutions)
+\item good for classification
+\item idea $f:\mathbb{R}\to(0,1)$
+\item good for probability then!
+\end{itemize}
+
+\begin{equation*}
+\sigma(a) = \frac{1}{1+e^{-a}}
+\end{equation*}
+
+Probability review\\ 
+
+$\bullet$ Probability density\\
+$\bullet$ CDF\\
+$\text{density} = P(x_1<x<x_2)$\\
+$\text{CDF} = \int_{x_1}^{x_2}P(X=x)\,dx$\\
+$\text{CDF} \approx \sum_{x=0}^{x_2}P(X=x)$\\
+$P(X=x|Y=y) = \frac{P(X=x,Y=y)}{P(Y=y)}$\\
+$P(Y=y) = \sum_{x\in X}P(X=x,Y=y)$\\
+
+define $P(x|c_1)$, $P(x,c_2)$ $P(c_1)$, $P(c_2)$\\
+Likelihood class\\
+
+a fun experiment\\
+\begin{align*}
+ & = \frac{P(x|c_1)P(c_1)}{P(x|c_1)P(c_1)+P(x|c_2)P(c_2)}\\
+ & =\frac{P(x|c_1)P(c_1)}{P(x|c_2)P(c_2)+P(x|c_1)P(c_1)}\\
+ & = \frac{B}{A+B} \\
+ & = \frac{\frac{B}{B}}{\frac{A+B}{B}}\\
+ & = \frac{1}{\frac{A}{B}+1}\\
+ & = \frac{1}{1+\exp\left(\ln\left(\frac{A}{B}\right)\right)}\\
+ & = \frac{1}{1+\exp\left(-\ln\left(\frac{B}{A}\right)\right)}\\
+ & = \sigma(a)\\
+ & = \frac{1}{e^{-a}}
+\end{align*}
+
+log ratio:
+\begin{equation*}
+a = \ln\frac{P(x|c_1)P(c_1)}{P(x|c_2)P(c_2)}
+\end{equation*}
+\begin{equation*}
+a = -\ln\frac{B}{A}
+\end{equation*}
+
+Given $x$, how to decide between $c_1$ and $c_2$?
+\begin{enumerate}[label=\circled{\arabic*}]
+\item Be racist (prejudice)
+\begin{equation*}
+\frac{P(c_1)}{P(c_2)}\qquad\text{--- odds of observing $c_1$ or $c_2$ in nature}
+\end{equation*}
+\item racism light:
+\begin{equation*}
+P(c_1|x) = \frac{P(x|c_1)}{P(x|c_1)+P(x|c_2)}
+\end{equation*}
+
+--- odds of observing $x$ in $c_1$ situation\\
+--- odds of observing $x$ in $c_2$ situation
+\begin{equation*}
+P(c_1|x) = \frac{P(x|c_1)}{\sum_{c\in\left\{c_1,c_2\right\}}P(x|c)}
+\end{equation*}
+\item No prejudice:\\
+--- Latent variable explanation
+\end{enumerate}
+
+\newpage
+
+forms for $P(x|c_k)$ $\ldots\qquad$ First, count $P(x|c_k)= \frac{\sum_{c_k\in T}1}{\sum_{c_k}}$ $\qquad T=\text{true\ set}1$\\
+
+impractical as $\lim_{|T|\to\infty}=\Omega\left( P(x|c_k) \right) = \infty$\\
+
+--- $P(x|c_k)$ --- parametric, try Gaussian (scales to $|T|\to\infty$, and realistic in \textbf{???})\\
+$=P(x|c_k)=\mathcal{N}( x|c_k, M_k, \Sigma )$, s.t.\ $u_k \sim c_k$
+\begin{equation*}
+P(x|c_k) = \frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma|^{1/2}}\exp\left\{ 
+-\frac{1}{2}(x-M_k)^{T}\Sigma^{-1}(x-M_k) \right\}
+\end{equation*}
+$D$ -- dimension\\
+
+Some derivation work\\
+-- -- -- -- -- -- -- -- -- -- -- -- -- --\\
+
+\begin{align*}
+a & = \ln\left( \frac{P(x|c_k)}{P(x|c_2)} \right) + \ln\left( \frac{P(c_k)}{P(c_2)} \right) \\
+a & = \ln\left( \frac{\exp\left\{ -\frac{1}{2} ( x-M_k )^{T}\Sigma^{-1} ( x-M_k ) \right\}}{\exp\left\{ -\frac{1}{2} ( x-M_2 )^{T}\Sigma^{-1} ( x-M_2  ) \right\}} \right) + \ln\left( \frac{P(c_k)}{P(c_2)} \right) \\
+\\
+&\downarrow\quad\text{magic (quadratic\ terms\ cancel\ due\ to\ ???\ }\Sigma\text{\ matrix)} \\
+\\
+& \left( \Sigma^{-1}(u_1-u_2)^{T}\right)x - \frac{1}{2}u_{k}^{T}\Sigma u_{k} + \frac{1}{2}u_{k}^{T}\Sigma^{-1}u_{k2} + \ln\left( \frac{P(c_k)}{P(c_2)}\right)
+\end{align*}
+or $a_k = \ln\left( P(x|c_k)P(c_k)\right)$ is an independent Gaussian:
+
+\newpage
+
+B) Multiclass logistic regression\\
+
+$P( c_k | \phi ) = \frac{e^{(a_k)}}{\sum_j e^{a_j}}$
+
+discriminate\\
+$a_k=w_k^T\phi$\\
+
+Generative version\\
+$a_k=\ln\frac{P(x|c_k)P(c_k)}{\sum_j}P(x|c_j)P(c_j)$\\
+a lot of computation (``fuck it'')\\
+
+for multiclass check out\\
+
+$a_k\approx w_k^T\phi$\\
+\begin{align*}
+\frac{\partial P(c_k|\phi)}{\partial a_j} & = P(c_k|\phi)\left( 1 - P(c_j|\phi)\right)\\
+\frac{\partial P(c_k|\phi)}{\partial a_j} & = P(c_k|\phi) \left( 1 - \frac{e^{a_j}}{\sum_l e^{a_l}}\right)\\
+ & = \frac{e^{a_k}}{\sum_l e^{a_l}} \left( 1 - \frac{e^{a_j}}{\sum_l e^{a_l}}\right)\\
+ & = \frac{e^{a_k}}{\sum_l e^{a_l}} - \frac{e^{a_k}e^{a_j}}{\sum_l \left(e^{a_l}\right)^2}\\
+\\
+& = P(c_k|\phi) - P(c_k|c_j,\phi)\\
+& = P(c_k, c_j|\phi)\qquad \longleftarrow c_k \text{\ without\ }c_j\text{\ included (just\ }c_k\text{)}
+\end{align*}
+
+\begin{equation*}
+\frac{\partial P( c_k | \phi )}{\partial a_j}=
+P(c_k|\phi)\left(I_{kj}-P( c_j | \phi ) \right)
+\end{equation*}
+
+\newpage
+
+\underline{Feed Forward Neural Netowrks}\\
+
+$P( c_k | \phi ) = \sigma( a_k )$\\
+
+change of terms 
+\begin{align*}
+P( c_k | \phi ) & \to y_k \\
+c_k  & \sim w \\
+y(x,w) & = f\left( \sum_{j=1}^{M} w_j \phi_j( x ) \right) \\
+(\cdot) \sim\text{layer}  \qquad y(x,w) & = \sum_{j=1}^{M}w_j \sigma( x ) \qquad y_k = \sigma(a_k) 
+\end{align*}
+
+\begin{equation*}
+\left( \sum_j \qquad \right)Y = \left[ \begin{array}{c} P(c_1|\phi) \\ \vdots \\ P(c_m|\phi) \end{array} \right]
+\end{equation*}
+
+\begin{align*}
+a_j^{(x)} & = w^{T}_{k}X = \sum_{i=0}^{D} w_{ji}^{(1)}+ w_{j0}^{(1)} \qquad \text{(intercept\ term\ from\ gaussian)} \\
+a_j & = \sum_{i=0}^{D} w_{ji}^{(1)}x_i + w_{j0}^{(1)} 
+\end{align*}
+
+$P(c_j|x)=\sigma(a_j)$\\
+$y_k = \sigma(a_j)$\\
+
+\begin{align*}
+y_j( x, w ) & = \sigma\left( \sum_{j=1}^{M} w_j^{(1)} x_i + w^{(1)}_{j0}\right) \\
+\\
+\downarrow & \\
+\\
+y_j( x, w ) & = \sigma\left( \sum_{j=1}^{M} w_j \phi_j(x)+w_{j0} \right)\,,\quad \text{s.t.\ }\phi_j(x)=x_i\\
+y_j( x, w ) & = \sigma\left( \sum_{j=1}^{M}w_j\phi_j^{(1)}(x) +w_{j0} \right) \quad \text{s.t.\ } \left\{ \begin{array}{c} \phi_j^{(i)}(x) = \sum_{j=1}^{M} w_j\phi_j^{(i)}(x)+w_{j0} \\ \phi_j^{i=M}(x) = x_j \end{array}\right. 
+\end{align*}
+
+\newpage
+
+\underline{Training}\\
+
+\underline{Error function}:
+
+\begin{equation*}
+E(w)  = \frac{1}{2} \sum_{n=1}^{N}\left\lVert y(x_n,w) - t_n \right\rVert^2
+\end{equation*}
+
+view as probability: $P(t|x,w)=\mathcal{N}(t|y(x,w),\beta^{-1})$
+
+Do
+\begin{align*}
+P( t|X, W, \beta ) & = \prod_{ n>1 }^{N} P( t_n|x_n, w, \beta ) \\
+\\
+& \qquad \downarrow \\
+\\
+-\ln\left( P( t|x, w, \beta )\right) & = \frac{\beta}{2}\sum \left\{ y( x_n, w ) - t_n \right\}^2 -\frac{N}{2}\ln \beta + \frac{N}{2}\ln(2\pi) \\
+\therefore\qquad E(w) & = \frac{1}{2} \sum_{n=1}^{N} \left\{ y( x_n, w ) - t_n \right\}^2
+\end{align*}
+
+\begin{center}
+\fbox{\pbox{\textwidth}{Probabilistic treatment $\approx$ Sum of squared errors}}
+\end{center}
+
+\begin{enumerate}[label=\arabic*)]
+\item find $w_{mL}$ (gradient descent)\\
+then $\frac{1}{\beta_{mL}} = \frac{1}{N}\sum_{n=1}^{N} \left\{ y( x_n, w_{mL} ) \right\}^2$\\
+for output: \fbox{\parbox[c]{10cm}{
+\begin{equation*}
+\frac{\partial E}{\partial a_k} = y_k-t_k \qquad (a_k\approx y_k \text{\ in\ output\ units})
+\end{equation*}
+}}
+\begin{align*}
+& \qquad (\text{only\ }k\text{\ varies}) \\
+\Biggl( \frac{\partial E_w(\:)}{\partial a_k} & = \frac{1}{2} \frac{ \partial \left\{  y( x_k, w )- t_k \right\}^2}{\partial a_k} \\
+& = \frac{2}{2} \left\{ y( x_k, w ) - t_k \right\} \left( \frac{\partial y_k( x_k, w )}{\partial a_k} - 0 \right) \\
+& = y( x_k, w ) - t_k \\
+& = y_k - t_k \Biggr)
+\end{align*}
+
+\item \underline{Back Propagation}\\
+
+\circled{A} weight derivative (to do with $dE$)\\
+
+\circled{B} weight adjusted (application of $dE$)\\
+
+Childishly:
+
+\begin{align*}
+E(w) & = \sum_{n=1}^{N} E_n( w ) \\
+y_k & = w_{ki} x_i \\
+E_n & = \frac{1}{2} \sum_{k} ( y_{nk} - t_{nk} )^2 \qquad \text{---(input\ pattern\ }n\text{)} \\
+y_{nk} & = y_k( x_n, w ) \\
+\frac{\partial E}{\partial w_{ji}} & = ( y_{nj} - t_{nj} )x_{ni}
+\end{align*}
+(callback to Logistic Regression)\\
+$a_j = \sum_{i} w_{ji} z_i$, $z_j = h(a_j)$, $y(\ )$\\
+
+\underline{Chain rule}:\\
+$\frac{\partial E_n}{\partial w_{ji}}=\frac{\partial E_n}{\partial a_j}\frac{\partial a_j}{\partial w_{ji}}$ \\
+or\\
+$\frac{\partial E_n}{\partial w_{ji}}=\delta_j \frac{\partial a_j}{\partial w_{ji}}$\\
+$\frac{\partial E_n}{\partial w_{ji}}=\delta_j z_i$\\
+
+\underline{for outputs} \\
+$\frac{\partial E_n}{\partial w_{ji}} = ( y_k - t_k )z_i$\\
+
+\underline{for hiddens} \\
+$\frac{\partial E_n}{\partial a_j} = \sum_{k} \frac{\partial E_n}{\partial a_k}\frac{\partial a_k}{\partial a_j}$\\
+$\delta_j = h^\prime(a_j)\sum_{k}w_k$; $\delta_k$
+
+
+\end{enumerate}

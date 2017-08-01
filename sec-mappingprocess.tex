@@ -1,0 +1,241 @@
+\section{Mapping as a process}
+
+In this section it is described how, and when, the function $d^{M_j, M_k}_{M_i}$ is applied. In fact, instead of structing the application of $d^{M_j, M_k}_{M_i}$ as human chosen conditional statements, it is possible to consider when to ``split'' and ``merge'' and MDP $M_i$ into $M_j$, $M_k$ as a learning problem. This problem is expressed as the mapping problem, and modelled as a learning problem MDP-map ($M_{\text{map}}$):
+\begin{equation*}
+M^i_{\text{map}} = \left\langle S^{i}_{\text{map}}, A^{i}_{\text{map}}, T^{i}_{\text{map}}, R^{i}_{\text{map}} \right\rangle
+\end{equation*}
+
+\begin{equation*}
+S_{\text{map}} = f\left( d\left( M_i, \mathscr{P}\left( M_j \right), P\left( M_k \right) \right) \right)\,,\quad\text{s.t.\ }
+f: d^{M_j, M_k}_{M_i} \to \mathbb{R} 
+\end{equation*}
+where $d\left( M_i, M_j, M_k \right) = d^{M_j, M_k}_{M_i}$.\\
+
+The state encodes all possible configurations for the MDP split:\\
+\textbf{[FIGURE]}\\
+\begin{align*}
+A^{i}_{\text{map}} & = 
+\text{a set of actions formed from the the decomposition and recomposition functions\: } \\
+& \qquad \qquad
+A_{\text{decomposition}} \cup \left\{ a_r \right\} \\
+& \quad
+\text{where\ }a_r \text{\ is a special recomposition function.}\\
+T^{i}_{\text{map}} & = \left\{ 
+\begin{array}{cl} 1\,, & \left( S = S_1 \text{\ and\ } a \neq a_r \right) \text{\ or\ } \left( S \neq S_1 \text{\ and\ } a = a_r \right)  \\ 0\,, & \text{otherwise} \end{array} 
+\right. \\
+R^{i}_{\text{map}} & = \sum_{e=\text{epoch}}R^{i}(e) \\
+\end{align*}
+
+
+
+Given $(S_{\textrm{map}}, A_{\textrm{map}}, T_{\textrm{map}}, R^{i}_{\textrm{map}}, \pi_{\textrm{map}})$, applied to $M=\langle S_x, A_x, \tilde{T}_x, R_x, \tilde{\pi}_x \rangle$, we may trivially define $M_y=\langle S_y, A_y, \tilde{T}_y, R_y, \pi_y \rangle$ in a method consistent with Bush, p.\ 74, with $M_x$ being the parent process and $M_y$ being the child.\\
+
+a) for $R^{i}_{\textrm{map}}$, there are five versions $i\in\{1,\ldots,5\}$\\
+b) Given $M_x$, $M_y$, a merge is also possible, so recovering $M$\\
+c) we can perform temporal Sink actions on an MDP (Book I, p.\ 88)\\
+${}\qquad\hookrightarrow$\ reduce resolution\\
+${}\qquad\hookrightarrow$\ re-increase resolution\\
+
+\underline{Actions}\\
+
+$\therefore$ Seven ``actions'' can be performed on an MDP: $(M_R)$\\
+
+$\qquad$\begin{minipage}[t]{0.9\textwidth}
+\underline{State}\\
+
+\begin{equation*}
+\left\{R^i_{\textrm{map}}\right\}_{i=0}^{5}\cup \left\{\text{merge}\right\}\times\left\{\text{scale\ up}^{i}\right\}_{i=0}^{5}\cup\left\{\text{normal}\right\}\cup\left\{\varnothing\right\}
+\end{equation*}\\
+
+\underline{Reward}\\
+
+\begin{equation*}
+R(s^\prime,a,s)=\sum_{l\in e}R(l)\qquad\text{reward during a trajectory}
+\end{equation*}
+$e=\text{epoch}$\\
+
+\underline{Transition}\\
+
+-easy to explain in MS Word
+\begin{equation*}
+T=\left\{
+\begin{array}{l}
+1\ \text{-- allow \textbf{???}}\\
+0\ \text{-- otherwise}
+\end{array}
+\right.
+\end{equation*}
+\end{minipage}
+
+\newpage
+
+
+\underline{Reward function mapping (5 way)}\\
+
+knowing $R\left(\{s_x, s_y\}|a, \{s^\prime_x,s^\prime_y\}\right)=R(s|a,s)$\\
+
+
+\underline{Mapping Policy} (1 way)\\
+
+finding: $f\tilde{\pi}(s)\to f\tilde{\pi}(s_y)$\\
+
+\begin{equation*}
+\tilde{\pi}(a_y|s_y) \leftarrow \sum_{s_x}\sum_{a_x}\tilde{\pi}\left( \{ a_x, a_y \} \middle|  \{ s_x, s_y \} \right)P(s_x) 
+\end{equation*}
+
+\newpage
+
+\subsection{}
+
+\subsubsection{Proof of Decomposition Correctness (Process 1)}
+
+The following section demonstrates\\
+
+\underline{MDP Policy Decomposition}\\
+
+First, it is true that the optimal policy $\pi^\ast(s)$ for a centralized MDP will arise from maximizing the expected reward.
+
+\begin{equation*}
+\pi^\ast(s) = \argmax_{a} \sum_{s^\prime} R(s,a,s^\prime) P(s^\prime |s, a) + \gamma V(s^\prime)
+\end{equation*}
+
+It is now shown that a set of MDPs ($M_i$, $M_k$) can be observed to create an optimal policy $\exists f s.t.\ f\left( \pi^\ast_i, \pi^\ast_k \right) \sim \pi^\ast$.
+
+Given $\pi^\ast_i(S_i, A_k)$, $\pi^\ast_k(S_k)$
+
+\begin{equation*}
+1.\quad \pi^\ast(s_i,s_k) = \argmax_{a_i, a_k} \sum_{s^\prime_i} \sum_{s^\prime_k} R\left( (s_i,s_k),(a_i,a_k),(s^\prime_i,s^\prime_k)\right) P\left( (s^\prime_i, s^\prime_k) \middle| (s_i, s_k), (a_i, a_k)  \right)
+\end{equation*}
+
+\textasteriskcentered \quad \underline{Lemma 1 -- augmentation with $a_k$}\quad where $a^\prime_k=\pi^\ast(s^\prime_k)$
+
+\begin{equation*}
+2.\quad\pi^\ast(s_i, s_k) = \argmax_{a_i, a_k} \sum_{s^\prime_i} \sum_{s^\prime_k} R\left((s_i, s_k, a_k), (a_i,a_k),(s^\prime_i,s^\prime_k,a^\prime_k) \right) P\left( (s^\prime_i, s^\prime_k, a^\prime_k) \middle| (s_i, s_k), (a_i,a_k) \right) 
+\end{equation*}
+
+\textasteriskcentered \quad \underline{Lemma 2 -- Simplification}\\
+
+$\overbrace{\ast\quad\text{assume} \quad \argmax_{a_i,a_k} \equiv \argmax_{a_i} \argmax_{a_k}}^{\text{separability}}$\\
+
+ \begin{equation*}
+3.\quad\pi^\ast(s_i, s_k) = \argmax_{a_i, a_k} \sum_{s^\prime_i}  R\left((s_i, a_k), (a_i,a_k),(s^\prime_i, a^\prime_k) \right) P\left( s^\prime_i, a^\prime_k \middle| (a_i,a_k),  (s_i, s_k) \right) 
+\end{equation*}
+
+\underline{Lemma 3}\\
+
+\textasteriskcentered \quad separation of $a_k$, and $a_k \leftarrow \pi^{\ast}_k(s_k)$
+
+ \begin{equation*}
+4.\quad\pi^\ast(s_i, s_k) =\left( \argmax_{a_i} \sum_{s^\prime_i}  R\left((s_i, a_k), a_i,(s^\prime_i, a^\prime_k) \right) P\left( s^\prime_i, a^\prime_k \middle| a_i,  (s_i, s_k) \right) \right)
+\end{equation*}
+
+\textasteriskcentered \quad \underline{Lemma 4}\\
+
+\begin{equation*}
+a_i = \pi^\ast_i(s_i) \longrightarrow^{\cup} \left( \argmax_{a_k} \sum_{s^\prime_k}  R\left(s_k, a_k, s^\prime_k, a^\prime_k \right) P\left( s^\prime_k \middle| a_k, s_k \right) \right)
+\end{equation*}
+
+\begin{center}
+\fbox{
+\begin{minipage}{5cm}
+\begin{equation*}
+5.\quad\pi^\ast(s_i, s_k) = \pi^\ast_i(s_i,a_k)\cup \pi^\ast(s_k)
+\end{equation*}
+\end{minipage}
+}
+\end{center}
+
+Thus, given $\pi^\ast_i$ and $\pi^{i}_{k}$, it is possible to infer $\pi^\ast \left( s_i, s_k \right)$.\\
+
+We now prove lemmas involved.\\
+
+Lemma 1:\\
+\vspace*{4cm}
+
+Lemma 2:\\
+\vspace*{4cm}
+
+Lemma 3:\\
+\vspace*{4cm}
+
+Lemma 4:\\
+\vspace*{4cm}
+
+\newpage
+
+ \subsubsection{Proof of Decomposition Correctness (Process \#2)}
+
+\underline{MDP Policy Decomposition}\\
+
+\begin{equation*}
+\pi^\ast(s) = \argmax_{a} \sum_{s^\prime} R(s, a, s^\prime) P(s^\prime | s, a) +\gamma V(s)
+\end{equation*}
+
+Given $\pi^\ast_i(S_i,A_k)$, $\pi^\ast(S_k)$\\
+
+\begin{equation*}
+1.\quad \pi^\ast(s_i,s_k) = \argmax_{a_i, a_k} \sum_{s^\prime_i} \sum_{s^\prime_k} R\left( (s_i,s_k),(a_i,a_k),(s^\prime_i,s^\prime_k)\right) P\left( (s^\prime_i, s^\prime_k) \middle| (s_i, s_k), (a_i, a_k)  \right)
+\end{equation*}\\
+
+Note:\qquad
+\begin{minipage}[t]{10cm}
+$R\left( (s_i,s_k,a_k),(a_i,a_k),(s^\prime_i,s^\prime_k) \right) \leftarrow R\left((s_i,s_k),(a_i,a_k),(s^\prime_i,s^\prime_k)\right)$\\
+$R\left( (s_i,s_k,a_k),(a_i,a_k),(s^\prime_i,s^\prime_k,a^\prime_k) \right) \leftarrow R\left((s_i,s_k),(a_i,a_k),(s^\prime_i,s^\prime_k)\right)$
+\end{minipage}\\
+
+
+\textasteriskcentered assume separability $\longrightarrow$\\
+\begin{align*}
+2.\quad \pi^\ast(s_i,s_k) & = \argmax_{a_i} \argmax_{a_k} \sum_{s^\prime_i} \sum_{s^\prime_k} R\left( ( s_i, s_k, a_k ), ( a_i, a_k ), ( s^\prime_i, s^\prime_k, a^\prime_k )\right) P\left( ( s^\prime_i, s^\prime_k, a^\prime_k ) \middle| \cdot \right) \\
+& = \argmax_{a_i} \sum_{s^\prime_i} \sum_{s^\prime_k} R\left(  ( s_i, s_k, a_k ),\begin{array}{c} a_i \\ a_k \end{array}
+\middle| 
+\begin{array}{c} s^\prime_i \\ s^\prime_k \\ a^\prime_k \end{array}
+\right)
+P\left( 
+\begin{array}{c} s^\prime_i \\ s^\prime_k \\ a^\prime_k \end{array}
+\middle | \begin{array}{c} a_i \\ a_k \end{array},
+\begin{array}{c} s_i \\ s_k \\ a_k \end{array}
+\right) \\
+& \qquad \qquad \qquad
+\cup
+\argmax_{a_k}
+ \sum_{s^\prime_k} R\left(  \begin{array}{c} s_i \\ s_k \\ a_k \end{array},\begin{array}{c} a_i \\ a_k \end{array}
+\middle| 
+\begin{array}{c} s^\prime_i \\ s^\prime_k \\ a^\prime_k \end{array}
+\right)
+P\left( 
+\begin{array}{c} s^\prime_i \\ s^\prime_k \\ a^\prime_k \end{array}
+\middle | \begin{array}{c} a_i \\ a_k \end{array},
+\begin{array}{c} s_i \\ s_k \\ a_k \end{array}
+\right)
+\end{align*}\\
+
+\begin{align*}
+\ast\qquad \text{let\ }a_k^\ast & = \argmax_{a_k}\sum_{s^\prime_k}  R\left(  \begin{array}{c} s_i \\ s_k \\ a_k \end{array},\begin{array}{c} a_i \\ a_k \end{array}
+\middle| 
+\begin{array}{c} s^\prime_i \\ s^\prime_k \\ a^\prime_k \end{array}
+\right)
+P\left( 
+\begin{array}{c} s^\prime_i \\ s_k \\ a_k \end{array}
+\middle | \begin{array}{c} a_i \\ a_k \end{array},
+\begin{array}{c} s_i \\ s_k \\ a_k \end{array}
+\right)\\
+& \qquad\text{s.\ t.\ }s_i,s^\prime_i\leftarrow\pi^\ast_i( \\
+&\qquad\quad a^\ast_i = \pi^\ast_i(s)
+\end{align*}
+
+\begin{align*}
+3.\qquad &= \argmax_{a_i}\sum_{s^\prime_i}
+ R\left(  \begin{array}{c} s_i \\ a_k \end{array},
+\begin{array}{c} a_k \\ a^\ast_k \end{array},
+\begin{array}{c} s^\prime_i \\  a^\prime_k \end{array}
+\right)
+P\left( 
+\begin{array}{c} s^\prime_i \\ a^\prime_k \end{array}
+\middle | \begin{array}{c} a_i \\ a^\ast_k \end{array},
+\begin{array}{c} s_i \\ a_k \end{array}
+\right)
+\cup
+\pi^\ast_k(s_k)=a_k \\
+& = \pi^\ast_i\left( s_i \middle| \pi_k^\ast \right) \cup \pi^\ast_k(s_k)
+\end{align*}
