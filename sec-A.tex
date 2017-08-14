@@ -27,3 +27,154 @@ R_c = \left\{ r_c: R(L^n)\times j \to R(L)\right\}^{\infty}\,,\quad A_c= \left\{
 \begin{equation*}
 T_c(l_{c_0}, a_c \in A_c, l_{c_1})
 \end{equation*}
+
+\begin{align*}
+T( s_1, \pi_c, s_2 ) & = \sum_{a \in \pi_c( s_1 )} \pi_c( a|s_1 ) T( s_1, a, s_2 ) \\
+ & = \sum_{a \in \pi_c( s_1 )} P( a|s_1 ) P( s_2|s_1, a ) \\
+ & = \sum_{a \in \pi(s_1)} P( a, s_2|s_1 ) \\
+ & = P( s_2|s_1, \pi_c ) \\
+ & = T( s_1, \pi_c, s_1 )
+\end{align*}
+
+\begin{align*}
+T( s_1, \pi_c, s_3 ) & = \sum_{s_i \in \tilde{S}} T(s_1, \pi_c, s_i) T( s_i, \pi_c, s_2)  \qquad \longleftarrow\textbf{[should\  this\  be\ }s_3\textbf{?]} \\
+T( s_1, \pi_c, s_3 ) & = T_{\pi_c}( s_1, \tilde{s}_2 ) \cdot T_{\pi_c}( \tilde{s}_2, s_3 ) \\
+T( s_1, \pi_c, s_n ) & = T_{\pi_c}( s_1, \tilde{s}_2 ) \left( \prod_{i=2}^{n-2} T_{\pi_c}( \tilde{s}_i, \tilde{s}_{i+1} )\right) T_{\pi_c}(\tilde{s}_{n-1}, s_n )
+\end{align*}
+
+\begin{center}
+\fbox{
+\begin{minipage}{10cm}
+\begin{equation*}
+T( s, f_{a_c}(l), s_n ) = \prod_{i=1}^{n-1} T_{\pi_c}(\tilde{s}_i, \tilde{s}_{i+1} )\,, \qquad \tilde{s}_1 = \{ s_1 \}\,,\: \tilde{s_n} = \{ s_n \} 
+\end{equation*}
+\end{minipage}
+}
+\end{center}
+(might be intractable to learn but can guess by\\
+(from page 85:) $\rightarrow$ link in and rewrite Both.\\
+
+reconfiguration ideas:
+\begin{itemize}[label=$\square$]
+\item $g(\cdot)$ should be a learned output function (regressed)
+\item the states of nodes should be able to be remapped to outputs of other MDPs
+\item actions can be large, multi-node, set-outputs as opposed to single, discrete or continuous actions
+\end{itemize}
+
+\newpage
+
+\underline{Transitional Learning} (Idea) \\
+
+$\rightarrow$ The generalization of Q-Learning to a theory relates to learning transitional models \\
+
+assume a process $\langle S, A, T, R \rangle$ \\
+
+knowing
+\begin{enumerate}[label=\circled{\arabic*}:]
+\item $Q_t( s, a ) = Q_{t-1}( s, a ) + \alpha \left[ R( s, a ) + \gamma \max_{a^\ast}Q_{t-1}( s^\prime, a^\ast) \right]$
+\item $E\left[ R( s, a) \right] = \gamma \sum_{s \in S} T( s, a, s^\prime ) \max_{a^\ast} E\left[ R( s^\prime, a ) \right]$
+\item $\lim_{ t \to \infty } Q_t( s, a ) = E\left[ R( s, a ) \right]$
+\end{enumerate}
+which is the general method (\circled{1}) used to converge on expected reward given in \circled{2}. We believe \circled{3}.\\
+
+Turns out (I think) we can do better, replacing Q-Learning with transitional learning by making threee substitutions.
+
+\begin{enumerate}[resume,label=\circled{\arabic*}]
+\item use $P_t( s^\prime | s, a )$ as a replacement for $T( s, a, s^\prime )$
+\item limit recursion depth using a threshold $A_{\text{th}}$
+\item model an approximation for $S$ called $L(s)$, s.t.\ $L(s) \subset S$, with a basis characterized by \circled{4}
+\end{enumerate}
+
+Thus we can define an approximation for \circled{2}:
+\begin{equation*}
+\bar{R}_\gamma( s, a|t, \theta ) = \left\{ \begin{array}{cc}
+\sum_{s \in L(s)} P_t( s^\prime | s, a ) \max_{a^\ast} \bar{R}_{\gamma}( s, a | t, \theta \gamma )\,, &  \theta \gamma > A_{\text{th}} \\
+0\,, & \text{otherwise}
+ \end{array}\right.
+\end{equation*}
+
+also:
+\begin{equation*}
+\lim_{A_{\text{th}} \to 0} \lim_{t \to \gamma} \bar{R}_{\gamma}( s, a | t, \theta ) = E\left[ R( s, a ) \right] \quad\text{if\ }T( s, a, s^\prime ) = P_t( s^\prime | s, a ) 
+\end{equation*}
+
+Lastly, $L( s )$ and $P_t( s^\prime | s, a )$ can be considered. $\{ s, s^\prime, w \} \in S \times S \times \mathbb{R}$ characterizes
+
+$L( s ) = s^\prime \in \{ s, s^\prime, w \} \ w > \text{th}\,B$ 
+
+\newpage
+
+\underline{Financial Domain}\\
+
+$S = \text{Security} = \{ V_S, P_S \} \qquad V_s = \left\{ V_t \right\}_{t=0}^{N}\,, P_s = \left\{ P_t \right\}_{t=0}^{N}$\\
+
+Goal: $V^\ast_{N+1}$, $P^\ast_{N+1}$\\
+and, a set of Securities=$\{ S_i \}_{i=0}^{M}$\\
+
+approaches
+\begin{itemize}[label=--]
+\item predict future prices
+\item predict direction
+\end{itemize}
+{\ }\\
+
+\underline{Build Bayesian model} \\
+
+feature vector space $d=\left\{ 1, 0, -1 \right\}$ (direction) 
+\begin{enumerate}[label=\arabic*)]
+\item choose stocks with 
+\begin{enumerate}[label=\alph*)]
+\item high beta
+\item high volume
+\end{enumerate}
+\item find: $P\left(  d \middle| \left\{ d \right\}^{N}_{N-\text{frame}} \right)$ $\:$? $\qquad\cdots$ assume independence\\
+$\text{frame}=4\rightarrow 81\text{\ states}$\\
+1-week of data:
+\begin{itemize}[label={\ }]
+\item 2400 states for training
+\item 4800 states ($\sim 60$ in each state)
+\end{itemize}
+\item build $f_r\left( d \middle| \left\{ d \right\}_{t=N-\text{frame}}^{N}\right)$ $\qquad\mathcal{O}(4800)$
+\item run $P( d | D )=\frac{f_r( d | D )}{\sum_{d^\prime \neq d} f_r( d | D )}$
+\end{enumerate}
+{\ }\\
+
+\underline{Testing}\\
+
+\begin{enumerate}[label=\alph*)]
+\item Dump $f_r$ for all 81 states
+\item Dump High/Low $P( d | D )$
+\end{enumerate}
+
+\newpage
+
+Naive\\
+\underline{Probabilistic Trading}\\
+
+\begin{enumerate}[label=\arabic*)]
+\item $\forall S_i \in M$: calculate $f^{i}_{r}( x_t | \overbrace{x_{t_1}, x_{t-2}, x_{t-3}, x_{t-4}}^{h_{t-1}} )$ \\
+$
+f^{i}_{r}\left( x \middle| h_{t-1} \right)
+= \sum_{t=\text{start\_history}}^{T}
+ I \left\{ \sum_{t^\prime=t}^{{\text{frame}}+t} I \left\{ d_{t^\prime} = x_{t^\prime} \right\} = 4 \right\}
+$
+\item $P^{i}(x|h_t-1)\leftarrow \frac{f^{i}_{r}( x | h_{t-1} )}{\sum_{x^\prime} f^{i}_{r}( x^\prime | h_{t-1} )}$ \\
+$\mathfrak{z}^{i}_{t}=I\left\{ \sum_{t^\prime=t}^{\text{fs}} I\left\{ d_{t^\prime} = x_{t^\prime} \right\} = \text{fs} \right\}$ \\
+$\mathfrak{z}^{i}_{t} \in \left\{ 0, 1 \right\}$
+\end{enumerate}
+
+
+\underline{Probabilistic Market \textbf{???}} \\
+
+
+
+Given a family $F=\left\{ S^i, S^j, \ldots, S^k \right\}$, $|F|\in\mathbb{N}$ \\
+
+$f_r^F(x|h_{t-1}) = \sum_{S^i \in F} \sum_{t=\text{start\_present}} I\left\{ \sum_{t^\prime = t}\left\{ d^i_{t^\prime} = x^\prime_{t^\prime} \right\} = \text{frame}\right\}$ \\
+$\text{start\_history} \ll \text{start\_present}$ \\
+$P^F(x|h_{t-1}) \leftarrow \frac{f_r^F(x|h_{t-1})}{\sum_{x^\prime}f_r^F(x^\prime|h_{t-1})}$ \\
+
+\underline{Probabilistic correlation \textbf{???} func}: \\
+
+$f_r^{i,F}\left( x^i \middle| h^i_{t-1}, h^j_{t-1} \right) = \sum_{t=\text{start\_history}}^{T}I\left\{ d^{i}_{t} = x^i \right\} \cdot \mathfrak{z}^i_t \cdot \mathfrak{z}^j_t$ \\
+have access to $P^i$, $P^F$, $P^{i,j}$
