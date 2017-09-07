@@ -1,0 +1,164 @@
+\circled{A} explains how: \\
+
+\circled{$\text{A}_1$}\\
+\begin{enumerate}
+\item MDPs are split into independent processes
+\item How these conditions interrelate between MDPs
+\end{enumerate}
+
+\circled{$\text{B}_1$} \\
+
+\underline{Paper outline} \circled{$\alpha$} General RL-mapping prior knowledge ($\tilde{R}$ and $\tilde{T}\to\tilde{Q}$)\\
+
+\begin{enumerate}[label=1.0.\arabic*]
+\item Introduction: \\
+One of the largest issues facing Q-Learning and Reinforcement Learning is the coupling of reward and state behaviours. In humans, this behaviour is called anchoring. A person can learn to associate reward with stimulus via Pavlov's effect. Importantly, humans possess the ability to disassociate reward from the prediction of system dynamics. For robots to be truly flexible learners, they must be able to separately encode the reward in a system from the transition dynamics in a system.  This allows one robot to maximize different reward functions without retraining.\\
+
+\item Q-Learning Extension: \\
+Specifically, given a perfect encoding $Q^\ast(s, a)$, transition and reward are 
+\begin{equation}
+\argmax_{a} Q_t^\ast(s,a)\sim\pi^\ast(s) = \argmax_{a} \sum_{s^\prime} R( s^\prime | a, s ) T( s^\prime | a, s ) + \gamma V( s^\prime )
+\end{equation}
+where
+\begin{align}
+Q^\ast_t(s,a) & = Q_{t-1}(s,a)+\alpha \left( Q_{t-1}( s, a ) - R( s^\prime | s, a ) \right) + \gamma Q_{t-1} ( s^\ast, a^\ast ) \\
+Q^\ast_t(s,a) & = Q_{t-1}(s,a)+\alpha \left( Q_{t-1}( s, a ) - R( s^\prime | s, a ) \right) + \gamma \argmax_{a^\ast} Q ( s^\prime, a^\ast )
+\end{align}
+Unfortunately, as time $t$ increases in value, the values $R(s|s)$ and $T(s|a,s)$ are encoded such that $f:R\cdot T\to Q_0$ it is not possible to compute $f^{-1}(Q)$ due to the loss of information. 
+
+To avoid information loss, a dynamics equation $\tilde{T}$ and observed reward policy $\tilde{R}$ can be tracked, and used to compute at any
+ time:
+\begin{equation}
+\tilde{Q}^\ast_t( s, a ) = \sum_{s^\prime} \tilde{T}_{t-1}^\ast ( s^\prime | s, a ) \tilde{R}_{t-1}( s^\prime, s, a ) + \gamma \pi^\ast( s^\prime ) \label{eq:a.2} 
+\end{equation}
+where $\tilde{\pi}^\ast( s, a ) \sim Q^\ast( s, a )$. 
+
+It is clear that equation~\ref{eq:a.2} must iterate over all states $s^\prime$, which is intractable. However, if optimal policy locality for a function $L$ is assumed, the resulting expression~\ref{eq:} is optimal.
+
+\underline{Lemma 1}: Policy optimality for the purposes of regresssion to optimal Q values $(\tilde{Q}^\ast, Q^\ast )$, consideration of ``local'' states and ``local'' acting are required,
+\begin{equation}
+L:S,A\to S,A | \text{onto}
+\end{equation}
+\begin{equation}
+\sum_{S^\prime \in S} \tilde{T}_t ( s^\prime | s, a ) \tilde{R}_t( s^\prime | s, a ) +\gamma \tilde{\pi}( s^\prime )  = \sum_{S \in L(s)}  \tilde{T}_{t}( s^\prime | s, a ) \tilde{R}_t( s^\prime | s, a ) + \tilde{\gamma}( s^\prime )
+\end{equation}
+\begin{equation}
+\argmax_{a \in A}\tilde{Q}^\ast( s, a ) = \argmax_{a\in L(a)} \tilde{Q}^\ast( s, a )
+\end{equation}
+\begin{equation}
+\tilde{\pi}^\ast( s | L ) = \tilde{\pi}^\ast( s )
+\end{equation}
+The local policy is equivalent to the complete state $\times$ action space version.\\
+
+\item Regression \\
+Instead of regressing to Q values directly $\left( Q_t \leftarrow f(Q_{t-1}) \right)$ we instead regress to system dynamics $\left( \tilde{T}_t \leftarrow f( T_{t-1} ) \right)$. Specifically:
+\begin{align}
+\tilde{T}_{t+1}( s^\prime | s, a ) = \frac{\textit{freqn}(s^\prime | s, a )}{\textit{freqn}( s, a )} & \quad\text{or}\quad \tilde{T}_{t+1}( s^\prime | s, a ) = P( s^\prime | s, a ) \\
+\underbrace{\tilde{R}_{t+1}( s^\prime | s, a ) = R_t( s^\prime | s, a )}_{\text{simple}} & \quad\text{or}\quad \underbrace{\tilde{R}_{t+1}( s^\prime | s, a ) = \tilde{R}( s^\prime | s, a ) + \left( \tilde{R}( s^\prime | s, a ) - R( s^\prime, a, s ) \right)}_{\text{verbose}} 
+\end{align}
+\textasteriskcentered --- $\tilde{T} \approx T$ when
+
+Thus it is possible, using either a simple regression model or a verbose training model, to regress to an optimal policy $\tilde{\pi}^\ast$, online, and exploit reward switching.\\
+
+\item Behaviour Switching
+
+After an agent is trained ($\tilde{\pi}\sim\tilde{\pi}^\ast$), then it is possible to redefine the reward function $\tilde{R}$. Given $\tilde{R}_{t} = R_{A}$, then $\tilde{R}_{t+1} \leftarrow R_{B}$ is possible. At this point the transition dynamics ($\tilde{T}$) and locality principle ($L$) maybe be used to infer $\tilde{\pi}_{t+1}$. Just as a human may redefine an objective during learning, agents may also change the definition of success through reassignment of $\tilde{R}$.\\
+\begin{enumerate}[label=1.0.\arabic{enumi}.\arabic*]
+\item Optimality of Switching
+
+Given a set of reward functions $\mathbf{R}=\{R_1, R_2, \ldots \}$ and a set of time indexes $\{ 1, 2, 3, \ldots, t, \ldots \}$ as time approaches infinity ($t \to \infty$) the global policy $\tilde{\pi}^\ast_{t}(s)$ will converge on the optimal policy $\tilde{\pi}^\ast$, $\tilde{\pi}^\ast \in \Pi(R_i)$, where $\Pi(R_i)$ is the set of all optimal policies for reward function $R_i$.
+\end{enumerate}
+
+Set of reward functions characterizing a set of goals
+\begin{equation}
+\mathbf{R}=\left\{ R_1, R_2, \ldots, R_i, \ldots \right\}\qquad R_i: S \times A \times S  = \mathbb{R}^{+}\,, \quad R_i\:\text{known} \leftarrow \mathbb{R}^{+}
+\end{equation}
+An ``expected quality'' of a state-action pair given locality \& states.
+\begin{equation}
+\tilde{Q}_t( s, a | R_i, L ) = \sum_{s^\prime \in L( s )} \tilde{T}_t( s^\prime | s, a) R( s^\prime | s, a ) + \gamma \argmax_{a^{*}} \tilde{Q}_{t}( s^\prime, a^\ast | R_i, L )
+\end{equation}
+Set of optimal policies
+\begin{equation}
+\Pi\,,\quad \pi^{*} \in \Pi \text{\ iif}: \pi^{\ast}( s ) = \argmax_{a} Q^{\ast}( s^\prime, a^{\ast} | L, R_i )
+\end{equation}
+optimal Q-value
+\begin{equation}
+Q^{\ast}( s, a | L, R_i  ) = \sum_{s^\prime \in L( s )} T( s^{\prime} | s, a ) R_i( s^\prime | s, a ) + \gamma \argmax_{a^{\ast}} Q^{\ast}
+\end{equation}
+\begin{enumerate}[label=\arabic*.]
+\item \begin{equation}
+Q^{\ast}( s, a | L, R_i ) = \tilde{Q}_t( s, a | L, R_i )\,,\quad t \to \infty
+\end{equation}
+\begin{align}
+Q^{\ast}( s, a | L, R_i ) & = E\left[ \sum_{s^{\prime} \in L( s )} T( s^{\prime} | s, a ) R_i( s^{\prime} | s, a ) + \gamma \argmax_{a^{\ast}} Q^{\ast}( s^{\prime}, a^{\ast} | R_i, L ) \right] \\
+& = \sum_{s^{\prime} \in L( s )} E\left[ T( s^{\prime} | s, a ) \right] E\left[ R_i( s^{\prime} | s, a ) \right] + \gamma \argmax_{a^{\ast}} E\left[ Q^{\ast}( s^{\prime}, a^{\ast} | R_i, L ) \right] \\
+& \qquad \qquad \qquad \text{obvious:\ }E[ Q^{\ast} ] \equiv Q^{\ast} \nonumber \\
+& \qquad \qquad \qquad \text{obvious:\ }R_i( s^{\prime} | s, a ) \equiv E\left[ R_i( s^{\prime} | s, a ) \right] \nonumber \\
+& = \sum_{s^{\prime} \in L(s)} E\left[ T( s^{\prime} | s, a ) \right] R_i( s^{\prime} | s, a ) + \gamma \argmax_{a^{\prime}} Q^{\ast}( s^{\prime}, a^{\ast} | R_i, L ) \\
+\ast\:\text{Prove}\:\longrightarrow & \qquad \qquad \text{assert}\:\lim_{t \to \infty} \tilde{T}_t( s^{\prime} | s, a ) = E\left[ T( s^{\prime} | s, a ) \right] \nonumber \\
+& = \lim_{t \to \infty} \sum_{s^{\prime} \in L( s )} \tilde{T}_t( s^\prime | s, a ) R_i( s^\prime | s, a ) + \gamma \argmax_{a^{\ast}} Q^{\ast}( s^{\prime}, a | R_i, L )
+\end{align}
+\begin{equation}
+Q^{\ast}( s, a | L, R_i ) = \tilde{Q}_{t}( s, a | L, R_i )\,,\quad t \to \infty
+\end{equation}
+\item Trivially: 
+\begin{equation}
+\text{if\ }\tilde{Q}_{t}( s, a | L, R_i ) \sim Q^{\ast}( s, a | L, R_i ) \text{\ iif\ }\tilde{T}_t \sim T
+\end{equation}
+\begin{equation}
+\forall R_j \in \Pi: \tilde{Q}_t( s, a | L, R_j) \sim Q^{\ast}( s, a, L, R_j )
+\end{equation}
+\end{enumerate}
+\item \underline{Validation}
+To the value the efficiency of this model we consider a staged experiment with three reward functions.
+
+Thus, in this experiment we consider training a model, first, on rewarding trading actions that essentially reward low exposure and no loss ($R_1$). Duriing this period $\tilde{T}$ will mature, and many dynamics of the system are discovered. After gains reach 10\%, $R_2$ becomes active --- given short term success in a security, we increase buy in. After this, given success, we reward an agent that tries to go ``all in'' to grow profits to 50\%. Lastly, at 50\%, we ``clamp'' the agent from being rewarded for taking excessive risks.
+
+This reward profile, across industry, is common. Humans design reward profits and procedures that emphasize the result of behaviour. For example, on the trading floor, we are interested in policies that manage the risk--profit profile.
+
+To experiment, we compose two processes:
+\begin{enumerate}[label=\circled{\arabic*}]
+\item a Q-learning mechanism
+\item a $\tilde{T}$-learning mechanism
+\end{enumerate}
+For both models, the following definitions are used.\\
+
+$S$ --- exposure $\times$ profit $\times$ price,$\qquad$ where exposure $\in [0,100]$, profit $\in \mathbb{R}$, price $\left\{ x\in \mathbb{R}^{+} \right\}_{x=0}^{100}$, representing exposure \%, profit \%, and price history \\
+
+$A$ --- buy 1\%, sell 1\%, no action \\
+
+$T$ --- $T( s^{\prime} | s, a )$ --- probability of making an action and ending up in a later state \\
+
+$R$ --- \begin{equation}
+R( s^{\prime} | s, a ) = \left\{ 
+\begin{array}{ll}
+R_1 \text{\ iif profit \textless 10\%} & R_1 = \frac{\Delta\text{profit}}{\text{exposure}}-\text{exposure} \\
+R_2 \text{\ iif profit 10\% -- 20\%} & R_2 = \Delta\text{profit} \\
+R_3 \text{\ iif profit 20\% -- 50\%} & R_3 = \Delta\text{profit(exposure)} \\
+R_4 \text{\ iif profit 50\%+} & R_4 = \frac{\text{profit}}{\text{exposure}}
+\end{array}
+\right.
+\end{equation}
+$\tilde{T}$ --- predicted transitional dynamics --- encoded using random forrest classification \\
+
+\begin{tabular}{|p{5cm}|p{3cm}|p{5cm}|}
+Approach \circled{1} & Approach \circled{3} & Approach \circled{2} \\
+Q-Learning & ensemble & T-learning \\
+\hline
+$R( s^\prime | s, a )$ will exhibit a `steady stochastic' 
+ input pattern and the average reward $E[R(s^\prime|s,a)]$ 
+will be encoded into the $Q(s,a)$ 
+& 
+We train separate Q-learning agents, each  which are active given the use of $R_1$, $R_2$, $R_3$, $R_4$, such that $R_i\to Q^{i}$.
+& 
+$\tilde{Q}(s,a)$ will never encode more than one, 
+singular, reward function $R_t\approx\{ R_1, R_2, R_3, R_4 \}$.
+Thus it is expected that T-learning will vastly out-perform Q-learning.
+\end{tabular}\\
+\item \underline{Experiment}
+
+We ran standard basic testing on two independent stocks.  One Google Inc., and the other, Blockbuster. Below we have plotted each models: Reward over time (Figure~\ref{}), Profit over time (Figure~\ref{}), Risk over time (Figure~\ref{}). All of the models are too juvenile in approach to be profitable. T-learning exhibits a xx\% increase in reward acquisition, a xx\% increase in profit and a xx\% increase in Reward. The ensemble approach failed to outperform the T-learning approach. The highest performance approach is T-learning.\\
+\end{enumerate}
+\underline{Summary}\\
+
+In this paper a method of reusing experience over several reward functions was demonstrated. T-learning allows gents to recycle transition information discovered through online learning. The results of using this experiment in the financial domain was a reduction in model complexity, and increased performance. Using a singular Q-learning agent lead to loss of understanding of the reward function.  Using the ensemble approach requires the transition dynamics of the experiment to be encoded four times. Thus, T-learning had both the best performance and can scale to an unlimited set of reward functions without retraining. It is the opinion of the author that the encoding of transtion and reward information separately should be seen as the fundamental first step when considering model reuse and generalization.  

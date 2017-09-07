@@ -48,7 +48,7 @@
 % The testflow support page is at:
 % http://www.michaelshell.org/tex/testflow/
 
-\documentclass[compsoc,journal,letterpaper,10pt,draftclsnofoot,onecolumn]{IEEEtran}
+\documentclass[compsoc,journal,letterpaper,10pt,draftcls,twocolumn]{IEEEtran}
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
@@ -429,9 +429,17 @@
 %%%%%
 %%%%%
 
-\date{\today}
 
 \begin{document}
+
+\title{Dependent Markov Decision Processes}
+
+\author{Justin~Girard%
+\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem{Justin~Girard is with Girard Research Inc.}}}
+
+\date{\today}
+
+\maketitle
 
 \begin{abstract}
 Optimal behaviour policies for non-degenerate Markov Decision Processes
@@ -453,7 +461,9 @@ exponentially less state space to specify (pairwise p-value \textless{}
 X.XXXX ).
 \end{abstract}
 
+%\IEEEraisesectionheading{
 \section{Introduction}\label{introduction}
+%}
 
 In prior work Concurrent Markov Decision Processes were presented
 {[}{]}, and shown via experiment to enable discovery locally policy when
@@ -478,13 +488,13 @@ work contributes this set of assumptions which may be validated when
 simplifying nMDP problems into CMDP problems.
 
 This paper outlines a brief background related to state space
-representation in Section 1, before outlining the core CMDP theory in
-Section 2. Section 3 outlines how a simple version of Q-Learning can be
+representation in Section~\ref{sec:background}, before outlining the core CMDP theory in
+Section~\ref{sec:theory}. Section 3 outlines how a simple version of Q-Learning can be
 used to contrast the state space representation experiment. In Section
 4, results are demonstrated for a simple localization and box pushing
 experiment.
 
-\section{Background}\label{background}
+\section{Background}\label{sec:background}
 
 The idea of state space factorization is not novel, and falls broadly
 into three categories.
@@ -504,7 +514,7 @@ tractable CMDP form. We demonstrate both analytically and empirically,
 that the regressed policies are identical in terms of local optimality,
 if certain conditions hold.
 
-\section{Theory}\label{theory}
+\section{Theory}\label{sec:theory}
 
 First, it is shown that an nMDP can be split into sub dependent MDPs,
 denoted a CMDP. Afterwards a lemma is provided which may be reused when
@@ -518,7 +528,7 @@ the optimal location in a discrete state space in
 \(S = \mathbb{N}^{N}\), using the maximum value function
 \(V:S\rightarrow\mathbb{R}\). To ensure the space \(S\) has an
 optimal element it is assumed that a certain rearrangement of the value
-image \(V\left( S \right)\) monotonic.
+image $V(S)$ monotonic.
 
 Thus, to discover a solution to the problem, the help of an agent may be
 elicited, who has allowed actions in a set \(A \subset \mathbb{N}\), for
@@ -538,11 +548,13 @@ over time more time instants are contained within each. It is assumed
 that some discoverable infinite horizon reward exists
 \(R\left( s_{t}, a_{t}, s_{t + 1} \right)\) such that agents may attempt
 to ``maximize'' the value given by the trajectory, where the value of a
-state is given by \(V\left( S \right).\)
+state is given by $V\left( S \right)$.
 
-\begin{equation}
-V\left( s_{t} \right) = \sum_{s_{t + 1} \in S\ }{P\left( s_{t + 1}|s_{t},a_{t} \right)\left( R\left( s_{t},a_{t},s_{t + 1} \right) + \gamma V\left( s_{t + 1} \right) \right)}
-\end{equation}
+\begin{align}
+& V\left( s_{t} \right) = \nonumber \\ 
+& \quad
+\sum_{s_{t + 1} \in S\ }{P\left( s_{t + 1}|s_{t},a_{t} \right)\left( R\left( s_{t},a_{t},s_{t + 1} \right) + \gamma V\left( s_{t + 1} \right) \right)}
+\end{align}
 
 The goal is to (a) explore and map the quality
 \(Q_{t}:S \times A\mathbb{\rightarrow R}\) for the space, such that (b)
@@ -565,10 +577,12 @@ timescale than another MDP \(m_{j}\).
 \subsubsection{Random Field Deconstruction
 Example}\label{random-field-deconstruction-example}
 
+\begin{center}
 \begin{figure}
 \includegraphics[width=2.68750in,height=2.80556in]{media/image1.png}\\
 \caption{\label{fig:figure1}The nMDP with transitions from \((i,j)\)only.}
 \end{figure}
+\end{center}
 
 The
 problem of the random field with real values can be considered,
@@ -994,7 +1008,7 @@ framework.
 Learning}\label{general-reinforcement-learning}
 
 In the following section, the approach to finding a policy for a
-singular MDP, \(M = \langle S, A, T, R \rangle \), is generalized; instead of relying on
+singular MDP, $M = \langle S, A, T, R \rangle$, is generalized; instead of relying on
 a human to decide how to structure a CMDP, as described in sections 3.0
 and 3.1, it may be desired that a reinforcement learning mechanism learn
 its own structure. This learning mechanism is inspired by all domans of
@@ -1028,7 +1042,7 @@ Knowledge}\label{learning-and-usage-of-transitional-knowledge}
 
 In this section we consider the benefits and drawbacks of modelling the
 regressed Q values directly for a behavioural policy. The classic
-initial approach is to discover \(Q\).
+initial approach is to discover $Q$.
 \begin{equation}
 Q:\,S \times A \rightarrow \mathbb{R}^{+}
 \end{equation}
@@ -1038,22 +1052,23 @@ Such that it is elementary to derive the behavioural policy online:
 \end{equation}
 
 Where a common policy definition is commonly used in casual
-experimentation, \(\pi^{*}(s) = \argmax_{a}Q(s,a)\).
+experimentation, $\pi^{*}(s) = \argmax_{a}Q(s,a)$.
 
 The calculation of Q has been traditionally computed online using
 equation (XX), repeated for reference:
-\begin{equation}
-{Q(s,a)}^{'} \leftarrow Q(s,a) + \alpha\left( R\left( s,a,s^{'} \right) - Q\left( s,a \right) + \max_{a^{*}}Q(s^{'},a^{*}) \right)
-\end{equation}
+\begin{align}
+& {Q^{\prime}(s,a)} \leftarrow \nonumber \\ 
+& \quad Q(s,a) + \alpha\left( R\left( s,a,s^{\prime} \right) - Q\left( s,a \right) + \max_{a^{*}}Q(s^{\prime},a^{*}) \right)
+\end{align}
 
-Where the symbol (`) represents a function or variable value at the
+Where the symbol (${}^\prime$) represents a function or variable value at the
 following time step. The procedure of executing Q-Learning (\(Q_{l}\))
 computes the a map,
 \begin{equation}
 Q_{l}:\,R(S,A,S) \times T(S,A,S) \rightarrow Q(S,A)
 \end{equation}
-, such that neither the complete reward (\(R(S,A,S)\)) or transition
-(\(T(S,A,S)\)) images are kept in memory; the \(\text{QL}\) algorithm
+, such that neither the complete reward ($R(S,A,S)$) or transition
+($T(S,A,S)$) images are kept in memory; the \(\text{QL}\) algorithm
 functions \(\text{online}\). The purpose of this section is to, first,
 provide a mechanism that stores and calculates Q values based on
 learning approximate characterizing functions, for transition
@@ -1064,11 +1079,11 @@ outlines a method to recover Q values from these images anytime, using
 \emph{transitional learning,} \(Q_{\text{tr}}\):
 \begin{align}
 %
-T_{l}:&\,\tilde{T}\left( S,A,S \right) \times \left\{ \left( s,a,s^{'} \right) \right\} \rightarrow {\tilde{T}}^{'}(S,A,S)\notag\\
+T_{l}:&\,\tilde{T}\left( S,A,S \right) \times \left\{ \left( s,a,s^{'} \right) \right\} \rightarrow {\tilde{T}}^{'}(S,A,S) \\
 %
 R_{l}:&\,\tilde{R}\left( S,A,S \right) \times \{(s,a,s^{'})\} \rightarrow {\tilde{R}}^{'}(S,A,S)\\
 %
-Q_{\text{tr}}:&\,{\tilde{T}(S,A,S)}^{'} \times {\tilde{R}(S,A,S)}^{'} \rightarrow Q^{'}(S,A)\notag
+Q_{\text{tr}}:&\,{\tilde{T}(S,A,S)}^{'} \times {\tilde{R}(S,A,S)}^{'} \rightarrow Q^{'}(S,A)
 %
 \end{align}
 Thus, it is expected that the basis functions \(T_{l}\) and
@@ -1079,12 +1094,13 @@ The \(T_{l}\) and \(R_{l}\) functions can be discovered, in the
 following manner, through the tracking of local visitation frequencies:
 
  
-\begin{equation*}
-T_{l}:\ \tilde{T}'\left( s,a,s' \right) \leftarrow \tilde{T}\left( s,a,s' \right) + \alpha\left( \frac{\text{fr}\left( s,a,s^{'} \right) + 1}{\text{fr}\left( s,a \right) + 1} - \tilde{T}\left( s,a,s' \right) \right)
-\end{equation*}
-\begin{equation*}
+\begin{align}
+& T_{l}:\ \tilde{T}'\left( s,a,s' \right) \leftarrow \nonumber \\
+& \qquad\quad \tilde{T}\left( s,a,s' \right) + \alpha\left( \frac{\text{fr}\left( s,a,s^{\prime} \right) + 1}{\text{fr}\left( s,a \right) + 1} - \tilde{T}\left( s,a,s' \right) \right)
+\end{align}
+\begin{equation}
 \frac{\text{fr}\left( s,a,s^{'} \right) + 1}{\text{fr}\left( s,a \right) + 1} = \frac{1 + \ \tilde{T}\left( s,a,s' \right)}{1 + \ \sum_{s'}^{\ }{\tilde{T}\left( s,a,s' \right)}} 
-\end{equation*}
+\end{equation}
 
 The \(Q_{\text{tr}}\) function can be defined using one of three
 regression functions, each with benefits and drawbacks, where \(\xi\)
@@ -1095,35 +1111,28 @@ represents a collection of sample states action state tuples,
 \begin{itemize}
 \item
   A greedy algorithm, which does not value any future reward.
-\end{itemize}
+ 
 
-\begin{equation}
-Q^{'}(s,a) \leftarrow \frac{1}{\sum_{s'\  \in \ \xi(s,a)}^{\ }{\tilde{T}\left( s,a,s' \right)}}\sum_{s'\  \in \ \xi(s,a)}^{\ }{\tilde{T}\left( s,a,s' \right)\tilde{R}\left( s,a,s' \right)}
-\end{equation} 
+\begin{align}
+& Q^{\prime}(s,a) \leftarrow \nonumber \\ 
+& \quad
+\frac{1}{\displaystyle \sum_{s^\prime  \in\xi(s,a)} \tilde{T}\left( s,a,s^\prime \right)}\sum_{s^\prime\in\xi(s,a)}\tilde{T}\left( s,a,s^\prime \right)\tilde{R}\left( s,a,s^\prime \right)
+\end{align} 
 
-\begin{itemize}
+ 
 \item
   A complete algorithm, which recursively explores potential for future
   reward:
-\end{itemize}
-
- 
-\begin{equation}
-Q^{'}(s,a) \leftarrow \frac{1}{\sum_{s'\  \in \ \xi(s,a)} {\tilde{T}\left( s,a,s' \right)}}\sum_{s'\  \in \ \xi(s,a)}^{\ }{\tilde{T}\left( s,a,s' \right)\tilde{R}\left( s,a,s' \right) + \gamma\max_{a^{*}}Q(s^{'},a^{*})}
-\end{equation}
-
- 
-
-\begin{quote}
+\begin{align}
+& Q^{\prime}(s,a) \leftarrow \nonumber \\ 
+& \quad \frac{1}{\displaystyle \sum_{s^\prime \in \xi(s,a)} \tilde{T}\left( s,a,s^\prime \right)}\sum_{s^\prime\in\xi(s,a)}\tilde{T}\left( s,a,s^\prime \right)\tilde{R}\left( s,a,s^\prime \right) \nonumber \\ & \qquad \qquad \qquad \qquad + \gamma\max_{a^{*}}Q(s^{\prime},a^{*}) 
+\end{align}
 This approach is the most complete, but runs into issues related to
 recursive state space explosion.
-\end{quote}
-
-\begin{itemize}
+ 
 \item
   A monte carlo algorithm, which runs a batch monte carlo simulation to
   update policy values:
-\end{itemize}
  
 \begin{equation}
 Q^{'}\left( s,a \right) \leftarrow Q^{\ }\left( s,a \right) + \ \frac{\alpha}{n}\sum_{i = 0}^{\text{n\ }}{\tilde{R}\left( s,a,s' \right) - Q \left( s,a \right) + \gamma\argmax_{a^{*}}{Q(s^{'},a^{*})}}
@@ -1133,6 +1142,7 @@ Q^{'}\left( s,a \right) \leftarrow Q^{\ }\left( s,a \right) + \ \frac{\alpha}{n}
 \(\tilde{T}\left( s,a,s' \right)\). It is trivial to note that the monte
 carlo simulation approaches the value obtained by the complete algorithm
 as the limit of \(n\) approaches infinity.
+\end{itemize}
 
 Thus, using elementary techniques it is tractable to regress to
 transitional and reward models online, and it is furher possible to
@@ -1146,16 +1156,16 @@ in a manner according to section 4.1, the next step is to consider how a
 knowledge transference model may be constructed. For the following
 section we will generalize the notion of state action result sets to the
 notion of trajectories such that
-\(l_{i}^{j} = \left\{ (s_{i},a_{i},s_{i}^{'}) \right\}_{i}^{j}\).
+$l_{i}^{j} = \left\{ (s_{i},a_{i},s_{i}^{\prime}) \right\}_{i}^{j}$.
 
 Using this notation
-\(\tilde{T}\left( s,a,s' \right) = P\left( s^{'}|s,a \right) = \tilde{T}\left( l_{i}^{i + 1} \right)\ \)where
-\(l_{i}^{i + 1} = \left\{ (s_{i},a_{i},s_{i}^{'}) \right\}_{i}^{i + 1}\).
+$\tilde{T}\left( s,a,s^\prime \right) = P\left( s^{\prime}\middle | s, a \right) = \tilde{T}\left( l_{i}^{i + 1} \right)$ where
+$l_{i}^{i + 1} = \left\{ (s_{i},a_{i},s_{i}^{\prime}) \right\}_{i}^{i + 1}$.
 The value for a transition sequence is a set of values
 \(\tilde{T}\left( l_{i}^{j} \right) = \left\{ \tilde{T}\left( l_{i}^{i} \right) \right\}_{i}^{j}\)
 . Lastly, to simplify analysis, we define a function
-\(\tilde{F}\  \in \{\tilde{T},\tilde{R}\}\). We also recall
-\(m_{k} = < S_{k},A_{k},T_{k},R_{k},{\tilde{T}}_{k},{\tilde{R}}_{k},\pi_{k} >\).
+$\tilde{F}\in\{\tilde{T},\tilde{R}\}$. We also recall
+$m_{k} = \left\langle S_{k},A_{k},T_{k},R_{k},{\tilde{T}}_{k},{\tilde{R}}_{k},\pi_{k} \right\rangle$.
 
 \subsubsection{Preliminary Deconstruction and Reconstruction
 }\label{preliminary-deconstruction-and-reconstruction}
@@ -1165,25 +1175,26 @@ reconstruction \(c_{\text{yz}}^{x}\)function, which maintain all of the
 properties outlined in sections 3.0. This section begins by using the
 CMDP via a gating function and regression is discussed.
 
-\subsubsubsection{Decision Making and
+\paragraph{Decision Making and
 Gating}\label{decision-making-and-gating}
 
 Before this, however, it is prudent to consider how a behaviour policy
 \(\pi_{x}\) can be mapped from a degenerate behaviour policy set
 \(\left\{ \pi_{y},\pi_{z} \right\}\). Simply, we allow for definition of
 a surjective confidence function
-\(g_{x}:S \times \ \pi_{y}(S) \times \pi_{z}(S) \rightarrow \mathbb{R}^{+}\).
+\(g_{x}:S \times \pi_{y}(S) \times \pi_{z}(S) \rightarrow \mathbb{R}^{+}\).
 Where, typically,
-\(\pi_{x}\left( s,a \right) = \operatorname{}{g_{x}\left( s,\pi_{y}\left( s \right),\pi_{z}(s) \right)}\).
+\(\pi_{x}\left( s,a \right) = {g_{x}\left( s,\pi_{y}\left( s \right),\pi_{z}(s) \right)}\).
 It seems obvious at this point to formulate this gating function as the
 result of a reinforcement learning mechanism.
 
-\subsubsubsection{Na\"{i}ve Deconstruction and
+\paragraph{Na\"{i}ve Deconstruction and
 Reconstruction}\label{nauxefve-deconstruction-and-reconstruction}
  
-\begin{equation}
-d_{x}^{\text{yz}}:m_{x} \rightarrow \ \left\{ m_{y},m_{z}|\ S_{y} \times S_{z} = S_{x},\ A_{y} \cup A_{z} = A_{x},\ {\tilde{c}}_{\text{yz}}^{x}\left( {\tilde{d}}_{x}^{\text{yz}}\left( \tilde{F} \right) \right) = \left( \tilde{F} \right) \right\} 
-\end{equation}
+\begin{align}
+& d_{x}^{\text{yz}}:m_{x} \rightarrow \nonumber \\
+&\quad  \left\{ m_{y},m_{z}|\ S_{y} \times S_{z} = S_{x},\ A_{y} \cup A_{z} = A_{x},\ {\tilde{c}}_{\text{yz}}^{x}\left( {\tilde{d}}_{x}^{\text{yz}}\left( \tilde{F} \right) \right) = \left( \tilde{F} \right) \right\} 
+\end{align}
 
 \begin{equation}
 c_{x}^{\text{yz}}:\left\{ m_{y}, \right\} \rightarrow \ \left\{ m_{x}|\ S_{y} \times S_{z} = S_{x},\ A_{y} \cup A_{z} = A_{x},\ {\tilde{c}}_{\text{yz}}^{x}\left( {\tilde{d}}_{x}^{\text{yz}}\left( \tilde{F} \right) \right) = \left( \tilde{F} \right) \right\} 
@@ -1195,7 +1206,7 @@ character and performance of any chosen reconstruction sets
 by usage of the functions. It can be illuminating to define some entry
 level deconstruction set implementations for an nMDP:
 
-\subsubsubsubsection{Example Na\"{i}ve
+\paragraph{Example Na\"{i}ve
 Deconstruction}\label{example-nauxefve-deconstruction}
 
 A deconstruction implementation is provided: \(d_{x}^{\text{yz}}\). It
@@ -1215,9 +1226,9 @@ satisfies the axioms given in section 3.0.
 
   The action set \(\{ A_{y}\ ,A_{z}\}\) can each be formed using a
   random selection of actions from \(A_{z}\). If actions are missing, (
-  \(\left\{ A_{y} \cup A_{z} \right\}\backslash\ A_{x} \neq \varnothing\ \)
-  ,) then the missing actions can simply be added,
-  \(A_{y} \leftarrow A_{y}\  \cup \left\{ A_{x}\backslash\left\{ A_{y} \cup A_{z} \right\} \right\}\).
+  \(\left\{ A_{y} \cup A_{z} \right\}\backslash A_{x} \neq \varnothing \)
+  ), then the missing actions can simply be added,
+  \(A_{y} \leftarrow A_{y} \cup \left\{ A_{x}\backslash\left\{ A_{y} \cup A_{z} \right\} \right\}\).
 \item
   Transition
 
@@ -1234,9 +1245,11 @@ satisfies the axioms given in section 3.0.
 \end{itemize}
 
  
-\begin{equation}
-{\tilde{T}}_{y}\left( s_{y}^{'}|s_{y}^{\ },a_{y} \right) = \ \sum_{s_{z}^{'}}^{\ }{\sum_{a_{z}}^{\ }{\sum_{s_{z}}^{\ }{{\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{y},a_{z} \right\} \right)\frac{\pi_{x}\left( a_{y},a_{z}|s_{y},s_{z} \right)}{\sum_{a_{z}^{'}}^{\ }{\pi_{x}\left( a_{y},a_{z}^{'}|s_{y},s_{z} \right)}}}}}
-\end{equation}
+\begin{align}
+& {\tilde{T}}_{y}\left( s_{y}^{\prime} \middle| s_{y}, a_{y} \right) = \nonumber \\
+& \quad
+\sum_{s_{z}^{\prime}}\sum_{a_{z}}\sum_{s_{z}}{\tilde{T}}_{x}\left( \left\{ s_{y}^{\prime},s_{z}^{\prime} \right\} \middle| \left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{y},a_{z} \right\} \right) \frac{\pi_{x}\left( a_{y}, a_{z} \middle| s_{y} ,s_{z} \right)}{\displaystyle\sum_{a_{z}^{\prime}}\pi_{x}\left( a_{y},a_{z}^{\prime}|s_{y},s_{z} \right)}
+\end{align}
  
 
 It is worth noting that if we split the MDPs according to section 3.0,
@@ -1249,17 +1262,18 @@ constant, rendering its behavioural policy irrelevant for the purposes
 of projecting transitional probability.
 
  
-\begin{equation}
-{\tilde{T}}_{z}\left( s_{z}^{'}|s_{z}^{\ },a_{z},a_{y} \right) \leftarrow \ \sum_{s_{z}^{'}}^{\ }{{\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{z} \right\},a_{y} \right)}
-\end{equation} 
+\begin{align}
+& {\tilde{T}}_{z}\left( s_{z}^{\prime}\middle| s_{z}, a_{z}, a_{y} \right) \leftarrow \nonumber \\ & \qquad \sum_{s_{z}^{\prime}}{{\tilde{T}}_{x}\left( \left\{ s_{y}^{\prime},s_{z}^{\prime} \right\}|\left\{ s_{y},s_{z}\right\},\left\{ a_{z} \right\},a_{y} \right)}
+\end{align} 
 
-For the parent, \(y\), the transition model must take into account a
+For the parent, $y$, the transition model must take into account a
 sequence of actions undertaken
 
  
-\begin{equation}
-{\tilde{T}}_{y}\left( s_{y}^{'}|s_{y}^{\ },a_{y} \right) = \ \sum_{s_{z}^{'}}^{\ }{\sum_{a_{z}}^{\ }{{\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{y},a_{z} \right\} \right)\pi_{z}\left( a_{z}|s_{z} \right)}}
-\end{equation}
+\begin{align}
+& {\tilde{T}}_{y}\left( s_{y}^{\prime}\middle| s_{y}, a_{y} \right) = \nonumber \\ 
+& \qquad \sum_{s_{z}^{\prime}}{\sum_{a_{z}}{{\tilde{T}}_{x}\left( \left\{ s_{y}^{\prime},s_{z}^{\prime} \right\}\middle|\left\{ s_{y},s_{z} \right\},\left\{ a_{y},a_{z} \right\} \right)\pi_{z}\left( a_{z}\middle| s_{z} \right)}}
+\end{align}
  
 
 \begin{itemize}
@@ -1277,9 +1291,9 @@ Briefly a direct mapping can be considered which is a projection of
 \(\pi_{y}\left( \bullet \right)\), where \(\sigma\) is a normalization
 constant:
 
-\begin{equation}
-\pi_{x}\left( a_{y}|s_{y} \right) = \ \sigma\sum_{s_{z}^{'}}^{\ }{\sum_{s_{z}}^{\ }{\sum_{a_{z}}^{\ }{{\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{y},a_{z} \right\} \right)\pi_{x}\left( \left\{ s_{y}^{\ },s_{z}^{\ } \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\} \right)}}}
-\end{equation}
+\begin{align}
+& \pi_{x}\left( a_{y}|s_{y} \right) = \nonumber \\ & \qquad \sigma\sum_{s_{z}^{'}}^{\ }{\sum_{s_{z}}^{\ }{\sum_{a_{z}}^{\ }{{\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{y},a_{z} \right\} \right)\pi_{x}\left( \left\{ s_{y}^{\ },s_{z}^{\ } \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\} \right)}}}
+\end{align}
  
 
 In essence, the degenerate policy image
@@ -1292,7 +1306,7 @@ After policy is initialized, the behavioural policy can be updated using
 Q-Learning or any other mechanism.
 
  
-\subsubsubsubsection{Example Na\"{i}ve
+\paragraph{Example Na\"{i}ve
 Reconstruction}\label{example-nauxefve-reconstruction}
 
 A reconstruction implementation is provided: \(c_{x}^{\text{yz}}\). It
@@ -1325,7 +1339,7 @@ direction as a mapping of \(\left\langle S,A,T,R \right\rangle\) tuples:
 \item
 \end{itemize} 
 
-\subsubsubsection{Concurrency and
+\paragraph{Concurrency and
 re-mapping}\label{concurrency-and-re-mapping}
 
 Given the state space savings given by a degenerate formulation, it may
@@ -1340,7 +1354,7 @@ difference}\label{compensation-for-temporal-scale-difference}
 \subsubsection{Compensation for action space
 factorization}\label{compensation-for-action-space-factorization}
 
-\subsubsubsection{Compensation for action space
+\paragraph{Compensation for action space
 factorization}\label{compensation-for-action-space-factorization-1}
 
 \section{}\label{section-1}
@@ -1375,25 +1389,25 @@ set of all optimal actions that maximize expected future discounted
 reward.
 
  
-\begin{equation}
-\Omega_{\ }^{*}(a) = \argmax_{a}\sum_{s' \in S\ }^{\ }{P\left( s'|s,a \right)\left( R\left( s,a,s' \right) + \gamma V\left( s' \right) \right)}
-\end{equation}
+\begin{align}
+& \Omega^{\ast}(a) = \nonumber \\ & \qquad \argmax_{a}\sum_{s^\prime \in S}{P\left( s^\prime\middle|s,a \right)\left( R\left( s,a,s^\prime \right) + \gamma V\left( s^\prime \right) \right)}
+\end{align}
  
 The argument is that there exists a mapping from two optimal sub
 policies onto this policy.
 
 \begin{equation} 
-f:\Omega_{u}^{*}\left( S_{u} \right) \times \Omega_{l}^{*}\left( S_{l} \right) \rightarrow \ {\tilde{\Omega}}_{\ }^{*}\left( S_{\ } \right):{\tilde{\Omega}}_{\ }^{*}\left( S_{\ } \right) \subseteq \Omega_{\ }^{*}\left( S_{\ } \right)
+f:\Omega_{u}^{\ast}\left( S_{u} \right) \times \Omega_{l}^{\ast}\left( S_{l} \right) \rightarrow \ {\tilde{\Omega}}^{\ast}\left( S \right):{\tilde{\Omega}}^{\ast}\left( S \right) \subseteq \Omega^{\ast}\left( S \right)
 \end{equation}
 
 For the following analysis, consultation of a visual grid can be
-beneficial. To simplify notation, \(\left( i,j \right)\ \)is taken to
+beneficial. To simplify notation, \(\left( i,j \right)\)is taken to
 equal \(\text{ij}\), and actions
 \(\left( a_{u},a_{l} \right) = \ a_{\text{ul}}\).
 
-\begin{equation}
-\Omega_{\ }^{*}(i,j) =  \argmax_{\left(a_{u},a_{l}\right)}\sum_{\left( i',j' \right) \in S\ }^{\ }{P\left( i'j'|ij,a_{\text{ul}} \right)\left( R\left( ij,a_{\text{ul}},i'j' \right) + \gamma V\left( i'j' \right) \right)}
-\end{equation}
+\begin{align}
+& \Omega^{\ast}(i,j) = \nonumber \\ & \quad \argmax_{\left(a_{u},a_{l}\right)}\sum_{\left( i',j' \right) \in S\ }^{\ }{P\left( i'j'|ij,a_{\text{ul}} \right)\left( R\left( ij,a_{\text{ul}},i'j' \right) + \gamma V\left( i'j' \right) \right)}
+\end{align}
 
 knowing
 \(  \max_{\left(a_{u},a_{l}\right)}R\left( \left( i,j \right),\left( a_{u},a_{l} \right),\left( i',j' \right) \right) = \max_{\left(a_{u},a_{l}\right)}R\left( \left( i,j' \right),\left( a_{u},a_{l} \right),\left( i',j' \right) \right)\)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.3)  11 MAY 2017 15:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.7.10)  6 SEP 2017 11:25
 entering extended mode
 **./dependentMDPs_11.tex
 (dependentMDPs_11.tex
@@ -114,7 +114,9 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24.09> not available
 \IEEEPARstartletwidth=\dimen125
 \c@IEEEbiography=\count93
 \@IEEEtranrubishbin=\box27
-) ("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\cite\cite.sty"
+)
+("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\cite\cite.s
+ty"
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
@@ -226,12 +228,12 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \extratabsurround=\skip47
 \backup@length=\skip48
 )
-("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\subfig\subfig.sty
-"
+("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\subfig\subf
+ig.sty"
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.
-sty"
+("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\cap
+tion3.sty"
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen139
@@ -270,23 +272,23 @@ Already applied: [0000/00/00] Old fixltx2e package on input line 53.
 ) (dependentMDPs_11.aux)
 \openout1 = `dependentMDPs_11.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 434.
-LaTeX Font Info:    ... okay on input line 434.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 434.
-LaTeX Font Info:    ... okay on input line 434.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 434.
-LaTeX Font Info:    ... okay on input line 434.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 434.
-LaTeX Font Info:    ... okay on input line 434.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 434.
-LaTeX Font Info:    ... okay on input line 434.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 434.
-LaTeX Font Info:    ... okay on input line 434.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 433.
+LaTeX Font Info:    ... okay on input line 433.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 433.
+LaTeX Font Info:    ... okay on input line 433.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 433.
+LaTeX Font Info:    ... okay on input line 433.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 433.
+LaTeX Font Info:    ... okay on input line 433.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 433.
+LaTeX Font Info:    ... okay on input line 433.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 433.
+LaTeX Font Info:    ... okay on input line 433.
 
 -- Lines per column: 38 (exact).
 
-("C:\Users\Chris Hemming\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.m
-kii"
+("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp
+-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count114
 \scratchdimen=\dimen147
@@ -346,203 +348,430 @@ Package grfext Info: Graphics extension search list:
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 436.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 442.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 44
+2.
+LaTeX Font Info:    Try loading font information for U+msa on input line 442.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 442.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+pzd on input line 442.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 442.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8.03> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 436.
-LaTeX Font Info:    Try loading font information for OML+phv on input line 452.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 444.
+LaTeX Font Info:    Try loading font information for OML+phv on input line 460.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlphv.fd"
 File: omlphv.fd 
 )
 LaTeX Font Info:    Font shape `OML/phv/m/n' in size <8.03> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 452.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 460.
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--462
+\OT1/phv/b/n/8.03 Abstract\OT1/phv/m/n/8.03 ---Optimal be-haviour poli-cies for
+ non-degenerate
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 444--462
+\OT1/phv/m/n/8.03 method of de-con-struc-tion nMDPs into a set of con-cur-rent
+ []
+
+
+Underfull \hbox (badness 6792) in paragraph at lines 444--462
+\OT1/phv/m/n/8.03 MDPs is demon-strated. Such con-cur-rent rep-re-sen-ta-tions
+ []
+
+
+Underfull \hbox (badness 6125) in paragraph at lines 444--462
+\OT1/phv/m/n/8.03 pol-icy re-gres-sion. Sur-pris-ingly, given weak pre-con-di-t
+ions,
+ []
+
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 456.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 465.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
 
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 456.
- [1{C:/Users/Chris Hemming/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 465.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{C:/Users/Christopher Hemming/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.
+map}
+
+
+]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 514.
-LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 518
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 524.
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 528
 .
-LaTeX Font Info:    Try loading font information for U+msa on input line 518.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 518.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 566.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 578.
 
-<media/image1.png, id=10, 237.2865pt x 214.401pt>
+<media/image1.png, id=12, 237.2865pt x 214.401pt>
 File: media/image1.png Graphic file (type png)
  <use media/image1.png>
-Package pdftex.def Info: media/image1.png used on input line 569.
+Package pdftex.def Info: media/image1.png used on input line 582.
 (pdftex.def)             Requested size: 194.22859pt x 202.76376pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--570
+Underfull \hbox (badness 10000) in paragraph at lines 582--583
 
  []
 
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 570.
-[2] <media/image3.png, id=28, 233.07076pt x 63.23625pt>
+[2] <media/image3.png, id=30, 233.07076pt x 63.23625pt>
 File: media/image3.png Graphic file (type png)
  <use media/image3.png>
-Package pdftex.def Info: media/image3.png used on input line 619.
+Package pdftex.def Info: media/image3.png used on input line 633.
 (pdftex.def)             Requested size: 233.07018pt x 63.23608pt.
 
-<media/image4.png, id=29, 224.63925pt x 65.043pt>
+<media/image4.png, id=31, 224.63925pt x 65.043pt>
 File: media/image4.png Graphic file (type png)
  <use media/image4.png>
-Package pdftex.def Info: media/image4.png used on input line 620.
+Package pdftex.def Info: media/image4.png used on input line 634.
 (pdftex.def)             Requested size: 224.63869pt x 65.04283pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 619--621
-
- []
-
-[3 <./media/image1.png>]
-File: media/image3.png Graphic file (type png)
- <use media/image3.png>
-Package pdftex.def Info: media/image3.png used on input line 673.
-(pdftex.def)             Requested size: 231.87167pt x 123.01297pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 673--674
-
- []
-
-[4 <./media/image3.png> <./media/image4.png>] [5] [6] [7]
-<media/figure7.pdf, id=52, 291.0875pt x 142.5325pt>
-File: media/figure7.pdf Graphic file (type pdf)
- <use media/figure7.pdf>
-Package pdftex.def Info: media/figure7.pdf used on input line 903.
-(pdftex.def)             Requested size: 291.08678pt x 142.53214pt.
-
-<media/figure8.pdf, id=53, 366.36874pt x 145.54375pt>
-File: media/figure8.pdf Graphic file (type pdf)
- <use media/figure8.pdf>
-Package pdftex.def Info: media/figure8.pdf used on input line 936.
-(pdftex.def)             Requested size: 366.36784pt x 145.54338pt.
-
-[8 <./media/figure7.pdf> <./media/figure8.pdf>]
-<media/figure9.pdf, id=141, 369.38pt x 131.49126pt>
-File: media/figure9.pdf Graphic file (type pdf)
- <use media/figure9.pdf>
-Package pdftex.def Info: media/figure9.pdf used on input line 961.
-(pdftex.def)             Requested size: 369.37909pt x 131.49092pt.
-
-<media/figure10.pdf, id=142, 598.235pt x 133.49875pt>
-File: media/figure10.pdf Graphic file (type pdf)
- <use media/figure10.pdf>
-Package pdftex.def Info: media/figure10.pdf used on input line 967.
-(pdftex.def)             Requested size: 598.23354pt x 133.4984pt.
-
-Overfull \hbox (142.78194pt too wide) in paragraph at lines 967--968
+Overfull \hbox (4.21516pt too wide) in paragraph at lines 633--635
 [][] 
  []
 
-[9 <./media/figure9.pdf> <./media/figure10.pdf>] [10] [11]
-! Undefined control sequence.
-l.1168 \subsubsubsection
-                        {Decision Making and
-? 
-! Undefined control sequence.
-l.1181 \subsubsubsection
-                        {Na\"{i}ve Deconstruction and
-? 
-! Undefined control sequence.
-l.1198 \subsubsubsubsection
-                           {Example Na\"{i}ve
-? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--635
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 663--664
+[]$\OML/cmm/m/it/10 R[] [] \OT1/cmr/m/n/10 =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 667--669
+[]\OT1/ppl/m/n/9.53561 Noting $\OML/cmm/m/it/10 R[] [] \OT1/cmr/m/n/10 =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 667--669
+[][] [] \OMS/cmsy/m/n/10  
+ []
+
+[3 <./media/image1.png> <./media/image3.png> <./media/image4.png>]
+Underfull \hbox (badness 2285) in paragraph at lines 679--685
+[]\OT1/ppl/m/n/9.53561 For no-ta-tion, the equal-i-ties are al-ways true:
+ []
+
+File: media/image3.png Graphic file (type png)
+<use media/image3.png>
+Package pdftex.def Info: media/image3.png used on input line 687.
+(pdftex.def)             Requested size: 231.87167pt x 123.01297pt.
+
+Overfull \hbox (3.01666pt too wide) in paragraph at lines 687--688
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 687--688
+
+ []
+
+[4]
+Overfull \hbox (1.39519pt too wide) detected at line 787
+\OT1/cmr/m/n/10 
+[](\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) = [] [] \OML/cmm/m/it/10 P [] []
+ []
+
+[5]
+Underfull \hbox (badness 1496) in paragraph at lines 869--874
+[]$\OML/cmm/m/it/10 T[] []$ \OT1/ppl/m/n/9.53561 de-notes a sta-ble tran-si-tio
+n
+ []
+
+
+Underfull \hbox (badness 3954) in paragraph at lines 890--894
+[]$\OML/cmm/m/it/10 T[] []$ \OT1/ppl/m/n/9.53561 de-notes a sta-ble tran-si-tio
+n
+ []
+
+<media/figure7.pdf, id=47, 291.0875pt x 142.5325pt>
+File: media/figure7.pdf Graphic file (type pdf)
+ <use media/figure7.pdf>
+Package pdftex.def Info: media/figure7.pdf used on input line 917.
+(pdftex.def)             Requested size: 291.08678pt x 142.53214pt.
+
+Overfull \hbox (76.53519pt too wide) in paragraph at lines 917--918
+[][] 
+ []
+
+[6 <./media/figure7.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 933--934
+[]$\OML/cmm/m/it/10 R[] [] \OT1/cmr/m/n/10 =
+ []
+
+
+Underfull \hbox (badness 7308) in paragraph at lines 937--939
+[]\OT1/ppl/m/n/9.53561 Noting $\OML/cmm/m/it/10 R[] [] \OT1/cmr/m/n/10 =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 937--939
+[][] [] \OMS/cmsy/m/n/10  
+ []
+
+<media/figure8.pdf, id=92, 366.36874pt x 145.54375pt>
+File: media/figure8.pdf Graphic file (type pdf)
+ <use media/figure8.pdf>
+Package pdftex.def Info: media/figure8.pdf used on input line 950.
+(pdftex.def)             Requested size: 366.36784pt x 145.54338pt.
+
+Overfull \hbox (151.81625pt too wide) in paragraph at lines 950--951
+[][] 
+ []
+
+<media/figure9.pdf, id=93, 369.38pt x 131.49126pt>
+File: media/figure9.pdf Graphic file (type pdf)
+ <use media/figure9.pdf>
+Package pdftex.def Info: media/figure9.pdf used on input line 975.
+(pdftex.def)             Requested size: 369.37909pt x 131.49092pt.
+
+Overfull \hbox (154.8275pt too wide) in paragraph at lines 975--976
+[][] 
+ []
+
+<media/figure10.pdf, id=94, 598.235pt x 133.49875pt>
+File: media/figure10.pdf Graphic file (type pdf)
+ <use media/figure10.pdf>
+Package pdftex.def Info: media/figure10.pdf used on input line 981.
+(pdftex.def)             Requested size: 598.23354pt x 133.4984pt.
+
+Overfull \hbox (383.68195pt too wide) in paragraph at lines 981--982
+[][] 
+ []
+
+[7 <./media/figure8.pdf> <./media/figure9.pdf> <./media/figure10.pdf>]
+Underfull \hbox (badness 3029) in paragraph at lines 1054--1056
+[]\OT1/ppl/m/n/9.53561 Where a com-mon pol-icy def-i-ni-tion is com-
+ []
+
+[8]
+Overfull \hbox (103.16011pt too wide) detected at line 1139
+\OML/cmm/m/it/10 Q[] [] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 Q[] [] \OT1/cmr/m/n
+/10 +  [] [] []
+ []
+
+
+Underfull \hbox (badness 2376) in paragraph at lines 1141--1145
+[]\OT1/ppl/m/n/9.53561 , where $\OML/cmm/m/it/10 s[]$ \OT1/ppl/m/n/9.53561 is s
+am-pled from the den-sity
+ []
+
+[9]
+Overfull \hbox (57.05519pt too wide) in paragraph at lines 1197--1197
+[] 
+ []
+
+
+Overfull \hbox (94.04741pt too wide) detected at line 1201
+\OML/cmm/m/it/10 c[] \OT1/cmr/m/n/10 : [] \OMS/cmsy/m/n/10 !  []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1235--1237
+[]\OT1/ppl/m/n/9.53561 Note: $\OML/cmm/m/it/10 P [] \OT1/cmr/m/n/10 =
+ []
+
+
+Underfull \hbox (badness 3179) in paragraph at lines 1238--1245
+\OML/cmm/m/it/10 P [] \OT1/cmr/m/n/10 =  \OML/cmm/m/it/10 P []$\OT1/ppl/m/n/9.5
+3561 .
+ []
+
+[10]
+Overfull \hbox (52.52068pt too wide) in paragraph at lines 1252--1252
+[] 
+ []
+
+
+Overfull \hbox (82.8089pt too wide) in paragraph at lines 1296--1296
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1299--1304
+[]\OT1/ppl/m/n/9.53561 In essence, the de-gen-er-ate pol-icy im-age
+ []
+
+
+Underfull \hbox (badness 1490) in paragraph at lines 1299--1304
+\OML/cmm/m/it/10 [] []$\OT1/ppl/m/n/9.53561 becomes the ex-pec-ta-tion of the 
+par-ent
+ []
+
+
+Underfull \hbox (badness 3557) in paragraph at lines 1299--1304
+\OT1/ppl/m/n/9.53561 pol-icy $\OML/cmm/m/it/10 [] []$ \OT1/ppl/m/n/9.53561 wei
+ghted by the tran-si-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1299--1304
+\OT1/ppl/m/n/9.53561 ex-pec-ta-tion, and this can be taken as the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1333--1335
+[]$[] [] \OT1/cmr/m/n/10 =
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 1373--1373
+ \OT1/phv/b/sc/11.04124 10 Ap-pendix: Con-ver-gent Fac-tors
+ []
+
+
+Underfull \hbox (badness 1748) in paragraph at lines 1377--1390
+[] \OML/cmm/m/it/10 ;$ \OT1/ppl/m/n/9.53561 for prob-lems in the pre-sented
+ []
+
+
+Overfull \hbox (29.22841pt too wide) in paragraph at lines 1410--1410
+[] 
+ []
+
+
+Underfull \hbox (badness 1460) in paragraph at lines 1412--1416
+[]\OT1/ppl/m/n/9.53561 knowing $[][] \OML/cmm/m/it/10 R [] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (183.35217pt too wide) detected at line 1419
+\OT1/cmr/m/n/10 
+[]([]) = [] [] []
+ []
+
+
+Overfull \hbox (139.9809pt too wide) detected at line 1426
+\OT1/cmr/m/n/10 
+[]([]) = [] [] []
+ []
+
+
+Underfull \hbox (badness 4621) in paragraph at lines 1428--1431
+[]\OT1/ppl/m/n/9.53561 At this point, it is pos-si-ble to note that
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1428--1431
+\OT1/ppl/m/n/9.53561 the Tran-si-tion func-tion may be de-com-posed
+ []
+
+
+Overfull \hbox (124.45667pt too wide) detected at line 1434
+\OT1/cmr/m/n/10 
+[]([]) = [] [] \OML/cmm/m/it/10 P [] P [] []
+ []
+
+
+Overfull \hbox (138.40369pt too wide) detected at line 1439
+\OT1/cmr/m/n/10 
+[]([]) = [] [] \OML/cmm/m/it/10 P [] []
+ []
+
 [12]
-! Undefined control sequence.
-l.1295 \subsubsubsubsection
-                           {Example Na\"{i}ve
-? 
-[13]
-! Undefined control sequence.
-l.1328 \subsubsubsection
-                        {Concurrency and
-? 
-! Undefined control sequence.
-l.1343 \subsubsubsection
-                        {Compensation for action space
-? 
-
-Overfull \hbox (5.89894pt too wide) in paragraph at lines 1363--1376
-[]\OT1/ppl/m/n/9.53561 The set of op-ti-mal poli-cies $\OT1/cmr/m/n/10 
-[] []$ \OT1/ppl/m/n/9.53561 can be ex-pressed as a union of two in-de-pen-dent 
-poli-cies, $[] \OML/cmm/m/it/10 ;$
- []
-
-[14]
-Overfull \hbox (6.24825pt too wide) in paragraph at lines 1414--1417
-[]\OT1/ppl/m/n/9.53561 At this point, it is pos-si-ble to note that the Tran-si
--tion func-tion may be de-com-posed $\OML/cmm/m/it/10 P [] \OT1/cmr/m/n/10 =
- []
-
-
-Overfull \hbox (8.09848pt too wide) detected at line 1433
+Overfull \hbox (248.99849pt too wide) detected at line 1447
 \OT1/cmr/m/n/10 
 [] [] = [] [] \OML/cmm/m/it/10 P [] []
  []
 
 
-Overfull \hbox (143.04889pt too wide) in paragraph at lines 1433--1437
-\OT1/ppl/m/n/9.53561 And, an op-ti-mal de-ci-sion pol-icy can be sub-sti-tuted 
-in for ac-tion se-lec-tion $\OT1/cmr/m/n/10 
-[] [] = [][] [][] \OML/cmm/m/it/10 P [] []$\OT1/ppl/m/n/9.53561 . 
+Underfull \hbox (badness 10000) in paragraph at lines 1447--1451
+\OT1/ppl/m/n/9.53561 And, an op-ti-mal de-ci-sion pol-icy can be
  []
 
 
-Overfull \hbox (84.5642pt too wide) detected at line 1440
+Underfull \hbox (badness 4608) in paragraph at lines 1447--1451
+\OT1/ppl/m/n/9.53561 sub-sti-tuted in for ac-tion se-lec-tion $\OT1/cmr/m/n/10 
+
+[] [] =
+ []
+
+
+Overfull \hbox (34.44675pt too wide) in paragraph at lines 1447--1451
+[][] [][] \OML/cmm/m/it/10 P [] []$\OT1/ppl/m/n/9.53561 . 
+ []
+
+
+Overfull \hbox (325.4642pt too wide) detected at line 1454
 \OT1/cmr/m/n/10 
 [] [] = [] [] \OML/cmm/m/it/10 P [] []
  []
 
-[15] [16] (dependentMDPs_11.aux) ) 
+
+Overfull \hbox (115.82771pt too wide) detected at line 1464
+\OT1/cmr/m/n/10 
+[] [] = [] [] \OML/cmm/m/it/10 P [] []  []a[] \OMS/cmsy/m/n/10 2 \OT1/cmr/m/n/1
+0 
+[] []
+ []
+
+
+Overfull \hbox (115.64792pt too wide) detected at line 1471
+\OT1/cmr/m/n/10 
+[] [] = [] \OML/cmm/m/it/10 P [] [] \OMS/cmsy/m/n/10 [ []  []\OML/cmm/m/it/10 a
+[] \OMS/cmsy/m/n/10 2 \OT1/cmr/m/n/10 
+[] []
+ []
+
+[13
+
+] (dependentMDPs_11.aux) ) 
 Here is how much of TeX's memory you used:
- 4299 strings out of 493328
- 67589 string characters out of 3139099
- 134404 words of memory out of 3000000
- 7757 multiletter control sequences out of 15000+200000
- 44896 words of font info for 107 fonts, out of 3000000 for 9000
+ 4334 strings out of 493328
+ 68255 string characters out of 3139080
+ 137396 words of memory out of 3000000
+ 7785 multiletter control sequences out of 15000+200000
+ 51661 words of font info for 124 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,11n,38p,475b,295s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/
-base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/h
-elvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8
-a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on dependentMDPs_11.pdf (16 pages, 2295446 bytes).
+ 39i,14n,38p,475b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.
+enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/symbols/msbm7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helv
+etic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/urw/palatino/uplri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfdin
+g/uzdr.pfb>
+Output written on dependentMDPs_11.pdf (13 pages, 2307752 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
+ 303 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
