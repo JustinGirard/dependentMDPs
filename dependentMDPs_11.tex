@@ -577,16 +577,16 @@ timescale than another MDP \(m_{j}\).
 \subsubsection{Random Field Deconstruction
 Example}\label{random-field-deconstruction-example}
 
-\begin{center}
-\begin{figure}
-\includegraphics[width=2.68750in,height=2.80556in]{media/image1.png}\\
-\caption{\label{fig:figure1}The nMDP with transitions from \((i,j)\)only.}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in]{media/image1.png}\\
+\caption{\label{fig:figure1}The nMDP with transitions from \((i,j)\) only.}
 \end{figure}
-\end{center}
+
 
 The
 problem of the random field with real values can be considered,
-\(r:X^{N} \rightarrow \mathbb{R}^{+}\ \ ,\ X\mathbb{\subset N}\), which
+\(r:X^{N} \rightarrow \mathbb{R}^{+}\,,\ X\mathbb{\subset N}\), which
 we assume is well-ordered and monotonic. For brevity, we consider
 \(N = 2\) as a visual example.
 
@@ -607,8 +607,10 @@ described}\label{an-nmdp-definition-can-be-described}
 \item
   \(R\left( s_{t + 1}|s_{t}, a_{t} \right) = r\left( l + a_{l}, u + a_{u} \right) - r(l,u)\)
 \item
-  \(T\left( \left\{ l + a_{l},u + a_{u} \right\}|,\{ a_{l},a_{u}\},\{ l,u\} \right) = 1\),
-  \(0\) otherwise
+   $ T\left( \left\{ l + a_{l},u + a_{u} \right\}|,\{ a_{l},a_{u}\},\{ l,u\} \right) \\ {\ }\qquad\qquad\qquad = \left\{ \begin{array}{ll} 
+1\,, & \\
+0\,, & \text{otherwise}
+\end{array}\right.$
 
   In terms of notation the following equalities are always true:
   \(s_{t + 1} = \{ i + a_{u}, j + a_{l}\}\), \(a_{t} = \{ a_{u},a_{l}\}\), and\(\ s_{t} = \{ i,j\}\).
@@ -617,7 +619,7 @@ described}\label{an-nmdp-definition-can-be-described}
 Thus, the problem for a reinforcement learning agent may be to localize
 and converge upon an optimal space \(s_{t}\) such that \(r(s_{t})\) is
 maximized. The agent can, without fail, move in any combination of
-``up'', ``left'', ''down'', ''right'', and ``nothing'' to localize the
+``up'', ``left'', ``down'', ``right'', and ``nothing'' to localize the
 best location. A discount reward and infinite time horizon are
 considered.
 
@@ -629,9 +631,10 @@ the best column and row independently.
 \subsubsection[An CMDP definition can be
 described]{ An CMDP definition can be described}\label{an-cmdp-definition-can-be-described}
 
-\begin{figure}
-\includegraphics{media/image3.png}\\
-\includegraphics{media/image4.png}\\
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in]{media/image3.png}\\
+\includegraphics[width=2.5in]{media/image4.png}\\
 \caption{\label{fig:figure2} Parent (a) and child (b) within the CMDP.}
 \end{figure}
 
@@ -643,9 +646,9 @@ First, a \emph{child} dependent MDP is defined
 \item
   \(A_{l}\)
 \item
-  \(R_{l}\left( l + a_{l}|a_{l},l,u \right) = r\left( l + a_{l}, u \right) - r(l,u)\)
+  \(R_{l}\left( l + a_{l}\middle| a_{l},l,u \right) = r\left( l + a_{l}, u \right) - r(l,u)\)
 \item
-  \(T_{l}\left( l + a_{l}|a_{l}, l, \right) = 1, 0\) otherwise
+  $T_{l}\left( l + a_{l}\middle| a_{l}, l, \right) = \left\{ \begin{array}{ll}  1\,, & \\ 0\,, & \text{otherwise} \end{array} \right.$ 
 \item
   The sequence index \(t\) is used for the child MDP.
 \item
@@ -660,13 +663,11 @@ Second, a \emph{parent} dependent MDP is defined
 \item
   \(A_{u}\)
 \item
-  \(R_{u}\left( u + a_{u}|a_{u},u,E_{e} \right) = R_{u}\left( s_{u,e + 1}|a_{u,e},s_{u,e},E_{e} \right)\)
+  \(R_{u}\left( u + a_{u} \middle|a_{u}, u, E_{e} \right) \\ {\ }\qquad = R_{u}\left( s_{u,e + 1}\middle| a_{u,e}, s_{u,e}, E_{e} \right)\)
 
-  \begin{itemize}
-  \item
-    Noting
-    \(R_{u}\left( s_{u,e + 1}|a_{u,e}, s_{u,e}, E_{e} \right) = \sum_{t \in E_{e}}^{\ }\frac{R_{l}\left( s_{l,t + 1}|a_{l,t}, s_{l,t}, s_{u,t} \right)}{\overline{\overline E}_{e}} - \sum_{t \in E_{e}^{o}}^{\ }\frac{R_{l}\left( s_{l,t + 1}|a_{l,t},s_{l,t},s_{u,t} \right)}{\overline{\overline E}_{e}^{o}}\)
-  \end{itemize}
+    Noting\\
+    \(R_{u}\left( s_{u,e + 1}|a_{u,e}, s_{u,e}, E_{e} \right) \\ {\ } = \displaystyle\sum_{t \in E_{e}}^{\ }\frac{R_{l}\left( s_{l,t + 1}|a_{l,t}, s_{l,t}, s_{u,t} \right)}{\overline{\overline E}_{e}} \\ {\ } \qquad - \displaystyle\sum_{t \in E_{e}^{o}}^{\ }\frac{R_{l}\left( s_{l,t + 1}|a_{l,t},s_{l,t},s_{u,t} \right)}{\overline{\overline E}_{e}^{o}}\)
+  
 \item
   \(T_{u}\left( u + a_{u}|a_{u}, u \right) = 1,\ 0\) otherwise
 \item
@@ -683,8 +684,9 @@ index \(t\) is substituted with and epoch \(e\) for the parent MDP. The
 notation \(\overline{\overline E}_{e}\) represents the cardinality of an epoch,
 and is variable in \(\mathbf{T}\).
 
-\begin{figure}
-\includegraphics[width=3.20833in,height=1.70208in]{media/image3.png}\\
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in]{media/image3.png}\\
 \caption{\label{fig:figure3}Block diagram of a CMDP.}
 \end{figure}
 
@@ -710,7 +712,7 @@ rate \(\alpha\) must satisfy CONVERGENCE CRITERIA, and (c) the Reward
 function and transitions probabilities \(T\), and \(R\) must be stably
 stochastic.
 
-A rudimentary action selection model \(\pi_{t}\ \)can involve sampling
+A rudimentary action selection model \(\pi_{t}\)can involve sampling
 the density function
 \begin{equation}
 \pi\left( s \right) \sim \left( s, a \right) = \frac{e^{Q_{t - 1}(s, a)}}{\sum_{b \in A}e^{Q_{t - 1}(s, b)}}
@@ -866,9 +868,9 @@ Team progress toward a goal can be defined as a
   \(A_{T}\) denotes a discrete set of actions, i.e., a function that
   assigns all available tasks to available agents.
 \item
-  \(T_{T}\left( s_{T}, a_{T}, s_{T}^{'} \right)\) denotes a stable
+  \(T_{T}\left( s_{T}, a_{T}, s_{T}^{\prime} \right)\) denotes a stable
   transition model, i.e., the probability of executing action \(a_{T}\)
-  starting from state \(s_{T}\) and ending up in state \(s_{T}^{'}\).
+  starting from state \(s_{T}\) and ending up in state \(s_{T}^{\prime}\).
   The transition function is completely specified by the individual
   performance process through a set of evidence \(E_{\text{TI}}\).
 \end{itemize}
@@ -887,13 +889,13 @@ Individual agent progress toward a sub-task can be defined as a
 \item
   \(A_{I}\) denotes a discrete set of actions.
 \item
-  \(T_{I}\left( s_{I}, a_{I}, s_{I}^{'} \right)\) denotes a stable
+  \(T_{I}\left( s_{I}, a_{I}, s_{I}^{\prime} \right)\) denotes a stable
   transition model, i.e., the probability of executing action \(a_{I}\)
-  starting from state \(s_{I}\) and ending up in state \(s_{I}^{'}\).
+  starting from state \(s_{I}\) and ending up in state \(s_{I}^{\prime}\).
 \item
-  \(R_{I}(s_{I},a_{I},s_{I}^{'})\) denotes a positive real number as a
+  \(R_{I}(s_{I},a_{I},s_{I}^{\prime})\) denotes a positive real number as a
   reward received for transitioning from state \(s_{I}\) into state
-  \(s_{I}^{'}\) using action \(a_{I}\).
+  \(s_{I}^{\prime}\) using action \(a_{I}\).
 \end{itemize}
 
 The evidence value \(e_{\text{IT}} \in E_{\text{IT}}\) is defined by
@@ -909,13 +911,14 @@ single agent, with a child MDP,
 \(\left\langle S_{l},A_{l},T_{l},R_{l} \right\rangle\) and parent MDP
 \(\left\langle S_{u},A_{u},T_{u},R_{u} \right\rangle\) depicted on a
 grid. In this situation the reward and transition functions are defined
-in accordiance with section 3.0. In this arrangement, the parent MDP
+in accordiance with Section~\ref{definitions-concurrent-markov-decision-processes}. In this arrangement, the parent MDP
 will have to try many rows, letting the child MDP visit an increasing
-amount of column states per row, as described in section 3.0.
+amount of column states per row, as described in Section~\ref{}.
 
- 
-\includegraphics{media/figure7.pdf}
- 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3in]{media/figure7.pdf}
+\end{figure}
 
 The first alteration that can be made, is to convert the problem into
 multi-agent MDP; the problem is constructed of a parent MDP and a set of
@@ -923,20 +926,15 @@ independent children MDPs. The parent MDP's definition can be expanded
 in the following manner:
 
 \begin{itemize}
-\item
-  \(S_{u}  = X^{1},X^{n}\)
+\item \(S_{u}  = X^{1}, X^{n}\)
 \item
   \(A_{u} = {\{ - 1, 0, 1\}}^{n}\)
+\item Transition
 \item
-  \(\text{Transition}\)
-\item
-  \(R_{u}\left( u + a_{u}|a_{u}, u, E_{e} \right) = \sum_{i \in \{ 1,\ldots,n\}}R_{u,i}\left( s_{u,e + 1}|a_{u,e}, s_{u,e}, E_{e} \right)\)
-
-  \begin{itemize}
-  \item
-    Noting
-    \(R_{u,i}\left( s_{u,e + 1}|a_{u,e}, s_{u,e}, E_{e} \right) = \sum_{t \in E_{e}}^{\ }\frac{R_{l}\left( s_{l, t + 1}|a_{l,t}, s_{l,t}, s_{u,t} \right)}{\overline{\overline E}_{e}} - \sum_{t \in E_{e}^{o}}^{\ }\frac{R_{l}\left( s_{l,t + 1}|a_{l,t}, s_{l,t}, s_{u,t} \right)}{\overline{\overline E}_{e}^{o}}\)
-  \end{itemize}
+  \(R_{u}\left( u + a_{u} \middle |a_{u}, u, E_{e} \right)  \\ {\ }= \sum_{i \in \{ 1, \ldots, n \}}R_{u,i}\left( s_{u,e + 1} \middle|a_{u,e}, s_{u,e}, E_{e} \right)\)\\
+    Noting\\
+    \(R_{u,i}\left( s_{u,e + 1} \middle|a_{u,e}, s_{u,e}, E_{e} \right) \\ {\ } = \displaystyle \sum_{t \in E_{e}} \frac{R_{l}\left( s_{l, t + 1} \middle| a_{l,t}, s_{l,t}, s_{u,t} \right)}{\overline{\overline E}_{e}} \\ {\ } \qquad - \displaystyle\sum_{t \in E_{e}^{o}} \frac{R_{l}\left( s_{l,t + 1} \middle| a_{l,t}, s_{l,t}, s_{u,t} \right)}{\overline{\overline E}_{e}^{o}}\)
+ 
 \end{itemize}
 
 Expanding the state by a factor of \(n\) allows for the parent MDP to
@@ -947,8 +945,10 @@ the multi-agent nMDP space space requirements are bounded by
 \(O(\left| X^{n} \right|\left| X^{n} \right|n)\).
 
  
-\includegraphics{media/figure8}
- 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3in]{media/figure8}
+\end{figure}
 
 
 \subsubsection{Convergence}\label{convergence-1}
@@ -972,13 +972,19 @@ number of total columns is unlimited. It is natural, at this point, to
 expand the \emph{multi-agent child} MDP into a \emph{complete
 multi-agent child} MDP, by solving a two dimensional row problem:
 
-\includegraphics{media/figure9}
- 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3in]{media/figure9}
+\end{figure} 
+
 This division of space can be readily generalized to a foraging problem,
 where each layer \(i\) is assigned reward such that reward increases as
 a foraging targets location is nearer:
 
-\includegraphics{media/figure10}
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=6in]{media/figure10}
+\end{figure*}
 
 \subsubsection{}\label{section}
 
@@ -1134,12 +1140,14 @@ recursive state space explosion.
   A monte carlo algorithm, which runs a batch monte carlo simulation to
   update policy values:
  
-\begin{equation}
-Q^{'}\left( s,a \right) \leftarrow Q^{\ }\left( s,a \right) + \ \frac{\alpha}{n}\sum_{i = 0}^{\text{n\ }}{\tilde{R}\left( s,a,s' \right) - Q \left( s,a \right) + \gamma\argmax_{a^{*}}{Q(s^{'},a^{*})}}
-\end{equation}
+\begin{align}
+& Q^{\prime}\left( s,a \right) \leftarrow \nonumber \\ 
+& \qquad Q\left( s,a \right) + \frac{\alpha}{n}\sum_{i = 0}^{n}\tilde{R}\left( s,a,s^\prime \right)  \\ 
+& \qquad \qquad - Q \left( s,a \right) + \gamma\argmax_{a^{\ast}} Q(s^{\prime},a^{\ast}) \nonumber
+\end{align}
  
-, where \(s'\) is sampled from the density
-\(\tilde{T}\left( s,a,s' \right)\). It is trivial to note that the monte
+, where \(s^\prime\) is sampled from the density
+\(\tilde{T}\left( s,a,s^\prime \right)\). It is trivial to note that the monte
 carlo simulation approaches the value obtained by the complete algorithm
 as the limit of \(n\) approaches infinity.
 \end{itemize}
@@ -1172,7 +1180,7 @@ $m_{k} = \left\langle S_{k},A_{k},T_{k},R_{k},{\tilde{T}}_{k},{\tilde{R}}_{k},\p
 
 The goal is to describe a deconstruction \(d_{x}^{\text{yz}}\)and
 reconstruction \(c_{\text{yz}}^{x}\)function, which maintain all of the
-properties outlined in sections 3.0. This section begins by using the
+properties outlined in Sections~\ref{}. This section begins by using the
 CMDP via a gating function and regression is discussed.
 
 \paragraph{Decision Making and
@@ -1211,20 +1219,20 @@ Deconstruction}\label{example-nauxefve-deconstruction}
 
 A deconstruction implementation is provided: \(d_{x}^{\text{yz}}\). It
 is direct to see that this implementation of \(d_{x}^{\text{yz}}\)
-satisfies the axioms given in section 3.0.
+satisfies the axioms given in Section~\ref{}.
 
 \begin{itemize}
 \item
   State
 
-  A set of degenerate state spaces \(\{ S_{y}\ ,S_{z}\}\) can be defined
+  A set of degenerate state spaces \(\{ S_{y}, S_{z}\}\) can be defined
   using principle component analysis on a parent state space \(S_{x}\) ,
   being careful to include all dimensions from \(S_{x}\) in either
   \(S_{y}\) or \(S_{z}\).
 \item
-  Action
+  Action\\
 
-  The action set \(\{ A_{y}\ ,A_{z}\}\) can each be formed using a
+  The action set \(\{ A_{y}, A_{z}\}\) can each be formed using a
   random selection of actions from \(A_{z}\). If actions are missing, (
   \(\left\{ A_{y} \cup A_{z} \right\}\backslash A_{x} \neq \varnothing \)
   ), then the missing actions can simply be added,
@@ -1233,14 +1241,14 @@ satisfies the axioms given in section 3.0.
   Transition
 
   Note:
-  \(P\left( \left\{ s_{z}^{'},s_{y}^{'} \right\}|\left\{ a_{z},a_{y} \right\},\left\{ s_{z},s_{y} \right\} \right) = P\left( s_{x}^{'}|a_{x},s_{x} \right)\)
+  \(P\left( \left\{ s_{z}^{\prime},s_{y}^{\prime} \right\}|\left\{ a_{z},a_{y} \right\},\left\{ s_{z},s_{y} \right\} \right) = P\left( s_{x}^{\prime}| a_{x}, s_{x} \right)\)
 
   The parent transition function \({\tilde{T}}_{x}\) can be projected
   onto subspaces \({\tilde{T}}_{y}\) and \({\tilde{T}}_{z}\). It is
   direct to note through application of the chain rule that a
   probability density describing transition can be broken into sub
   constituent distributions\(\backslash n\)
-  \(P\left( s_{x}^{'}|a_{x},s_{x} \right) = \ P\left( s_{y}^{'},s_{z}^{'}|a_{x},a_{y},s_{y},s_{z} \right)\).
+  \(P\left( s_{x}^{\prime}|a_{x},s_{x} \right) = \ P\left( s_{y}^{\prime},s_{z}^{\prime}|a_{x},a_{y},s_{y},s_{z} \right)\).
   Thus, In our current notation this notion can be stated briefly:
 \end{itemize}
 
@@ -1248,7 +1256,9 @@ satisfies the axioms given in section 3.0.
 \begin{align}
 & {\tilde{T}}_{y}\left( s_{y}^{\prime} \middle| s_{y}, a_{y} \right) = \nonumber \\
 & \quad
-\sum_{s_{z}^{\prime}}\sum_{a_{z}}\sum_{s_{z}}{\tilde{T}}_{x}\left( \left\{ s_{y}^{\prime},s_{z}^{\prime} \right\} \middle| \left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{y},a_{z} \right\} \right) \frac{\pi_{x}\left( a_{y}, a_{z} \middle| s_{y} ,s_{z} \right)}{\displaystyle\sum_{a_{z}^{\prime}}\pi_{x}\left( a_{y},a_{z}^{\prime}|s_{y},s_{z} \right)}
+\sum_{s_{z}^{\prime}}\sum_{a_{z}}\sum_{s_{z}}{\tilde{T}}_{x}\left( \left\{ s_{y}^{\prime},s_{z}^{\prime} \right\} \middle| \left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{y},a_{z} \right\} \right) \nonumber \\
+& \qquad\qquad\qquad \times
+\frac{\pi_{x}\left( a_{y}, a_{z} \middle| s_{y} ,s_{z} \right)}{\displaystyle\sum_{a_{z}^{\prime}}\pi_{x}\left( a_{y},a_{z}^{\prime}|s_{y},s_{z} \right)}
 \end{align}
  
 
@@ -1263,7 +1273,8 @@ of projecting transitional probability.
 
  
 \begin{align}
-& {\tilde{T}}_{z}\left( s_{z}^{\prime}\middle| s_{z}, a_{z}, a_{y} \right) \leftarrow \nonumber \\ & \qquad \sum_{s_{z}^{\prime}}{{\tilde{T}}_{x}\left( \left\{ s_{y}^{\prime},s_{z}^{\prime} \right\}|\left\{ s_{y},s_{z}\right\},\left\{ a_{z} \right\},a_{y} \right)}
+& {\tilde{T}}_{z}\left( s_{z}^{\prime}\middle| s_{z}, a_{z}, a_{y} \right) \leftarrow \nonumber \\ 
+& \qquad \sum_{s_{z}^{\prime}}{\tilde{T}}_{x}\left( \left\{ s_{y}^{\prime},s_{z}^{\prime} \right\}|\left\{ s_{y},s_{z}\right\},\left\{ a_{z} \right\},a_{y} \right)
 \end{align} 
 
 For the parent, $y$, the transition model must take into account a
@@ -1272,7 +1283,14 @@ sequence of actions undertaken
  
 \begin{align}
 & {\tilde{T}}_{y}\left( s_{y}^{\prime}\middle| s_{y}, a_{y} \right) = \nonumber \\ 
-& \qquad \sum_{s_{z}^{\prime}}{\sum_{a_{z}}{{\tilde{T}}_{x}\left( \left\{ s_{y}^{\prime},s_{z}^{\prime} \right\}\middle|\left\{ s_{y},s_{z} \right\},\left\{ a_{y},a_{z} \right\} \right)\pi_{z}\left( a_{z}\middle| s_{z} \right)}}
+& \qquad \sum_{s_{z}^{\prime}} \sum_{a_{z}} 
+{\tilde{T}}_{x}
+\left( 
+     \left\{ s_{y}^{\prime}, s_{z}^{\prime} \right\}
+\middle|
+     \left\{ s_{y}, s_{z} \right\}, \left\{ a_{y}, a_{z} \right\} 
+\right) 
+\pi_{z}\left( a_{z} \middle| s_{z} \right)
 \end{align}
  
 
@@ -1287,20 +1305,22 @@ It becomes apparent that the degenerate policy
 \(\pi_{y}\left( a_{y}|s_{y} \right)\) is unknown, and needs to be
 inferred from the complete policy \(\pi_{x}\left( a_{x}|s_{x} \right)\).
 Briefly a direct mapping can be considered which is a projection of
-\(\pi_{x}\left( \bullet \right)\ \) onto
-\(\pi_{y}\left( \bullet \right)\), where \(\sigma\) is a normalization
+\(\pi_{x}\left( \cdot \right)\ \) onto
+\(\pi_{y}\left( \cdot \right)\), where \(\sigma\) is a normalization
 constant:
 
 \begin{align}
-& \pi_{x}\left( a_{y}|s_{y} \right) = \nonumber \\ & \qquad \sigma\sum_{s_{z}^{'}}^{\ }{\sum_{s_{z}}^{\ }{\sum_{a_{z}}^{\ }{{\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},\left\{ a_{y},a_{z} \right\} \right)\pi_{x}\left( \left\{ s_{y}^{\ },s_{z}^{\ } \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\} \right)}}}
+& \pi_{x}\left( a_{y} |s_{y} \right) = \nonumber \\ 
+& \qquad \sigma\sum_{s_{z}^{\prime}}\sum_{s_{z}}\sum_{a_{z}} {\tilde{T}}_{x}\left( \left\{ s_{y}^{\prime},s_{z}^{\prime} \right\}|\left\{ s_{y}, s_{z} \right\},\left\{ a_{y},a_{z} \right\} \right) \nonumber \\ 
+& \qquad \qquad \times \pi_{x}\left( \left\{ s_{y}, s_{z} \right\}|\left\{ s_{y}, s_{z} \right\} \right)
 \end{align}
  
 
 In essence, the degenerate policy image
-\(\pi_{x}\left( A_{y}|S_{y} \right)\)becomes the expectation of the
-parent policy \(\pi_{x}\left( A_{x}|A_{x} \right)\) weighted by the
+\(\pi_{x}\left( A_{y}| S_{y} \right)\) becomes the expectation of the
+parent policy \(\pi_{x}\left( A_{x}| A_{x} \right)\) weighted by the
 transitional expectation, and this can be taken as the
-\(\pi_{y}\left( a_{y}|s_{y} \right) = \ \pi_{x}\left( a_{y}|s_{y} \right)\).
+\(\pi_{y}\left( a_{y}| s_{y} \right) = \pi_{x}\left( a_{y}| s_{y} \right)\). 
 
 After policy is initialized, the behavioural policy can be updated using
 Q-Learning or any other mechanism.
@@ -1311,7 +1331,7 @@ Reconstruction}\label{example-nauxefve-reconstruction}
 
 A reconstruction implementation is provided: \(c_{x}^{\text{yz}}\). It
 is direct to see that this implementation of \(c_{x}^{\text{yz}}\)
-satisfies the axioms given in section 3.0.
+satisfies the axioms given in Section~\ref{}.
 
 Similar to deconstruction, reconstruction steps can be expressed
 direction as a mapping of \(\left\langle S,A,T,R \right\rangle\) tuples:
@@ -1328,9 +1348,9 @@ direction as a mapping of \(\left\langle S,A,T,R \right\rangle\) tuples:
 \item
   Transitional probability
 \item
-  Knowing \(s_{x}^{'} = \left\{ s_{y}^{'},s_{z}^{'} \right\}\)
+  Knowing \(s_{x}^{\prime} = \left\{ s_{y}^{\prime},s_{z}^{\prime} \right\}\)
 \item
-  \({\tilde{T}}_{x}\left( \left\{ s_{y}^{'},s_{z}^{'} \right\}|\left\{ s_{y}^{\ },s_{z}^{\ } \right\},a_{x} \right) = {\tilde{T}}_{y}\left( s_{y}^{'}|s_{y}^{\ },a_{x} \right){\tilde{T}}_{z}\left( s_{z}^{'}|s_{z}^{\ },a_{x} \right)\)
+  \({\tilde{T}}_{x}\left( \left\{ s_{y}^{\prime},s_{z}^{\prime} \right\}|\left\{ s_{y}, s_{z} \right\}, a_{x} \right) = \\ {\ } \qquad  {\tilde{T}}_{y}\left( s_{y}^{\prime}| s_{y}, a_{x} \right){\tilde{T}}_{z}\left( s_{z}^{\prime}|s_{z}, a_{x} \right)\)
 \item
   Reward
 \item
@@ -1401,42 +1421,50 @@ f:\Omega_{u}^{\ast}\left( S_{u} \right) \times \Omega_{l}^{\ast}\left( S_{l} \ri
 \end{equation}
 
 For the following analysis, consultation of a visual grid can be
-beneficial. To simplify notation, \(\left( i,j \right)\)is taken to
+beneficial. To simplify notation, \(\left( i, j \right)\)is taken to
 equal \(\text{ij}\), and actions
-\(\left( a_{u},a_{l} \right) = \ a_{\text{ul}}\).
+\(\left( a_{u},a_{l} \right) = a_{\text{ul}}\).
 
 \begin{align}
-& \Omega^{\ast}(i,j) = \nonumber \\ & \quad \argmax_{\left(a_{u},a_{l}\right)}\sum_{\left( i',j' \right) \in S\ }^{\ }{P\left( i'j'|ij,a_{\text{ul}} \right)\left( R\left( ij,a_{\text{ul}},i'j' \right) + \gamma V\left( i'j' \right) \right)}
+& \Omega^{\ast}(i,j) = \nonumber \\ & \quad \argmax_{\left( a_{u}, a_{l} \right)}\sum_{\left( i^{\prime}, j^{\prime} \right) \in S}
+P\left( i^{\prime}j^{\prime}| ij, a_{\text{ul}} \right)\left( R\left( ij,a_{\text{ul}},i^{\prime}j^{\prime} \right) + \gamma V\left( i^{\prime}j^{\prime} \right) \right)
 \end{align}
-
 knowing
 \(  \max_{\left(a_{u},a_{l}\right)}R\left( \left( i,j \right),\left( a_{u},a_{l} \right),\left( i',j' \right) \right) = \max_{\left(a_{u},a_{l}\right)}R\left( \left( i,j' \right),\left( a_{u},a_{l} \right),\left( i',j' \right) \right)\)
 allows the expression to be altered with \(j'\), using the exchange
 lemma.
-
-\begin{equation}
- \Omega_{\ }^{*}(\left( i,j \right)) =  \argmax_{\left(a_{u},a_{l}\right)}\sum_{\left( i',j' \right) \in S\ }^{\ }{P\left( \left( i',j' \right)|\left( i,j \right),\left( a_{u},a_{l} \right) \right)\left( R\left( \left( i,j' \right),\left( a_{u},a_{l} \right),\left( i',j' \right) \right) + \gamma V\left( \left( i',j' \right) \right) \right)}
-\end{equation}
-
+\begin{align}
+& \Omega^{\ast}(\left( i,j \right)) = \nonumber \\ 
+& \qquad \argmax_{\left(a_{u},a_{l}\right)}\sum_{\left( i,j' \right) \in S}
+P\left( \left( i',j' \right)|\left( i,j \right),\left( a_{u},a_{l} \right) \right) \nonumber \\
+& \qquad\qquad \times\left( R\left( \left( i,j' \right),\left( a_{u},a_{l} \right),\left( i',j' \right) \right) + \gamma V\left( \left( i',j' \right) \right) \right)
+\end{align}
 It then becomes clear that the reward dependency can be expressed in
 terms of \(R_{l}\ \)only:
-
-\begin{equation}
-\Omega^{*}(\left( i,j \right)) = \argmax_{\left(a_{u},a_{l}\right)} \sum_{\left( i',j' \right) \in S\ }^{\ }{P\left( \left( i',j' \right)|\left( i,j \right),\left( a_{u},a_{l} \right) \right)\left( R_{l}\left( j^{'}|a_{l},i',j \right) + \gamma V\left( \left( i',j' \right) \right) \right)}
-\end{equation}
+\begin{align}
+& \Omega^{\ast}(\left( i,j \right)) = \nonumber \\ 
+& \quad \argmax_{\left(a_{u}, a_{l}\right)} \sum_{\left( i',j' \right) \in S}
+P\left( \left( i',j' \right) \middle| \left( i,j \right),\left( a_{u},a_{l} \right) \right)  \\
+& \qquad\qquad \qquad \qquad \times
+\left( R_{l}\left( j' \middle| a_{l},i',j \right) + \gamma V\left( \left( i',j' \right) \right) \right) \nonumber
+\end{align}
 
 At this point, it is possible to note that the Transition function may
 be decomposed
 \(P\left( \left( i',j' \right)|\left( i,j \right),\left( a_{u},a_{l} \right) \right) = P\left( i'|a_{l},i \right)P\left( j'|a_{u},j \right)\).
-
-\begin{equation} 
-\Omega^{*}(\left( i,j \right)) = \argmax_{\left(a_{u},a_{l}\right)}\sum_{\left( i',j' \right) \in S\ }P\left( i'|a_{l},i \right)P\left( j'|a_{u},j \right)\left( R_{l}\left( j^{'}|a_{l},i',j \right) + \gamma V\left( \left( i',j' \right) \right) \right)
-\end{equation} 
+\begin{align} 
+& \Omega^{\ast}(\left( i,j \right)) = \nonumber \\ 
+& \qquad \argmax_{\left(a_{u},a_{l}\right)}\sum_{\left( i',j' \right) \in S} P\left( i'|a_{l},i \right) P\left( j'|a_{u},j \right) \\
+& \qquad \qquad\qquad \times
+ \left( R_{l}\left( j'|a_{l},i',j \right) + \gamma V\left( \left( i',j' \right) \right) \right) \nonumber
+\end{align} 
 
 Leading to a summation decomposition:
-\begin{equation}
-\Omega^{*}(\left( i,j \right)) =  \argmax_{\left(a_{u},a_{l}\right)}\sum_{i' \in S\ }P\left( i'|a_{u},i \right)\left\lbrack \sum_{j' \in S}^{\ } P\left( i'|a_{l},i \right)\left( R_{l}\left( j^{'}|a_{l},i',j \right) + \gamma V\left( \left( i',j' \right) \right) \right) \right\rbrack  
-\end{equation}
+\begin{align}
+& \Omega^{\ast}(\left( i,j \right)) = \nonumber \\ 
+& \quad  \argmax_{\left(a_{u}, a_{l}\right)}\sum_{i' \in S}P\left( i'|a_{u},i \right) \\ 
+& \qquad \times \left\lbrack \sum_{j' \in S} P\left( i'|a_{l},i \right)\left( R_{l}\left( j'|a_{l},i',j \right) + \gamma V\left( \left( i',j' \right) \right) \right) \right\rbrack  \nonumber
+\end{align}
 
 It is also possible to take the difference between two reward functions,
 differentiated by \(i\) and \(i\)', to achieve a favourable formulation.
