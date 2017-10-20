@@ -244,25 +244,162 @@ f_Q: \tilde{T}_t \times \tilde{R}_t \to Q_t
 In this paper we rely on a method of extracting dynamic $Q$-values from an encoded transition and reward function $( \tilde{T}, \tilde{R} )$. The motivation for this encoding is that it allows mapping the transition function into multiple spaces, and allows the reward function to be altered. The significance of this finding is covered in \textbf{???} Price wash \textbf{???}.
 
   
-\subsection{Reconfiguration of $M$}
+\subsection{Representation and mapping of $M$}
 
 Reconfiguring a process $M$ allows some intractable MDPs to be rendered tractable. 
 As an example, take an MDP $M$ modeling a 3-dimensional foraging experiment with three thousand positions on the $x$, $y$, and $z$
 axes respectively. This process will consume over three billion memory locations and may be impossible to explore. If this system is
 broken into three sub problems, each targeting a special axis, then only nine thousand memory locations need be consumed. This decreases memory requirements by an exponential factor.
 
-This section presents a method of decomposition that, when followed, introduces no degeneration of the regressed policy $\pi^{*}(s,a)$.
-The summary of these conditions is presented. There is no free lunch: the trade-off for saving in space is exponentially increased computational burden. As in all problems, finding the balance between space and computational complexity is required.
+This section presents a method of decomposition that introduces no degeneration of the regressed policy $\pi(s,a)$.
+The trade-off for saving in space is exponentially-increased computation. As in all problems, finding the balance between space and computational complexity is required.
 
  
 
-\subsubsection{Introduction to approach}
+\subsubsection{Introduction}
 
-The general approach is related to factor analysis, or clustering, eigenvalue decomposition, or projected component analysis, with which the reader may be familiar. The process is split such that a subspace $S_i \subseteq S$, and action space $A_i \subseteq A$ seem independent of subspaces $S_k$, $A_k$, for the purposes of generating reward $R(s^\prime|a,s)$. Specifically, it may be observed that the reward is homogeneous, such that 
+The general approach is related to factor analysis, or clustering, eigenvalue decomposition, or projected component analysis. An MDP is split such that a subspace $S_i \subseteq S$, and action space $A_i \subseteq A$ seem independent of subspaces $S_k$, $A_k$.
+
+Specifically, these candidate subproblems can be considered as a replacement for the centralized MDP under some conditions. Two candidate subproblems, although independent, are ``explorable''
+and ``concurrently maximized''. Explorability means that for a candidate split $C_x=\left\langle S_i, A_i, S_k, A_k \right\rangle$, the transition function $T( s_i | a_i, s_i) = P( s_i | a_i, s_i )$ exhibits full readability.  Second, the problem nees to be ``concurrently maximized''.  In this Section it will be shown that a completely explorable candidate, $C_x$, can also be concurrently maximized. First, definitions of explorability are articulated. Second, concurrent maximization is discussed.
+
+\paragraph{Candidates}
+
+A candidate split is a tuple $C_x=\left\langle S_i, A_i, S_k, A_k \right\rangle$, where $S_i \cup S_k = S$, and $A_i \cup A_k = A$. A candidate also comes with a dynamic region $G_i: S \to P( S_i )$, $G( S ) \subseteq S_i$. Given these notations explorability can be defined.
+
+\paragraph{Explorability}
+
+\underline{$i$-explorable}: a candidate split is $i$-explorable in $C_x$ if all states are ``reachable'' and independent of $S_k$, $A_k$:
 \begin{equation*}
-\forall k_2, a_2: R\left(S^\prime_i \cup  S^\prime_{k_1} \middle| S_i \cup S_{k_1} , a_i \cup a_{k_1} \right) \sim R\left( S^\prime_i \cup S^\prime_{k_2}  \middle|  S_i \cup S_{k_2} , a_i \cup a_{k_2}  \right)\,.
+\forall s_i^\prime, \exists s_i, a_i: T(s_i^\prime | a_i, s_i ) >0
 \end{equation*}
-In this case, it is likely that the problem may be separated. Even in the case where variance of reward is high, convergence is expected.
+where $s_i^\prime \in G( s_i )$, $s_i \in G( s_i )$, $a_i \in A_i$, $a_k= \varnothing$ (inaction).
+
+\underline{Completely $i$-explorable}: Given $G( s_i ) = S_i$, then a candidate $C_x$ can be said to be completely explorable. This is generally intractable to compute, but may be inferred or deduced in other manners.
+
+\underline{Explorable}: A candidate split $C_x$ is explorable if it is $i$-explorable and $k$-explorable for $G_i( s_i )$ and $G_k( s_k )$.
+
+\paragraph{Concurrent maximization}
+
+Given a completeley explorable candidate $C_x$, it is possible to regress to two independent and optimal behaviour policies simultaneously, $\pi^\ast_i$, $\pi^\ast_k$ if it is also the case that the optimal policy $\pi^\ast( s ) = \pi^\ast( s_i ) \cup \pi^\ast_k( s_k )$. (See concurrent maximization proof.)
+
+Concurrent maximization can occur when (a) the policies are learned in a synchronous manner, where $a_i$ and $a_k$ are executed in the same instant, or asynchronously, where $a_i$ and $a_k$ are executed in independent instants. As explained in the concurrent maximization proof, both the synchronous and asynchronous methods bear separate conditions. \\
+
+\underline{Synchronous conditions}:
+
+\begin{enumerate}[label=\roman*$\cdot$]
+\item $\bar{S}_k$ is a (i) stably stochastic random variable, or (ii) $\bar{S}_k$ is chosen such that $E\left[ R_t\left( \begin{array}{c} s^\prime_i \\ \bar{s}^\prime_k \end{array}  \middle| \begin{array}{cc} a_i & s_i \\ a_k & \bar{s}_k \end{array}\right) \right]>E\left[ R_{t+1}\left( \begin{array}{c} s_i \\ \bar{s}^\prime_k \end{array}  \middle| \begin{array}{cc} a_i & s^\prime_i \\ a_k & \bar{s}_k \end{array}\right) \right]$.
+\item $\bar{R}_t( s_i | a_i, s_i ) = E\left[
+  \sum_{s^\prime_k} \sum_{a_k} \pi( a_k | s_k ) T( s^\prime_k | a_k, s_k  )
+    R\left(
+           \begin{array}{c} s_i^\prime \\ s^\prime_k  \end{array} \middle| \begin{array}{cc} a_i & s_i \\ a_k & \bar{s}_k  \end{array}
+     \right)
+  + V\left( s_i^\prime, s_k^\prime
+     \right)
+     \right]$
+\item Candidate $C_x$ is completely explorable.
+\item $\pi^\ast_k( s_k )$ is either (a) stably stochastic, or (b) reward maximization.
+\end{enumerate}
+When a synchronous method is used, $a_i$ and $a_k$ can be executed in tandem according to $\pi_k()$ and $\pi_i()$. However, continual evaluation of $\bar{R}_t( \bar{s}^\prime_i | a_i, s_i )$ is required according to ii, and in the general case requires a computational complexity of $O\left( \left| A_k \right| \left| s_k \right| \right)$ to compute per time step. This may be intractable. \\
+
+\underline{Asynchronous conditions}:
+
+If $a_i$ and $a_k$ are executed in different instances, between reward observance by the regression approach, then only conditions i, iv are required. 
+
+\begin{enumerate}[resume*]
+\item \underline{$\bar{s}_k^\prime$ is chosen} \\
+  Lastly, during execution of a policy $\pi(s)$, it may be required to evaluate many candidate splits, $C_1, C_2, C_3, \ldots, C_x, \ldots$ for the purposes of deciding on an optimal split. For each split $C_x$ a theorized explorability can be measured, after choice.
+  \begin{enumerate}[label=\roman*.]
+  \item the size of $G(s_i)$ is measured as $|G(s_i)|$
+  \item the explored space is tracked $\text{ex}(C_x)\leq G(s)$
+  \item the purposeful transitions are tracked, $\text{count}_p( a \in A_i )$
+  \item the meddlesome transitions are tracked, $\text{count}_m( a \in A_k )$\\
+    if $\frac{|\text{ex}(C_x)|}{|G(s)|} > \mathfrak{Z}_{\text{ex}}$ and $\frac{\text{count}_p}{\text{count}_m} > \mathfrak{Z}_m$ then $C_x$ is taken as a global candidate.\\
+    \textbf{(Is that symbol $\xi$ or $\mathfrak{Z}$?)}
+  \end{enumerate}
+\end{enumerate}
+
+
+\underline{Concurrent Maximization Proof}:
+
+Synchronous: a synchronous case is where $a_i \in A_i$ and $a_k \in A_k$ can be executed at the same time.
+
+\begin{align*}
+  \pi^\ast_i( s_i )
+& \sim \argmax_{a_i} \sum_{s_i^\prime \in G( s_i )}
+  \left[
+      T\left( s^\prime_i \middle| a_i, s_i \right)
+      \sum_{s^\prime_k \in G( s_i )} \sum_{a_k}
+        \left(
+           \pi( a_k | s_k ) T( s^\prime_k | a_k, s_k )
+           R\left(
+               \begin{array}{c} s^\prime_i \\ s^\prime_k  \end{array}
+            \middle|
+               \begin{array}{cc} a_i & s_i \\ a_k & s_k \end{array}   
+               \right)
+          + V( s^\prime_i, s^\prime_k )    
+        \right)
+  \right] \\
+& = \argmax_{a_i} \sum_{s_i^\prime \in G( s_i )} P\left( s^\prime_i \middle| a_i, s_i  \right) \sum_{s^\prime_k \in G( s_i )} \sum_{a_k} P( a_k | s_k ) P\left( s^\prime_k \middle| a_k, s_k \right)  R\left(
+               \begin{array}{c} s^\prime_i \\ s^\prime_k  \end{array}
+            \middle|
+               \begin{array}{cc} a_i & s_i \\ a_k & s_k \end{array}   
+               \right)
+               + V( s^\prime_i, s^\prime_k ) \\
+& \qquad\qquad \downarrow \qquad \text{chain\ rule} \\               
+& = \argmax_{a_i} \sum_{s_i^\prime \in G( s_i )} P\left( s^\prime_i \middle| a_i, s_i  \right) \sum_{s^\prime_k \in G( s_i )} \sum_{a_k} P\left( s^\prime_k, a_k \middle| s_k \right)  R\left(
+               \begin{array}{c} s^\prime_i \\ s^\prime_k  \end{array}
+            \middle|
+               \begin{array}{cc} a_i & s_i \\ a_k & s_k \end{array}   
+               \right)
+               + V( s^\prime_i, s^\prime_k ) \\              
+& \downarrow \qquad \left( \text{using\ }
+               \tilde{R}_k \left( \begin{array}{ccc} s^\prime_i, & a_i, & s_i \\ & & s_k  \end{array} \right) = E\left[ P( S_k, A_k | S_k ) R\left( \begin{array}{ccc} S^\prime_i, & A_i & S_i \\ S^\prime_k, & A_k, & S_k\end{array} \right) \right] + E\left[ V( S_i, S_k ) \right] \right) \\
+& \textbf{Comment: in handwritten notes, this last equation had ambiguous bracketing. I couldn't resolve it to my satisfaction.} \\
+& = \argmax_{a_i} \sum_{s_i^\prime \in G( s_i )} P( s^\prime_i | a_i, s_i ) \tilde{R}_k( s_i^\prime, a_i, s_i, s_k ) \\
+& \downarrow \qquad \left( \text{using\ } \tilde{R}( s^\prime_i, a_i, s_i ) \approx \tilde{R}( s_i^\prime, a_i, s_i, s_k \sim S_k ) \text{\ where\ }s_k \sim S_k \text{\ is\ a\ random\ sample\ from\ the\ state\ } S_k^\prime \right) \\
+& = \argmax_{a_i} \sum_{s_i^\prime \in G( s_i )} P( s^\prime_i | a_i, s_i ) \tilde{R}_k( s_i^\prime, a_i, s_i ) \\
+& = \pi^\ast_i( s_i )                              
+\end{align*}
+$\therefore$ with computation of $\tilde{R}_k( s_i, a_i, s_i, s_k )$ the estimation of $\pi_i^\ast( s_i )$ is possible.  The complexity to compute $\tilde{R}_k( s_i | a_i, s_i )$ with perfect information is $O(|S_k||A_k|)$, which may be intractable to compute each time instant $t$. \\
+
+Conditions:
+\begin{enumerate}[label=\arabic*.]
+\item stable stochastic $\pi_k^\ast(s)$ or one that increases $(R_k)$ $E[R_{t+1}()]>E[R_t()]$
+\item independent $T( s^\prime_k | a_k, s_k )$
+\item a stably stochastic $s_k \sim S_k$
+\end{enumerate}
+
+asynchronous: assume $a_k = \varnothing$, always.
+\begin{align*}
+  \pi_i^\ast( s_i )
+  & \sim \argmax_{a_i} \sum_{s_i^\prime \in G( s_i )} \left( T( s^\prime_i | a_i, s_i ) \sum_{s^\prime_k} \sum_{a_k} \left( \pi( a_k | s_k ) T( s^\prime_k | a_k, s_k ) \left( R\left( \begin{array}{ccc} s^\prime_i, & a_i, & s_i \\ s^\prime_k, & a_k, & s_k \end{array} \right) + V( s_i^\prime, s^\prime_k ) \right) \right) \right) \\
+  & \qquad \qquad \qquad \downarrow \\
+  & \qquad \qquad \quad a_k = \varnothing \\
+  & \qquad \qquad \qquad \downarrow \\
+  & \sim \argmax_{a_i} \sum_{s_i^\prime \in G( s_i )} \left( T( s^\prime_i | a_i, s_i ) \sum T( s^\prime_k | s_k ) \left(  R\left( \begin{array}{ccc} s^\prime_i, & a_i, & s_i \\ s^\prime_k, & \varnothing, & s_k \end{array} \right) + V( s_i^\prime, s^\prime_k ) \right) \right) \\
+  & \qquad \qquad \downarrow \text{\ since\ } a_k = \varnothing, a_k \neq \varnothing \qquad \qquad s^\prime_k, s_k \text{\ decided\ based\ on\ }a_i\text{,\ and\ stably\ stochastic} \\
+  & \sim \argmax_{a_i} \sum_{s_i^\prime \in G( s_i )} T( s^\prime_i | a_i, s_i )  \left(  R\left( \begin{array}{ccc} s^\prime_i, & a_i, & s_i \\ \bar{s}^\prime_k, & \varnothing, & \bar{s}_k \end{array} \right) + V( s_i^\prime, \bar{s}^\prime_k ) \right)\,,\\
+  &
+  \qquad \qquad \qquad \qquad \qquad\text{where\ } \left. \begin{array}{c} \bar{s}_i \sim S_i \\ \bar{s}^\prime_k \sim S_k \end{array}\right\}\begin{array}{l}\text{randomly\ drawn} \\ \text{stably\ stochastic}\end{array} \\
+  & \qquad\qquad \bar{\bar{R}}( s^\prime_i, a_i, s_i ) \leftarrow
+  R\left( \begin{array}{ccc} s^\prime_i, & a_i & s_i \\ \bar{s}^\prime_k, & a_i & s_i  \end{array}\right) \\
+  & \qquad\qquad \bar{\bar{R}}( s^\prime_i, a_i, s_i ) \sim R( s^\prime_i, a_i, s_i ) 
+  \qquad\qquad \textrm{when:}\quad \begin{array}{l}\text{a)\ }\bar{s}_k, \bar{s}_i\text{\ chosen\ as\ stably\ stochastic} \\
+    \qquad \text{or} \\
+ \text{b)\ }\bar{s}_k \text{\ chosen\ s.t.\ }E[R_{k,t+1}()]>E[R_{k,t}()]
+  \end{array}
+\end{align*}
+
+Considering synchronous and asychronous solutions, when $\pi^\ast_i$ and $\pi^\ast_k$ run independently, then both $\bar{s}_k$ and $\bar{s}_i$ will be chosen according to the ``maximization choice''.\\
+
+synchronous: $\pi^\ast(s_i \cup s_k) \sim \pi^\ast_i(s_i) \cup \pi^\ast_k(s_k)$ iif $\exists \tilde{R}_k(s^\prime_i|a_i,s_i)\sim R_k(s^\prime_i|a_i,s_k)$ which is computed each timestep with complexity $O(|A_k||S_k|)$ and maybe intractable \\
+
+asynchronous: $\pi^\ast(s_i \cup s_k)\sim\pi^\ast_i(s_i)\cup\pi^\ast_k(s_k)$ iif $\bar{s}_k$, $\bar{s}_k$ are chosen according to the ``maximum choice'' which they trivially are by definition.\\
+
+
+%%%%%%%%%%%%%%%%%%
+
 
 Splitting is done using a decomposition function
 \begin{equation*}

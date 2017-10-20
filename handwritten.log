@@ -1,10 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.7.10)  6 SEP 2017 12:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2016/dev) (preloaded format=pdflatex 2017.6.28)  17 OCT 2017 12:38
 entering extended mode
-**./handwritten.tex
-(handwritten.tex
-LaTeX2e <2017-04-15>
-Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
-(IEEEtran.cls
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**handwritten
+(./handwritten.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 2 languages loaded.
+(./IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -17,7 +19,7 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ppl on input line 503.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ppl.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 -- Using IEEE Computer Society mode.
@@ -114,79 +116,78 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24.09> not available
 \IEEEPARstartletwidth=\dimen125
 \c@IEEEbiography=\count93
 \@IEEEtranrubishbin=\box27
-)
-("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\cite\cite.s
-ty"
+) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
-File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count94
 ))
 \Gin@req@height=\dimen126
 \Gin@req@width=\dimen127
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2016/11/05 v2.16a AMS math features
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
-Package: amstext 2000/06/29 v2.01 AMS text
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
-File: amsgen.sty 1999/11/30 v2.0 generic functions
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen128
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen129
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
-Package: amsopn 2016/03/08 v2.02 operator names
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count95
-LaTeX Info: Redefining \frac on input line 213.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count96
 \leftroot@=\count97
-LaTeX Info: Redefining \overline on input line 375.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count98
 \DOTSCASE@=\count99
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box28
 \strutbox@=\box29
 \big@size=\dimen130
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count100
 \c@MaxMatrixCols=\count101
 \dotsspace@=\muskip10
@@ -207,35 +208,33 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \multlinegap=\skip45
 \multlinetaggap=\skip46
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen137
 \extrarowheight=\dimen138
 \NC@list=\toks21
 \extratabsurround=\skip47
 \backup@length=\skip48
 )
-("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\subfig\subf
-ig.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\cap
-tion3.sty"
-Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 67.
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen139
 \captionmargin@=\dimen140
 \captionwidth=\dimen141
@@ -260,10 +259,10 @@ Package caption Info: Unknown document class (or package),
 \sf@top=\skip52
 \sf@bottom=\skip53
 )
-("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\pbox\pbox.s
-ty"
+(/usr/share/texlive/texmf-dist/tex/latex/pbox/pbox.sty
 Package: pbox 2011/12/07 v1.2 Dynamic parboxes
- ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count114
 \calc@Bcount=\count115
@@ -276,13 +275,12 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count116
 \calc@Cskip=\skip56
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \pb@xlen=\skip57
 )
-("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\dashbox\das
-hbox.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/dashbox/dashbox.sty
 Package: dashbox 2001/12/11 v1.14 Dashed and layered boxes
 \dashlength=\skip58
 \dashdash=\skip59
@@ -297,13 +295,13 @@ Package: dashbox 2001/12/11 v1.14 Dashed and layered boxes
 \l@yerlineheight=\skip66
 \l@yervoffset=\skip67
 \c@l@yercount=\count117
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\eucal.sty"
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/eucal.sty
 Package: eucal 2009/06/22 v3.00 Euler Script fonts
 LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
 (Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
 )
-("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\enumitem\en
-umitem.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip68
 \enit@outerparindent=\dimen149
@@ -311,27 +309,27 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box32
 \enitdp@description=\count118
 )
-("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\linegoal\li
-negoal.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/linegoal/linegoal.sty
 Package: linegoal 2011/02/25 v2.9 - Measuring the remaining width of the line
- ("C:\Program Files\MiKTeX 2.9\tex\latex\etex-pkg\etex.sty"
-Package: etex 2016/08/01 v2.7 eTeX basic definition package (PEB,DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 2015/09/02 v2.4 eTeX basic definition package (PEB,DPC)
 \et@xins=\count119
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\zref.sty"
-Package: zref 2016/05/21 v2.26 A new reference scheme for LaTeX (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/zref.sty
+Package: zref 2012/04/04 v2.24 A new reference scheme for LaTeX (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\zref-base.sty"
-Package: zref-base 2016/05/21 v2.26 Module base for zref (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/zref-base.sty
+Package: zref-base 2012/04/04 v2.24 Module base for zref (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
 Package etexcmds Info: Could not find \expanded.
@@ -339,58 +337,57 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
-Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
 Package zref Info: New property list: main on input line 759.
 Package zref Info: New property: default on input line 760.
 Package zref Info: New property: page on input line 761.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\zref-savepos.sty"
-Package: zref-savepos 2016/05/21 v2.26 Module savepos for zref (HO)
-Package zref Info: New property list: savepos on input line 80.
-Package zref Info: New property: posx on input line 81.
-Package zref Info: New property: posy on input line 82.
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/zref-savepos.sty
+Package: zref-savepos 2012/04/04 v2.24 Module savepos for zref (HO)
+Package zref Info: New property list: savepos on input line 75.
+Package zref Info: New property: posx on input line 76.
+Package zref Info: New property: posy on input line 77.
 )
 Package zref Info: New property: linegoal on input line 39.
 \LNGL@unique=\count277
 \LNGL@tempdim=\dimen256
 )
-("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\pict2e\pict
-2e.sty"
-Package: pict2e 2016/02/05 v0.3b Improved picture commands (HjG,RN,JT)
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2014/01/12 v0.2z Improved picture commands (HjG,RN,JT)
 
-("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\pict2e\pict
-2e.cfg"
-File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2011/04/05 v0.1t pict2e configuration for teTeX/TeXLive
 )
 Package pict2e Info: Driver file: pdftex.def on input line 119.
 Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
 
-("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\latex\pict2e\p2e-
-pdftex.def"
-File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+File: p2e-pdftex.def 2011/04/05 v0.1t Driver-dependant file (RN,HjG,JT)
 )
 \pIIe@GRAPH=\toks23
 \@arclen=\dimen150
 \@arcrad=\dimen151
 \@tempdimd=\dimen152
-) (handwritten.aux)
+)
+(./handwritten.aux)
 \openout1 = `handwritten.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 383.
@@ -407,9 +404,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 383.
 LaTeX Font Info:    ... okay on input line 383.
 
 -- Lines per column: 38 (exact).
-
-("C:\Users\Christopher Hemming\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp
--pdf.mkii"
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count120
 \scratchdimen=\dimen153
@@ -422,28 +417,30 @@ LaTeX Font Info:    ... okay on input line 383.
 \MPnumerator=\count124
 \makeMPintoPDFobject=\count125
 \everyMPtoPDFconversion=\toks25
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.jpeg,.png,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-)
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-(sec-preamble.tex
+(./sec-preamble.tex
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 1.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
@@ -455,18 +452,17 @@ LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 14.
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 14.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 14.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{C:/Users/Christopher Hemming/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex
-.map}]
+) [1{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for OMS+ppl on input line 47.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9.53561> not available
@@ -486,7 +482,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
-) [2] (sec-intro.tex
+) [2] (./sec-intro.tex
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 6.
 
@@ -538,7 +534,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 [5]
 LaTeX Font Info:    Try loading font information for OML+ppl on input line 134.
 
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlppl.fd"
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlppl.fd
 File: omlppl.fd 
 )
 LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <9.53561> not available
@@ -567,7 +563,7 @@ LaTeX Warning: Reference `' on page 6 undefined on input line 160.
 
 LaTeX Warning: Reference `' on page 6 undefined on input line 160.
 
-[6] <media/page4diagram.pdf, id=36, 248.93pt x 97.36375pt>
+[6] <media/page4diagram.pdf, id=37, 248.93pt x 97.36375pt>
 File: media/page4diagram.pdf Graphic file (type pdf)
 
 <use media/page4diagram.pdf>
@@ -577,7 +573,8 @@ Package pdftex.def Info: media/page4diagram.pdf used on input line 182.
 Overfull \hbox (20.19774pt too wide) in paragraph at lines 185--186
 []\OT1/ppl/m/n/9.53561 To do this, as-sume a Markov de-ci-sion pro-cess M which
  can be in-ter-nally mod-eled as a tu-ple $\OML/cmm/m/it/10 M \OT1/cmr/m/n/10 =
- \OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 S; A; T; R; ; []; []\OMS/cmsy/m/n/10 i$ 
+ \OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 S; A; T; R; ^^Y; []; []\OMS/cmsy/m/n/10 i$ 
+
  []
 
 
@@ -586,63 +583,120 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--186
  []
 
 [7 <./media/page4diagram.pdf>] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 277--279
-
- []
-
-<media/page5figure.pdf, id=50, 672.5125pt x 212.795pt>
-File: media/page5figure.pdf Graphic file (type pdf)
-
-<use media/page5figure.pdf>
-Package pdftex.def Info: media/page5figure.pdf used on input line 281.
-(pdftex.def)             Requested size: 672.51085pt x 212.79446pt.
- [9 <./media/page5figure.pdf>]
-
-LaTeX Warning: Reference `' on page 10 undefined on input line 288.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--304
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--308
+Overfull \hbox (37.09033pt too wide) in paragraph at lines 310--312
+\OT1/ppl/m/n/9.53561 Lastly, dur-ing ex-e-cu-tion of a pol-icy $\OML/cmm/m/it/1
+0 ^^Y\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 )$\OT1/ppl/m/n/9.53561 
+, it may be re-quired to eval-u-ate many can-di-date splits, $\OML/cmm/m/it/10 
+C[]; C[]; C[]; [] ; C[]; []$
+ []
 
+[9]
+LaTeX Font Info:    Try loading font information for U+euf on input line 317.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Overfull \hbox (73.38779pt too wide) in paragraph at lines 363--363
+[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--312
-
+Overfull \hbox (12.63242pt too wide) in paragraph at lines 363--365
+$\U/msa/m/n/9.53561 )$ \OT1/ppl/m/n/9.53561 with com-pu-ta-tion of $[]\OT1/cmr/
+m/n/10 (\OML/cmm/m/it/10 s[]; a[]; s[]; s[]\OT1/cmr/m/n/10 )$ \OT1/ppl/m/n/9.53
+561 the es-ti-ma-tion of $\OML/cmm/m/it/10 ^^Y[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/
+10 s[]\OT1/cmr/m/n/10 )$ \OT1/ppl/m/n/9.53561 is pos-si-ble. The com-plex-ity t
+o com-pute $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s[]\OMS/cmsy/m/n/10 j\OML/cmm/m
+/it/10 a[]; s[]\OT1/cmr/m/n/10 )$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--322
-
- []
-
-
-LaTeX Warning: Reference `' on page 10 undefined on input line 342.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 352--353
+Underfull \hbox (badness 10000) in paragraph at lines 363--365
 
  []
 
 [10]
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
 
-LaTeX Warning: Reference `' on page 11 undefined on input line 366.
+ []
 
-) [11] (sec-mappingfunction.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--416
+
+ []
+
+[11] <media/page5figure.pdf, id=62, 672.5125pt x 212.795pt>
+File: media/page5figure.pdf Graphic file (type pdf)
+
+<use media/page5figure.pdf>
+Package pdftex.def Info: media/page5figure.pdf used on input line 418.
+(pdftex.def)             Requested size: 672.51085pt x 212.79446pt.
+ [12 <./media/page5figure.pdf>]
+
+LaTeX Warning: Reference `' on page 13 undefined on input line 425.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 427--428
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--441
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--445
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--449
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
+
+ []
+
+
+LaTeX Warning: Reference `' on page 13 undefined on input line 479.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 479--480
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+
+ []
+
+[13]
+
+LaTeX Warning: Reference `' on page 14 undefined on input line 503.
+
+) [14] (./sec-mappingfunction.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
@@ -697,7 +751,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-[12]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
@@ -717,10 +771,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
-) [13] (sec-mappingprocess.tex
+) [16] (./sec-mappingprocess.tex
 LaTeX Font Info:    Try loading font information for U+eus on input line 9.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
 Underfull \hbox (badness 10000) in paragraph at lines 11--13
@@ -777,7 +831,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-[14] [15]
+[17] [18]
 Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
@@ -797,7 +851,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
-[16]
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
@@ -829,10 +883,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
 
 Overfull \hbox (4.69557pt too wide) detected at line 145
-\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 : []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s[]; s
-[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s[]
-; a[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 [ \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (
-\OML/cmm/m/it/10 s[]\OT1/cmr/m/n/10 )
+\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 : ^^Y[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s[];
+ s[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 ^^Y[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
+ s[]; a[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 [ \OML/cmm/m/it/10 ^^Y[]\OT1/cmr/m/
+n/10 (\OML/cmm/m/it/10 s[]\OT1/cmr/m/n/10 )
  []
 
 
@@ -840,12 +894,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
-[17]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
-[18] [19]
+[21] [22]
 Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
@@ -875,17 +929,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
  []
 
-) [20] (sec-convergence.tex
+) [23] (./sec-convergence.tex
+Overfull \hbox (8.84663pt too wide) in paragraph at lines 18--31
+|  [][][][][][][] \OT1/ppl/m/n/9.53561 We de-
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 50--54
 
  []
 
-[21]
+[24]
+Overfull \hbox (8.84663pt too wide) in paragraph at lines 77--90
+|  [][][][][][][] \OT1/ppl/m/n/9.53561 We de-
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 109--113
 
  []
 
-) [22] (sec-worstcase.tex
+) [25] (./sec-worstcase.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
@@ -915,12 +979,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--27
 
  []
 
-) [23] (sec-NN.tex
+) [26] (./sec-NN.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
  []
 
-[24]
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
@@ -950,7 +1014,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-[25] [26]
+[28] [29]
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
@@ -970,7 +1034,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--116
 
  []
 
-[27]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
@@ -995,7 +1059,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
-[28]
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
@@ -1010,7 +1074,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 181--183
 
  []
 
-[29]
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
@@ -1030,7 +1094,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
-[30]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 249--252
 
  []
@@ -1045,7 +1109,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 259--261
 
  []
 
-) [31] (sec-A.tex
+) [34] (./sec-A.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
@@ -1083,7 +1147,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
 
-[32] [33]
+[35] [36]
 Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
@@ -1103,7 +1167,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
-[34]
+[37]
 Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
@@ -1138,15 +1202,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
-[35]
+[38]
 Underfull \hbox (badness 10000) in paragraph at lines 151--153
 
  []
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 162.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
+
 Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
@@ -1166,20 +1227,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
-) [36] (page16.1.tex
+) [39] (./page16.1.tex
 
-LaTeX Warning: Reference `sec:experimental' on page 37 undefined on input line 
+LaTeX Warning: Reference `sec:experimental' on page 40 undefined on input line 
 4.
 
 
-LaTeX Warning: Reference `sec' on page 37 undefined on input line 17.
+LaTeX Warning: Reference `sec' on page 40 undefined on input line 17.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
-) [37] (page17.tex
+) [40] (./page17.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -1191,13 +1252,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
 
 Overfull \hbox (53.5267pt too wide) in paragraph at lines 9--10
-\OT1/ppl/m/n/9.53561 want to find $\OML/cmm/m/it/10 [] \OT1/cmr/m/n/10 : [] \O
-MS/cmsy/m/n/10 [ \OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 S; A\OT1/c
-mr/m/n/10 ) \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 A$ \OT1/ppl/m/n/9.53561 s. t. f
-or some value func-tion $\OML/cmm/m/it/10 V\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\
-OT1/cmr/m/n/10 )$\OT1/ppl/m/n/9.53561 , $\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\
-OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) = [][] [][] \OML/cmm/m/it/10 T [] R [] \OT1/
-cmr/m/n/10 +
+\OT1/ppl/m/n/9.53561 want to find $\OML/cmm/m/it/10 ^^Y[] \OT1/cmr/m/n/10 : [] 
+\OMS/cmsy/m/n/10 [ \OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 S; A\OT1
+/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 A$ \OT1/ppl/m/n/9.53561 s. t.
+ for some value func-tion $\OML/cmm/m/it/10 V\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
+s\OT1/cmr/m/n/10 )$\OT1/ppl/m/n/9.53561 , $\OML/cmm/m/it/10 ^^Y[]\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) = [][] [][] \OML/cmm/m/it/10 T [] R [] \
+OT1/cmr/m/n/10 +
  []
 
 
@@ -1215,7 +1276,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-) [38] (page18.tex
+) [41] (./page18.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -1225,7 +1286,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--12
 
  []
 
-) [39] (page19.tex
+) [42] (./page19.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -1255,7 +1316,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--431
 
  []
 
-[40] (page20.tex
+[43] (./page20.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -1280,7 +1341,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--30
 
  []
 
-) [41] (page21.tex
+) [44] (./page21.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -1295,18 +1356,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<media/page21figure.pdf, id=173, 633.36626pt x 436.63126pt>
+<media/page21figure.pdf, id=185, 633.36626pt x 436.63126pt>
 File: media/page21figure.pdf Graphic file (type pdf)
 
 <use media/page21figure.pdf>
 Package pdftex.def Info: media/page21figure.pdf used on input line 9.
 (pdftex.def)             Requested size: 633.36472pt x 436.63019pt.
- [42 <./media/page21figure.pdf>])
+ [45 <./media/page21figure.pdf>])
 Underfull \hbox (badness 10000) in paragraph at lines 65--439
 
  []
 
-[43] (page22.tex
+[46] (./page22.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -1346,12 +1407,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--27
 
  []
 
-) [44] (page23.tex
+) [47] (./page23.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<media/page23figure.pdf, id=192, 745.78625pt x 372.39125pt>
+<media/page23figure.pdf, id=203, 745.78625pt x 372.39125pt>
 File: media/page23figure.pdf Graphic file (type pdf)
 
 <use media/page23figure.pdf>
@@ -1377,7 +1438,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--447
 
  []
 
-[45 <./media/page23figure.pdf>] (handwritten.aux)
+[48 <./media/page23figure.pdf>] (./handwritten.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.6161pt have occurred.
@@ -1390,38 +1451,39 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 5265 strings out of 493328
- 82342 string characters out of 3139080
- 155675 words of memory out of 3000000
- 8628 multiletter control sequences out of 15000+200000
- 43234 words of font info for 109 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 43i,19n,38p,1321b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cmextra/cmex7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/euler/eufm7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/euler/eusm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/s
-ymbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
-ols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/
-uplri8a.pfb>
-Output written on handwritten.pdf (45 pages, 374701 bytes).
+ 5236 strings out of 495003
+ 81360 string characters out of 6181405
+ 157371 words of memory out of 5000000
+ 8302 multiletter control sequences out of 15000+600000
+ 43942 words of font info for 112 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 43i,19n,38p,1314b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helve
+tic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on handwritten.pdf (48 pages, 352053 bytes).
 PDF statistics:
- 280 PDF objects out of 1000 (max. 8388607)
+ 293 PDF objects out of 1000 (max. 8388607)
+ 205 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
