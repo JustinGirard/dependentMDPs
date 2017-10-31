@@ -374,6 +374,8 @@
 %%%%%
 
 \DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
 \newcommand{\circled}[1]{\raisebox{.6pt}{\textcircled{\raisebox{-1.0pt}{#1}}}}
 
 %%%%%
@@ -456,6 +458,50 @@ $\mathrm{M}=\{M_1,M_2,\ldots,M_i,\ldots\}$ s.t.\ a gating function $\pi^{\ast}_{
 
 \input paper3_figure1.pdf_t
 
+\section*{Level 3: Solution Combination}
+
+Given a set of Goal Regression Problems, and a set of online Hyperparameter Optimization Problems, the operation result is a set of Goal Regression Problems and associate Hyperparameters that are effective for the optimization of independent GR problems. In addition, over time, the characteristics will increase due to Hyperparameter Optimization.
+
+This optimization can be run as an online process, and coded using Dynamic Programming Principles. The assumption is that each region $G_i$ outputs a set of locally optimal matches $m_i$. The combination function $C_b(m_i,m_j)$ outputs a higher quality match matrix $m_{ij}$, such that the total cost is reduced, s.t.\
+\begin{equation}
+  m_{ij}(e_a,e_b)\leftarrow \argmin \begin{array}{cc} m_i(a) & m_i(b) \\ m_j(a) & m_j(b) \end{array}
+  \end{equation}
+
+Given all matches $(x,y)\in M_i$ and all matches $(a,b)\in M_j$, it is possible that $a,b \in M_i$ and that $x,y \in M_j$. Thus, the combination of $M_i \cup M_j = M_{ij}$ may form a bi-partite graph, where each set $(a,b)$ may have duplicate values for $a$ or $b$.
+
+In the most complex case, the graph is fully converti\textbf{(???)}. The goal of this optimization problem is to choose the best over all matches such that no entity receives a duplicate match.
+
+Since the graph is bi-partite, it is possible to consider exactly two scenarios:
+\begin{enumerate}[label=\alph*)]
+\item the case where odd vertices are selected;
+  \item the case where even vertices are selected.
+\end{enumerate}
+$\therefore$ if limiting to these cases, the optimal matches are
+\begin{equation}
+  \argmin_{\text{INDICES}}\sum_{k\in\text{INDICES}}q(e_i,e_j)+q(e_j,e_i)\,,\qquad\text{s.t.\ INDICES}\in\left\{\text{ODD},\text{EVEN}\right\}
+  \end{equation}
+\begin{itemize}
+  \item The visited elements $e_i$, $e_j$, are tracked, and place in a ``processed queue''.
+\end{itemize}
+Thus the algorithm $C_b(i,j)$ returns the lowest cost-per-match selection over all assigned matches.
+
+Lastly, given an adjacency list for each region, s.t.\ $(i,j)\in A_d$ indicates adjacency, it is possible to combine all sub-optimal solution using Dynamic Programming, which is trivial to execute in linear time.
+
+\newpage
+
+\section*{Results}
+
+\vspace*{10cm}
+
+\section*{Discussion}
+
+\newpage
+
+\section*{Appendix}
+
+\begin{itemize}[label=--]
+\item splitting and merging Markov Decision Processes 
+  \item reward flexibiliy 
+\end{itemize}
 
 \end{document}
-
