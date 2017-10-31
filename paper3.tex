@@ -367,6 +367,8 @@
 \usepackage{enumitem}
 \usepackage{linegoal}
 \usepackage{pict2e}
+\usepackage[pdftex]{graphicx,color}
+
 %%%%%
 %%%%%                                         Our definitions
 %%%%%
@@ -379,10 +381,11 @@
 %%%%%
 
 \setlength{\parindent}{0pt}
- 
+
+
 \begin{document}
 
-\section{Level 1: Goal Regression}
+\section*{Level 1: Goal Regression}
 
 Given a set of entities $e\in E$, preferences $R=\{r_1,r_2,r_3,\ldots,r_n\}$, and a value function over preferences $h(e,r)\in [0,1]$, it is possible to produce an ideal match over the set of entities $q(e_i,e_j)$. To do this, a few functions need to be defined:
 \begin{itemize}
@@ -435,4 +438,24 @@ Specifically:
 \item $\alpha(Q,M)=1\:\rightarrow$ only the amount of assignments matter. Trivially, $\displaystyle \sum_{m\in M} m = \sum_{m\in M}1$ satisfies this requirement.
 \end{itemize}
 Thus, the ideal matching characteristics depend on an optimal value $\alpha$. For algorithmic stability and quantity, low values of $\alpha$ should be attempted, which will prioritize quality over quantity.
+
+\section*{Level 2: Hyperparameter optimization}
+
+Given a goal regression problem $G_i$, we wish to optimize both the quality of assignments $C_{G_i}$, and the number of matches, $\displaystyle \sum_{m \in M_{G_i}}m$. The problem $G_i$ based around a geographical region and pertains to a fixed set of entities. In general for a goal problem $G_i$, we may consider the problem of optimization as an online stably stochastic process, which can be represented with a Markov Decision Process, $\bar{M}$:
+\begin{itemize}[label={}]
+\item $S_i=\left\{p_1,p_2,\ldots,p_n\right\}$ --- a list of control parameters $p_x\in [0,1]$
+\item $A_i = \left\{ a_1^{+}, a_1^{=}, a_1^{-}, a_2^{+}, a_2^{=}, a_2^{-}, \ldots, a_n^{+}, a_n^{=}, a_n^{-} \right\}$ --- an action sequence which alters hyperparameters
+\item $T=P(s^\prime|a,s)$ --- the likelihood of transiting between states given an action
+  \item $R(s) = \frac{QM^T}{\sum_{m\in M}m}$ --- reward, specified as quality per match
+\end{itemize}
+This MDP, in general, can be seen as intractable for all but non-trivial problems. Various approaches are used to decompose this MDP into
+tractable subproblems as covered in [Concurrent Markov Decision Processes, 2,3]. The result of this Decomposition Process is a family of MDPs,
+$\mathrm{M}=\{M_1,M_2,\ldots,M_i,\ldots\}$ s.t.\ a gating function $\pi^{\ast}_{\mathrm{M}}$ representing the policy for the MDP family is interchangeable with the policy $\pi^{\ast}_{\bar{M}}$, $\pi^{\ast}_{\mathrm{M}} \sim \pi^{\ast}_{\bar{M}}$.
+
+{\ }\\
+
+\input paper3_figure1.pdf_t
+
+
 \end{document}
+
